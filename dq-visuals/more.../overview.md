@@ -26,19 +26,19 @@ Collibra DQ offers a full DQ suite to cover the unique challenges of each datase
 
 **Imagine a column going null, automatic row count checks - does your data behave/look/feel the same way it has in the past.**
 
-![](../../.gitbook/assets/Behavior.jpg)
+![](../../.gitbook/assets/behavior.jpg)
 
 ## **Rules**
 
 **Assures only values compliant with your data rules are allowed within a data object.**&#x20;
 
-![](../../.gitbook/assets/Rules.jpg)
+![](../../.gitbook/assets/rules.jpg)
 
 ## **Schema**&#x20;
 
 **Columns add or dropped.**
 
-![](../../.gitbook/assets/Schema.jpg)
+![](../../.gitbook/assets/schema.jpg)
 
 ## **Shapes**
 
@@ -50,30 +50,30 @@ Collibra DQ offers a full DQ suite to cover the unique challenges of each datase
 
 **Fuzzy matching to identify entries that have been added multiple times with similar but not exact detail.**
 
-![](../../.gitbook/assets/Dupes.jpg)
+![](../../.gitbook/assets/dupes.jpg)
 
 ## **Outliers**
 
 **Data points that differ significantly from other observations.**
 
-![](../../.gitbook/assets/Outliers.jpg)
+![](../../.gitbook/assets/outliers.jpg)
 
 ## **Pattern**
 
 **Recognizing relevant patterns between data examples.**&#x20;
 
-![](../../.gitbook/assets/Pattern.jpg)
+![](../../.gitbook/assets/pattern.jpg)
 
 ## **Source**
 
 **Validating source to target accuracy.**
 
-![](../../.gitbook/assets/Source.jpg)
+![](../../.gitbook/assets/source.jpg)
 
 ## **Record**
 
 **Deltas for a given column.**&#x20;
 
-![](../../.gitbook/assets/Record.jpg)
+![](../../.gitbook/assets/record.jpg)
 
 ##

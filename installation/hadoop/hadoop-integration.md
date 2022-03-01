@@ -76,7 +76,7 @@ When deploying a Cloud Service Hadoop cluster from any of the major Cloud platfo
 
 Once the Hadoop client configuration has been created, navigate to Agent Management console from the Admin Console and configure the agent to use Yarn (Hadoop resource scheduler) as the Default Master and set the Default Deployment Mode to "Cluster".
 
-![](<../../.gitbook/assets/Screenshot 2021-06-21 at 8.42.19 AM.png>)
+![](../../.gitbook/assets/screenshot-2021-06-21-at-8.42.19-am.png)
 
 ### Kerberos Secured with Resource Manager TLS enabled
 
@@ -134,4 +134,4 @@ echo "
 
 When the target Hadoop cluster is secured by Kerberos, DQ checks require a Kerberos credential. This typically means that the DQ Agent will need to be configured to include a Kerberos keytab with each DQ check. Access the DQ Agent configuration page from the Admin Console and configure the "Freeform Append" setting with the -sparkprinc \<spark-submit-principal> -sparkkeytab \<path-to-keytab>.
 
-![](<../../.gitbook/assets/Screenshot 2021-06-21 at 8.38.56 AM.png>)
+![](../../.gitbook/assets/screenshot-2021-06-21-at-8.38.56-am.png)

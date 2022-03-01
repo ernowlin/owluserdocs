@@ -8,7 +8,7 @@ description: An organized repository of all your rule templates
 
 #### The rule library contains both OOTB and custom-built rule templates.
 
-![](<../../.gitbook/assets/image (95).png>)
+![](<../../.gitbook/assets/image (88).png>)
 
 ### OOTB Rules
 
@@ -31,7 +31,7 @@ Below is a list of one click rules that can be added to any dataset.  It is impo
 
 The quick rule drop-down offers another great way to apply rules at the click of a button in the preview tab.
 
-![](<../../.gitbook/assets/image (41).png>)
+![](<../../.gitbook/assets/image (49).png>)
 
 ### Customized Rules
 
