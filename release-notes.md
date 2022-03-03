@@ -56,7 +56,7 @@ Added UUIDs for Jobs may take additional time on initial startup after upgrade
     * Please note there are no (Collibra imposed) domain restrictions on Reply Email field
 * Security
   * Stricter password policy is enforced on all user/tenant management screens/APIs.&#x20;
-    * The restriction is as follows: Minimum length of 8 characters.&#x20;
+    * The restriction is as follows: Minimum length of 8 characters&#x20;
     * Maximum length of 20 characters.&#x20;
     * At least one upper-case letter.&#x20;
     * At least one numeric character.&#x20;
