@@ -100,7 +100,7 @@ Format: JSON string list
 
 
 
-### V1 - This API is going to be deprecated soon
+#### We suggest using db-export, but we will not remove get-exports.  We do expect to consolidate the newer logic behind the method.
 
 #### Step 1 - Get-Exports
 
