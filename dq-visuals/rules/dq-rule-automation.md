@@ -1,23 +1,50 @@
-# The best DQ rule, is the one you don't have to write
+---
+description: An organized repository of all your rule templates
+---
 
-Owl's semantic scanning self identifies standard columns and automatically provides the proper protection. This makes it easy to get started adding common rules for specific use-cases. 
+# Rule Library
 
-**Owl offers out of the box rules for 1-click rule creation**
+![](../../.gitbook/assets/rule\_lib.gif)
 
-![](<../../.gitbook/assets/Auto Rules.png>)
+#### The rule library contains both OOTB and custom-built rule templates.
 
+![](<../../.gitbook/assets/image (95).png>)
 
+### OOTB Rules
 
-#### The catalog offers a global view to see PII exists
+Owl shares all of it's out of the box rules with each user/tenant.  This makes it easy to get started quickly and let the team add common rules for specific use-cases. See Rule Library for more information.
 
-![ You can also view globally via the catalog to see PII exists](<../../.gitbook/assets/Screen Shot 2019-11-04 at 2.10.11 PM (1).png>)
+Below is a list of one click rules that can be added to any dataset.  It is important to note that Owl often self identifies these columns and automatically provides the proper protection.
 
-## Rule Library
+* Email
+* Zip
+* Credit Card
+* SSN
+* EIN
+* State Code
+* Phone
+* Gender
+* IP Address
+* Date
+* Int
+* Double
 
-The rule library hosts out of the box and custom global rules. See data concepts and semantics for advanced use of global rules. 
+The quick rule drop-down offers another great way to apply rules at the click of a button in the preview tab.
 
-{% content-ref url="../data-concepts-and-semantics.md" %}
-[data-concepts-and-semantics.md](../data-concepts-and-semantics.md)
+![](<../../.gitbook/assets/image (41).png>)
+
+### Customized Rules
+
+#### Add to The Rule Library
+
+Create a rule once using our rule template builder and re-use the rule across any column on any dataset.  Owl will substitute the dataset and column that the rule applies to at runtime. This commonly saves hundreds of redundant rules that do the same thing but on different column names.
+
+The rule library hosts out of the box and custom global rules. See data concepts and semantics for advanced use of global rules.&#x20;
+
+{% content-ref url="data-concepts-and-semantics.md" %}
+[data-concepts-and-semantics.md](data-concepts-and-semantics.md)
 {% endcontent-ref %}
 
-![](<../../.gitbook/assets/owl-rule-repo (3).png>)
+####
+
+###

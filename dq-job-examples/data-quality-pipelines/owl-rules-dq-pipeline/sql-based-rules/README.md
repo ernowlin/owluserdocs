@@ -4,17 +4,14 @@
 
 #### Rule Type - SQLG
 
-{% page-ref page="simple-rule.md" %}
+{% content-ref url="simple-rule.md" %}
+[simple-rule.md](simple-rule.md)
+{% endcontent-ref %}
 
 ## Freeform SQL
 
 #### RuleType - SQLF
 
-{% page-ref page="freeform-sql.md" %}
-
-## Function
-
-#### RuleType - FUNCTION
-
-{% page-ref page="function.md" %}
-
+{% content-ref url="freeform-sql.md" %}
+[freeform-sql.md](freeform-sql.md)
+{% endcontent-ref %}

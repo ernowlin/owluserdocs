@@ -1,9 +1,10 @@
 ---
 description: Using Owl on Spark
 ---
-# Spark - DQ Pipeline
 
-## Programmatic Owl
+# Advanced
+
+## Programmatic DQ
 
 Don't like leaving your notebook? Want to build Owl into your in-house data quality pipeline? Owl can do both!
 
@@ -11,11 +12,11 @@ Don't like leaving your notebook? Want to build Owl into your in-house data qual
 
 ### Rules
 
-Let's assume we were provided a file named "atm_cust_file" and want to load it into a database table as well as scan it for all possible errors.  We want to provide a couple levels of protection. 1) A business rule checking if _a customer joined before before the company was founded_.  2) Check if the file 100% matches to the DataFrame or db table we've created.  3) Check for all possible outliers or anomalies in the dataset.  Each one of these 3 issues had a different impact to the business and causes a different flow to trigger in our pipeline.     
+Let's assume we were provided a file named "atm\_cust\_file" and want to load it into a database table as well as scan it for all possible errors.  We want to provide a couple levels of protection. 1) A business rule checking if _a customer joined before before the company was founded_.  2) Check if the file 100% matches to the DataFrame or db table we've created.  3) Check for all possible outliers or anomalies in the dataset.  Each one of these 3 issues had a different impact to the business and causes a different flow to trigger in our pipeline.    &#x20;
 
 #### Add Rule
 
-Let's create a simple rule and assign points to the overall scoring system for later delegation. 
+Let's create a simple rule and assign points to the overall scoring system for later delegation.&#x20;
 
 ```scala
     val rule = new domain2.Rule
@@ -140,7 +141,7 @@ Here we illustrate an example of how to work with files when using Owl programma
 
 ### All Pipeline Activities in 1 Line
 
-For brevity and convenience Owl allows a DF to be loaded in the constructor and in 1 line run all 9 dimensions of data quality "owl.owlcheck".  To adjust the DQ dimensions you simply set the properties in the props object.   
+For brevity and convenience Owl allows a DF to be loaded in the constructor and in 1 line run all 9 dimensions of data quality "owl.owlcheck".  To adjust the DQ dimensions you simply set the properties in the props object.  &#x20;
 
 ```scala
 val owl = Util.OwlContext(df, atmCustFile, props)
