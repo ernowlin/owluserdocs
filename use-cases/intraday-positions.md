@@ -83,7 +83,7 @@ owl.owlCheck
 
 ### Owl Web
 
-![](../.gitbook/assets/positions-owl.png)
+![](<../.gitbook/assets/positions-owl (1).png>)
 
 ### DQ Coverage for Position data
 

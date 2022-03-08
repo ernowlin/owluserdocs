@@ -18,7 +18,7 @@
 * Catalog
   * Catalog now features intelligent ranking based on Recency, Most Scanned, User
 * Outliers
-  * [Dynamic minimum history](dq-visuals/more.../outliers.md#dynamic-history-options) allows for gaps in dates when establishing lookback period, which is established by history with row count > x (specified by user)
+  * [Dynamic minimum history](dq-visuals/more/outliers.md#dynamic-history-options) allows for gaps in dates when establishing lookback period, which is established by history with row count > x (specified by user)
   * Fixed issue where outlier data preview graphics were not displayed
   * Fixed issue where outlier results did not honor the initial scope where clause, in particular for Remote Files (S3)
 * Connections
@@ -84,7 +84,7 @@ viewsEnabled=true
   * Fixed backrun timebin to work with weeks and quarters instead of days.
 * Outliers
   * Split historical load to avoid historical query rounding up.
-  * \*Tech Preview\* \[TP] [Dynamic minimum history](dq-visuals/more.../outliers.md#dynamic-history-options).
+  * \*Tech Preview\* \[TP] [Dynamic minimum history](dq-visuals/more/outliers.md#dynamic-history-options).
 * Source
   * Fixed an issue where settings were not sticky for subsequent runs.
 * Security
@@ -313,7 +313,7 @@ _Please note updated Collibra release name methodology_
 * Security
   * SQL View data by role vs just Admin
 * Reports
-  * OTB completeness reports from reports section. [Completeness Report](reports/built-in/completeness-report.md)
+  * OTB completeness reports from reports section. [Completeness Report](reports/completeness-report.md)
 
 ## 2.15.0 (**05-31-2021)**
 

@@ -30,7 +30,7 @@ Owl's semantic scanning self identifies standard columns and automatically provi
 
 **Owl offers out of the box rules for 1-click rule creation**
 
-![](<../../.gitbook/assets/Auto Rules.png>)
+![](../../.gitbook/assets/auto-rules.png)
 
 ## Sensitive Data
 
@@ -47,7 +47,7 @@ Column Level
 
 Now imagine if you could classify your datasets as concepts, then automatically have all the columns be recognized semantically(with validation rules in place) as well as have the columns labeled with sensitivity tags.  It might look something like the below.
 
-![](<../../.gitbook/assets/Screen Shot 2021-09-15 at 1.11.06 PM.png>)
+![](../../.gitbook/assets/screen-shot-2021-09-15-at-1.11.06-pm.png)
 
 ## Steps To Use
 
@@ -55,7 +55,7 @@ Now imagine if you could classify your datasets as concepts, then automatically 
 
 To start, create a new DQ Job and select Semantic ON on the Profile options page
 
-![](<../../.gitbook/assets/dqjobsemanticon (1).gif>)
+![](../../.gitbook/assets/dqjobsemanticon.gif)
 
 ### Step 2: In Catalog, select and apply your Data Concept
 
@@ -83,7 +83,7 @@ On the DQ Job page, please browse your newly created rules based on Semantics as
 
 Create, test, and manage your Semantics in Collibra DQ in your **Rule Builder** wizard on the **Create Generic Rule** tab. Below is an example of creating a RegEx Semantic
 
-![](<../../.gitbook/assets/creating-semantic-regex (1).gif>)
+![](../../.gitbook/assets/creating-semantic-regex.gif)
 
 ## Administering Data Concepts
 
@@ -91,13 +91,13 @@ Setup your data concepts once and let the entire organization benefit by unifyin
 
 ![](../../.gitbook/assets/adding-data-concepts.gif)
 
-![](<../../.gitbook/assets/Screen Shot 2021-09-15 at 1.14.42 PM.png>)
+![](../../.gitbook/assets/screen-shot-2021-09-15-at-1.14.42-pm.png)
 
 ## Physical Schemas to Semantics
 
 Below you can see the benefit of organized metadata.  PDEs or `physical data elements` organized/tagged by semantics.  This allows for sub-second searches while in catalog or searching for data to figure out where all your PII data lives, or what systems have "loan data".
 
-![](<../../.gitbook/assets/Screen Shot 2021-09-15 at 4.32.09 PM.png>)
+![](../../.gitbook/assets/screen-shot-2021-09-15-at-4.32.09-pm.png)
 
 Above you can see Data Concepts in Yellow, Semantics in Gray and Sensitive labels in Orange.  Enabling you to organize all your data in classes, search and discover types no matter what system they live in or what the PDE column name is.  Transforming technical types into business metadata.
 
@@ -105,4 +105,4 @@ Above you can see Data Concepts in Yellow, Semantics in Gray and Sensitive label
 
 Now that we have all PDEs discovered and tagged and rolled up into business terms, we can roll up technical assets like database tables and files into business reports across departments and non technical concepts.
 
-![](<../../.gitbook/assets/Screen Shot 2021-09-15 at 5.17.14 PM.png>)
+![](../../.gitbook/assets/screen-shot-2021-09-15-at-5.17.14-pm.png)

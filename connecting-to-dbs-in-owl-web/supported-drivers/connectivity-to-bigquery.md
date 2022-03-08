@@ -107,13 +107,13 @@ bigquery.googleapis.com
 
 Make sure the project and account have appropriate permissions.  These are common permissions to provide to the account.&#x20;
 
-![](<../../.gitbook/assets/image (76).png>)
+![](<../../.gitbook/assets/image (69).png>)
 
 ### Views
 
 Support for Bigquery views is available from the 2021.11 release and forward. There are Bigquery limitations on creating views from different datasets (collections).  Optionally you can add the `viewsEnabled=true` parameter to the connection property when defining the connection.
 
-![](<../../.gitbook/assets/image (141).png>)
+![](<../../.gitbook/assets/image (103) (1).png>)
 
 ### Spark Version 2
 
