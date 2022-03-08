@@ -24,9 +24,9 @@ Query builder will help generate SQL for more complex rules. You can apply to on
 
 ![](../../.gitbook/assets/query\_builder.gif)
 
-![(Optional)  Start by searching for table B on the right, to set a key for the join condition](../../.gitbook/assets/screen-shot-2019-09-04-at-12.39.17-pm.png)
+![(Optional)  Start by searching for table B on the right, to set a key for the join condition](<../../.gitbook/assets/Screen Shot 2019-09-04 at 12.39.17 PM.png>)
 
-![Input conditions and click SQL statement to generate example syntax](../../.gitbook/assets/screen-shot-2019-09-04-at-12.46.02-pm.png)
+![Input conditions and click SQL statement to generate example syntax](<../../.gitbook/assets/Screen Shot 2019-09-04 at 12.46.02 PM.png>)
 
 {% hint style="info" %}
 As with any SQL generator, there are limitations for more complex scenarios.

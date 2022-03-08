@@ -2,7 +2,7 @@
 
 ## Cells Per Second Performance Theory (9.5M CPS)
 
-![](../.gitbook/assets/screen-shot-2020-12-01-at-10.31.09-am.png)
+![](<../.gitbook/assets/Screen Shot 2020-12-01 at 10.31.09 AM.png>)
 
 ## Load and Profile
 

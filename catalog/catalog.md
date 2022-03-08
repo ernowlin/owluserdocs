@@ -8,7 +8,7 @@ While Owl does not pride itself on being a catalog tool it does automatically ma
 
 Owl automatically understands the _semantic_ schema of your data such as CREDIT CARD, EMAIL, SSN and much more.  Additionally Owl will label sensitive data with PII and MNPI classifications.
 
-![](../.gitbook/assets/owl-catalog-pii.png)
+![](<../.gitbook/assets/owl-catalog-pii (2).png>)
 
 ### Data Table View of PII
 
@@ -18,4 +18,4 @@ Owl applies many labels to the header of a field / column.  These labels be seen
 
 #### The catalog offers a global view and filtering to see where PII exists
 
-![ You can also view globally via the catalog to see PII exists](../.gitbook/assets/screen-shot-2019-11-04-at-2.10.11-pm-1.png)
+![ You can also view globally via the catalog to see PII exists](<../.gitbook/assets/Screen Shot 2019-11-04 at 2.10.11 PM (1).png>)

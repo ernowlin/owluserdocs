@@ -175,11 +175,11 @@ The database named `postgres` is used by default as DQ metadata storage. Changin
 
 The installation process will start the DQ Web Application. This process will handle initializing the Postgres metadata storage schema in Postgres (under the database named `postgres`). This process must complete successfully before the DQ Agent can be started. Wait approximately 1 minute for the Postgres metadata storage schema to be populated. If you can access DQ Web using `<url-to-dq-web>:9000` using a Web browser, then this means you have successfully installed DQ.
 
-![Fig 2: Login page of DQ Web UI](../../.gitbook/assets/dq-login.png)
+![Fig 2: Login page of DQ Web UI](../../.gitbook/assets/DQ-Login.png)
 
 Next, verify that the Spark Cluster has started and is available to run DQ checks using `<url-to-dq-web>:`8080 Take note of the Spark Master url (starting with `spark://...`). This will be required during DQ Agent configuration.
 
-![Fig 3: Spark Master Web UI](../../.gitbook/assets/screenshot-2021-06-14-at-4.17.30-pm.png)
+![Fig 3: Spark Master Web UI](<../../.gitbook/assets/Screenshot 2021-06-14 at 4.17.30 PM.png>)
 
 ## Step 5. Set License Key
 
@@ -229,7 +229,7 @@ Follow the steps on [How To Configure Agent via UI](https://docs.owl-analytics.c
 
 Refer to [Agent Configuration Parameters](https://docs.owl-analytics.com/installation/agent-configuration#agent-configuration-parameters) for parameters descriptions.
 
-![Fig 4: Expected final output of edited agent based on this tutorial](<../../.gitbook/assets/image (40).png>)
+![Fig 4: Expected final output of edited agent based on this tutorial](<../../.gitbook/assets/image (67).png>)
 
 ## Step 7. Create DB Connection for DQ Job
 
@@ -239,15 +239,15 @@ Follow the steps on [How To Link DB Connection to Agent via UI](https://docs.owl
 
 Click the compass icon in the navigation pane to navigate to the Explorer Page. Click on the "metastore" connection, select the "public" schema, and then select the first table in the resulting list of tables. Once the preview and scope tab comes up, click "Build Model". When the Profile page comes up, click the "Run" button.
 
-![](../../.gitbook/assets/screenshot-2021-06-14-at-5.03.40-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-06-14 at 5.03.40 PM.png>)
 
 On the Run page, click the "Estimate Job" button, acknowledge the resource recommendations, and then click the "Run" button.
 
-![](../../.gitbook/assets/screenshot-2021-06-14-at-5.05.31-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-06-14 at 5.05.31 PM.png>)
 
 Click the clock icon in the navigation pane to navigate to the Jobs Page. Wait 10 seconds and then click refresh several times with a few seconds in between clicks. The test DQ check should show and progress through a sequence of activities before settling in "Finished "status.
 
-![](../../.gitbook/assets/screenshot-2021-06-14-at-5.27.04-pm.png)
+![](<../../.gitbook/assets/Screenshot 2021-06-14 at 5.27.04 PM.png>)
 
 ## Generally Available Build Versions
 
@@ -317,7 +317,7 @@ export SPARK_WORKER_OPTS="${SPARK_WORKER_OPTS} -Dspark.worker.cleanup.enabled=tr
 
 Or change Spark storage with an agent configuration `-conf spark.local.dir=/home/owldq/owl/owltmp`
 
-![](<../../.gitbook/assets/image (91).png>)
+![](<../../.gitbook/assets/image (105).png>)
 
 ## Troubleshooting Tip: Add Spark Home Environment Variables to Profile
 

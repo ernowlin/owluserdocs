@@ -28,6 +28,6 @@ Shapes - Validate, Invalidate, Resolve
 
 Users can assign items or label for future runs.
 
-![Each item will have an action to assign or dismiss the item.](<../.gitbook/assets/image (102).png>)
+![Each item will have an action to assign or dismiss the item.](<../.gitbook/assets/image (136).png>)
 
-![](<../.gitbook/assets/image (97).png>)
+![](<../.gitbook/assets/image (118).png>)

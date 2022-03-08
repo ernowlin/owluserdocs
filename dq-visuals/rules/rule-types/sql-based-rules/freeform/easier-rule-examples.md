@@ -16,7 +16,7 @@
 Cross-dataset rules require -libsrc or -addlib (prior to 2021.11)&#x20;
 {% endhint %}
 
-![When a cross-dataset rule uses two connections, be sure the jars are in the -lib or -addlib directory.](<../../../../../.gitbook/assets/image (100).png>)
+![When a cross-dataset rule uses two connections, be sure the jars are in the -lib or -addlib directory.](<../../../../../.gitbook/assets/image (130).png>)
 
 ## In-Clause (Single Column)
 
@@ -59,4 +59,4 @@ where
 
 ## Sample Results
 
-![](<../../../../../.gitbook/assets/image (55).png>)
+![](<../../../../../.gitbook/assets/image (46).png>)

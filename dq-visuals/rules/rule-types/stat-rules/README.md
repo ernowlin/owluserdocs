@@ -34,7 +34,7 @@ fname.$type != 'String' AND $rowCount < 800
 | **.$mixedTypePercent**         | nc.$mixedTypeRatio > 20                  | <p>alert when the percent of mixed data types </p><p>no longer falls within acceptable range. </p><p> i.e. Strings and Ints in the same field</p> |
 | **.$mixedTypeCount**           | id.$mixedTypeCount >= 1                  |                                                                                                                                                   |
 
-![](../../../../.gitbook/assets/colstatrules.png)
+![](../../../../.gitbook/assets/colStatRules.png)
 
 Known limitation.  Cannot combine stat rules or distribution rules with regex rules in the same rule.  Example car\__vin rlike '$\[asdf]\[0-9]' and car\_vin.$uniqueCount_
 
@@ -51,6 +51,6 @@ gender['Male'].$uniquePercent between 40 and 60
 | **.$uniqueCount**   | credit\_rating\['FAIR'].$uniqueCount > 7                |
 | **.$uniquePercent** | credit\_rating\['GOOD'].uniquePercent between 40 and 60 |
 
-![](../../../../.gitbook/assets/screen-shot-2021-05-10-at-2.24.51-pm.png)
+![](<../../../../.gitbook/assets/Screen Shot 2021-05-10 at 2.24.51 PM.png>)
 
 ###

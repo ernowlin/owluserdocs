@@ -28,11 +28,11 @@ Runtime: 00:00:03
 
 This requires that you have imported the Owl libraries into your notebook or databricks env.
 
-![](../../.gitbook/assets/screen-shot-2020-05-09-at-11.02.15-pm.png)
+![](<../../.gitbook/assets/Screen Shot 2020-05-09 at 11.02.15 PM.png>)
 
 ## Next Run a Profile
 
-![](../../.gitbook/assets/screen-shot-2020-05-09-at-11.04.23-pm.png)
+![](<../../.gitbook/assets/Screen Shot 2020-05-09 at 11.04.23 PM.png>)
 
 ```scala
 +-------------+-----+-------+-----------+--------+-----------+------+----+------+-------+-------+------+------+---------+
@@ -54,13 +54,13 @@ This requires that you have imported the Owl libraries into your notebook or dat
 
 Notice there is a duplicate discovered.  NYSE AAN record exists twice in the 10/1/2018.  This should not happen as end of day stock data should only have 1 record per stock symbol.  Great DQ finding.
 
-![](../../.gitbook/assets/screen-shot-2020-05-09-at-11.06.25-pm.png)
+![](<../../.gitbook/assets/Screen Shot 2020-05-09 at 11.06.25 PM.png>)
 
 ## Next Scan for Outliers
 
 Notice that KOD.w the camera company Kodak commonly trades at less than 2 pennies and jumps to $2.35.  Absolutely an outlier. This was a news event named Kodak coin, google it.
 
-![](../../.gitbook/assets/screen-shot-2020-05-09-at-11.07.54-pm.png)
+![](<../../.gitbook/assets/Screen Shot 2020-05-09 at 11.07.54 PM.png>)
 
 ```scala
 +-----+------+---------+----------+----------+

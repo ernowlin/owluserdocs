@@ -10,7 +10,7 @@ description: A no-code option to get started quickly and onboard a dataset.
 
 This page can be accessed by clicked the Explorer option (the compass icon).
 
-![](<../../.gitbook/assets/image (87) (1).png>)
+![](<../../.gitbook/assets/image (96).png>)
 
 {% hint style="info" %}
 All UI functionality has corresponding API endpoints to define, run, and get results programmatically.
@@ -18,11 +18,11 @@ All UI functionality has corresponding API endpoints to define, run, and get res
 
 ## Select Your Data Source
 
-![](<../../.gitbook/assets/image (89) (1) (1).png>)
+![](<../../.gitbook/assets/image (104).png>)
 
 ## Create a new DQ Job by clicking +Create DQ Job
 
-![](<../../.gitbook/assets/image (92) (1) (1).png>)
+![](<../../.gitbook/assets/image (122).png>)
 
 #### **View Data is an interactive option to run queries and explore the data**
 
@@ -30,13 +30,13 @@ All UI functionality has corresponding API endpoints to define, run, and get res
 
 ## Select The Scope and Define a Query
 
-![](<../../.gitbook/assets/image (98) (1) (1).png>)
+![](<../../.gitbook/assets/image (124).png>)
 
 #### Pick Date Column if your dataset contains an appropriate time filter&#x20;
 
 #### Click Build Model -> to Save and Continue&#x20;
 
-![](<../../.gitbook/assets/image (99) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (134).png>)
 
 ## Transform Tab (advanced / optional)
 
@@ -48,7 +48,7 @@ All UI functionality has corresponding API endpoints to define, run, and get res
 
 ## Profile
 
-![](<../../.gitbook/assets/image (88) (1).png>)
+![](<../../.gitbook/assets/image (97).png>)
 
 #### Use the drop-downs to enable different analysis. Best practice is to leave the defaults.
 
@@ -100,9 +100,9 @@ Manually map the columns by dragging left to right or deselect columns&#x20;
 2. Click Estimate Job
 3. Click Run to start the job
 
-![](<../../.gitbook/assets/image (90) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (112).png>)
 
-![](<../../.gitbook/assets/image (100) (1) (1).png>)
+![](<../../.gitbook/assets/image (140).png>)
 
 {% hint style="info" %}
 \*Note if you do not see your agent, please verify the agent has been assigned to your connection via:

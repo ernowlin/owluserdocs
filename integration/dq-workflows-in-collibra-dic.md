@@ -28,7 +28,7 @@ Let's proceed after gathering all prerequisites!
 
 \*\*1B. Deploy Workflows \*\*
 
-![](<../.gitbook/assets/image (20).png>)
+![](<../.gitbook/assets/image (68).png>)
 
 **1C. Adjust Workflow Settings (One-Time Setup)**
 
@@ -44,9 +44,9 @@ Let's proceed after gathering all prerequisites!
 | Roles: Stop Workflow                                                     |                           |                                  |                     |                     | Sysadmin                | Sysadmin             |
 | Roles: Reassign Tasks                                                    |                           |                                  |                     |                     | Sysadmin                | Sysadmin             |
 
-![Example: DQ Rule Request](<../.gitbook/assets/image (30).png>)
+![Example: DQ Rule Request](<../.gitbook/assets/image (69).png>)
 
-![Example: Manage DQ Subscriptions](<../.gitbook/assets/image (17).png>)
+![Example: Manage DQ Subscriptions](<../.gitbook/assets/image (70).png>)
 
 ## **Step 2: Create Data Quality Requests / Issues**
 
@@ -59,15 +59,15 @@ Let's proceed after gathering all prerequisites!
 | DQ Rule Modification | Business Analyst                           | Proposing adjustments to existing rules e.g. values, dimensions, passing thresholds                                                                                                    | Data Steward                  |
 | DQ Sync Request      | Business Analyst                           | Request for synchronization of the DQ Connector to synchronize and/or onboarding a new dataset with pre-populated rules                                                                | Data Steward                  |
 
-![Example: Data Quality Rule Request](<../.gitbook/assets/image (97) (1) (1).png>)
+![Example: Data Quality Rule Request](<../.gitbook/assets/image (135).png>)
 
-![Completed Rule Request Example](<../.gitbook/assets/image (94).png>)
+![Completed Rule Request Example](<../.gitbook/assets/image (103).png>)
 
-![Example: Data Quality Rule Modification Request](<../.gitbook/assets/image (96) (1).png>)
+![Example: Data Quality Rule Modification Request](<../.gitbook/assets/image (127).png>)
 
-![Completed Data Quality Rule Modification Example](<../.gitbook/assets/image (95) (1).png>)
+![Completed Data Quality Rule Modification Example](<../.gitbook/assets/image (126).png>)
 
-![Example: DQ Synchronization Request with Rules Request optional checkbox](<../.gitbook/assets/image (98) (1) (1) (1) (1).png>)
+![Example: DQ Synchronization Request with Rules Request optional checkbox](<../.gitbook/assets/image (145).png>)
 
 ## Step 3: Manage Data Quality Issues
 
@@ -83,11 +83,11 @@ Let's proceed after gathering all prerequisites!
 
 ### 3B. Manage Issues From Data Helpdesk View
 
-![](<../.gitbook/assets/image (22).png>)
+![](<../.gitbook/assets/image (71).png>)
 
 ### 3C. Alternate: Manage Issues From Tasks
 
-![](<../.gitbook/assets/image (32).png>)
+![](<../.gitbook/assets/image (72).png>)
 
 ## Step 4: Receive Notifications Of DQ Issues And Metrics
 
@@ -95,11 +95,11 @@ Let's proceed after gathering all prerequisites!
 
 Who? Anyone can set up a DQ subscription, for yourself or for your teammates
 
-![](<../.gitbook/assets/image (99) (1) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (144).png>)
 
 Alerts will be sent based on reviewing rules and metrics associated with **Tables** or **Columns** that violate the specified **Threshold**
 
-![](<../.gitbook/assets/image (95).png>)
+![](<../.gitbook/assets/image (109).png>)
 
 Assuming an e-mail is associated with the Subscriber within Collibra, the Subscriber will receive e-mail notifications by default at **12pm local server time**. This, along with other settings within the provided workflow, can be **adjusted** in **Eclipse**, Collibra's recommended workflow editor.
 
@@ -107,12 +107,12 @@ Assuming an e-mail is associated with the Subscriber within Collibra, the Subscr
 
 Ensure that the DQ alerts set for you are providing helpful details
 
-![](<../.gitbook/assets/image (98) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (132).png>)
 
 ### 4C. Update Subscription Settings
 
-![](<../.gitbook/assets/image (97) (1).png>)
+![](<../.gitbook/assets/image (120).png>)
 
 For every subscription set up for a Subscriber, the Manage DQ Subscriptions modal will cycle through for your review. You can update **Threshold**, add or delete **Notification Days**, add or delete **Tables** or **Columns**, rename the **Subscription title**, **Save the new settings**, or simply **Unsubscribe**.
 
-![](<../.gitbook/assets/image (96).png>)
+![](<../.gitbook/assets/image (114).png>)
