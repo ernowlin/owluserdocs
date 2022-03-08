@@ -54,29 +54,3 @@ cleaner_retention_days: "180"
 cleaner_retention_field: updt_ts
 cleaner_retention_enabled: "true"
 ```
-
-### Defaults for Auto Clean Process
-
-{% hint style="info" %}
-This is a separate rolling purge that is **distinct from the time-based retention.** This is **on by default** and uses the pre-defined limits below.  You will see audit records for this clean-up process in the audit history of the admin console.
-{% endhint %}
-
-Separate from the time-based retention there is also a default auto clean mechanism that actively purges your old records.  This is enabled by default and can be modified by use of the autoClean (AUTOCLEAN) boolean parameter.&#x20;
-
-```
-AUTOCLEAN=false or autoClean="false" 
-
-### Depending whether this is part of owl-env.sh 
-### or the configMap of the web pod
-```
-
-These are the defaults. The row count threshold is the global limit when this is triggered.  This is based on the records in the data\_preview table.  The runs threshold and the dataset per row threshold are dataset-level limits that require a dataset to have at least 4 scans and at least 1000 rows.
-
-This is an example using the owl-env.sh file to control these settings.
-
-```
-export AUTOCLEAN=true
-export DATASETS_PER_ROW=1000
-export RUNS_THRESHOLD=4
-export ROW_COUNT_THRESHOLD=200000
-```

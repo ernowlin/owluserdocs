@@ -6,7 +6,7 @@
 
 ### High-Level Diagram <a href="#howlstandalone" id="howlstandalone"></a>
 
-![](<../../.gitbook/assets/image (114).png>)
+![](<../../.gitbook/assets/image (113).png>)
 
 ### Kubernetes Diagram
 

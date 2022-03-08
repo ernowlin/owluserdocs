@@ -1,172 +1,6 @@
 # Release Notes
 
-## 2022.03 (In Progress)
-
-#### Fixes / Enhancements
-
-* Rules
-  * Additional HealthCare Data Classes to Rule Library
-
-{% hint style="info" %}
-Rule Discovery Terminology Alignment
-
-Data Concepts => Data Categories
-
-Semantics => Data Classes
-{% endhint %}
-
-* Admin
-  * Edge download page within Admin Console (for Cloud customers)
-*
-* Validate Source
-  * \*Tech Preview\* \[TP] Update Source Scope
-
-#### Known Limitations
-
-* Validate Source
-  * \*Tech Preview\* \[TP] Update Source Scope
-    * Only works for JDBC connections. Feature is hidden for remote, temp, local files
-    * Valsrc query won't be updated automatically when modifying column mappings. Use 'Preview' button to reset the feature if column mappings need to be changed
-
-## 2022.02
-
-{% hint style="info" %}
-For new Standalone Collibra DQ installations, please double check 'Number of Core(s)' field when setting up 'Edit Agent'
-{% endhint %}
-
-{% hint style="info" %}
-Added UUIDs for Jobs may take additional time on initial startup after upgrade
-{% endhint %}
-
-#### Enhancements
-
-* DQ Job
-  * Added UUIDs for jobs for better tracking between web and core
-  * Improved DQ Job page load performance by optimizing calls
-  * Fixed issue DQ jobs would fail when -rd is in "yyyy-mm-dd HH" format
-* Outliers
-  * [\*Tech Preview\* \[TP\] Outlier Calibration](dq-visuals/more/outliers.md#tech-preview-tp-outlier-calibration)
-    * Feature flag can be set within owl-env.sh or configMap with `export outlier_calibration_enabled=true` (Default is off)
-    * Ability to suppress Outlier observations for a user-determined length of time that would have otherwise surfaced as anomalies
-    * Once feature is enabled, accessible within Outliers tab on DQ Job page
-* Alerts
-  * Ability to navigate to dataset specific Alerts from DQ Job page
-  * Ability to test SMTP alert configurations when adding an email relay
-  * Fixed issue where 'Reply Email' field did not properly accept user input value
-    * Please note there are no (Collibra imposed) domain restrictions on Reply Email field
-* Security
-  * Stricter password policy is enforced on all user/tenant management screens/APIs.&#x20;
-    * The restriction is as follows: Minimum length of 8 characters&#x20;
-    * Maximum length of 20 characters.&#x20;
-    * At least one upper-case letter.&#x20;
-    * At least one numeric character.&#x20;
-    * At least one special character (supported are !,%,&,@,#,$,^,\*,?,\_,\~)&#x20;
-    * User ID and password cannot be the same.&#x20;
-    * Password cannot contain user ID.
-  * Change Password functionality on user profile requires a current password of the user.
-  * Mitigated 64 critical, 15 high, and 12 medium vulnerabilities identified by JFrog ([internal-only report link](https://docs.google.com/spreadsheets/d/1yDfqfBO3T3uyw9z\_-zr2SESinTuRWmP\_TgYf\_tlHlk8/edit#gid=0))
-  * Upgrade Log4J to 2.17.1
-    * Please follow [upgrade steps](release-notes.md#note-to-standalone-collibra-dq-customer-upgrades-we-have-upgraded-to-log4j-2.17-please-refer-to-for)&#x20;
-  * Added connection security checks to users to prevent running jobs and query the tables that are not authorized per connection. This is applicable when `DB Connection Security` is enabled in the Admin Console under `General`.
-  * Implemented stricter session management
-  * Implemented CORS restriction to mitigate potential CSRF vulnerability
-    * Enforced strict CORS policy by not allowing any domain. In order to allow other domains and tweak this behavior, we have exposed the following properties as environment variables in owl-env:
-    * CORS\_ALLOWED\_ORIGINS=[http://facebook.com,http://google.com](http://facebook.com,http/google.com)
-    * CORS\_ALLOWED\_METHODS=GET,POST,OPTIONS,DELETE,PUT,PATCH
-    * CORS\_ALLOWED\_HEADERS=X-Requested-With,Origin,Content-Type,Accept,Authorization
-    * CORS\_EXPOSE\_HEADERS=
-    * CORS\_ALLOW\_CREDENTIALS=false
-    * CORS\_MAX\_AGE=0
-* \*Tech Preview\* \[TP] [Collibra Native DQ Connector](integration/dq-connector.md)
-  * Fixed issue where tenant specified on DQ Connector configuration (issuer of the jwt token field within DGC Edge Management page) was not properly accepted; only rules that existed with 'public' schema were brought over; now the DQ Connector will accept the proper values
-* Agent
-  * Upon potential deletion of an agent, added server side validation to indicate number of scheduled jobs so that users can understand if jobs fail going forward
-* Rules
-  * Enhanced stability on Parallel Rule execution to ensure all rules load by reverting back to fixed thread counts
-  * Display exceptions upon rule execution failure to improve rule management experience
-  * Improvements to user experience in Rule Library tab (within Rules page) including filters and column alignment
-  * Quick Rule dropdown within the Rules page will save with default severity of 1 point and a threshold of 1 percent
-  * Enhanced validation for rules generated in Profile tab
-  * Fixed issue where removing semantic tag may not have removed corresponding auto-generated rule
-  * Rule name character limit of 100
-  * Rule Builder page now returns error messages where the dataset contained 0 records
-* Catalog
-  * Renaming Dataset from Catalog page keeps associated rules&#x20;
-    * Clone only creates the dataset shell (with DQ job run configs, no additional rules, etc.) will be copied
-  * Bulk actions support for Data Concepts
-  * Fixed issue where child of business unit could be assigned as parent
-  * Fixed issue where clearing individual filters were not functioning
-* Validate Source
-  * \*Tech Preview\* \[TP] New collapsible section for Query in Source tab; enables users to use custom srcq, similar to query on section on Home tab so that users do not need to edit -srcq in cmd line editor on Run tab
-  * Introducing new observation types via `-valscrshowmissingkey` flag
-    * Key not in source
-    * Key not in target
-  * Source Name should be fetched as part of getcatalogandconnsrcnamebydataset API call for a given dataset
-  * Fixed issue which prevented Hive from working as Target
-* Export / Import
-  * Fixed issue that import could not accommodate more than one table insert
-  * Fixed bug where certain values were inadvertently inserted into RegEx rules upon Export
-  * New endpoints added for [db-export and db-import](apis/rest-apis/export-and-import-api.md)
-* Connection
-  * Fixed Out Of Memory issue with Dremio
-    * Explicitly added limit clause in the preview query within Update Scope
-    * Dremio driver requires double quotes in Schema, Table, and Column names e.g. "SchemaName"."TableName"
-  * Fixed Oracle TIMESTAMPLTZ conversion error
-* Explorer
-  * Fixed issue where 'Analyze Table' option did not populate for Hive
-  * Fixed the static date values showing up in Managed Template and Run Check while running the job via v2/runtemplate API call from swagger UI
-* Files
-  * File names with spaces are now handled with double quotes t
-  * Implemented Supported File Type Check at time of uploading the Temp Files via Explorer
-    * Default supported file types are “csv,json,parquet,avro,delta".&#x20;
-    * In order to add/update the supported file types and ensure validation, a new environment variable needs to be added in owl-env.sh as below: `export ALLOWED_UPLOAD_FILE_TYPES="csv,json,parquet,avro,delta"`
-    * Tip: For remote files with delimiter, please use the csv dropdown options for files with .txt extension
-  * \*Tech Preview\* \[TP] Users have ability to assign an agent when using temp file and local file Explorer paths without manually appending -master to agent or job (previous known limitation)
-  * LIMIT values are now properly accepted on the Scope & Range query panel
-* Dupes
-  * Fixed issue where column selections were not retained from the original DQ Job with Dupes ON for future runs
-
-#### Known Limitations
-
-* Rules
-  * Cannot currently create rule with API /v3/rules; will be fixed in future release
-    * Please use /v2/createrule API
-* Profile
-  * Stat Rules
-    * Tool tips will only generate when Max Precision and Max Scale are greater than 0
-* DQ Job
-  * /v2/runtemplate API still creates 'zombie' job
-    * Please use /v3/jobs/run
-* LinkID
-  * LinkID column selection is case sensitive; breaks may not appear if case does not match
-* Outliers
-  * Outlier Calibrate
-    * Outliers cannot retrain on-demand; to suppress existing Outliers, must rerun the DQ Job for those date(s)
-    * In-app labels do not exist for Outliers which have been subject to past, current, or future calibration; references only exist within the `outlier_boundary` table in the metastore
-
-**\[Informational Only] New Tables Introduced To Metastore In 2022.02**
-
-* `outlier_boundary`
-
-**\[Informational Only] Changes To Metastore Made In 2022.02**
-
-```
-ALTER TABLE validate_source_metadata ADD COLUMN IF NOT EXISTS validate_values_show_missing_keys boolean DEFAULT false
-ALTER TABLE opt_source ADD COLUMN IF NOT EXISTS validate_values_show_missing_keys boolean DEFAULT false
-
-ALTER TABLE opt_source ADD COLUMN IF NOT EXISTS filter_cols character varying[]
-
-ALTER TABLE user_profile ADD COLUMN IF NOT EXISTS external_user_id VARCHAR
-
-ALTER TABLE owlcheck_q ADD COLUMN IF NOT EXISTS agent_job_uuid UUID
-ALTER TABLE job_log ADD COLUMN IF NOT EXISTS job_uuid UUID
-ALTER TABLE platform_logs ADD COLUMN IF NOT EXISTS job_uuid UUID
-ALTER TABLE platform_logs DROP CONSTRAINT IF EXISTS platform_logs_job_uuid_ux
-ALTER TABLE platform_logs ADD CONSTRAINT platform_logs_job_uuid_ux UNIQUE (job_uuid)
-ALTER TABLE opt_owl ADD COLUMN IF NOT EXISTS job_uuid UUID
-```
-
-## 2022.01
+## 2022.1 (In Progress)
 
 #### Enhancements
 
@@ -207,17 +41,6 @@ ALTER TABLE opt_owl ADD COLUMN IF NOT EXISTS job_uuid UUID
 * Explorer
   * \-Addlib not yet supported for Remote Files e.g. S3
 
-#### \[Informational Only] Changes To Metastore Made In 2022.01
-
-```
-ALTER TABLE owl_rule ADD COLUMN IF NOT EXISTS run_time_limit DOUBLE PRECISION NOT NULL DEFAULT 30.0;
-ALTER TABLE owl_rule ADD COLUMN IF NOT EXISTS scoring_scheme INT4 NOT NULL DEFAULT 0;
-
-ALTER TABLE job_log ALTER COLUMN stage TYPE character varying; -- stage set to varchar because RULE logs rule_nm into stage
-ALTER TABLE job_log ALTER COLUMN log_desc TYPE character varying;
-ALTER TABLE job_log ALTER COLUMN log_hint TYPE character varying;
-```
-
 ## 2021.12
 
 #### \*Note to Standalone Collibra DQ Customer Upgrades\*: We have upgraded to Log4J 2.17, please refer to [standalone-upgrade.md](installation/standalone/standalone-upgrade.md "mention") for additional steps
@@ -229,9 +52,7 @@ ALTER TABLE job_log ALTER COLUMN log_hint TYPE character varying;
     * Run Discovery feature can be accessed from Catalog by selecting 'Data Concept' option from Actions or clicking the 'Run Discovery' button on the Rules tab of the DQ Job page. This will run a DQ Scan to detect for the semantics assigned to the selected data concept
     * Algorithm now selects best match if column matches 2 or more data classes based on % match and name distance
   * \*Tech Preview\* \[TP] Configurable rule break preview limit
-    * Global default is 6 max rows per rule
-    * Any change from 6 must be specified with previewLimit (API /v2/createrule) or in the Preview Limit field (UI)
-    * Maximum of 50 from UI
+    * Maximum of 50
   * Introducing additional Stat Rules including minPrecision, maxPrecision, minScale, maxScale
 * Behavior
   * Min and max value checks are now triggered for all numeric columns when selected, even if column contains zeroes in lookback period
@@ -240,7 +61,7 @@ ALTER TABLE job_log ALTER COLUMN log_hint TYPE character varying;
 * Catalog
   * Catalog now features intelligent ranking based on Recency, Most Scanned, User
 * Outliers
-  * [Dynamic minimum history](dq-visuals/more/outliers.md#dynamic-history-options) allows for gaps in dates when establishing lookback period, which is established by history with row count > x (specified by user)
+  * [Dynamic minimum history](dq-visuals/more.../outliers.md#dynamic-history-options) allows for gaps in dates when establishing lookback period, which is established by history with row count > x (specified by user)
   * Fixed issue where outlier data preview graphics were not displayed
   * Fixed issue where outlier results did not honor the initial scope where clause, in particular for Remote Files (S3)
 * Connections
@@ -306,7 +127,7 @@ viewsEnabled=true
   * Fixed backrun timebin to work with weeks and quarters instead of days.
 * Outliers
   * Split historical load to avoid historical query rounding up.
-  * \*Tech Preview\* \[TP] [Dynamic minimum history](dq-visuals/more/outliers.md#dynamic-history-options).
+  * \*Tech Preview\* \[TP] [Dynamic minimum history](dq-visuals/more.../outliers.md#dynamic-history-options).
 * Source
   * Fixed an issue where settings were not sticky for subsequent runs.
 * Security
@@ -515,7 +336,7 @@ _Please note updated Collibra release name methodology_
 
 #### Enhancements
 
-* \*Tech Preview\* \[TP] [Collibra Native DQ Connector](integration/dq-connector.md)
+* Collibra Native DQ Connector
   * No-code, native integration between Collibra DQ and Collibra Catalog
 * UX/UX
   * Full redesign of web user experience and standardization to match Collibra layout
@@ -601,3 +422,37 @@ _Please note updated Collibra release name methodology_
 * Shapes
   * Expanded options for numeric/alpha
   * Expanded options for length on alphanumerics
+
+## 2.13.0 (**12-20-2020)**
+
+#### Enhancements
+
+* Schema
+  * Notify of quality issue on special characters in column names
+* Shapes
+  * Shape Top-N display in profile
+* Behaviors
+  * Chart enhancements including visible Min/Max ranges on AR drill in
+  * Force pass/fail at AR item level
+* Explorer
+  * Menu driven selections on existing datasets
+  * Run remote file scans at parent folder level
+* Scheduler
+  * Allow scheduling based on dataset timezone (previously all UTC)
+* Profile
+  * Enhanced Drill in display including new AR view & Shape Top-N values
+  * Data Preview Filtergram Export of distinct column values
+* Validate Source
+  * Additional UI parameters exposed: File Type/ File Delimiter
+  * Edit support in Explorer Wizard step
+  * Grouped display on Hoot Page with aggregate statistics
+* Business Units
+  * Organize datasets by [business-units](https://docs.owl-analytics.com/observation-assignments/business-units) visible in catalog and profile views
+* Hoot Page
+  * Ability to Clone datasets from a given dataset run
+* Rules Page
+  * Allow Vertical Resize
+* Catalog
+  * Searchable filters for: rows, columns, scans, and more
+* Performance
+  * 2X faster on data loading activity based on revised caching and surrogate I
