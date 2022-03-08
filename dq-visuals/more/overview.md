@@ -1,12 +1,12 @@
 # Summary
 
-## **Click or Code**&#x20;
+## **Click or Code**
 
 Collibra DQ offers easy to use no (low) code options for getting started quickly. Alternatively, more technical users may prefer programmatic APIs.
 
 ## **Core Components**
 
-Collibra DQ offers a full DQ suite to cover the unique challenges of each dataset.&#x20;
+Collibra DQ offers a full DQ suite to cover the unique challenges of each dataset.
 
 **9 Dimensions of DQ**
 
@@ -16,13 +16,13 @@ Collibra DQ offers a full DQ suite to cover the unique challenges of each datase
 4. Shapes - Typos and Formatting Anomalies
 5. Duplicates - Fuzzy matching, Identify similar but not exact entries
 6. Outliers - Anomalous records, clustering, time-series, categorical
-7. Pattern - Classification, cross-column & parent/child anomalies&#x20;
+7. Pattern - Classification, cross-column & parent/child anomalies
 8. Record - Deltas for a given column(s)
 9. Source - Source to target reconciliation
 
 [Check out our videos to learn more](https://www.youtube.com/channel/UCKMcJ5NRiCDZQxBvSsVtTXw/videos)
 
-## **Behavior**&#x20;
+## **Behavior**
 
 **Imagine a column going null, automatic row count checks - does your data behave/look/feel the same way it has in the past.**
 
@@ -30,11 +30,11 @@ Collibra DQ offers a full DQ suite to cover the unique challenges of each datase
 
 ## **Rules**
 
-**Assures only values compliant with your data rules are allowed within a data object.**&#x20;
+**Assures only values compliant with your data rules are allowed within a data object.**
 
 ![](../../.gitbook/assets/rules.jpg)
 
-## **Schema**&#x20;
+## **Schema**
 
 **Columns add or dropped.**
 
@@ -44,9 +44,9 @@ Collibra DQ offers a full DQ suite to cover the unique challenges of each datase
 
 **Infrequent formats.**
 
-![](<../../.gitbook/assets/shapes (1) (1).jpg>)
+![](<../../.gitbook/assets/shapes (1).jpg>)
 
-## Dupes&#x20;
+## Dupes
 
 **Fuzzy matching to identify entries that have been added multiple times with similar but not exact detail.**
 
@@ -60,7 +60,7 @@ Collibra DQ offers a full DQ suite to cover the unique challenges of each datase
 
 ## **Pattern**
 
-**Recognizing relevant patterns between data examples.**&#x20;
+**Recognizing relevant patterns between data examples.**
 
 ![](../../.gitbook/assets/pattern.jpg)
 
@@ -68,11 +68,11 @@ Collibra DQ offers a full DQ suite to cover the unique challenges of each datase
 
 **Validating source to target accuracy.**
 
-![](<../../.gitbook/assets/source (1).jpg>)
+![](../../.gitbook/assets/source.jpg)
 
 ## **Record**
 
-**Deltas for a given column.**&#x20;
+**Deltas for a given column.**
 
 ![](../../.gitbook/assets/record.jpg)
 

@@ -6,13 +6,13 @@ Best practice is to use get-exports and the owl\_rule table post 2021.09 release
 
 ### Steps
 
-1. Find your dataset&#x20;
+1. Find your dataset
 2. Pass your table to the following api call - [http://\<url>/v2/get-rules-export?dataset=public.transit\_6](http://localhost:9000/v2/get-export?dataset=public.transit\_6)
 3. Run import on the desired environment, passing the output of the previous statement to the body of the request - [http://\<url>/v2/run-import](http://35.202.14.58/v2/run-import)
 
 {% embed url="https://youtu.be/puXZwKi-CmM" %}
 
-The following function needs to be declared in the postgres metastore before this can run.&#x20;
+The following function needs to be declared in the postgres metastore before this can run.
 
 ```
 CREATE OR REPLACE FUNCTION public.dump(p_schema text, p_table text, p_where text)
@@ -91,20 +91,17 @@ AS $function$
  END
  $function$
 ;
-
 ```
 
 ## From Swagger
 
 Navigate to the API page
 
-&#x20;
-
 ![](<../../.gitbook/assets/image (65).png>)
 
 Find the Rest APIs link
 
-![](<../../.gitbook/assets/image (59).png>)
+![](<../../.gitbook/assets/image (59) (1).png>)
 
 Drill-in to the controller-scala section
 
@@ -118,7 +115,7 @@ Click Try it out and enter a dataset name, Execute to run the call
 
 ![](<../../.gitbook/assets/image (57).png>)
 
-Copy the response body&#x20;
+Copy the response body
 
 ![](<../../.gitbook/assets/image (66).png>)
 
@@ -126,11 +123,11 @@ Navigate to the controller-catalog section
 
 ![](<../../.gitbook/assets/image (64).png>)
 
-Find run-import and Try it out&#x20;
+Find run-import and Try it out
 
 ![](<../../.gitbook/assets/image (62).png>)
 
-Make any edits and paste in the response body from the previous step&#x20;
+Make any edits and paste in the response body from the previous step
 
 ![](<../../.gitbook/assets/image (58).png>)
 

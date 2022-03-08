@@ -2,11 +2,11 @@
 
 ![](../../.gitbook/assets/APIs.gif)
 
-All REST APIs are available inside the application under admin section.  The APIs can be used against the application in live working mode, which is preferred over documentation of APIs because it means the API works and was tested at compile time versus documentation time.
+All REST APIs are available inside the application under admin section. The APIs can be used against the application in live working mode, which is preferred over documentation of APIs because it means the API works and was tested at compile time versus documentation time.
 
 ### Product API
 
-The product API is for end-users who want to interact with the official and supported API.  You can also generate a client side SDK from the API with 4 steps below.
+The product API is for end-users who want to interact with the official and supported API. You can also generate a client side SDK from the API with 4 steps below.
 
 ![](../../.gitbook/assets/screen-shot-2021-08-02-at-5.25.08-pm.png)
 
@@ -36,7 +36,7 @@ findings = /v3/jobs/{jobId}/findings
 
 1. Go to [https://editor.swagger.io/](https://editor.swagger.io)
 2. Click File Import URL
-3. Paste a URL that looks like this  [https://\<host>/v2/api-docs?group=Product%20API](https://146.148.84.143/v2/api-docs?group=Product%20API)
+3. Paste a URL that looks like this [https://\<host>/v2/api-docs?group=Product%20API](https://146.148.84.143/v2/api-docs?group=Product%20API)
 4. Click generate client (python, java, scala, C#)
 
 ![](../../.gitbook/assets/screen-shot-2021-08-03-at-9.05.13-am.png)
@@ -59,7 +59,7 @@ status = get_job_findings(dataset, run_date)
 
 ### Dataset Definition
 
-The JSON for the full dataset definition.  It can be more terse to send in the cmdline string of just the variables you use for your DQ Job. &#x20;
+The JSON for the full dataset definition. It can be more terse to send in the cmdline string of just the variables you use for your DQ Job.
 
 ```bash
 -df "yyyy/MM/dd" -owluser <user> -numexecutors 1 -executormemory 1g \
@@ -435,9 +435,7 @@ The JSON for the full dataset definition.  It can be more terse to send in the c
   }
 ```
 
-
-
-![](<../../.gitbook/assets/image (47).png>)
+![](<../../.gitbook/assets/image (47) (1).png>)
 
 ### JWT Token For Auth
 
@@ -471,12 +469,12 @@ curl --location --request POST 'http://localhost:9000/auth/signin' \
 
 Alternatively, you can use the rest endpoints directly. This example shows how it can be done with Python.
 
-1. Create a dataset def&#x20;
-   1. using the UI (Explorer) or&#x20;
+1. Create a dataset def
+   1. using the UI (Explorer) or
    2. using the dataset-def-api (https://\<ip>/swagger-ui.html#/dataset-def-api)
-2. Confirm your Python environment has the appropriate modules and imports&#x20;
+2. Confirm your Python environment has the appropriate modules and imports
 3. Fill-in the variables and customize to your preference
-   1. url, user and pass&#x20;
+   1. url, user and pass
    2. dataset, runDate, and agentName
 
 ```python
@@ -538,7 +536,7 @@ response = requests.get(
 print(response.json())
 ```
 
-This assumes you have created a dataset definition using the UI or from the template.&#x20;
+This assumes you have created a dataset definition using the UI or from the template.
 
 #### Command Line instead of JSON dataset def
 
@@ -566,7 +564,7 @@ jobId = str(response.json()['jobId'])
 
 ### Get the Status
 
-Using the jobId returned from the job submission, you can check the status.  In the example above, there is an interval to wait for the job to complete. You can create your own logic and orchestrate more precisely.
+Using the jobId returned from the job submission, you can check the status. In the example above, there is an interval to wait for the job to complete. You can create your own logic and orchestrate more precisely.
 
 ```python
 response = requests.get(
@@ -577,7 +575,7 @@ response = requests.get(
 
 ### Get the Results
 
-Using the same jobId returned from the job submission, you can check the results.  You will get a detailed json object with all the capabilities and detections in one payload.  This is where you would decision, based on your organization and process.
+Using the same jobId returned from the job submission, you can check the results. You will get a detailed json object with all the capabilities and detections in one payload. This is where you would decision, based on your organization and process.
 
 ```python
 response = requests.get(
@@ -624,13 +622,12 @@ for stat in range(100):
 
 # Results
 response = requests.get(url = owl + '/v3/jobs/'+jobId+'/findings', headers=owl_header,  verify=False)
-
 ```
 
 ### Internal API
 
-Collibra DQ also exposes the internal API so that all potential operations are available.  The caveat is that these calls may change over time or expose underlying functionality.
+Collibra DQ also exposes the internal API so that all potential operations are available. The caveat is that these calls may change over time or expose underlying functionality.
 
-![](<../../.gitbook/assets/image (44).png>)
+![](<../../.gitbook/assets/image (44) (1).png>)
 
-![](<../../.gitbook/assets/image (47).png>)
+![](<../../.gitbook/assets/image (47) (1).png>)

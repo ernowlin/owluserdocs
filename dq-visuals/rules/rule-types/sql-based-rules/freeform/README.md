@@ -21,8 +21,8 @@ All built-in spark functions are available to use. ([https://spark.apache.org/do
 
 ### Cross-Connection Libraries
 
-![](<../../../../../.gitbook/assets/image (100).png>)
+![](<../../../../../.gitbook/assets/image (102) (1).png>)
 
 {% hint style="warning" %}
-When applying cross-connection rules please use the -addlib to submit the job with the appropriate jar files.  In this example, a secondary set of jars is added through the Explorer. These files are located in the /opt/owl/drivers/mysql directory.
+When applying cross-connection rules please use the -addlib to submit the job with the appropriate jar files. In this example, a secondary set of jars is added through the Explorer. These files are located in the /opt/owl/drivers/mysql directory.
 {% endhint %}

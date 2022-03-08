@@ -8,11 +8,9 @@ Search for a particular dataset and run to generate an exportable dataset profil
 
 ![](<../.gitbook/assets/image (90).png>)
 
-### Search for a dataset&#x20;
+### Search for a dataset
 
-![](<../.gitbook/assets/image (92).png>)
-
-
+![](<../.gitbook/assets/image (99).png>)
 
 ### View or Export the results
 

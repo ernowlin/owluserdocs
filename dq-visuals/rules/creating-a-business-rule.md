@@ -2,7 +2,7 @@
 
 ![](../../.gitbook/assets/rule\_.gif)
 
-Navigate to the Rule page as shown in the screenshot below. By selecting the  icon on the top left corner under the Owl icon and select “Rule”. You will see a page as shown below.&#x20;
+Navigate to the Rule page as shown in the screenshot below. By selecting the icon on the top left corner under the Owl icon and select “Rule”. You will see a page as shown below.
 
 ![](../../.gitbook/assets/screen-shot-2019-12-24-at-9.08.27-am.png)
 
@@ -10,25 +10,25 @@ You can get to rules from the hoot page by clicking on Rules under the dataset n
 
 ![](../../.gitbook/assets/screen-shot-2019-12-24-at-9.07.59-am.png)
 
-## &#x20;Instructions                                               &#x20;
+## Instructions
 
 1. Search for a dataset or navigate to the rule page using the hot link
    * Rules can only be applied to datasets once a DQ job has been run
-2. Click Load&#x20;
+2. Click Load
    * This will populate the schema and any previously saved rules
-3. Select a rule type&#x20;
+3. Select a rule type
    * Using the dropdown next to the Type label
-4. Select a rule name&#x20;
+4. Select a rule name
    * If applying a preset rule, the rule name will be auto populated
 5. Input a rule condition
    * Only if applying a simple, freeform sql, stat, or native rule type.
-   * Provide a value in the condition/sql/function input field.&#x20;
+   * Provide a value in the condition/sql/function input field.
    * Keystroke Ctrl+Space will provide IntelliSense
 6. Select Low, Medium or High for scoring severity (optional).
 7. Add any custom DQ dimensions for reporting (optional).
 8. Click submit to save the rule.
 
-![Search for a dataset and click Select next to the Type label](<../../.gitbook/assets/image (18) (1) (5).png>)
+![Search for a dataset and click Select next to the Type label](<../../.gitbook/assets/image (18) (5).png>)
 
 ‌The rule will be measured on the next DQ job for that particular dataset.‌
 
@@ -74,6 +74,3 @@ Rule scores will appear under the Rule tab on the Hoot page. You can also see mo
 ![Hoot page rule results](../../.gitbook/assets/screen-shot-2019-09-04-at-1.29.54-pm.png)
 
 ![Rule page rule results (bottom panel)](../../.gitbook/assets/screen-shot-2019-09-04-at-1.30.07-pm.png)
-
-
-

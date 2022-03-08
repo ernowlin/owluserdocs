@@ -6,7 +6,7 @@ description: Template for Job Control
 
 ### Cron / Autosys / Control M / Oozie
 
-It is common for organization to need to run jobs on a schedule.  Below are a few shell tricks to get a date from bash and use an OwlCheck with template variables.
+It is common for organization to need to run jobs on a schedule. Below are a few shell tricks to get a date from bash and use an OwlCheck with template variables.
 
 Kinit and get run\_date from shell or job control variable, pass it into Owl using $run\_date
 
@@ -38,7 +38,7 @@ echo "password" | kinit  userabc@CW.COM
 
 ### Template
 
-You can also use -template to use Owl as a service hook and remove the need to pass in almost anything.  In this case Owl will look up the template automatically from either a previous run or if you've saved a template, and use these variables.  Any variable at the cmdline will override and win/replace.  This is a great way to remove connection and other information from being hard coded into the job control framework and allows edit ability from Owl Webapp. &#x20;
+You can also use -template to use Owl as a service hook and remove the need to pass in almost anything. In this case Owl will look up the template automatically from either a previous run or if you've saved a template, and use these variables. Any variable at the cmdline will override and win/replace. This is a great way to remove connection and other information from being hard coded into the job control framework and allows edit ability from Owl Webapp.
 
 ```bash
 %sh
@@ -47,11 +47,11 @@ You can also use -template to use Owl as a service hook and remove the need to p
 
 ### Owl Scheduler - Built In
 
-A quick option is to use Owl's built in scheduler. Owl will automatically substitute the runtime variables like ${rd} into the job.  This also gives you control to edit the OwlCheck.&#x20;
+A quick option is to use Owl's built in scheduler. Owl will automatically substitute the runtime variables like ${rd} into the job. This also gives you control to edit the OwlCheck.
 
 ![](../../.gitbook/assets/owl-schedule.png)
 
-The schedule is based on the OwlCheck Template.  This way the runtime variables are replaced in each run.  Notice the ${rd} below.&#x20;
+The schedule is based on the OwlCheck Template. This way the runtime variables are replaced in each run. Notice the ${rd} below.
 
 ![](../../.gitbook/assets/owl-template-schedule.png)
 
@@ -59,4 +59,4 @@ The schedule is based on the OwlCheck Template.  This way the runtime variables 
 
 Under the jobs dashboard you can see an overview schedule with all running jobs and their status.
 
-![](../../.gitbook/assets/owl-scheduler.png)
+![](<../../.gitbook/assets/owl-scheduler (1).png>)

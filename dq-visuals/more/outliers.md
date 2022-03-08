@@ -8,7 +8,7 @@ This is an advanced opt-in feature
 
 Kodak Coin! In 2018 Kodak announced themselves as Kodak coin and witnessed a steep change in their stock price. Owl automatically captured this event and provided the ability to drill into the item.
 
-![](<../../.gitbook/assets/owl-outlier-numerical (1).png>)
+![](../../.gitbook/assets/owl-outlier-numerical.png)
 
 ### Complex outliers made Simple
 
@@ -36,7 +36,7 @@ Categorical Outliers are much different than numerical outliers and require sepa
 
 Owl will automatically learn the normal behavior of your String and Categorical attributes such as STOCK,OPTION,FUTURE or state codes such as MD,NC,D.C. When a strange pattern occurs (e.g NYC instead of NY), Owl will show this as a categorical outlier.
 
-Owl is able to detect Categorical Outliers both with and without taking time into account. If a time dimension is not provided, Owl will calculate the distribution of categorical values within the available data, and identify the values that fall into the most infrequent percentile (configurable). &#x20;
+Owl is able to detect Categorical Outliers both with and without taking time into account. If a time dimension is not provided, Owl will calculate the distribution of categorical values within the available data, and identify the values that fall into the most infrequent percentile (configurable).
 
 ![Categorical Outliers without Time](../../.gitbook/assets/screen-shot-2020-07-07-at-9.43.19-pm.png)
 
@@ -48,7 +48,7 @@ If a time dimension is provided, Owl will first identify infrequent categories i
 
 Although Owl uses different techniques to detect Numerical and Categorical Outliers, the training process is very similar.
 
-At a minimum,  Owl requires historical data that can be used as the training dataset. If no other input is provided, Owl will calculate the normal range for each selected column and look for numerical and categorical outliers within the training dataset without any further context. The output will essentially consist of infrequent values that fall outside the normal range fo each column.
+At a minimum, Owl requires historical data that can be used as the training dataset. If no other input is provided, Owl will calculate the normal range for each selected column and look for numerical and categorical outliers within the training dataset without any further context. The output will essentially consist of infrequent values that fall outside the normal range fo each column.
 
 ![](../../.gitbook/assets/screen-shot-2020-07-07-at-8.17.02-pm.png)
 
@@ -56,19 +56,19 @@ To obtain more targeted results, the Owl requires a "key" column. This column wi
 
 ![](../../.gitbook/assets/screen-shot-2020-07-07-at-8.18.40-pm.png)
 
-Another input that can make outlier detection more precise is a data/time column and a look back period.   This enables a more precise calculation of the normal range for a column and in the case of numerical outliers, makes it possible for Owl to establish a trend. Given a time column and key column, Owl will not only identify numerical outliers, it will plot the historical trend of the column value trailing the outlier.&#x20;
+Another input that can make outlier detection more precise is a data/time column and a look back period. This enables a more precise calculation of the normal range for a column and in the case of numerical outliers, makes it possible for Owl to establish a trend. Given a time column and key column, Owl will not only identify numerical outliers, it will plot the historical trend of the column value trailing the outlier.
 
 ![](../../.gitbook/assets/screen-shot-2020-07-07-at-8.19.14-pm.png)
 
-Owl also allows further refinement of the time dimension by defining time bins and processing intervals. By default, when given a time column, Owl will bin the data into days and process the data in daily interval. However, if the data is high frequency, day bins and day intervals might be too coarse grained. In this case,  it might make more sense to group the data into bins on the minute and process the data in hour or minute intervals. The same concept applies in the other direction. What if the data is already aggregated on the month or year? In this case, it makes more sense to set the bins and intervals to month by month or month by year.&#x20;
+Owl also allows further refinement of the time dimension by defining time bins and processing intervals. By default, when given a time column, Owl will bin the data into days and process the data in daily interval. However, if the data is high frequency, day bins and day intervals might be too coarse grained. In this case, it might make more sense to group the data into bins on the minute and process the data in hour or minute intervals. The same concept applies in the other direction. What if the data is already aggregated on the month or year? In this case, it makes more sense to set the bins and intervals to month by month or month by year.
 
 ![](../../.gitbook/assets/screen-shot-2020-07-07-at-8.20.18-pm.png)
 
-Some data may be measured in really small or large units or contain a lot of noise. In this case, Owl allows  the user to adjust the sensitivity level and unit of measure for outlier detection on each column. Click the advanced tab to make these adjustments.
+Some data may be measured in really small or large units or contain a lot of noise. In this case, Owl allows the user to adjust the sensitivity level and unit of measure for outlier detection on each column. Click the advanced tab to make these adjustments.
 
 ![](../../.gitbook/assets/screen-shot-2020-07-07-at-8.20.33-pm.png)
 
-Once Outlier detection is complete for a given run, it's time to tune the scoring of the model. Owl allows the user to label any outlier findings as legitimate, thus preventing that outlier from being detected in the future or effecting the score of the current run. In addition, it is possible to define the significance of an outlier finding to a given dataset. This can be accomplished by setting how many quality points should be deducted for each outlier finding on any given run on that dataset.  It is also possibly to adjust sensitivity and unit of measure of future runs by clicking on the small gear icon on the far left of the screen.
+Once Outlier detection is complete for a given run, it's time to tune the scoring of the model. Owl allows the user to label any outlier findings as legitimate, thus preventing that outlier from being detected in the future or effecting the score of the current run. In addition, it is possible to define the significance of an outlier finding to a given dataset. This can be accomplished by setting how many quality points should be deducted for each outlier finding on any given run on that dataset. It is also possibly to adjust sensitivity and unit of measure of future runs by clicking on the small gear icon on the far left of the screen.
 
 ![](../../.gitbook/assets/screen-shot-2020-07-07-at-8.38.05-pm.png)
 
@@ -143,10 +143,10 @@ The following command shows an example of running monthly OwlDQ Checks, from the
 
 The `-br 12` option ran 12 monthly OwlChecks for every month of 2016. The figure below shows OwlCheck Hoot page for the lastest run of dataset `iowa_liquor_sales_by_store_numbers_monthly`. The Hoot page shows that OwlCheck identified 24 Outliers among 4.8k rows of unique date x store\_number for month of December, 2016.
 
-![Monthly OwlCheck for 2016-12-01](<../../.gitbook/assets/image (39) (1).png>)
+![Monthly OwlCheck for 2016-12-01](<../../.gitbook/assets/image (39).png>)
 
 Since the original data quality issue that inspired us to run OwlCheck is from May 2016, we can navigate to specific run date 2016-05-01 by click on the line graph on top. Then searching for store #2508 on the **key** column shows outlier detected for **column** `address`. Press \[+] for that row to see contextual details about this detected value.
 
-![Monthly OwlCheck for 2016-05-01. The drill-in outlier details for store #2508 is shown](<../../.gitbook/assets/image (36) (1).png>)
+![Monthly OwlCheck for 2016-05-01. The drill-in outlier details for store #2508 is shown](<../../.gitbook/assets/image (36).png>)
 
 We can verify that OwlCheck identified the outlier of interest among other 60 data quality issues. Using OwlCheck, you can identify issues at scale for past data (using backrun), current (using simple OwlCheck), and future (using scheduled jobs).

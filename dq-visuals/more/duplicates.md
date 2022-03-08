@@ -4,7 +4,7 @@
 This is an advanced opt-in feature
 {% endhint %}
 
-## General Ledger.  Accounting use-case
+## General Ledger. Accounting use-case
 
 {% embed url="https://owl-analytics.com/general-ledger" %}
 

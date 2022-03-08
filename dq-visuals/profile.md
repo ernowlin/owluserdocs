@@ -5,7 +5,7 @@ description: Create profiles based on a table, view, or file
 # Profile (automatic)
 
 {% hint style="info" %}
-Users have the option to scan the entire dataset or users can apply custom filtering to select the depth (row filtering) and width (columns).&#x20;
+Users have the option to scan the entire dataset or users can apply custom filtering to select the depth (row filtering) and width (columns).
 {% endhint %}
 
 ### Select the Scope
@@ -16,7 +16,7 @@ See [selecting the scope section](https://dq-docs.collibra.com/dq-visuals/explor
 
 ### Select Options (or leave defaults)
 
-![](<../.gitbook/assets/profile\_options (1).gif>)
+![](../.gitbook/assets/profile\_options.gif)
 
 ### Save / Run
 
@@ -24,13 +24,13 @@ See [selecting the scope section](https://dq-docs.collibra.com/dq-visuals/explor
 
 ### View the Results
 
-![](../.gitbook/assets/profile\_results.gif)
+![](<../.gitbook/assets/profile\_results (1).gif>)
 
 ## Automatically Profile
 
 Owl automatically profiles datasets over time to enable drill-in for detailed insights an automated data quality. A profile is just the first step towards an amazing amount of auto discovery. Visualize segments of the dataset and how how the dataset is changing over time.
 
-Collibra DQ offers click or code options to run profiling.&#x20;
+Collibra DQ offers click or code options to run profiling.
 
 ## Dataset Profile
 
@@ -40,31 +40,31 @@ Owl creates a detailed profile of each dataset under management. This profile wi
 
 ### Pushdown Profiling
 
-Collibra DQ can compute the Profile of a dataset either via Spark (default) or the Data Warehouse (Profile Pushdown) where the data lives as the engine. When the Profile is computed using the datasource DBMS the user can choose two levels of pushdown:&#x20;
+Collibra DQ can compute the Profile of a dataset either via Spark (default) or the Data Warehouse (Profile Pushdown) where the data lives as the engine. When the Profile is computed using the datasource DBMS the user can choose two levels of pushdown:
 
-* Full Profile - Perform full profile calculation except for TopN&#x20;
+* Full Profile - Perform full profile calculation except for TopN
 * Count - Only perform row and column counts
 
-![](<../.gitbook/assets/pushdown (1).gif>)
+![](../.gitbook/assets/pushdown.gif)
 
 {% hint style="info" %}
 The following DBMS systems are supported for "Profile Pushdown"
 
-* Impala&#x20;
-* Hive&#x20;
-* Snowflake&#x20;
-* Presto&#x20;
-* Teradata&#x20;
-* SQL Server&#x20;
-* Postgres&#x20;
-* Redshift&#x20;
-* Mysql&#x20;
-* Oracle&#x20;
-* DB2&#x20;
+* Impala
+* Hive
+* Snowflake
+* Presto
+* Teradata
+* SQL Server
+* Postgres
+* Redshift
+* Mysql
+* Oracle
+* DB2
 {% endhint %}
 
 {% hint style="danger" %}
-Pushdown and parallel JDBC cannot be used together.  If you are using pushdown, do not select the parallel JDBC option.
+Pushdown and parallel JDBC cannot be used together. If you are using pushdown, do not select the parallel JDBC option.
 {% endhint %}
 
 ![](../.gitbook/assets/screen-shot-2020-05-07-at-7.28.25-pm.png)
@@ -73,7 +73,7 @@ Pushdown and parallel JDBC cannot be used together.  If you are using pushdown, 
 
 ![](../.gitbook/assets/screen-shot-2020-05-07-at-7.33.16-pm.png)
 
-By gathering a variety of different statistics, Owl's profile can provide a great deal of insight about the dataset. &#x20;
+By gathering a variety of different statistics, Owl's profile can provide a great deal of insight about the dataset.
 
 {% hint style="info" %}
 Profile includes a range of statistics
@@ -93,7 +93,7 @@ Profile includes a range of statistics
 
 ## Sensitive Data Detection (Semantic)
 
-Owl can automatically identify any types of common PII columns.&#x20;
+Owl can automatically identify any types of common PII columns.
 
 {% hint style="info" %}
 Owl is able to detect the following types of PII
@@ -132,4 +132,3 @@ Often the first step in a data science project is to segment the data. Owl autom
 After profiling the data, for those users with appropriate rights, Owl provides a glimpse of the dataset. The Data preview tab also provides a some basic insights such as highlights of Data Shape issues and Outliers (if enabled), and Column Filtergram visualization.
 
 ![](../.gitbook/assets/screen-shot-2020-05-07-at-7.57.29-pm.png)
-

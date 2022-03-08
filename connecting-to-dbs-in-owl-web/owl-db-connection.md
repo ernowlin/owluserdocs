@@ -1,6 +1,6 @@
 # Add a Connection
 
-![](../.gitbook/assets/connections.gif)
+![](<../.gitbook/assets/connections (1).gif>)
 
 ## How to Add DB Connection via UI
 
@@ -37,8 +37,3 @@ Fig 6 is what the new connection setting should look like. Make sure to provide 
 {% hint style="info" %}
 Make sure to [Link DB Connection](https://docs.owl-analytics.com/installation/agent-configuration#how-to-link-db-connection-to-agent-via-ui) to a DQ Agent, if required
 {% endhint %}
-
-
-
-
-

@@ -10,7 +10,7 @@ description: A no-code option to get started quickly and onboard a dataset.
 
 This page can be accessed by clicked the Explorer option (the compass icon).
 
-![](<../../.gitbook/assets/image (88) (1) (1).png>)
+![](<../../.gitbook/assets/image (87) (1).png>)
 
 {% hint style="info" %}
 All UI functionality has corresponding API endpoints to define, run, and get results programmatically.
@@ -26,15 +26,15 @@ All UI functionality has corresponding API endpoints to define, run, and get res
 
 #### **View Data is an interactive option to run queries and explore the data**
 
-#### The bar chart icon will take you to a profile page of the dataset created prior to Explorer 2&#x20;
+#### The bar chart icon will take you to a profile page of the dataset created prior to Explorer 2
 
 ## Select The Scope and Define a Query
 
-![](<../../.gitbook/assets/image (93) (1) (1).png>)
+![](<../../.gitbook/assets/image (98) (1) (1).png>)
 
-#### Pick Date Column if your dataset contains an appropriate time filter&#x20;
+#### Pick Date Column if your dataset contains an appropriate time filter
 
-#### Click Build Model -> to Save and Continue&#x20;
+#### Click Build Model -> to Save and Continue
 
 ![](<../../.gitbook/assets/image (99) (1) (1) (1).png>)
 
@@ -44,7 +44,7 @@ All UI functionality has corresponding API endpoints to define, run, and get res
 [owlcheck-transform.md](../../dq-job-examples/owlcheck/owlcheck-transform.md)
 {% endcontent-ref %}
 
-#### Click Build Model -> to Save and Continue&#x20;
+#### Click Build Model -> to Save and Continue
 
 ## Profile
 
@@ -56,13 +56,13 @@ All UI functionality has corresponding API endpoints to define, run, and get res
 
 Toggle on Pattern to enable this layer
 
-Click +Add to define a group and series of columns&#x20;
+Click +Add to define a group and series of columns
 
 {% content-ref url="pattern-mining.md" %}
 [pattern-mining.md](pattern-mining.md)
 {% endcontent-ref %}
 
-#### Click Save to and Click Outlier to Continue&#x20;
+#### Click Save to and Click Outlier to Continue
 
 ## Outlier (advanced / optional)
 
@@ -70,7 +70,7 @@ Click +Add to define a group and series of columns&#x20;
 [outliers.md](outliers.md)
 {% endcontent-ref %}
 
-#### Click Save to and Click Dupe to Continue&#x20;
+#### Click Save to and Click Dupe to Continue
 
 ## Dupe (advanced / optional)
 
@@ -78,7 +78,7 @@ Click +Add to define a group and series of columns&#x20;
 [duplicates.md](duplicates.md)
 {% endcontent-ref %}
 
-#### Click Save to and Click Source to Continue&#x20;
+#### Click Save to and Click Source to Continue
 
 ## Source (advanced / optional)
 
@@ -86,13 +86,13 @@ Navigate to the source dataset
 
 Click Preview to interlace the columns
 
-Manually map the columns by dragging left to right or deselect columns&#x20;
+Manually map the columns by dragging left to right or deselect columns
 
 {% content-ref url="validate-source.md" %}
 [validate-source.md](validate-source.md)
 {% endcontent-ref %}
 
-#### Click Save to and Click Save/Run to Continue&#x20;
+#### Click Save to and Click Save/Run to Continue
 
 ## Run
 
@@ -114,4 +114,4 @@ Manually map the columns by dragging left to right or deselect columns&#x20;
 
 _Admin Console-->Remote Agent--> (Link icon on far right)-->Map connections to this agent and then reload the explorer page_
 
-## ****
+## \*\*\*\*
