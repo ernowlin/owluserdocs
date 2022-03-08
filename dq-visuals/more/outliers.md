@@ -150,29 +150,3 @@ Since the original data quality issue that inspired us to run OwlCheck is from M
 ![Monthly OwlCheck for 2016-05-01. The drill-in outlier details for store #2508 is shown](<../../.gitbook/assets/image (36).png>)
 
 We can verify that OwlCheck identified the outlier of interest among other 60 data quality issues. Using OwlCheck, you can identify issues at scale for past data (using backrun), current (using simple OwlCheck), and future (using scheduled jobs).
-
-
-
-## \*Tech Preview \[TP] Outlier Calibration\*
-
-**Use Case**
-
-When A) using Outliers and B) faced with an event such as a stock split or currency devaluation, it may be helpful to calibrate the outlier boundaries within Collibra DQ to avoid surfacing non-issues for a period of time.
-
-**Example Step #1: No Action Necessary**
-
-In the video below, Collibra DQ Outliers were set to a high sensitivity. The USDEUR conversion rate on January 6th in the sample dataset may be considered reasonable and the user can 1) rerun the dataset with lower sensitivity or 2) downtrain the unintended Outlier anomalies.
-
-![](../../.gitbook/assets/outliercalibratenavigate.gif)
-
-**Example Step #2: Macro Event That User Understands e.g. Currency Devaluation or Stock Split**
-
-When examining the outlier on January 11th, the dataset depicts that the USDEUR conversion shot up to 3.14, which in our hypothetical example coincides with an explainable macroeconomic phenomenon. As such, the user may not want Outlier anomalies to trigger for a period of time.
-
-![](../../.gitbook/assets/outliercalibratenextdatapoint.gif)
-
-**Example Step #3: User Wants To Suppress Outliers**
-
-Once Outlier Calibration is enabled, a user can select the boundaries and duration of the 'suppression' period. And once the DQ Job is re-run for the selected date(s), the outliers will not trigger an anomaly / downscore.
-
-![](../../.gitbook/assets/outliercalibratemodal.gif)
