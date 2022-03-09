@@ -4,11 +4,105 @@ description: Promoting and moving datasets across environments
 
 # Export and Import API
 
-{% hint style="info" %}
+## Pre-requirements
+
+{% hint style="warning" %}
 The database needs the [stored procedure](export-and-import-api.md#stored-procedure) (function) defined in order to use the Export/Import API.&#x20;
 {% endhint %}
 
-### Step 1 - Get-Exports
+### V2 - Stable - available from 2022.02 release
+
+#### Step 1 - Export content from source schema
+
+{% swagger method="get" path="/db-export" baseUrl="https://<collibra-dq-url>/v2" summary="Export tables from database" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="query" name="datasets" required="true" type="List of strings" %}
+List of datasets to export. You need to give at least one 
+
+**valid**
+
+ dataset name into the list
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="schema" type="String" %}
+Name of the schema/tenant where you want to perform the export.
+
+\
+
+
+
+
+_Default value: **public**_
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" type="String" name="tables" %}
+List of tables to export on the given schema & dataset(s).
+
+\
+
+
+If you leave it empty, the following tables will be exported altogether: 
+
+_**rule_repo, owl_catalog, owl_rule, alert_cond, owl_check_repo, job_schedule, alert_output**_
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="List of SQL - INSERT statements as JSON list" %}
+```javascript
+{
+    // Response
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="400: Bad Request" description="Any error happened with error message" %}
+```javascript
+{
+    // Response
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+#### Step 1 - Import content
+
+{% swagger method="post" path="/db-import" baseUrl="https://<collibra-dq-url>/v2" summary="Import content into the target tenant" %}
+{% swagger-description %}
+The target schema/tenant name will be part of the input SQL INSERT statements.
+
+The import is rung on non-transactional mode, any error happens in the middle, the saved items will be left in the database as is.
+{% endswagger-description %}
+
+{% swagger-parameter in="body" type="" required="true" %}
+List of SQL INSERT which will be imported into the target Collibra DQ metastore
+
+Format: JSON string list
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="When the import was successful" %}
+```javascript
+{
+    // Response
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="400: Bad Request" description="Any error happened with error message" %}
+```javascript
+{
+    // Response
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+
+
+#### We suggest using db-export, but we will not remove get-exports.  We do expect to consolidate the newer logic behind the method.
+
+#### Step 1 - Get-Exports
 
 Best practice is to use the get-exports endpoint for most scenarios.  You can pass in several dataset names and several tables at once. This endpoint will create a JSON payload
 
@@ -30,13 +124,13 @@ http://<url>/v2/get-exports?dataset=public.dataset_scan_2,public.dataset_scan_1&
 
 This is located under controller-scala (internal API)
 
-![](<../../.gitbook/assets/image (132).png>)
+![](<../../.gitbook/assets/image (133).png>)
 
 #### Click Try it out to input the details
 
 ![](<../../.gitbook/assets/image (58).png>)
 
-### Step 2 - Run-Import
+#### Step 2 - Run-Import
 
 {% hint style="info" %}
 You will want to perform a find/replace on the import payload to check for differences in connections, agents, spark and environment configurations.  Migrating to different environments typically requires the payload to be modified.
@@ -52,17 +146,17 @@ http://<url>/v2/run-import
 
 This is under controller-catalog
 
-![](<../../.gitbook/assets/image (124).png>)
+![](<../../.gitbook/assets/image (125).png>)
 
-![](<../../.gitbook/assets/image (114).png>)
+![](<../../.gitbook/assets/image (115).png>)
 
 This would be the body of the POST.
 
 ![](<../../.gitbook/assets/Screen Shot 2021-04-26 at 10.13.18 AM.png>)
 
-## Stored Procedure
+## Requirement - Stored Procedure
 
-The following function needs to be created in the Owl metastore before this can run.&#x20;
+The following function needs to be created in the Collibra DQ metastore, before this can run.&#x20;
 
 ```
 CREATE OR REPLACE FUNCTION public.dump(p_schema text, p_table text, p_where text)
@@ -146,5 +240,6 @@ AS $function$
 This assignment needs added.
 
 ```
-alter function dump(text, text, text) owner to ownername;
+alter function dump(text, text, text) owner to <ownername>;
 ```
+

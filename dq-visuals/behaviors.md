@@ -87,3 +87,15 @@ In adaptive mode Owl automatically generates a DQ item score based on the egregi
 ![](../.gitbook/assets/owl-behavior-score.png)
 
 The score can range from 0-30.  This ties to the percent change and Z-Score.  In cases when the Z-Score ranges from 0.0 - 6.0.
+
+## FAQ
+
+**Q: Which Collibra DQ API contains all behavioral checks (passing and breaking)?**
+
+* /v2/getdqchecksdetails
+
+**Q: How is 'Mean' defined in the Behavioral Modal chart?**
+
+* Mean represents the average of behavioral lookback window e.g. if today is the 11th of the month, and the bhlb is set at 10, the mean will be the average of the 1st to the 10th, and the statistic on the 11th day will represent the change to that mean.
+* Also of note: the mean only includes passing rules, not failed runs
+

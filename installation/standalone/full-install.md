@@ -64,12 +64,10 @@ First set some variables for `OWL_BASE` (where to install DQ. In this tutorial, 
 
 export OWL_BASE=$(pwd)
 export OWL_METASTORE_USER=postgres
-export OWL_METASTORE_PASS=password
+# minimum complexity recommended (18 length, upper, lower, number, symbol)
+# example below
+export OWL_METASTORE_PASS=H55Mt5EbXh1a%$aiX6
 ```
-
-{% hint style="info" %}
-The default username and password for Postgres server that will be installed as part of the tutorial is `postgres`/`password` (the installation script takes these default values). If you want to change these values, you must install Postgres separately and configure Postgres permissions independently. If so, skip step #2 and perform step #3 instead.
-{% endhint %}
 
 `dq-package-full.tar.gz` that you untarred contains installation packages for Java 8, Postgres 11, and Spark. There is no need to download these components. These off-line installation components are located in `$(pwd)/package/install-packages` .
 
@@ -146,7 +144,9 @@ Refer to the Step #2 for details on what `OWL_BASE`, `OWL_METASTORE_USER` , and 
 
 export OWL_BASE=$(pwd)
 export OWL_METASTORE_USER=postgres
-export OWL_METASTORE_PASS=password
+# minimum complexity recommended (18 length, upper, lower, number, symbol)
+# example below
+export OWL_METASTORE_PASS=H55Mt5EbXh1a%$aiX6
 ```
 
 Run the following installation script. Note the missing "postgres" in `-options` and new parameter `-pgserver`. This `-pgserver` could point to any URL that the standalone instance has access to.

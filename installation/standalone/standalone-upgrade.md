@@ -1,5 +1,13 @@
 # Standalone Upgrade
 
+{% hint style="success" %}
+Before proceeding with any upgrades, please remember to backup your DQ Metastore
+{% endhint %}
+
+{% hint style="danger" %}
+Please remember that rolling back Collibra DQ to a prior version is not supported. Please contact Collibra Support with any questions.
+{% endhint %}
+
 ### Download DQ Upgrade Package
 
 **Note: Beginning December 2021, all Collibra DQ customers upgrading or patching will be receiving the Full package (vs. Base) and should follow the same Upgrade steps below**
@@ -39,18 +47,20 @@ rm dq-full-package.tar.gz
 
 ### Additional Notes / Steps Due To Log4J (December 2021)
 
-#### Additional Step 1: Place Log4j-1.2-api-2.17.0.jar into /\<install-home>/owl/spark/jars
+#### Additional Step 1: Place Log4j-1.2-api-2.17.1.jar (as of 2022.02) into /\<install-home>/owl/spark/jars
+
+* #### Note: Was Log4j-1.2-api-2.17.0.jar in 2021.12 and 2022.01
 
 **Who: All Collibra DQ customers, particularly those leveraging CLI mode**
 
 1. Navigate to the same folder where the Collibra provided upgrade package was extracted
-2. Navigate to \<location of 2021-12-dq-upgrade>/packages/install-packages
-3. Extract the needed log4j-1.2-api-2.17.0.jar via the command:`tar -xvf spark-extras.tar.gz spark-extras/log4j-1.2-api-2.17.0.jar`&#x20;
-4. Move the log4j-1.2-api-2.17.0.jar file into /\<install-path>/spark/jars folder
+2. Navigate to \<location of 2022-02-dq-upgrade>/packages/install-packages
+3. Extract the needed log4j-1.2-api-2.17.1.jar via the command:`tar -xvf spark-extras.tar.gz spark-extras/log4j-1.2-api-2.17.1.jar`&#x20;
+4. Move the log4j-1.2-api-2.17.1.jar file into /\<install-path>/spark/jars folder
 
 **FAQ**
 
-Q: (When) do I need to move Log4j-1.2-api-2.17.0.jar before or after swapping the main Collibra DQ jars?
+Q: (When) do I need to move Log4j-1.2-api-2.17.1.jar before or after swapping the main Collibra DQ jars?
 
 * A: Sequence does not matter.
 
@@ -60,7 +70,7 @@ Q: (What) if I don't follow these additional upgrade steps?
 
 #### Additional Step 2: Remove a legacy properties file
 
-**Who: Only Collibra DQ customers upgrading Agents installed on Hadoop Edge Node**
+**Who: Only Collibra DQ customers upgrading Agents installed on Cloudera CDP Hadoop Edge Nodes**
 
 1. Navigate to /\<agenthome>/owl/config/&#x20;
 2. Remove `log4j-cluster.properties` file
@@ -74,3 +84,7 @@ Q: (When) do I need to remove log4j-cluster.properties before or after swapping 
 Q: (What) if I don't follow these additional steps?
 
 * A: For customers using agents on Hadoop edge nodes, they will receive errors when running DQ Jobs due to engaging a method that no longer exists.
+
+Q: What should I do if I am not a vendor-supported Cloudera CDP version?
+
+* A: Our testing and guidance mainly applies to vendor-supported (non-EOL) Cloudera CDP versions. Other Hadoop variants may handle logging differently and may require the legacy properties file. In short, feel free to first upgrade without this step, then remove the log4j-cluster.properties file if DQ Jobs are running into issues.

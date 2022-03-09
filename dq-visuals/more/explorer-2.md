@@ -22,7 +22,7 @@ All UI functionality has corresponding API endpoints to define, run, and get res
 
 ## Create a new DQ Job by clicking +Create DQ Job
 
-![](<../../.gitbook/assets/image (125).png>)
+![](<../../.gitbook/assets/image (126).png>)
 
 #### **View Data is an interactive option to run queries and explore the data**
 
@@ -30,13 +30,13 @@ All UI functionality has corresponding API endpoints to define, run, and get res
 
 ## Select The Scope and Define a Query
 
-![](<../../.gitbook/assets/image (127).png>)
+![](<../../.gitbook/assets/image (128).png>)
 
 #### Pick Date Column if your dataset contains an appropriate time filter&#x20;
 
 #### Click Build Model -> to Save and Continue&#x20;
 
-![](<../../.gitbook/assets/image (137).png>)
+![](<../../.gitbook/assets/image (139).png>)
 
 ## Transform Tab (advanced / optional)
 
@@ -100,9 +100,9 @@ Manually map the columns by dragging left to right or deselect columns&#x20;
 2. Click Estimate Job
 3. Click Run to start the job
 
-![](<../../.gitbook/assets/image (115).png>)
+![](<../../.gitbook/assets/image (116).png>)
 
-![](<../../.gitbook/assets/image (143).png>)
+![](<../../.gitbook/assets/image (145).png>)
 
 {% hint style="info" %}
 \*Note if you do not see your agent, please verify the agent has been assigned to your connection via:

@@ -53,7 +53,7 @@ The following is a list of drivers which are for test purposes (not certified ye
 | **Phoenix**                      | Native                                                                            | Preview       | C+    |                         | requires knowledge of phoenix and hbase                                                                                                                                               |
 | **Cassandra**                    | Native                                                                            | Preview       | C+    | User / Pass             | CQL vs SQL and other nuances                                                                                                                                                          |
 | **MS SQL Data Warehouse**        | Native                                                                            | Preview       | B+    | User / Pass             |                                                                                                                                                                                       |
-| **Delta Lake**                   | Native                                                                            | Preview       | B-    | User / Pass             | Requires knowledge of databricks                                                                                                                                                      |
+| **Delta Lake**                   | Native                                                                            | Preview       | C+    | User / Pass             | Requires knowledge of Databricks. Validated against environment using DQ Spark 3.01 and Databricks 7.3 LTS                                                                            |
 | **SAP HANA**                     | Native                                                                            | Preview       | B+    | User / Pass             | works with most common data types                                                                                                                                                     |
 | **MariaDB**                      | MySQL Driver                                                                      | Preview       | B+    | User / Pass             | Uses mysql driver, some nuances                                                                                                                                                       |
 | **Dremio**                       | Dremio JDBC                                                                       | Preview       | B     | User / Pass             |                                                                                                                                                                                       |
@@ -105,3 +105,15 @@ The following is a list of drivers which are for test purposes (not certified ye
 #### Spark Engine Support
 
 * MapR is EOL and MapR spark engine not supported to run CDQ jobs.
+
+#### Databricks
+
+The only supported Databricks spark submit option is to use a [notebook](../../dq-job-examples/data-quality-pipelines/aws-databricks-dq-pipeline.md) to initiate the job (Scala and Pyspark options).  This is intended for pipeline developers and users knowledgeable with Databricks and notebooks.  This form factor is ideal for incorporating data quality within existing Spark ETL data flows.  The results are still available for business users to consume.  The configuration is not intended for business users to implement.
+
+{% hint style="warning" %}
+Delta Lake and JDBC connectivity has been validated against Spark 3.01 CDQ package, Databricks 7.3 LTS and SparkJDBC41.jar.  This is available as Preview.  No other combinations have been certified at this time.
+{% endhint %}
+
+{% hint style="danger" %}
+Spark submit using the Databricks spark master url is not supported.&#x20;
+{% endhint %}

@@ -31,4 +31,6 @@ export SERVER_SSL_KEY_PASS:*******
 export SERVER_SSL_KEY_ALIAS:keystoreAliasNameHere
 ```
 
+Most common SSL types are JKS and PKCS12
+
 \*Dont forget to restart the web application from the bin directory: ./owlmanage.sh restart=owlweb

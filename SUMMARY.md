@@ -93,7 +93,7 @@
   * [Azure DataBricks](dq-job-examples/data-quality-pipelines/azure-databricks-dq-pipeline.md)
   * [Options API](dq-job-examples/data-quality-pipelines/owl-options-api.md)
   * [FAQs](dq-job-examples/data-quality-pipelines/frequently-asked-questions.md)
-* [Advanced...](dq-job-examples/owlcheck/README.md)
+* [Advanced](dq-job-examples/owlcheck/README.md)
   * [DQ Job Back Run](dq-job-examples/owlcheck/owlcheck-backrun.md)
   * [DQ Job Cron](dq-job-examples/owlcheck/owlcheck-cron.md)
   * [DQ Job Kafka](dq-job-examples/owlcheck/job-kafka.md)
