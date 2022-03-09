@@ -20,3 +20,6 @@
 
 _This is used when you are using datasets that do not contain a date column or a malformed date string_
 
+### Known Limitations
+
+This feature is only available for files, not for database tables.
