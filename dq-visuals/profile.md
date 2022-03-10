@@ -16,7 +16,7 @@ You can find detailed instructions about [selecting the scope](more/explorer-2.m
 
 ### Select Options (or leave defaults)
 
-![](../.gitbook/assets/profile\_options.gif)
+![](<../.gitbook/assets/profile\_options (1).gif>)
 
 ### Save / Run
 
@@ -24,7 +24,7 @@ You can find detailed instructions about [selecting the scope](more/explorer-2.m
 
 ### View the Results
 
-![](<../.gitbook/assets/profile\_results (1).gif>)
+![](../.gitbook/assets/profile\_results.gif)
 
 ## Automatically Profile
 
@@ -45,7 +45,7 @@ Collibra DQ can compute the Profile of a dataset either via Spark (default) or t
 * Full Profile - Perform full profile calculation except for TopN&#x20;
 * Count - Only perform row and column counts
 
-![](../.gitbook/assets/pushdown.gif)
+![](<../.gitbook/assets/pushdown (1).gif>)
 
 {% hint style="info" %}
 The following DBMS systems are supported for "Profile Pushdown"

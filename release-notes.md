@@ -4,8 +4,19 @@
 
 #### Fixes / Enhancements
 
+* Alerts
+  * Updated email notifications to customers to comply with Collibra branding
+  * Fixed Cancel Action for Delete functionality on Alert page
+* Security
+  * Password length has been increased to a maximum of 72 characters
+  * Fixed issue of throwing error message when adding/editing user roles
+  * Added the helper text "Enforce user roles to run the job" to DQ Job Security row
 * Rules
   * Additional HealthCare Data Classes to Rule Library
+  * Fixed input validation rule of POST - /v3/rules/ endpoints. The following validation rules have been applied to RuleDTO.ruleName field:
+    * Maximum size is 100
+    * Must comply with the following regular expression: ^\[a-zA-Z0-9\_]+$
+  * The rules on the Hoot page now show the correct exception data when expanded if there are two or more rules with exceptions attached to the dataset
 
 {% hint style="info" %}
 Rule Discovery Terminology Alignment
@@ -15,11 +26,16 @@ Data Concepts => Data Categories
 Semantics => Data Classes
 {% endhint %}
 
+* Profile
+  * Precision and Scale metrics are correct when using multi executors
 * Admin
   * Edge download page within Admin Console (for Cloud customers)
-*
 * Validate Source
   * \*Tech Preview\* \[TP] Update Source Scope
+* Connection
+  * Added handling for errors during log cleanup process
+* API
+  * Improved API calls for the Save function
 
 #### Known Limitations
 

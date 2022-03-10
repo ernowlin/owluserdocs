@@ -12,7 +12,7 @@ description: Users can apply custom monitoring with SQL
 
 Owl takes a strong stance that data should first be profiled, auto-discovered and learned before applying basic rules.  This methodology commonly removes thousands of rules that will never need to be written and evolve naturally overtime.  However there are still many cases to add a simple rule, complex rule or domain specific rule.  Simply search for any dataset and add a rule. You can use the optional Column Name/Category/Description to add meta-data to your rules for future reporting.
 
-![](<../../.gitbook/assets/quick\_rules (1).gif>)
+![](../../.gitbook/assets/quick\_rules.gif)
 
 {% hint style="info" %}
 Customized discovery routines can be run using the [rule library](./#rule-library) together with [data concepts and semantics.](data-concepts-and-semantics.md)
@@ -36,7 +36,7 @@ As with any SQL generator, there are limitations for more complex scenarios.
 
 Storing break records is only available for Freefrom and Simple rule types.  Rule library rules will use one of these types as well. &#x20;
 
-![](../../.gitbook/assets/break\_records.gif)
+![](<../../.gitbook/assets/break\_records (1).gif>)
 
 Additional storage can be enabled using the -linkid flag.  This allows users to store complete sets of break records. Please refer to the [linkid section](../../dq-job-examples/owlcheck/owlcheck-linkid.md) for more details
 
@@ -54,4 +54,4 @@ Native SQL uses your native DB syntax. The score is total break records / rows f
 
 This is a complete list of Spark SQL operators and functions available. [https://spark.apache.org/docs/latest/api/sql/index.html](https://spark.apache.org/docs/latest/api/sql/index.html)
 
-![](<../../.gitbook/assets/sql\_functions (1).gif>)
+![](../../.gitbook/assets/sql\_functions.gif)

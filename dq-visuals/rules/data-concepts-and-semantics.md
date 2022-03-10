@@ -55,7 +55,7 @@ Now imagine if you could classify your datasets as concepts, then automatically 
 
 To start, create a new DQ Job and select Semantic ON on the Profile options page
 
-![](<../../.gitbook/assets/dqjobsemanticon (1).gif>)
+![](../../.gitbook/assets/dqjobsemanticon.gif)
 
 ### Step 2: In Catalog, select and apply your Data Concept
 
@@ -83,7 +83,7 @@ On the DQ Job page, please browse your newly created rules based on Semantics as
 
 Create, test, and manage your Semantics in Collibra DQ in your **Rule Builder** wizard on the **Create Generic Rule** tab. Below is an example of creating a RegEx Semantic
 
-![](<../../.gitbook/assets/creating-semantic-regex (1).gif>)
+![](../../.gitbook/assets/creating-semantic-regex.gif)
 
 ## Administering Data Concepts
 

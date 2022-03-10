@@ -39,7 +39,7 @@ In order to setup multi-tenancy follow these steps
 * In order to use multi-tenancy in URLBASEDMULTITENANTMODE=TRUE you'll have to make sure we have DNS entries to the tenant endpoints, otherwise click the tenant management link from the login page.  Example:&#x20;
   1. If I have a DNS alias named hub.  I should be able to point me browser at hub:9002 (or your respective owlweb port) to get to the main Multi-Tenant login page as depicted below
 
-![](<../../.gitbook/assets/image (82).png>)
+![](<../../.gitbook/assets/image (79) (2).png>)
 
 * This is where DNS alias come into place.  Assuming we left the owlhub as the multiTenantSchemaHub name we hit the drop down and select owlhub and click the arrow it will place owlhub.hub into the url.  This means there also has to be a DNS Alias name for your selected multiTenantSchemaHub name.   NOTE: Username and password for tenant management is mtadmin / mtadmin123
 
@@ -87,5 +87,5 @@ Access to agents are also handled by the administrator(s) within each tenant ind
 
 Each agent is visible and editable as an Admin from the UI.
 
-![](<../../.gitbook/assets/owl-agent (1) (1).png>)
+![](<../../.gitbook/assets/owl-agent (1).png>)
 
