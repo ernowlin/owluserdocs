@@ -4,13 +4,29 @@
 
 #### Fixes / Enhancements
 
+* DQ Job
+  * The -validatevaluesshowmissingkeys options now allows the extrapolation of missing keys between target and source
+  * Newly created jobs will no longer be marked incorrectly with enclosing double quotes
+  * File names with spaces are now handled with double quotes within the application
 * Alerts
-  * Updated email notifications to customers to comply with Collibra branding
+  * Updated email notifications to customers to comply with Collibra branding\
+    Cleaned verifying email address for SMTP template to comply with Collibra branding
   * Fixed Cancel Action for Delete functionality on Alert page
 * Security
   * Password length has been increased to a maximum of 72 characters
+  * Fixed issue where password showed success message in UI regardless of success/failure
   * Fixed issue of throwing error message when adding/editing user roles
   * Added the helper text "Enforce user roles to run the job" to DQ Job Security row
+  * User password field removed while updating user in user management screen
+    * Admin can only set password for another user wile creating new user, but not while updating/modifying them
+    * If a user wants to change a password, the only way to do it is to use the self-service (Forgot password) feature
+  * XSS security
+    * Fixed the XSS security vulnerability on scorecard and jobs page
+    * Fixed the XSS security vulnerability via remote connection
+    * Fixed the XSS security vulnerability on catalog page
+    * Fixed the XSS security vulnerability on rule and job page
+  * Mitigated the endpoint "/v2/getrawpreview" vulnerable to Local File inclusion attack
+  * DQ HTTP session cookie is now secured by default when HTTPS is enabled
 * Rules
   * Additional HealthCare Data Classes to Rule Library
   * Fixed input validation rule of POST - /v3/rules/ endpoints. The following validation rules have been applied to RuleDTO.ruleName field:
