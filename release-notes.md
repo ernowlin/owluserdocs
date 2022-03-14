@@ -5,34 +5,33 @@
 #### Fixes / Enhancements
 
 * DQ Job
-  * The -validatevaluesshowmissingkeys options now allows the extrapolation of missing keys between target and source
-  * Newly created jobs will no longer be marked incorrectly with enclosing double quotes
-  * File names with spaces are now handled with double quotes within the application
+  * The -validatevaluesshowmissingkeys options now allows the extrapolation of missing keys between target and source.
+  * Newly created jobs will no longer be marked incorrectly with enclosing double quotes.
+  * File names with spaces are now handled with double quotes within the application.
 * Alerts
-  * Updated email notifications to customers to comply with Collibra branding\
-    Cleaned verifying email address for SMTP template to comply with Collibra branding
-  * Fixed Cancel Action for Delete functionality on Alert page
-* Security
-  * Password length has been increased to a maximum of 72 characters
-  * Fixed issue where password showed success message in UI regardless of success/failure
-  * Fixed issue of throwing error message when adding/editing user roles
-  * Added the helper text "Enforce user roles to run the job" to DQ Job Security row
-  * User password field removed while updating user in user management screen
-    * Admin can only set password for another user wile creating new user, but not while updating/modifying them
-    * If a user wants to change a password, the only way to do it is to use the self-service (Forgot password) feature
-  * XSS security
-    * Fixed the XSS security vulnerability on scorecard and jobs page
-    * Fixed the XSS security vulnerability via remote connection
-    * Fixed the XSS security vulnerability on catalog page
-    * Fixed the XSS security vulnerability on rule and job page
-  * Mitigated the endpoint "/v2/getrawpreview" vulnerable to Local File inclusion attack
-  * DQ HTTP session cookie is now secured by default when HTTPS is enabled
+  * Email notifications now have Collibra branding and terminology.
+  * Fixed Cancel Action for Delete functionality on Alert page.
+* Outliers
+  * Fixed the issue where Numerical Outlier drill in graph wasn't displaying when perChange is NaN.
 * Rules
-  * Additional HealthCare Data Classes to Rule Library
+  * Added additional HealthCare Data Classes to Rule Library.
   * Fixed input validation rule of POST - /v3/rules/ endpoints. The following validation rules have been applied to RuleDTO.ruleName field:
-    * Maximum size is 100
+    * Maximum size is 100.
     * Must comply with the following regular expression: ^\[a-zA-Z0-9\_]+$
-  * The rules on the Hoot page now show the correct exception data when expanded if there are two or more rules with exceptions attached to the dataset
+  * The rules on the Hoot page now show the correct exception data when expanded if there are two or more rules with exceptions attached to the dataset.
+* Security
+  * Password length has increased to a maximum of 72 characters.
+  * Fixed an issue where password showed success message in UI regardless of success/failure.
+  * Fixed an issue of a throwing error message when adding/editing user roles.
+  * Added the helper text "Enforce user roles to run the job" to DQ Job Security row.
+  * User password field removed while updating user in user management screen.
+    * Admin can only set password for another user wile creating new user, but not while updating/modifying them.
+    * If a user wants to change a password, the only way to do it is to use the self-service (Forgot password) feature.
+  * XSS security
+    * Fixed the vulnerability on scorecard, jobs, rules and catalog pages.
+    * Fixed the vulnerability via remote connection.
+  * Mitigated the endpoint "/v2/getrawpreview" vulnerable to Local File inclusion attack.
+  * DQ HTTP session cookie is now secured by default when HTTPS is enabled.
 
 {% hint style="info" %}
 Rule Discovery Terminology Alignment
@@ -43,22 +42,23 @@ Semantics => Data Classes
 {% endhint %}
 
 * Profile
-  * Precision and Scale metrics are correct when using multi executors
+  * Precision and Scale metrics are correct when using multi executors.
 * Admin
-  * Edge download page within Admin Console (for Cloud customers)
+  * Edge download page within Admin Console (for Cloud customers).
 * Validate Source
-  * \*Tech Preview\* \[TP] Update Source Scope
+  * \*Tech Preview\* \[TP] Update Source Scope.
+    * Added "Update Source Scope" in the Query section of the Source tab.
 * Connection
-  * Added handling for errors during log cleanup process
+  * Added handling for errors during log cleanup process.
 * API
-  * Improved API calls for the Save function
+  * Improved API calls for the Save function.
 
 #### Known Limitations
 
 * Validate Source
-  * \*Tech Preview\* \[TP] Update Source Scope
-    * Only works for JDBC connections. Feature is hidden for remote, temp, local files
-    * Valsrc query won't be updated automatically when modifying column mappings. Use 'Preview' button to reset the feature if column mappings need to be changed
+  * \*Tech Preview\* \[TP] Update Source Scope.
+    * Only works for JDBC connections. Feature is hidden for remote, temp, local files.
+    * Valsrc query won't be updated automatically when modifying column mappings. Use 'Preview' button to reset the feature if column mappings need to be changed.
 
 ## 2022.02
 
