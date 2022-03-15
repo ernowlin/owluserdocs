@@ -25,6 +25,7 @@
   * Password length has increased to a maximum of 72 characters.
   * Fixed an issue where password showed success message in UI regardless of success/failure.
   * Fixed an issue of a throwing error message when adding/editing user roles.
+  * Added error checks if the password manager script throws any errors.
   * Added the helper text "Enforce user roles to run the job" to DQ Job Security row.
   * User password field removed while updating user in user management screen.
     * Admin can only set password for another user wile creating new user, but not while updating/modifying them.
