@@ -1,8 +1,6 @@
 # Release Notes
 
-## 2022.03 (In Progress)
-
-####
+## 2022.03
 
 #### Fixes / Enhancements
 
