@@ -4,7 +4,7 @@ description: Ideal for rules that apply to more than one dataset. Write once, ap
 
 # Rule Templates
 
-![](../../.gitbook/assets/rule\_template.gif)
+![](<../../.gitbook/assets/rule\_template (1).gif>)
 
 Templates are great for regex, format, and compliance checks.&#x20;
 

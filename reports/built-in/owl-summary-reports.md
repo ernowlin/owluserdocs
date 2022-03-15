@@ -1,6 +1,6 @@
 # Summary Reports
 
-![](<../../.gitbook/assets/reports (1).gif>)
+![](../../.gitbook/assets/reports.gif)
 
 ### Owl Weekly Rollup Reports
 

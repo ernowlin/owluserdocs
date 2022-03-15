@@ -28,7 +28,7 @@ You can get to rules from the hoot page by clicking on Rules under the dataset n
 7. Add any custom DQ dimensions for reporting (optional).
 8. Click submit to save the rule.
 
-![Search for a dataset and click Select next to the Type label](<../../.gitbook/assets/image (10) (5).png>)
+![Search for a dataset and click Select next to the Type label](<../../.gitbook/assets/image (18) (5).png>)
 
 ‌The rule will be measured on the next DQ job for that particular dataset.‌
 

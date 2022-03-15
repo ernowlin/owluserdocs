@@ -4,11 +4,11 @@
 
 Limits can be set to limit resources that are requested.  There are options for cores, memory, executors, and cells (maxexecutorcores, maxexecutormemory, maxnumexecutors and maxcellcountforparalleljdbc)&#x20;
 
-![](<../.gitbook/assets/limits (1).gif>)
+![](../.gitbook/assets/limits.gif)
 
 If you request more cells than the limit, the user should see a warning message before hitting run.&#x20;
 
-![](<../.gitbook/assets/image (101).png>)
+![](<../.gitbook/assets/image (132).png>)
 
 ### Agent Defaults
 

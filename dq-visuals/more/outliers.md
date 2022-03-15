@@ -8,7 +8,7 @@ This is an advanced opt-in feature
 
 Kodak Coin! In 2018 Kodak announced themselves as Kodak coin and witnessed a steep change in their stock price. Owl automatically captured this event and provided the ability to drill into the item.
 
-![](../../.gitbook/assets/owl-outlier-numerical.png)
+![](<../../.gitbook/assets/owl-outlier-numerical (1).png>)
 
 ### Complex outliers made Simple
 
@@ -143,11 +143,11 @@ The following command shows an example of running monthly OwlDQ Checks, from the
 
 The `-br 12` option ran 12 monthly OwlChecks for every month of 2016. The figure below shows OwlCheck Hoot page for the lastest run of dataset `iowa_liquor_sales_by_store_numbers_monthly`. The Hoot page shows that OwlCheck identified 24 Outliers among 4.8k rows of unique date x store\_number for month of December, 2016.
 
-![Monthly OwlCheck for 2016-12-01](<../../.gitbook/assets/image (30).png>)
+![Monthly OwlCheck for 2016-12-01](<../../.gitbook/assets/image (39).png>)
 
 Since the original data quality issue that inspired us to run OwlCheck is from May 2016, we can navigate to specific run date 2016-05-01 by click on the line graph on top. Then searching for store #2508 on the **key** column shows outlier detected for **column** `address`. Press \[+] for that row to see contextual details about this detected value.
 
-![Monthly OwlCheck for 2016-05-01. The drill-in outlier details for store #2508 is shown](<../../.gitbook/assets/image (31).png>)
+![Monthly OwlCheck for 2016-05-01. The drill-in outlier details for store #2508 is shown](<../../.gitbook/assets/image (36).png>)
 
 We can verify that OwlCheck identified the outlier of interest among other 60 data quality issues. Using OwlCheck, you can identify issues at scale for past data (using backrun), current (using simple OwlCheck), and future (using scheduled jobs).
 
@@ -169,7 +169,7 @@ In the video below, Collibra DQ Outliers were set to a high sensitivity. The USD
 
 When examining the outlier on January 11th, the dataset depicts that the USDEUR conversion shot up to 3.14, which in our hypothetical example coincides with an explainable macroeconomic phenomenon. As such, the user may not want Outlier anomalies to trigger for a period of time.
 
-![](<../../.gitbook/assets/outliercalibratenextdatapoint (1).gif>)
+![](../../.gitbook/assets/outliercalibratenextdatapoint.gif)
 
 **Example Step #3: User Wants To Suppress Outliers**
 

@@ -10,7 +10,7 @@ description: A no-code option to get started quickly and onboard a dataset.
 
 This page can be accessed by clicked the Explorer option (the compass icon).
 
-![](<../../.gitbook/assets/image (102).png>)
+![](<../../.gitbook/assets/image (96).png>)
 
 {% hint style="info" %}
 All UI functionality has corresponding API endpoints to define, run, and get results programmatically.
@@ -30,7 +30,7 @@ All UI functionality has corresponding API endpoints to define, run, and get res
 
 ## Select The Scope and Define a Query
 
-![](<../../.gitbook/assets/image (127).png>)
+![](<../../.gitbook/assets/image (128).png>)
 
 #### Pick Date Column if your dataset contains an appropriate time filter&#x20;
 

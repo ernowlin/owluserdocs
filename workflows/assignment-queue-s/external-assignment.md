@@ -9,6 +9,6 @@ To configure a queue, you must have ROLE\_ADMIN or ROLE\_CONNECTION\_MANAGER.
 {% endhint %}
 
 1. Go to the **Admin Console** and click **Assignment Queues**.\
-   ![](<../../.gitbook/assets/screen-shot-2020-07-07-at-5.06.59-am (1).png>)
+   ![](<../../.gitbook/assets/Screen Shot 2020-07-07 at 5.06.59 AM.png>)
 2. **Add** or **Edit** a Service Now configuration from the corresponding page.\
    ![](<../../.gitbook/assets/Screen Shot 2020-07-07 at 5.16.11 AM.png>)

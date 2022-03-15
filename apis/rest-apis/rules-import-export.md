@@ -104,7 +104,7 @@ Navigate to the API page
 
 Find the Rest APIs link
 
-![](<../../.gitbook/assets/image (48).png>)
+![](<../../.gitbook/assets/image (59).png>)
 
 Drill-in to the controller-scala section
 

@@ -44,7 +44,7 @@ Collibra DQ offers a full DQ suite to cover the unique challenges of each datase
 
 **Infrequent formats.**
 
-![](../../.gitbook/assets/Shapes.jpg)
+![](<../../.gitbook/assets/shapes (1).jpg>)
 
 ## Dupes&#x20;
 
@@ -68,7 +68,7 @@ Collibra DQ offers a full DQ suite to cover the unique challenges of each datase
 
 **Validating source to target accuracy.**
 
-![](../../.gitbook/assets/source.jpg)
+![](../../.gitbook/assets/Source.jpg)
 
 ## **Record**
 
