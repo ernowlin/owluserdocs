@@ -22,6 +22,8 @@
     * Must comply with the following regular expression: ^\[a-zA-Z0-9\_]+$
   * The rules on the Hoot page now show the correct exception data when expanded if there are two or more rules with exceptions attached to the dataset.
 * Security
+  * Vulnerabilities identified by Jfrog
+    * Vulns 0, critical, 6 high vulnerabilities
   * Password length has increased to a maximum of 72 characters.
   * Fixed an issue where password showed success message in UI regardless of success/failure.
   * Fixed an issue of a throwing error message when adding/editing user roles.
