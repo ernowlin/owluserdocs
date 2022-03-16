@@ -23,7 +23,7 @@
   * Vulnerabilities identified by Jfrog
     * Vulns 0, critical, 6 high vulnerabilities
   * Password length has increased to a maximum of 72 characters.
-  * Fixed an issue where password showed success message in UI regardless of success/failure.
+  * Forgot password screen will now always show success message in UI regardless of success or failure.
   * Fixed an issue of a throwing error message when adding/editing user roles.
   * Added error checks if the password manager script throws any errors.
   * Added the helper text "Enforce user roles to run the job" to DQ Job Security row.
