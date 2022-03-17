@@ -29,7 +29,7 @@
   * Added the helper text "Enforce user roles to run the job" to DQ Job Security row.
   * User password field removed while updating user in user management screen.
     * Admin can only set password for another user wile creating new user, but not while updating/modifying them.
-    * If a user wants to change a password, the only way to do it is to use the self-service (Forgot password) feature.
+    * To change a password, users can now use either the profile page or the self-service (Forgot password) feature.
   * XSS security
     * Fixed the vulnerability on scorecard, jobs, rules and catalog pages.
     * Fixed the vulnerability via remote connection.
