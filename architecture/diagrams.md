@@ -10,6 +10,8 @@ description: Choosing your deployment
 
 ## Pushdown DQ Control to Data
 
+Exploratory at this time, Private Beta coming in 2022 Q3. Some features may be limited.
+
 ![](../.gitbook/assets/2\_Pushdown\_DQ\_Control\_to\_Data\_Plane.gif)
 
 ## Databricks to Data to DQ Control
