@@ -14,7 +14,7 @@ description: Installation details for the Edge component for DQ Cloud.
 
 ## **Diagram**
 
-![](<../.gitbook/assets/image (94).png>)
+![Future-state visuals can be found in the diagram page as well](<../.gitbook/assets/image (94).png>)
 
 ## **Prerequisites**
 
