@@ -4,7 +4,7 @@ description: Installation details for the Edge component for DQ Cloud.
 
 # Cloud
 
-## System Requirements
+## Requirements
 
 | Resource           | Notes                                   | Provisioned by |
 | ------------------ | --------------------------------------- | -------------- |
@@ -39,6 +39,7 @@ This is the database is where your data will be stored
 * 100gb storage minimum
 * 4 cores minimum
 * Network access to and from the VM where Edge is installed
+* User with ownership rights over the target database
 
 ## **1. Obtain a Secure Collibra DQ Web URL**&#x20;
 
