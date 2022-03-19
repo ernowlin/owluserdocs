@@ -18,11 +18,12 @@ description: Installation details for the Edge component for DQ Cloud.
 
 ## **Prerequisites**
 
-### **VM with SSH Access**
+### **VM**&#x20;
 
 This is where your [Edge](https://productresources.collibra.com/docs/collibra/latest/Content/Edge/ref\_edge-faq.htm) site will be installed
 
 * Redhat 8 or Centos 8
+* SSH Access
 * 55gb+ Storage
 * 64gb RAM
 * 16 cores
