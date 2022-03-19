@@ -157,7 +157,7 @@ Use the spark confs in the code block below.
 ```
 
 {% hint style="info" %}
-DQ Jobs (Spark) compute will take place locally on Edge K3s. Increase the size of your VM to vertically scale for more resources (.e.g. 32 cores, RAM, etc.). This is the preferred option in beta. Hadoop compute is supported if customer chooses that path and uses their Dataproc or EMR cluster.
+The DQ Job (Spark) compute will take place locally on Edge K3s. Increase the size of your VM to vertically scale for more resources (.e.g. 32 cores, RAM, etc.). This is the preferred option in beta. Hadoop compute is supported if customer chooses that path and uses their Dataproc or EMR cluster.
 {% endhint %}
 
 Remember your agent name for the next step where you will map a connection to the agent.
@@ -179,7 +179,7 @@ Afterwards, you do not need to assign the connection to the agent. It will be au
 Run a DQ Job to validate the installation.  Use the Explorer to onboard a table and check the Jobs page as normal to see the status.
 
 {% hint style="info" %}
-If job does not succeed, please check your Agent settings and system prerequisites
+If the DQ Job does not succeed, please check your Agent settings and system prerequisites
 {% endhint %}
 
 ### Notes
