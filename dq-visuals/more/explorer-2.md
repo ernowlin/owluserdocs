@@ -18,11 +18,11 @@ All UI functionality has corresponding API endpoints to define, run, and get res
 
 ## Select Your Data Source
 
-![](<../../.gitbook/assets/image (105).png>)
+![](<../../.gitbook/assets/image (105) (1).png>)
 
 ## Create a new DQ Job by clicking +Create DQ Job
 
-![](<../../.gitbook/assets/image (126).png>)
+![](<../../.gitbook/assets/image (126) (1).png>)
 
 #### **View Data is an interactive option to run queries and explore the data**
 

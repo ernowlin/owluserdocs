@@ -16,6 +16,7 @@
   * [Cloud native requirements](installation/cloud-native-owldq/preparing-for-deployment.md)
   * [Cloud native install](installation/cloud-native-owldq/deploying-cloud-native-owldq.md)
   * [EKS / GKE / AKS](installation/cloud-native-owldq/aks-eks-gke-kubernetes-deployment.md)
+* [Cloud](installation/cloud.md)
 * [Agent](installation/agent-configuration.md)
 
 ## Connections <a href="#connecting-to-dbs-in-owl-web" id="connecting-to-dbs-in-owl-web"></a>

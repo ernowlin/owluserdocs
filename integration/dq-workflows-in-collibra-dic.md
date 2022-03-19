@@ -59,7 +59,7 @@ Let's proceed after gathering all prerequisites!
 | DQ Rule Modification | Business Analyst                           | Proposing adjustments to existing rules e.g. values, dimensions, passing thresholds                                                                                                    | Data Steward                  |
 | DQ Sync Request      | Business Analyst                           | Request for synchronization of the DQ Connector to synchronize and/or onboarding a new dataset with pre-populated rules                                                                | Data Steward                  |
 
-![Example: Data Quality Rule Request](<../.gitbook/assets/image (140).png>)
+![Example: Data Quality Rule Request](<../.gitbook/assets/image (140) (1).png>)
 
 ![Completed Rule Request Example](<../.gitbook/assets/image (104).png>)
 
@@ -95,7 +95,7 @@ Let's proceed after gathering all prerequisites!
 
 Who? Anyone can set up a DQ subscription, for yourself or for your teammates
 
-![](<../.gitbook/assets/image (149).png>)
+![](<../.gitbook/assets/image (149) (1).png>)
 
 Alerts will be sent based on reviewing rules and metrics associated with **Tables** or **Columns** that violate the specified **Threshold**
 

@@ -10,7 +10,7 @@
 
 ### Kubernetes Diagram
 
-![](<../../.gitbook/assets/image (107).png>)
+![](<../../.gitbook/assets/image (107) (1).png>)
 
 ### Owl Standalone <a href="#howlstandalone" id="howlstandalone"></a>
 

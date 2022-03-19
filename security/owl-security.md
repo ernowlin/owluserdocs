@@ -6,4 +6,4 @@ Security can be configured to meet your needs. Advanced options to segment group
 
 You can control configurations at the Web (UI), Postgres, and Application layers depending on your security requirements.  Encryption is available for data in-transit or at-rest.&#x20;
 
-![](<../.gitbook/assets/image (119).png>)
+![](<../.gitbook/assets/image (119) (1).png>)

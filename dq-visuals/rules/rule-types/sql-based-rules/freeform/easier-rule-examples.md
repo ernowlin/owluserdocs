@@ -16,7 +16,7 @@
 Cross-dataset rules require -libsrc or -addlib (prior to 2021.11)&#x20;
 {% endhint %}
 
-![When a cross-dataset rule uses two connections, be sure the jars are in the -lib or -addlib directory.](<../../../../../.gitbook/assets/image (134).png>)
+![When a cross-dataset rule uses two connections, be sure the jars are in the -lib or -addlib directory.](<../../../../../.gitbook/assets/image (134) (1).png>)
 
 ## In-Clause (Single Column)
 
