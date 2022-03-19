@@ -40,7 +40,7 @@ This is the database is where your data will be stored
 * 4 cores minimum
 * Network access to and from the VM where Edge is installed
 
-### **Step 0: Obtain a Secure Collibra DQ Web URL**&#x20;
+## **1. Obtain a Secure Collibra DQ Web URL**&#x20;
 
 This is provisioned by Collibra. Along your URL, credentials will be provided to access your instance.
 
@@ -48,7 +48,7 @@ This is provisioned by Collibra. Along your URL, credentials will be provided to
 This offering is in private beta and only available for select Collibra customers. Please contact a Collibra representative to learn more about this offering.
 {% endhint %}
 
-### **Step 1: Install Postgres**
+## **2. Install Postgres**
 
 This is provisioned by the customer. There are several way to install Postgres.  You should follow your existing company process to provision a Postgres instance (RDS, Azure SQL, Cloud SQL, or standard install using a package manager). Please ensure version 11+.
 
@@ -56,7 +56,7 @@ This is provisioned by the customer. There are several way to install Postgres. 
 Remember your Postgres IP and login credentials. This is required when deploying the Edge site. &#x20;
 {% endhint %}
 
-### **Step 2: Install Edge**
+## **3. Install Edge**
 
 Refer to Edge documentation for [system requirements](https://productresources.collibra.com/docs/collibra/latest/Content/Edge/EdgeSitesInstallation/ref\_edge-site-system-requirements.htm).
 
@@ -133,7 +133,7 @@ sudo /usr/local/bin/uninstall-edge.sh --force
 sudo yum localinstall --skip-broken -y https://rpm.rancher.io/k3s/stable/common/centos/7/noarch/k3s-selinux-0.2-1.el7_8.noarch.rpm
 ```
 
-### Step 3: **Configure an Agent**
+## 4. **Configure an Agent**
 
 **Navigate to the Remote Agent panel in the admin console**
 
@@ -159,7 +159,7 @@ DQ Jobs (Spark) compute will take place locally on Edge K3s. Increase the size o
 
 Remember your agent name for the next step where you will map a connection to the agent.
 
-### **Step 4: Add a Connection**
+## **5. Add a Connection**
 
 This is the same process of adding a connection found [here ](../connecting-to-dbs-in-owl-web/owl-db-connection.md)with one difference.  You will map the connection to your agent installed in the previous step.  This is different than mapping a connection and an agent in the self-hosted application.
 
@@ -171,7 +171,7 @@ Afterwards, you do not need to assign the connection to the agent. It will be au
 
 ![](<../.gitbook/assets/image (122).png>)
 
-### **Step 5: Run a DQ Job**
+## **6. Run a DQ Job**
 
 Run a DQ Job to validate the installation.  Use the Explorer to onboard a table and check the Jobs page as normal to see the status.
 
@@ -179,7 +179,7 @@ Run a DQ Job to validate the installation.  Use the Explorer to onboard a table 
 If job does not succeed, please check your Agent settings and system prerequisites
 {% endhint %}
 
-### Note:
+### Notes
 
 Edge Capability Resource Requirements: If insufficient resources, your capabilities will not perform properly.&#x20;
 
@@ -188,6 +188,8 @@ Installer: Please beware, downloading new installer will invalidate previous ins
 Volume: /var/lib/rancher/k3s path must have 50gb available&#x20;
 
 Root access: root access is needed, though future revisions will follow the least privileged user access policies.
+
+The private beta is designed to let customers 1) complete the installation 2) confirm successful DQ jobs can be run and 3) validate their security requirements whereby no sensitive data is stored outside their custody.
 
 ### FAQ
 
