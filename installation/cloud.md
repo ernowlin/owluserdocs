@@ -77,8 +77,7 @@ Using the Actions drop-down, download the Edge installer package locally
 Upload the Edge installer package to your VM that meets the Edge system requirements above. An example scp command is below, but you can do this several ways.
 
 ```
-scp -i ~/Downloads/vm-key.pem ~/Downloads/<installer>.tgz 
-user@34.258.253.216:/home/user/<installer>.tgz
+scp -i ~/Downloads/vm-key.pem ~/Downloads/<installer>.tgz user@<host-or-ip>:/home/user/<installer>.tgz
 ```
 
 SSH to your VM after uploading the installer package. Untar the .tgz
