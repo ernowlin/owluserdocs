@@ -107,9 +107,11 @@ Install Edge w/ DQ w/ the correct parameters
 sudo /home/centos/install-master.sh --disable-checks --storage-path /var/edge properties.yaml -r registries.yaml --set collibra_edge.collibra.dq.enabled=true,collibra_edge.collibra.dq.targetRevision=2022.02-186,collibra_edge.collibra.dq.sparkVersion=3.2.0,collibra_edge.collibra.dq.metastoreUrl=jdbc:postgresql://<your-postgres-ip>:5432/postgres,collibra_edge.collibra.dq.metastoreUser=<your-postgres-user>,collibra_edge.collibra.dq.metastorePass=<your-postgres-password>
 ```
 
-**Edit these sections from the above code block.**
+**The snippet below is the same as the code block above.**&#x20;
 
-sudo **/home/\<your-directory>/**install-master.sh --disable-checks --storage-path /var/edge properties.yaml -r registries.yaml --set collibra\_edge.collibra.dq.enabled=**true**,collibra\_edge.collibra.dq.targetRevision=**2022.02-\<version>**,collibra\_edge.collibra.dq.sparkVersion=**3.2.0**,collibra\_edge.collibra.dq.metastoreUrl=jdbc:postgresql://**\<postgres-ip>:5432/postgres**,collibra\_edge.collibra.dq.metastoreUser=**\<postgres-user>**,collibra\_edge.collibra.dq.metastorePass=**\<postgres-password>**
+**The bold sections are the areas you will edit**
+
+sudo **/home/\<your-directory>/**install-master.sh --disable-checks --storage-path /var/edge properties.yaml -r registries.yaml --set collibra\_edge.collibra.dq.enabled=true,collibra\_edge.collibra.dq.targetRevision=**2022.02-\<version>**,collibra\_edge.collibra.dq.sparkVersion=3.2.0,collibra\_edge.collibra.dq.metastoreUrl=jdbc:postgresql://**\<postgres-ip>:5432/postgres**,collibra\_edge.collibra.dq.metastoreUser=**\<postgres-user>**,collibra\_edge.collibra.dq.metastorePass=**\<postgres-password>**
 
 **Check that all the processes are running / completed**
 
