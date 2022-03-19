@@ -124,7 +124,7 @@ sudo /usr/local/bin/kubectl get pods --all-namespaces
 
 ![](<../.gitbook/assets/image (145).png>)
 
-**Uninstall Edge if there were mistakes / typos / for any reason.**
+**Uninstall Edge if there were mistakes/typos in the process**
 
 ```
 sudo /usr/local/bin/uninstall-edge.sh --force
