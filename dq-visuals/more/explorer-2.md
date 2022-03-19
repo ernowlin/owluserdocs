@@ -102,7 +102,7 @@ Manually map the columns by dragging left to right or deselect columns&#x20;
 
 ![](<../../.gitbook/assets/image (116).png>)
 
-![](<../../.gitbook/assets/image (145).png>)
+![](<../../.gitbook/assets/image (145) (1).png>)
 
 {% hint style="info" %}
 \*Note if you do not see your agent, please verify the agent has been assigned to your connection via:

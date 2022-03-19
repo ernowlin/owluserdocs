@@ -122,7 +122,7 @@ sudo /usr/local/bin/kubectl get pods --all-namespaces
 
 **Your Edge site will appear as HEALTHY upon successful installation**
 
-![](<../.gitbook/assets/image (132).png>)
+![](<../.gitbook/assets/image (145).png>)
 
 **Uninstall Edge if there were mistakes / typos / for any reason.**
 
