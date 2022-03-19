@@ -86,7 +86,7 @@ SSH to your VM after uploading the installer package. Untar the .tgz
 tar -xvf <installer>.tgz
 ```
 
-Install pre-requisite Edge packages.
+Install prerequisite Edge packages.
 
 ```
 sudo yum install -y container-selinux selinux-policy-base
