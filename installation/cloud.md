@@ -34,7 +34,7 @@ Edge installation requirements can be found [**here**](https://productresources.
 
 ### **Postgres**
 
-This is the database is where your data will be stored
+This is where your DQ Job results will be stored
 
 * Version 11 or above
 * 100gb storage minimum
