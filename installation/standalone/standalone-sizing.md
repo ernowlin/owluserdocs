@@ -50,4 +50,4 @@ Sizing should allow headroom and based on peak concurrency and peak volume requi
 
 ## Cluster <a href="#cluster" id="cluster"></a>
 
-If your program requires more horsepower or (spark) workers than the example tiers above which is fairly common in Fortune 500 companies than you should consider the horizontal and ephemeral scale of a cluster. Common examples are Amazon EMR, Cloudera CDP etc... OwlDQ is built to scale up horizontally and can scale to hundreds of nodes.
+If your program requires more horsepower or (spark) workers than the example tiers above which is fairly common in Fortune 500 companies then you should consider the horizontal and ephemeral scale of a cluster. Common examples are Amazon EMR, Cloudera CDP etc... Collibra DQ is built to scale up horizontally and can scale to hundreds of nodes.
