@@ -134,6 +134,7 @@
 
 ## WORKFLOWS / ALERTS <a href="#workflows" id="workflows"></a>
 
+* [Email Batch Alerts](workflows/email-batch-alerts.md)
 * [Email Alerts](workflows/email-alerts.md)
 * [Assignment Queue(s)](workflows/assignment-queue-s/README.md)
   * [Internal Assignment](workflows/assignment-queue-s/internal-assignment.md)
