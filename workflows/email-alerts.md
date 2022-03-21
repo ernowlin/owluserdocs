@@ -12,8 +12,6 @@ Navigate to OwlWeb URL.  Then click the gear icon on the left in the admin secti
 
 Also shows some of the common rules associated with this dataset for quick reference while creating. Use the batch name to create a consolidated list of alerts and distribution list for a set of notifications per dataset.
 
-![](<../.gitbook/assets/Screen Shot 2020-07-27 at 9.14.20 PM.png>)
-
 ## DQ Alert in your Inbox
 
 Below is what an alert email that makes it into your inbox will look like.  Always smart to make sure your email client didn't mark it as spam and that the SMTP was setup properly.  Some email clients automatically strip images therefore we try to keep the emails light on styling and straight to the point.
