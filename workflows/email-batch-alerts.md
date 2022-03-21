@@ -2,6 +2,8 @@
 
 Alert Email functionality allows user to send email to recipients when Alert condition is satisfied for specified dataset. It allows to send email to recipient(s) specified in Alert recipient field on Alert Definition screen. User can specify single recipient or multiple recipients. Multiple recipients are specified by Comma(,) AND/OR Semicolon(;).&#x20;
 
+![](../.gitbook/assets/Multiple\_Recipients\_0.png)
+
 ![](../.gitbook/assets/multiple\_recipient\_2.png)
 
 ![](../.gitbook/assets/multiple\_recipient\_3.png)
