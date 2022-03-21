@@ -160,13 +160,15 @@ Use the spark confs in the code block below.
 The DQ Job (Spark) compute will take place locally on Edge K3s. Increase the size of your VM to vertically scale for more resources (.e.g. 32 cores, RAM, etc.). This is the preferred option in beta. Hadoop compute is supported if customer chooses that path and uses their Dataproc or EMR cluster.
 {% endhint %}
 
-Remember your agent name for the next step where you will map a connection to the agent.
+{% hint style="success" %}
+Make note of the agent name that as created. In the following step you will create a connection and select (link) the agent to your connection.
+{% endhint %}
 
 ## **5. Add a Connection**
 
-This is the same process of adding a connection found [here ](../connecting-to-dbs-in-owl-web/owl-db-connection.md)with one difference.  You will map the connection to your agent installed in the previous step.  This is different than mapping a connection and an agent in the self-hosted application.
+This is the same process of adding a connection found [here ](../connecting-to-dbs-in-owl-web/owl-db-connection.md)with one difference.  You will map the connection to your agent upon establishing a connection.  This is different than mapping a connection and an agent in the self-hosted application.
 
-Select your target agent using the drop-down.
+Select your target agent using the **Target Agent drop-down**. This drop-down will populate with existing agents.  Here is where you will select the agent name from the previous step.
 
 ![](<../.gitbook/assets/image (134).png>)
 
