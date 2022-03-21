@@ -1,9 +1,5 @@
 # Email Alerts
 
-![](<../.gitbook/assets/Screen Recording 2022-03-21 at 4.40.31 PM.gif>)
-
-![](../.gitbook/assets/alerts.gif)
-
 ### Setting up an Email Server using the WebApp
 
 Navigate to OwlWeb URL.  Then click the gear icon on the left in the admin section and click alerts.
@@ -13,6 +9,8 @@ Navigate to OwlWeb URL.  Then click the gear icon on the left in the admin secti
 ### Creating a Condition to Send an Alert
 
 Also shows some of the common rules associated with this dataset for quick reference while creating. Use the batch name to create a consolidated list of alerts and distribution list for a set of notifications per dataset.
+
+![](<../.gitbook/assets/Screen Recording 2022-03-21 at 4.40.31 PM.gif>)
 
 ## DQ Alert in your Inbox
 
