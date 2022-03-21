@@ -1,5 +1,7 @@
 # Email Alerts
 
+![](<../.gitbook/assets/Screen Recording 2022-03-21 at 4.40.31 PM.gif>)
+
 ![](../.gitbook/assets/alerts.gif)
 
 ### Setting up an Email Server using the WebApp
