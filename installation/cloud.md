@@ -196,45 +196,45 @@ The private beta is designed to let customers 1) complete the installation 2) co
 
 ### FAQ
 
-What network access is needed?
+**What network access is needed?**
 
 * The Edge Site and Postgres need to communicate with each other.
 * Additionally,  logging and heartbeat requires outbound access to several services.  Please refer to Edge documentation for specific services that are used.
 
-How can a user check the install?
+**How can a user check the install?**
 
 * Time: The install should complete in around \~5 minutes; if not, there is likely an issue.
 * Check that the pods&#x20;
-* sudo /usr/local/bin/kubectl get pods --all-namespaces
+* `sudo /usr/local/bin/kubectl get pods --all-namespaces`
 
-Is there a way to get more checks / more logs?
+**Is there a way to get more checks / more logs?**
 
-* sudo /usr/local/bin kubectl describe
+* `sudo /usr/local/bin kubectl describe`
 
-How to verify successful install?
+**How to verify successful install?**
 
-* Go back to the Collibra DQ instance and see HEALTHY status
+* In your Collibra DQ instance, navigate to the Edge Site Management panel in the Admin Console and confirm a HEALTHY status
 * Support can confirm via Datadog, the edge site will send heartbeats
 
-How to locate my Edge site in Datdog?
+**How to locate my Edge site in Datdog?**
 
 * Send your Edge Site ID to Support to check the health status.
 
-Do customers have access to Datadog?
+**Do customers have access to Datadog?**
 
 * Only Collibra has access to Datadog logging.
 
-Can all my Collibra DQ and other capabilities run on the same Edge Site?
+**Can all my Collibra DQ and other capabilities run on the same Edge Site?**
 
 * There are not technical reasons preventing other capabilities and Collibra DQ from running on the same Edge Site.
 * The guidance for the beta is to have DQ Edge separate from DGC Edge capabilities and simply use two Edge sites.
 
-Are there any limitations with Collibra DQ Cloud in terms of features or functionality?
+**Are there any limitations with Collibra DQ Cloud in terms of features or functionality?**
 
 * While remote files are supported, local files and uploaded files are not supported due to security restrictions
 * Specific drivers are not available in the beta, though the most common data sources are available.
 
-What are the benefits of installing with Edge vs. a stand-alone, self-hosted application?&#x20;
+**What are the benefits of installing with Edge vs. a stand-alone, self-hosted application?**&#x20;
 
 * The primary benefits are managed upgrades, maintenance, and reducing the ownership costs of an entirely self-hosted set of components.
 * In addition, this design allows customers to take advantage of containers and cloud technologies without deep technical skillset requirements.&#x20;
