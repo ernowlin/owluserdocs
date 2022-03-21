@@ -6,7 +6,7 @@
 
 Navigate to OwlWeb URL.  Then click the gear icon on the left in the admin section and click alerts.
 
-![](<../.gitbook/assets/Screen Shot 2020-07-27 at 9.09.04 PM.png>)
+![](../.gitbook/assets/dq-alert-email-server.png)
 
 ### Creating a Condition to Send an Alert
 
