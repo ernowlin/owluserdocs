@@ -1,6 +1,6 @@
 # Standalone Install
 
-## Step 0. Setup Tutorial Assumptions
+## 1. Setup Tutorial Assumptions
 
 We assume that a server running Centos 7 or RHEL 7 is setup and ready to install DQ in the home directory (base path: `OWL_BASE`) under subdirectory `owl`(install path: `$OWL_BASE/owl`). There is no requirement for DQ to be installed in the home directory, but the DQ Full Installation script may lead to permission-denied issue during local Postgres server installation if paths other than home directory is used. If so, please adjust your directory permission to allow the installation script a write access to the Postgres data folder.
 
@@ -30,7 +30,7 @@ gcloud compute ssh --zone "us-central1-a" --project "gcp-example-project" "cento
 2. Access the server where DQ will be installed.&#x20;
 {% endhint %}
 
-## Step 1. Download DQ Full Package
+## 2. Download DQ Full Package
 
 Download full package tarball using the signed link to the full package tarball provided by the DQ Team. Replace `<signed-link-to-full-package>` with the link provided.
 
@@ -55,7 +55,7 @@ rm dq-full-package.tar.gz
 2. Untar`dq-full-package.tar.gz` to `OWL_BASE`.
 {% endhint %}
 
-## Step 2. Install DQ + Postgres + Spark
+## 3. Install DQ + Postgres + Spark
 
 First set some variables for `OWL_BASE` (where to install DQ. In this tutorial, you are already in the directory that you want to install), `OWL_METASTORE_USER` (the Postgres username used by DQ Web Application  to access Postgres storage), and `OWL_METASTORE_PASS` (the Postgres password used by DQ Web Application  to access Postgres storage).&#x20;
 
@@ -125,7 +125,7 @@ please use owl owlmanage utility to configure license key and start owl-agent af
    The location of `OWL_BASE` and Postgres are configurable, but we advise you to take the defaults.
 {% endhint %}
 
-## Step 3_._ Install DQ + Spark and use existing Postgres (advanced)
+## 3_._ Install DQ + Spark and use existing Postgres (advanced)
 
 {% hint style="warning" %}
 Skip Step 3 if you opted to install Postgres and performed Step 2 instead.
@@ -171,7 +171,7 @@ The database named `postgres` is used by default as DQ metadata storage. Changin
 2. &#x20;Install DQ Web and Spark linked to DQ Agent (**all files will be in `$OWL_BASE/owl` sub-directory**) using `setup.sh` script provided and link DQ Web to an existing Postgres server.
 {% endhint %}
 
-## Step 4. Verify DQ and Spark Installation
+## 5. Verify DQ and Spark Installation
 
 The installation process will start the DQ Web Application. This process will handle initializing the Postgres metadata storage schema in Postgres (under the database named `postgres`). This process must complete successfully before the DQ Agent can be started. Wait approximately 1 minute for the Postgres metadata storage schema to be populated. If you can access DQ Web using `<url-to-dq-web>:9000` using a Web browser, then this means you have successfully installed DQ.
 
@@ -181,7 +181,7 @@ Next, verify that the Spark Cluster has started and is available to run DQ check
 
 ![Fig 3: Spark Master Web UI](<../../.gitbook/assets/Screenshot 2021-06-14 at 4.17.30 PM.png>)
 
-## Step 5. Set License Key
+## 6. Set License Key
 
 In order for DQ to run checks on data, the DQ Agent must be configured with a license key. Replace `<license-key>` with a valid license key provided by Collibra.
 
@@ -193,7 +193,7 @@ cd $OWL_BASE/owl/bin
 # > License Accepted new date: <expiration-date>
 ```
 
-## Step 6. Set DQ Agent Configuration
+## 7. Set DQ Agent Configuration
 
 Next, start the DQ Agent process to enable processing of DQ checks.
 
@@ -231,7 +231,7 @@ Refer to [Agent Configuration Parameters](https://docs.owl-analytics.com/install
 
 ![Fig 4: Expected final output of edited agent based on this tutorial](<../../.gitbook/assets/image (67).png>)
 
-## Step 7. Create DB Connection for DQ Job
+## 8. Create DB Connection for DQ Job
 
 Follow the steps on [How to Add DB Connection via UI](https://docs.owl-analytics.com/installation/agent-configuration#how-to-add-db-connection-via-ui) page to add `metastore` database connection. For demo purposes, we will run a DQ Job against local DQ Metadata Storage.&#x20;
 
@@ -249,7 +249,7 @@ Click the clock icon in the navigation pane to navigate to the Jobs Page. Wait 1
 
 ![](<../../.gitbook/assets/Screenshot 2021-06-14 at 5.27.04 PM.png>)
 
-### Helpful Commands
+## Troubleshooting + Helpful Commands
 
 ```
 ### Setting permissions on your pem file for ssh access
@@ -326,7 +326,7 @@ Or change Spark storage with an agent configuration `-conf spark.local.dir=/home
 
 ![](<../../.gitbook/assets/image (106).png>)
 
-## Troubleshooting Tip: Add Spark Home Environment Variables to Profile
+## Tip: Add Spark Home Environment Variables to Profile
 
 ```
 ### Adding ENV variables to bash profile
@@ -401,20 +401,20 @@ cd /home/owldq/owl/spark/sbin/
 
 #### Example: <a href="#example" id="example"></a>
 
-* The Owl tar ball has been extracted to this folder on my EC2 Instance: _**/home/ec2-user/packages/**_
-* Owl will be running as the _**ec2-user**_
-* The owl-web application will run on port _**9000**_
-* The base location for the setup.sh script to create the owl folder and place all content under owl will be: _**/home/ec2-user/**_
+* The tar ball has been extracted to this folder on my EC2 Instance: _****_ `/home/ec2-user/packages/`
+* Owl will be running as the _****_ `ec2-user`
+* The owl-web application will run on port `9000`
+* The base location for the setup.sh script to create the will be: `/home/ec2-user/`
 
-_**./setup.sh -port=9000 -user=ec2-user -owlbase=/home/ec2-user -owlpackage=/home/ec2-user/package**_
+**`./setup.sh -port=9000 -user=ec2-user -owlbase=/home/ec2-user -owlpackage=/home/ec2-user/packages`**
 
 #### Example installing just the agent (perhaps on an Edge node of a hadoop cluster): <a href="#example-installing-just-the-agent-perhaps-on-an-edge-node-of-a-hadoop-cluster" id="example-installing-just-the-agent-perhaps-on-an-edge-node-of-a-hadoop-cluster"></a>
 
-* The Package has been extracted to this folder on my EC2 Instance: _**/home/ec2-user/packages/**_
-* Owl-agent will be running as the _**ec2-user**_
-* The base location for the setup.sh script to create the owl folder and place all packages under owl will be: _**/home/ec2-user/**_
+* The Package has been extracted to this folder on my EC2 Instance: _****_ `/home/ec2-user/packages/`
+* Owl-agent will be running as the _****_ `ec2-user`
+* The base location for the setup.sh script to create the owl folder and place all packages under owl will be: `/home/ec2-user/`
 
-_**./setup.sh -user=ec2-user -owlbase=/home/ec2-user -owlpackage=/home/ec2-user/package -options=owlagent**_
+**`./setup.sh -user=ec2-user -owlbase=/home/ec2-user -owlpackage=/home/ec2-user/package -options=owlagent`**
 
 {% hint style="info" %}
 When installing different features questions will be asked
@@ -424,7 +424,7 @@ When installing different features questions will be asked
 * If postgres is not being installed (such as agent install only) postgres metastore server name needs to be supplied
 {% endhint %}
 
-### Launching and Administering owl: <a href="#launching-and-administering-owl" id="launching-and-administering-owl"></a>
+### Launching and Administering Collibra DQ <a href="#launching-and-administering-owl" id="launching-and-administering-owl"></a>
 
 When the setup.sh script finishes by default software is automatically started. The setup.sh also creates the owlmanage.sh script which allows for stopping and starting of all owl services or some components of services.The setup script will also generate an owl-env.sh script that will hold the main variables that are reused across components (see owl-env.sh under the config directory).
 
