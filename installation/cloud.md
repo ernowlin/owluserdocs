@@ -44,7 +44,7 @@ This is where your DQ Job results will be stored
 
 ## **1. Obtain a Secure Collibra DQ Web URL**&#x20;
 
-This is provisioned by Collibra. Along your URL, credentials will be provided to access your instance.
+This is provisioned by Collibra. Along with the URL, credentials will be provided to access your instance.
 
 {% hint style="success" %}
 This offering is in private beta and only available for select Collibra customers. Please contact a Collibra representative to learn more about this offering.
@@ -130,11 +130,17 @@ sudo /usr/local/bin/kubectl get pods --all-namespaces
 sudo /usr/local/bin/uninstall-edge.sh --force
 ```
 
+Uninstalling an Edge Site using this command is OK.  Do not delete an Edge Site using the UI.
+
 **Reinstall the prerequisites if you perform the uninstall**
 
 ```
 sudo yum localinstall --skip-broken -y https://rpm.rancher.io/k3s/stable/common/centos/7/noarch/k3s-selinux-0.2-1.el7_8.noarch.rpm
 ```
+
+{% hint style="danger" %}
+**You should not delete an Edge using the UI, to avoid orphaned records.**
+{% endhint %}
 
 ## 4. **Configure an Agent**
 
@@ -164,7 +170,17 @@ The DQ Job (Spark) compute will take place locally on Edge K3s. Increase the siz
 Make note of the agent name that as created. In the following step you will create a connection and select (link) the agent to your connection.
 {% endhint %}
 
-## **5. Add a Connection**
+{% hint style="danger" %}
+**Do not delete an Agent from the UI, to avoid any orphaned records.**
+{% endhint %}
+
+## **5. Set Job Limits**
+
+Set max cores to 1 in the job limit settings.&#x20;
+
+**Refer to this** [**link**](https://dq-docs.collibra.com/benchmarks/performance-settings#job-limits) **for configuring job limits.**
+
+## **6. Add a Connection**
 
 This is the same process of adding a connection found [here ](../connecting-to-dbs-in-owl-web/owl-db-connection.md)with one difference.  You will map the connection to your agent upon establishing a connection.  This is different than mapping a connection and an agent in the self-hosted application.
 
@@ -176,7 +192,7 @@ Afterwards, you do not need to assign the connection to the agent. It will be au
 
 ![](<../.gitbook/assets/image (122).png>)
 
-## **6. Run a DQ Job**
+## **7. Run a DQ Job**
 
 Run a DQ Job to validate the installation.  Use the Explorer to onboard a table and check the Jobs page as normal to see the status.
 
