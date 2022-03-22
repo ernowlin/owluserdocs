@@ -125,7 +125,7 @@ please use owl owlmanage utility to configure license key and start owl-agent af
    The location of `OWL_BASE` and Postgres are configurable, but we advise you to take the defaults.
 {% endhint %}
 
-## 3_._ Install DQ + Spark and use existing Postgres (advanced)
+## 4. Install DQ + Spark and use existing Postgres (advanced)
 
 {% hint style="warning" %}
 Skip Step 3 if you opted to install Postgres and performed Step 2 instead.
