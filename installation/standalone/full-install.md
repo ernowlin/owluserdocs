@@ -249,16 +249,6 @@ Click the clock icon in the navigation pane to navigate to the Jobs Page. Wait 1
 
 ![](<../../.gitbook/assets/Screenshot 2021-06-14 at 5.27.04 PM.png>)
 
-## Generally Available Build Versions
-
-* Default Build = Spark 2.3.0
-* Spark 2.4.5
-* Spark 3.0.1
-* HDP 3
-* CDH5
-* CDH6-NOLOG
-* K8s
-
 ### Helpful Commands
 
 ```
@@ -304,6 +294,23 @@ hostname -f
 
 sudo du -ah | sort -hr | head -5
 sudo find /home/owldq/owl/spark/work/* -mtime +1 -type f -delete
+```
+
+```
+### "Too many open files error message"
+### check and modify that limits.conf file 
+### Do this on the machine where the agent is running for Spark standalone version
+
+ulimit -Ha 
+cat /etc/security/limits.conf 
+
+### Edit the limits.conf file
+sudo vi /etc/security/limits.conf
+
+### Increase the limit for example 
+### Add these 2 lines 
+*               soft    nofile           8192
+*               hard    nofile           10000
 ```
 
 ```
