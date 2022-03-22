@@ -182,7 +182,7 @@ Set max cores to 1 in the job limit settings.&#x20;
 
 ## **6. Add a Connection**
 
-This is the same process of adding a connection found [here ](../connecting-to-dbs-in-owl-web/owl-db-connection.md)with one difference.  You will map the connection to your agent upon establishing a connection.  This is different than mapping a connection and an agent in the self-hosted application.
+This is the same process of adding a connection found [here ](../connecting-to-dbs-in-owl-web/owl-db-connection.md)with one difference.  You will map the connection to your agent upon establishing a connection.  **This is different than mapping a connection and an agent in the self-hosted application.**
 
 Select your target agent using the **Target Agent drop-down**. This drop-down will populate with existing agents.  Here is where you will select the agent name from the previous step.
 
@@ -191,6 +191,10 @@ Select your target agent using the **Target Agent drop-down**. This drop-down wi
 Afterwards, you do not need to assign the connection to the agent. It will be automatically mapped.
 
 ![](<../.gitbook/assets/image (122).png>)
+
+{% hint style="info" %}
+**To map a connection to another agent, you need to re-save the connection and select another agent from the drop-down list.**
+{% endhint %}
 
 ## **7. Run a DQ Job**
 
