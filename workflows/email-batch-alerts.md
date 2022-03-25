@@ -23,3 +23,7 @@ After job runs it checks dataset with condition email not sent and batch name no
 User can also run the DQ jobs manually from Hoot page.
 
 ![](<../.gitbook/assets/Screen Shot 2022-03-21 at 1.01.45 PM.png>)
+
+#### Alert for Batch Schedule
+
+[https://dq-docs.collibra.com/scheduler/schedule-owlchecks](https://dq-docs.collibra.com/scheduler/schedule-owlchecks)
