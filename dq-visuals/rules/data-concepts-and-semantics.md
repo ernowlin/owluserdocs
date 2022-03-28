@@ -16,6 +16,8 @@ Dataset Level
 **Security Reference Data** - Bloomberg financial data                                                                      **Home Loan Data** - Mortgage application data
 {% endhint %}
 
+
+
 ## Semantics
 
 {% hint style="info" %}
@@ -24,13 +26,44 @@ Column Level
 EMAIL, ZIP CODE, SSN, CUSIP, GENDER, ADDRESS, CURRENCY CD, SKU, EIN, IP ADDRESS, PHONE, LICENSE, VIN, CREDIT CARD
 {% endhint %}
 
-A semantic is the "semantic type" of a column or attribute of a dataset.  All columns have a physical type such as String, Int, Date etc... but the semantic understanding of what type of String is in the column can be very important.  I also allows us to enforce DQ validation rules out of the box.&#x20;
+A semantic is the "semantic type" of a column or attribute of a dataset.  All columns have a physical type such as String, Int, Date etc... but the semantic understanding of what type of String is in the column can be very important.  It also allows us to enforce DQ validation rules out of the box.&#x20;
 
 Owl's semantic scanning self identifies standard columns and automatically provides the proper protection. This makes it easy to get started adding common rules for specific use-cases.&#x20;
 
 **Owl offers out of the box rules for 1-click rule creation**
 
 ![](<../../.gitbook/assets/Auto Rules.png>)
+
+### Run Discovery
+
+With the **Run Discovery** modal, you can run a **DQ Scan** to detect for the semantics assigned to a selected data concept. The Run Discovery algorithm automatically selects the best match if a column matches two or more data classes. Data class match criteria are determined by percent match and name distance.&#x20;
+
+You can access the Run Discovery feature via:&#x20;
+
+* **Catalog**
+* **DQ Job**
+
+#### Via Catalog
+
+1. In **Catalog**, select your dataset.
+2. In the **Actions** dropdown menu, click **Data Concept**.
+3. Select an option from the **Data Concept** dropdown and click **Run Discovery**.
+
+![](<../../.gitbook/assets/run-discovery-catalog-1 (1).png>)
+
+![](<../../.gitbook/assets/dq-job-run-discovery (1).png>)
+
+#### Via DQ Job
+
+1. From the **DQ Job** page, select your DQ Job.&#x20;
+2. Click the **Rules** tab in your DQ Job.
+3. Click the **Rule Discovery** button.
+4. In the **Data Concept** window, select your Data Concept.
+5. Click **Run Discovery**.
+
+![](../../.gitbook/assets/rule-discovery-run-discovery.png)
+
+![](<../../.gitbook/assets/dq-job-run-discovery (1).png>)
 
 ## Sensitive Data
 
