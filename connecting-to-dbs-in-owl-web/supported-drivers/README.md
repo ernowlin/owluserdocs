@@ -41,7 +41,7 @@ _Note: Illustrative grades provided below represent level of support around data
 
 ## Preview
 
-The following is a list of drivers which are for test purposes (not certified yet for production usage).
+The following is a list of drivers which are under evaluation (not certified yet for production usage).
 
 | Connection Type                  | Driver                                                                            | Certification | Grade | Auth Type               | Comments                                                                                                                                                                                              |
 | -------------------------------- | --------------------------------------------------------------------------------- | ------------- | ----- | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
