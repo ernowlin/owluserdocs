@@ -19,6 +19,7 @@ _Note: Illustrative grades provided below represent level of support around data
 * _Features_
   * _A Grade: Pushdown Support, Views, Special characters, Validate Source, versatile Driver support_
   * _C Grade: No pushdown support, no special characters, specific drivers required (e.g. multiple JARs)_
+  * _D Grade: Not packaged in k8 containers and not certified with each release. These are not available in the cloud version of the software._ &#x20;
 
 | Connection Type   | Driver                                | Certification | Grade | Auth Type                                   | Comments                                                                                       |
 | ----------------- | ------------------------------------- | ------------- | ----- | ------------------------------------------- | ---------------------------------------------------------------------------------------------- |
