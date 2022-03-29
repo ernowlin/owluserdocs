@@ -6,9 +6,9 @@
 
 * Security
   * CORS restriction is now enforced for SAML and multi-tenancy.&#x20;
-    * This breaks SAML unless the IDP is configured as a trusted origin in DQ, so the following property must be added to environment variables in order for DQ and SAML to work: `CORS_ALLOWED_ORIGINS=${IDP-BASE-URL},${DQ-BASE-URL}`
-      * Replace `${IDP-BASE-URL}` with the value of the actual IDP URL (For example: https://ping.auth.com)
-      * Replace `${DQ-BASE-URL}` with the value of the actual DQ Base URL (For example: https://dq-env.com)
+    * This breaks SAML unless the IDP is configured as a trusted origin in DQ, so the following property must be added to environment variables in order for DQ and SAML to work: CORS\_ALLOWED\_ORIGINS=${IDP-BASE-URL},${DQ-BASE-URL}
+      * Replace ${IDP-BASE-URL`}` with the value of the actual IDP URL (For example: https://ping.auth.com)
+      * Replace ${DQ-BASE-URL} with the value of the actual DQ Base URL (For example: https://dq-env.com)
 
 ## 2022.03&#x20;
 
