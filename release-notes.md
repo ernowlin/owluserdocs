@@ -4,6 +4,8 @@
 
 #### Fixes / Enhancements
 
+* DQ Job
+  * Entering negative values for the downscore is no longer supported and will now produce an error message.&#x20;
 * Security
   * CORS restriction is now enforced for SAML and multi-tenancy.&#x20;
     * This breaks SAML unless the IDP is configured as a trusted origin in DQ, so the following property must be added to environment variables in order for DQ and SAML to work: CORS\_ALLOWED\_ORIGINS=${IDP-BASE-URL},${DQ-BASE-URL}
