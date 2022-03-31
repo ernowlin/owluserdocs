@@ -4,6 +4,10 @@ description: Installation details for the Edge component for DQ Cloud.
 
 # Cloud
 
+{% hint style="success" %}
+This offering is in private beta and only available for select Collibra customers. Please contact a Collibra representative to learn more about this offering.
+{% endhint %}
+
 ## Requirements
 
 | Resource           | Notes                                   | Provisioned by |
