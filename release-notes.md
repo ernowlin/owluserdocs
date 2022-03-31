@@ -6,11 +6,16 @@
 
 * DQ Job
   * Entering negative values for the downscore is no longer supported and will now produce an error message.&#x20;
+* Rules
+  * For Native SQL rules, jobs now behave the same whether or not a semicolon ";" is included in the SQL query.&#x20;
 * Security
   * CORS restriction is now enforced for SAML and multi-tenancy.&#x20;
     * This breaks SAML unless the IDP is configured as a trusted origin in DQ, so the following property must be added to environment variables in order for DQ and SAML to work: CORS\_ALLOWED\_ORIGINS=${IDP-BASE-URL},${DQ-BASE-URL}
       * Replace ${IDP-BASE-URL} with the value of the actual IDP URL (For example: https://ping.auth.com)
       * Replace ${DQ-BASE-URL} with the value of the actual DQ Base URL (For example: https://dq-env.com)
+  * Profile
+    * Fixed the issue where the connection fails when connecting to MSSQL server on Windows from a Linux DQ environment.
+      * We recommend (not required) a TLS connection for MSSQL connections from a DQ Linux environment with a properly signed certificate setup on MSSQL server to connect only via TLS.
 
 ## 2022.03&#x20;
 
