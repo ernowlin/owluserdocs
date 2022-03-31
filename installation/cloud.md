@@ -220,6 +220,21 @@ Root access: root access is needed, though future revisions will follow the leas
 
 The private beta is designed to let customers 1) complete the installation 2) confirm successful DQ jobs can be run and 3) validate their security requirements whereby no sensitive data is stored outside their custody.
 
+### Helpful Commands
+
+```
+# Get all pods running
+sudo /usr/local/bin/kubectl get pods --all-namespaces
+
+# Get shell access to pod
+sudo /usr/local/bin/kubectl exec -it <dq-web-pod> -n collibra-edge -- bash
+
+# Check network connectivity to database
+curl telnet://<rds-host>:<port> 
+
+
+```
+
 ### FAQ
 
 **What network access is needed?**
