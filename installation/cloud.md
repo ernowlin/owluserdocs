@@ -232,7 +232,8 @@ sudo /usr/local/bin/kubectl exec -it <dq-web-pod> -n collibra-edge -- bash
 # Check network connectivity to database
 curl telnet://<rds-host>:<port> 
 
-
+# Delete jobs
+sudo /usr/local/bin/kubectl delete pod <pod-name> -n collibra-edge
 ```
 
 ### FAQ
