@@ -229,6 +229,9 @@ sudo /usr/local/bin/kubectl get pods --all-namespaces
 # Get shell access to pod
 sudo /usr/local/bin/kubectl exec -it <dq-web-pod> -n collibra-edge -- bash
 
+# Get shell access to pod
+sudo /usr/local/bin/kubectl exec -it collibra-edge-controller-<pod-name> -n collibra-edge -- sh
+
 # Check network connectivity to database
 curl telnet://<rds-host>:<port> 
 
