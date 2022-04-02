@@ -5,7 +5,7 @@ description: Installation details for the Edge component for DQ Cloud.
 # Cloud
 
 {% hint style="success" %}
-This offering is in private beta and only available for select Collibra customers. Please contact a Collibra representative to learn more about this offering.
+This offering is in private beta and only available for select Collibra customers. Please contact a Collibra representative to learn more.
 {% endhint %}
 
 ## Requirements
@@ -51,7 +51,7 @@ This is where your DQ Job results will be stored
 This is provisioned by Collibra. Along with the URL, credentials will be provided to access your instance.
 
 {% hint style="success" %}
-This offering is in private beta and only available for select Collibra customers. Please contact a Collibra representative to learn more about this offering.
+This offering is in private beta and only available for select Collibra customers. Please contact a Collibra representative to learn more.
 {% endhint %}
 
 ## **2. Install Postgres**
