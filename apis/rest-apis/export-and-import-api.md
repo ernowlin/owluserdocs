@@ -12,7 +12,7 @@ The database needs the [stored procedure](export-and-import-api.md#stored-proced
 
 ### V2 - Stable - available from 2022.02 release
 
-#### Step 1 - Export content from source schema
+#### Step 1a - Export content from source schema
 
 {% swagger method="get" path="/db-export" baseUrl="https://<collibra-dq-url>/v2" summary="Export tables from database" %}
 {% swagger-description %}
@@ -66,7 +66,7 @@ _**rule_repo, owl_catalog, owl_rule, alert_cond, owl_check_repo, job_schedule, a
 {% endswagger-response %}
 {% endswagger %}
 
-#### Step 1 - Import content
+#### Step 1b - Import content
 
 {% swagger method="post" path="/db-import" baseUrl="https://<collibra-dq-url>/v2" summary="Import content into the target tenant" %}
 {% swagger-description %}
@@ -102,7 +102,7 @@ Format: JSON string list
 
 #### We suggest using db-export, but we will not remove get-exports.  We do expect to consolidate the newer logic behind the method.
 
-#### Step 1 - Get-Exports
+#### Step 1c - Get-Exports
 
 Best practice is to use the get-exports endpoint for most scenarios.  You can pass in several dataset names and several tables at once. This endpoint will create a JSON payload
 
