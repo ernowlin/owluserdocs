@@ -6,11 +6,16 @@
 
 * DQ Job
   * Entering negative values for the downscore is no longer supported and will now produce an error message.
+  * You can now invalidate schema with special characters.&#x20;
+  * Spark table names of historical dataset loaded and other spark tables are now available on Jobs Log table.
 * Alerts
-  * You can once again use the Cancel action button on the Alert Page.
+  * You can once again use the Cancel action button on the Alerts page.
+  * You can now set up alerts to reach multiple email recipients.&#x20;
 * Rules
   * You can now modify Rules definitions from the primary DQ Job dashboard without loading the Rules page.
   * For Native SQL rules, jobs now behave the same whether or not a semicolon ";" is included in the SQL query.&#x20;
+  * You can now use a hyphen "-" in a dataset name.&#x20;
+    * Acceptable special characters now include a hyphen "-", period ".", and underscore "\_".
   * Added a tooltip that displays which condition is being checked in a DQ Job when using a Stat rule when you hover your cursor over a condition in the Condition column.
   * Improved the exception message for when there are no values for a specific column while using a Stat rule.
   * The WebUI passing boundaries range has been updated to ().
