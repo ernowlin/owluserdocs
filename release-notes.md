@@ -5,17 +5,27 @@
 #### Fixes / Enhancements
 
 * DQ Job
-  * Entering negative values for the downscore is no longer supported and will now produce an error message.&#x20;
+  * Entering negative values for the downscore is no longer supported and will now produce an error message.
+* Alerts
+  * You can once again use the Cancel action button on the Alert Page.
 * Rules
+  * You can now modify Rules definitions from the primary DQ Job dashboard without loading the Rules page.
   * For Native SQL rules, jobs now behave the same whether or not a semicolon ";" is included in the SQL query.&#x20;
+  * Added a tooltip that displays which condition is being checked in a DQ Job when using a Stat rule when you hover your cursor over a condition in the Condition column.
+  * Improved the exception message for when there are no values for a specific column while using a Stat rule.
+  * The WebUI passing boundaries range has been updated to ().
 * Security
   * CORS restriction is now enforced for SAML and multi-tenancy.&#x20;
     * This breaks SAML unless the IDP is configured as a trusted origin in DQ, so the following property must be added to environment variables in order for DQ and SAML to work: CORS\_ALLOWED\_ORIGINS=${IDP-BASE-URL},${DQ-BASE-URL}
       * Replace ${IDP-BASE-URL} with the value of the actual IDP URL (For example: https://ping.auth.com)
       * Replace ${DQ-BASE-URL} with the value of the actual DQ Base URL (For example: https://dq-env.com)
   * Profile
-    * Fixed the issue where the connection fails when connecting to MSSQL server on Windows from a Linux DQ environment.
+    * When connecting to MSSQL server on Windows from a Linux DQ environment, the connection no longer fails.
       * We recommend (not required) a TLS connection for MSSQL connections from a DQ Linux environment with a properly signed certificate setup on MSSQL server to connect only via TLS.
+  * Explorer
+    * When toggling between fullfile and Union LookBack options, `-fullfile` and `-fllb` flags can no longer be generated together in the DQ Job command line.
+  * Dupes
+    * Added linkID column for exact match in both UI and REST API. linkID can now be either included or excluded from Dupes for exact match.
 
 ## 2022.03&#x20;
 
