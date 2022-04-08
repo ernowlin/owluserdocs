@@ -198,11 +198,23 @@ cd $OWL_BASE/owl/bin
 Next, start the DQ Agent process to enable processing of DQ checks.
 
 ```
+# 1 start the agent so agent.properties will be created 
 cd $OWL_BASE/owl/bin
 ./owlmanage.sh start=owlagent
 
-# Verify "agent.properties" file is created
+# 2 stop the agent add this line to agent.properties
+./owlmanage.sh stop=owlagent
+
+# 3 add this line to agent.properties
+sparksubmitmode=native
+sparkhome=</your/spark/home/folder> 
+
+# 4 start the agent again 
+./owlmanage.sh start=owlagent
+
+# 5 Verify "agent.properties" contains the correct details
 cd $OWL_BASE/owl/config
+cat $OWL_BASE/owl/config/agent.properties
 ```
 
 When the script successfully runs, `$OWL_BASE/owl/config` folder will contain a file called `agent.properties`. This file contains agent id # of agents installed in this machine. Since this is the first non-default agent installed, the expected agent id is 2. Verify `agent.properties` file is created. Your`agent.properties` is expected to have different timestamp, but you should see `agentid=2`
