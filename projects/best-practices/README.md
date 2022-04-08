@@ -1,5 +1,11 @@
 # Best Practices
 
+### **Multi Tenant Names**
+
+**Tenant names should be lower case only.**&#x20;
+
+![](<../../.gitbook/assets/image (133).png>)
+
 ### **Understanding owl activities and what the key/date columns mean for each**
 
 * Starting with profile and expanding to rules and then other advanced capabilities. &#x20;

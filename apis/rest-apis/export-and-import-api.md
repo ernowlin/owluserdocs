@@ -124,7 +124,7 @@ http://<url>/v2/get-exports?dataset=public.dataset_scan_2,public.dataset_scan_1&
 
 This is located under controller-scala (internal API)
 
-![](<../../.gitbook/assets/image (133).png>)
+![](<../../.gitbook/assets/image (133) (1).png>)
 
 #### Click Try it out to input the details
 
