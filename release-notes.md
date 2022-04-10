@@ -8,6 +8,7 @@
   * Entering negative values for the downscore is no longer supported and will now produce an error message.
   * You can now invalidate schema with special characters.&#x20;
   * Spark table names of historical dataset loaded and other spark tables are now available on Jobs Log table.
+  * Changed the /v2/getlistdataschemapreviewdbtablebycols API call method from GET to POST to support the long query (-q) or very large columns table.&#x20;
 * Alerts
   * You can once again use the Cancel action button on the Alerts page.
   * You can now set up alerts to reach multiple email recipients.&#x20;
@@ -25,10 +26,12 @@
       * Replace ${IDP-BASE-URL} with the value of the actual IDP URL (For example: https://ping.auth.com)
       * Replace ${DQ-BASE-URL} with the value of the actual DQ Base URL (For example: https://dq-env.com)
   * Profile
+    * Mean value once again displays in the Volume column.&#x20;
     * When connecting to MSSQL server on Windows from a Linux DQ environment, the connection no longer fails.
       * We recommend (not required) a TLS connection for MSSQL connections from a DQ Linux environment with a properly signed certificate setup on MSSQL server to connect only via TLS.
   * Explorer
     * When toggling between fullfile and Union LookBack options, `-fullfile` and `-fllb` flags can no longer be generated together in the DQ Job command line.
+    * Data Preview for Temp files loading in Explorer now correctly shows the order of columns of the original Temp file.&#x20;
   * Dupes
     * Added linkID column for exact match in both UI and REST API. linkID can now be either included or excluded from Dupes for exact match.
 
