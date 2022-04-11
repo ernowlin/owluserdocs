@@ -84,17 +84,17 @@ Now imagine if you could classify your datasets as concepts, then automatically 
 
 ## Steps To Use
 
-### Step 1: Create DQ Job with Semantic On
+### Step 1: Create DQ Job
 
-To start, create a new DQ Job and select Semantic ON on the Profile options page
+To start, create a new DQ Job. When creating a DQ Job from **Explorer**, Semantic Detection is on by default. &#x20;
 
-![](<../../.gitbook/assets/dqjobsemanticon (1).gif>)
+![](../../.gitbook/assets/explorer-dq-job.png)
 
 ### Step 2: In Catalog, select and apply your Data Concept
 
 Navigate to your dataset in **Catalog** and select the Data Concept you would like to apply with the **Actions** dropdown menu.
 
-See below sections on how to **Administering Data Concepts** as well as how to **Create and Manage Semantics**
+See below sections on how to **Administering Data Concepts** as well as how to **Create and Manage Semantics**.
 
 ![](<../../.gitbook/assets/semantic-apply-dataconcept (1).gif>)
 
