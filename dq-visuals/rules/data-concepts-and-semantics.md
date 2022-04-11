@@ -86,7 +86,7 @@ Now imagine if you could classify your datasets as concepts, then automatically 
 
 ### Step 1: Create DQ Job
 
-To start, create a new DQ Job. When creating a DQ Job from **Explorer**, Semantic Detection is on by default. &#x20;
+To start, create a new DQ Job. In the Profile step, Semantic Detection is on by default. &#x20;
 
 ![](../../.gitbook/assets/explorer-dq-job.png)
 
