@@ -104,7 +104,7 @@ Format: JSON string list
 
 #### Step 1c - Get-Exports
 
-Best practice is to use the get-exports endpoint for most scenarios.  You can pass in several dataset names and several tables at once. This endpoint will create a JSON payload
+You can pass in several dataset names and several tables at once. This endpoint will create a JSON payload
 
 {% hint style="info" %}
 Exports and Imports are currently limited to the 3 tables listed below.
