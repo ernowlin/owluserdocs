@@ -1,6 +1,6 @@
 # Release Notes
 
-## 2022.04 (In Progress)
+## 2022.04
 
 #### Fixes / Enhancements
 
