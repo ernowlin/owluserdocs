@@ -94,7 +94,7 @@ Once the above steps are completed, user can create a spark submit job through D
 [https://docs.databricks.com/jobs.html](https://docs.databricks.com/jobs.html)\
 Then user can add the environment variables to the cluster and click run on databticks UI.
 
-![](<../../.gitbook/assets/Screen Shot 2022-04-12 at 10.36.06 AM.png>)
+![Create a job in Databricks UI](<../../.gitbook/assets/Screen Shot 2022-04-12 at 10.36.06 AM.png>)
 
 #### Check the result in DQ web:
 
@@ -116,15 +116,14 @@ For this path we need to do the steps 1-4 of the the previous section and then c
 
 Below is the sample Json payload:&#x20;
 
-POST /api/2.1/jobs/runs/submit HTTP/1.1\
-Host: [xxxxxx.cloud.databricks.com](http://dbc-9a4426da-9755.cloud.databricks.com)\
-Content-Type: application/json\
-Authorization: Bearer ~~xxxxxxxxxxxxx~~\
-Cache-Control: no-cache\
-Postman-Token: xxxxxxxx
+`POST /api/2.1/jobs/runs/submit HTTP/1.1`\
+`Host:` [`xxxxxx.cloud.databricks.com`](http://dbc-9a4426da-9755.cloud.databricks.com)``\
+`Content-Type: application/json`\
+`Authorization: Bearer`` `~~`xxxxxxxxxxxxx`~~\
+`Cache-Control: no-cache`\
+`Postman-Token: xxxxxxxx`
 
-`1{ "tasks": [ 2 { 3 "task_key": "CDQ-SparkSubmitCallFinal", 4 "spark_submit_task": { 5 "parameters": [ 6 "--class", 7 "com.owl.core.cli.OwlCheck", 8 "dbfs:/FileStore/cdq/owl-core-2022.02-SPARK301-jar-with-dependencies.jar", 9 "-lib", 10 "dbfs:/FileStore/cdq/owl/drivers/postgres", 11 "-q", 12 "select * from public.agent", 13 "-bhlb", 14 "10", 15 "-rd", 16 "2022-03-16", 17 "-driver", 18 "owl.com.org.postgresql.Driver", 19 "-drivermemory", 20 "4g", 21 "-cxn", 22 "metastore", 23 "-h", 24 "xxx-1.rds.amazonaws.com:xxx/postgres", 25 "-ds", 26 "public.agent_2", 27 "-deploymode", 28 "cluster", 29 "-owluser", 30 "admin" 31 ] 32 }, 33 "new_cluster": { 34 "cluster_name": "", 35 "spark_version": "7.3.x-scala2.12", 36 "aws_attributes": { 37 "zone_id": "us-east-1e", 38 "first_on_demand": 1, 39 "availability": "SPOT_WITH_FALLBACK", 40 "spot_bid_price_percent": 100, 41 "ebs_volume_count": 0 42 }, 43 "node_type_id": "i3.xlarge", 44 "spark_env_vars": { 45 "SPRING_DATASOURCE_URL": "jdbc:postgresql://xxxx-1.rds.amazonaws.com:xxx/postgres", 46 "SPRING_DATASOURCE_PASSWORD":"xxx", 47 "SPRING_DATASOURCE_USERNAME":"xxx", 48 "SPRING_DATASOURCE_DRIVER_CLASS_NAME":"org.postgresql.Driver", 49 "LICENSE_KEY": "ZZZZZZLNJXDQBZN24XKVHYAQ0YCSNK9NSQK1EEN6W1GPABDPDCRAXY:85O62HKN406B6JQTWMUITE2PUZHRURNJZQFSWCMP42O9XWSQ:65536" 50 }, 51 "enable_elastic_disk": false, 52 "num_workers": 8 53 }, 54 "timeout_seconds": 0 55 } 56 ]`\
-``
+<mark style="color:orange;">{</mark> <mark style="color:orange;"></mark><mark style="color:orange;">`"tasks": [ { "task_key": "CDQ-SparkSubmitCallFinal", "spark_submit_task": { "parameters": [ "--class", "com.owl.core.cli.OwlCheck", "dbfs:/FileStore/cdq/owl-core-2022.02-SPARK301-jar-with-dependencies.jar", "-lib", "dbfs:/FileStore/cdq/owl/drivers/postgres", "-q", "select * from public.agent", "-bhlb", "10", "-rd", "2022-03-16", "-driver", "owl.com.org.postgresql.Driver", "-drivermemory", "4g", "-cxn", "metastore", "-h", "xxxs.amazonaws.com:xxx/postgres", "-ds", "public.agent_2", "-deploymode", "cluster", "-owluser", "admin" ] }, "new_cluster": { "cluster_name": "", "spark_version": "7.3.x-scala2.12", "aws_attributes": { "zone_id": "us-east-1e", "first_on_demand": 1, "availability": "SPOT_WITH_FALLBACK", "spot_bid_price_percent": 100, "ebs_volume_count": 0 }, "node_type_id": "i3.xlarge", "spark_env_vars": { "SPRING_DATASOURCE_URL": "jdbc:postgresql://xxx-xx-xxs.amazonaws.com:xx/postgres", "SPRING_DATASOURCE_PASSWORD":"xxx", "SPRING_DATASOURCE_USERNAME":"xxx", "SPRING_DATASOURCE_DRIVER_CLASS_NAME":"org.postgresql.Driver", "LICENSE_KEY": "xxxx" }, "enable_elastic_disk": false, "num_workers": 8 }, "timeout_seconds": 0 } ] }`</mark>\ <mark style="color:orange;">``</mark>
 
 ![Authentication setup for Databricks Rest API](<../../.gitbook/assets/Screen Shot 2022-04-12 at 10.17.00 AM (1).png>)
 
