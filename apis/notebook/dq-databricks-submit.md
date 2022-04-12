@@ -1,45 +1,38 @@
 # DQ-Databricks Submit
 
-### DQ Spark submit using the UI
+### DQ Spark submit from the UI
 
 #### Limitations
 
 There are a few limitation to spark-submit jobs in Databricks listed in this section: [https://docs.databricks.com/jobs.html#create-a-job](https://docs.databricks.com/jobs.html#create-a-job)\
-&#x20;Also, spark-submit is only on new clusters from both the UI via Jobs or calling the REST APIs. See Step 4 in: [https://docs.databricks.com/jobs.html#create-a-job](https://docs.databricks.com/jobs.html#create-a-job) where it lists that spark-submit is handled by new clusters only.\
+Also, spark-submit is only on new clusters from both the UI via Jobs or calling the REST APIs. See Step 4 in: [https://docs.databricks.com/jobs.html#create-a-job](https://docs.databricks.com/jobs.html#create-a-job) where it lists that spark-submit is handled by new clusters only.
 
+{% hint style="info" %}
+**Note:** These are only examples to demonstrate how to achieve DQ spark submit to Databricks's cluster. These paths are _not_ supported in production and DQ team does NOT support any bug coverages or professional services or customer questions for these flows.&#x20;
+{% endhint %}
 
-Please note that these are only examples to demonstrate how to achieve DQ spark submit to Databricks's cluster. These paths are NOT supported in production and DQ team does NOT support any bug coverages or professional services or customer questions for these flows.&#x20;
+#### Steps to create and run a spark submit job from Databricks UI:
 
-#### Steps:
+1. Grant Collibra DQ Database access to your instance of Databricks.
+2. Upload DQ jars in Databricks File System (DBFS).
+3. Set up environment variables for your new cluster.
+4. Prepare the DQ JSON payload.
+5. Create and Run your job.
+6. View the status and result of your job from the DQ Jobs page.
 
-Here are the main steps to create and run a spark submit job from Databricks UI:
+#### Database access
 
-1- Grant the DQ's Database access to your Databricks's instance.
+To begin, ensure that sure your Databricks instance has access to the DQ Database.&#x20;
 
-2- Upload DQ's jars in DBFS.
+The entire subnet must be whitelisted to connect to the database. As specified in [Databricks' documentation on subnets](https://docs.databricks.com/administration-guide/cloud-configurations/aws/customer-managed-vpc.html#subnets), Databricks must have access to at least two subnets for each database. To connect to the two Databricks subnets where the nodes will be instantiated, you must allow AWS to whitelist your IP address range.&#x20;
 
-3-Setup environment variables for the new cluster.
+#### Upload DQ's jars in DBFS
 
-4- Prepare DQ's Json payload.
-
-5-Create and Run the job.
-
-6- View the job's result in DQ web.
-
-#### &#x20;Database access
-
-The first step is to make sure  your Databricks instance has access to your DQ's Database. The whole subnet should be whitelisted to connect to the database. Here is a link to AWS Databricks documentation the subnet portion of the VPC setup\
-[https://docs.databricks.com/administration-guide/cloud-configurations/aws/customer-managed-](https://docs.databricks.com/administration-guide/cloud-configurations/aws/customer-managed-vpc.html#subnets) [vpc.html#subnets](https://docs.databricks.com/administration-guide/cloud-configurations/aws/customer-managed-vpc.html#subnets)\
-AWS should have the ability to whitelist a IP address range that would allow the two Databricks subnets where the nodes will be instantiated to connect
-
-#### &#x20;Upload DQ's jars in DBFS
-
-The jars should be manually uploaded in Databricks file system. The steps can be found on Databricks website.\
-
+The jars should be manually uploaded in Databricks file system. The steps can be found on Databricks website.
 
 #### Environment variables for the new  cluster :
 
-`These environment variables should be set on the new cluster.`&#x20;
+These environment variables should be set on the new cluster.
 
 `SPRING_DATASOURCE_URL=xx`\
 `SPRING_DATASOURCE_USERNAME=xx`\
@@ -48,9 +41,9 @@ The jars should be manually uploaded in Databricks file system. The steps can be
 
 ![Setting up DQ's environment variables for the new cluster.](<../../.gitbook/assets/configure-new-cluster (1).png>)
 
-#### Json Payload&#x20;
+#### JSON payload&#x20;
 
-Once the above steps are completed, you can submit a spark submit job with DQ's parameters. Payload parameters can be get from DQ's web Run command. You need to manually copy paste the params to prepare a json payload. Here is one sample:&#x20;
+Once the above steps are completed, you can submit a spark submit job with DQ's parameters. Payload parameters can be from DQ's web Run command. You can copy and paste the parameters to prepare a JSON payload. Here is one sample:&#x20;
 
 ```
                      "--class",
@@ -83,31 +76,31 @@ Once the above steps are completed, you can submit a spark submit job with DQ's 
 
 #### Run the job
 
-Once the above steps are completed, user can create a spark submit job through Databricks UI. The steps are detailed here: \
-[https://docs.databricks.com/jobs.html](https://docs.databricks.com/jobs.html)\
-Then user can add the environment variables to the cluster and click run on databticks UI.
+Once you have completed the above steps, you can [create a spark submit job](https://docs.databricks.com/jobs.html) through Databricks UI.&#x20;
+
+You can then add the environment variables to the cluster and click Run on Databricks UI.
 
 ![Create a job in Databricks UI](../../.gitbook/assets/create-job-spark-submit.png)
 
 #### Check the result in DQ web:
 
-Once the job is submitted you can login to your DQ's web instance and check the job in the jobs page.&#x20;
+Once the job is submitted, you can login to your DQ web instance and check the job in the Jobs page.&#x20;
 
-### Spark submit by invoking Databricks's Rest API
+### Spark submit by invoking Databricks REST API
 
-There are Public REST APIS available for the Jobs API with the latest version being: [https://docs.databricks.com/dev-tools/api/latest/jobs.html](https://docs.databricks.com/dev-tools/api/latest/jobs.html)
+There are public REST APIS available for the Jobs API, [including the latest version](https://docs.databricks.com/dev-tools/api/latest/jobs.html).
 
-For this path we need to do the steps 1-4 of the the previous section and then call directly the rest API using postman or any other tool. So the two new steps are as below:
+For this path we need to do the steps 1-4 of the the previous section and then call directly the REST API using Postman, or your preferred API testing tool.&#x20;
 
 #### Steps:
 
-1- Json Payload
+1- Prepare the DQ JSON Payload.
 
-2- Authentication
+2- Authenticate the Databricks REST API.
 
-#### &#x20;Json payload&#x20;
+#### JSON payload&#x20;
 
-Below is the sample Json payload:&#x20;
+Sample JSON payload:&#x20;
 
 `POST /api/2.1/jobs/runs/submit HTTP/1.1`\
 `Host:` [`xxxxxx.cloud.databricks.com`](http://dbc-9a4426da-9755.cloud.databricks.com)``\
@@ -122,6 +115,6 @@ Below is the sample Json payload:&#x20;
 
 #### View the job's result in DQ web
 
-Like the previous section, the result of job run can be viewed in DQ's web.
+You can view the result of your job run by navigating to the DQ Jobs page.
 
 ![DQ job submitted from Databricks API](../../.gitbook/assets/job-submit-success-databricks.png)
