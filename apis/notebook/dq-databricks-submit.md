@@ -6,7 +6,11 @@ description: >-
 
 # DQ-Databricks Submit
 
-### DQ Spark submit using the UI
+### Introduction
+
+In this page we will demonstrate two paths to run a spark submit job on Databricks's cluster. First approach is to run a DQ spark submit job using Databricks UI and the second approach is by invoking Databricks rest API.
+
+Please note that these are only examples to demonstrate how we ran a DQ spark submit on Databricks's cluster. These paths are **NOT** supported in production and DQ team does **NOT** support any bug coverages or professional services or customer questions for these flows.&#x20;
 
 #### Limitations
 
@@ -14,7 +18,7 @@ There are a few limitation to spark-submit jobs in Databricks listed in this sec
 &#x20;Also, spark-submit is only on new clusters from both the UI via Jobs or calling the REST APIs. See Step 4 in: [https://docs.databricks.com/jobs.html#create-a-job](https://docs.databricks.com/jobs.html#create-a-job) where it lists that spark-submit is handled by new clusters only.\
 
 
-Please note that these are only examples to demonstrate how to achieve DQ spark submit to Databricks's cluster. These paths are NOT supported in production and DQ team does NOT support any bug coverages or professional services or customer questions for these flows.&#x20;
+### 1. DQ Spark submit using the UI
 
 #### Steps:
 
@@ -101,7 +105,7 @@ Then user can add the environment variables to the cluster and click run on data
 
 Once the job is submitted you can login to your DQ's web instance and check the job in the jobs page.&#x20;
 
-### Spark submit by invoking Databricks's Rest API
+### 2. Spark submit by invoking Databricks's Rest API
 
 There are Public REST APIS available for the Jobs API with the latest version being: [https://docs.databricks.com/dev-tools/api/latest/jobs.html](https://docs.databricks.com/dev-tools/api/latest/jobs.html)
 
