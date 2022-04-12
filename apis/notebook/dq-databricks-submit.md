@@ -1,8 +1,7 @@
 ---
 description: >-
-  This page contains two examples to achieve DQ spark submit to Databricks's
-  cluster. Please note that these paths are NOT supported in production and DQ
-  does NOT support bug coverages for these flows.
+  The purpose of this page is to demonstrate DQ spark submit to Databticks
+  cluster.
 ---
 
 # DQ-Databricks Submit
