@@ -26,8 +26,6 @@ Here are the main steps to create and run a spark submit job from Databricks UI:
 
 6- View the job's result in DQ web.
 
-
-
 #### &#x20;Database access
 
 The first step is to make sure  your Databricks instance has access to your DQ's Database. The whole subnet should be whitelisted to connect to the database. Here is a link to AWS Databricks documentation the subnet portion of the VPC setup\
@@ -47,6 +45,8 @@ The jars should be manually uploaded in Databricks file system. The steps can be
 `SPRING_DATASOURCE_USERNAME=xx`\
 `SPRING_DATASOURCE_DRIVER_CLASS_NAME=xx`\
 `LICENSE_KEY=xx // This is DQ's license key`
+
+![Setting up DQ's environment variables for the new cluster.](<../../.gitbook/assets/configure-new-cluster (1).png>)
 
 #### Json Payload&#x20;
 
@@ -87,7 +87,7 @@ Once the above steps are completed, user can create a spark submit job through D
 [https://docs.databricks.com/jobs.html](https://docs.databricks.com/jobs.html)\
 Then user can add the environment variables to the cluster and click run on databticks UI.
 
-![Create a job in Databricks UI](broken-reference)
+![Create a job in Databricks UI](../../.gitbook/assets/create-job-spark-submit.png)
 
 #### Check the result in DQ web:
 
@@ -118,8 +118,10 @@ Below is the sample Json payload:&#x20;
 
 <mark style="color:orange;">{</mark> <mark style="color:orange;"></mark><mark style="color:orange;">`"tasks": [ { "task_key": "CDQ-SparkSubmitCallFinal", "spark_submit_task": { "parameters": [ "--class", "com.owl.core.cli.OwlCheck", "dbfs:/FileStore/cdq/owl-core-2022.02-SPARK301-jar-with-dependencies.jar", "-lib", "dbfs:/FileStore/cdq/owl/drivers/postgres", "-q", "select * from public.agent", "-bhlb", "10", "-rd", "2022-03-16", "-driver", "owl.com.org.postgresql.Driver", "-drivermemory", "4g", "-cxn", "metastore", "-h", "xxxs.amazonaws.com:xxx/postgres", "-ds", "public.agent_2", "-deploymode", "cluster", "-owluser", "admin" ] }, "new_cluster": { "cluster_name": "", "spark_version": "7.3.x-scala2.12", "aws_attributes": { "zone_id": "us-east-1e", "first_on_demand": 1, "availability": "SPOT_WITH_FALLBACK", "spot_bid_price_percent": 100, "ebs_volume_count": 0 }, "node_type_id": "i3.xlarge", "spark_env_vars": { "SPRING_DATASOURCE_URL": "jdbc:postgresql://xxx-xx-xxs.amazonaws.com:xx/postgres", "SPRING_DATASOURCE_PASSWORD":"xxx", "SPRING_DATASOURCE_USERNAME":"xxx", "SPRING_DATASOURCE_DRIVER_CLASS_NAME":"org.postgresql.Driver", "LICENSE_KEY": "xxxx" }, "enable_elastic_disk": false, "num_workers": 8 }, "timeout_seconds": 0 } ] }`</mark>\ <mark style="color:orange;">``</mark>
 
-![Authentication setup for Databricks Rest API](broken-reference)
+![Authentication setup for Databricks Rest API](../../.gitbook/assets/authentication-setup-databricks.png)
 
 #### View the job's result in DQ web
 
-Like the previous section, the result of job run can be viewed in DQ's web.\
+Like the previous section, the result of job run can be viewed in DQ's web.
+
+![DQ job submitted from Databricks API](../../.gitbook/assets/job-submit-success-databricks.png)
