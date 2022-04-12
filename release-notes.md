@@ -98,7 +98,6 @@
   * You can now browse multiple local (NFS) file connections.&#x20;
 * Dupes
   * Added linkID column for exact match in both UI and REST API. linkID can now be either included or excluded from Dupes for exact match.
-  *
 
 ## 2022.03&#x20;
 
