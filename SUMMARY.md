@@ -178,7 +178,7 @@
     * [OwlOptions (base)](apis/notebook/notebook-api/owloptions-base.md)
   * [JWT](apis/notebook/jwt.md)
   * [Cookie](apis/notebook/cookie.md)
-  * [DQ Spark Submit in Databricks](apis/notebook/dq-spark-submit-in-databricks.md)
+  * [DQ-Databricks Submit](apis/notebook/dq-databricks-submit.md)
 
 ## Solutions <a href="#projects" id="projects"></a>
 
