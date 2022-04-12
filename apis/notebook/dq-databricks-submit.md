@@ -5,7 +5,7 @@ description: >-
   does NOT support bug coverages for these flows.
 ---
 
-# DQ Spark Submit in Databricks
+# DQ-Databricks Submit
 
 ### DQ Spark submit using the UI
 
@@ -14,6 +14,8 @@ description: >-
 There are a few limitation to spark-submit jobs in Databricks listed in this section: [https://docs.databricks.com/jobs.html#create-a-job](https://docs.databricks.com/jobs.html#create-a-job)\
 &#x20;Also, spark-submit is only on new clusters from both the UI via Jobs or calling the REST APIs. See Step 4 in: [https://docs.databricks.com/jobs.html#create-a-job](https://docs.databricks.com/jobs.html#create-a-job) where it lists that spark-submit is handled by new clusters only.\
 
+
+Please note that these are only examples to demonstrate how to achieve DQ spark submit to Databricks's cluster. These paths are NOT supported in production and DQ team does NOT support any bug coverages or professional services for these flows.&#x20;
 
 #### Steps:
 
