@@ -98,9 +98,8 @@ For this path we need to do the steps 1-4 of the the previous section and then c
 
 #### Steps:
 
-1- Prepare the DQ JSON Payload.
-
-2- Authenticate the Databricks REST API.
+1. Prepare the DQ JSON Payload.
+2. Authenticate the Databricks REST API.
 
 #### JSON payload&#x20;
 
