@@ -8,10 +8,8 @@
   * Entering negative values for the downscore is no longer supported and will now produce an error message.
   * You can now invalidate schema with special characters.&#x20;
   * Spark table names of historical dataset loaded and other spark tables are now available on Jobs Log table.
-  * Changed the /v2/getlistdataschemapreviewdbtablebycols API call method from GET to POST to support the long query (-q) or very large columns table.&#x20;
   * Long type values larger than `Integer.Max` no longer breaks the Profile.&#x20;
   * View Findings now displays user's full name, if applicable, in Validate Modal. Assignment queue page also displays the full name of user, if applicable.
-  *
 * Alerts
   * You can once again use the Cancel action button on the Alerts page.
   * You can now set up alerts to reach multiple email recipients.&#x20;
@@ -104,6 +102,8 @@
     * We recommend using this feature from a primary key perspective for its first iteration.&#x20;
     * The aggregate function used is min().&#x20;
       * For example: if you have 6 occurrences, you will get 1 example linkID, the min.
+* API
+  * Updated the /v2/getlistdataschemapreviewdbtablebycols API call method from GET to POST to support the long query (-q) or very large columns table.&#x20;
 
 ## 2022.03&#x20;
 
