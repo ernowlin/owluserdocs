@@ -27,7 +27,7 @@
   * Added a pop-up success message for when the correct syntax rule passes for Freeform rules with secondary datasets after the Validate button is clicked.&#x20;
 * Security
   * Vulnerabilities identified by Jfrog
-    * Vulns 0, 2 criticals, 6 high vulnerabilities
+    * Vulns 0, criticals, high vulnerabilities
   * Authorization restriction is now enforced for the following endpoints:&#x20;
     * /v2/deletefiledir&#x20;
     * /v2/getRunIdsByDataset&#x20;
