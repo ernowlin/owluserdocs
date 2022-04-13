@@ -27,7 +27,7 @@
   * Added a pop-up success message for when the correct syntax rule passes for Freeform rules with secondary datasets after the Validate button is clicked.&#x20;
 * Security
   * Vulnerabilities identified by Jfrog
-    * Vulns 0, critical, 6 high vulnerabilities
+    * Vulns 0, 2 criticals, 6 high vulnerabilities
   * Authorization restriction is now enforced for the following endpoints:&#x20;
     * /v2/deletefiledir&#x20;
     * /v2/getRunIdsByDataset&#x20;
@@ -98,6 +98,10 @@
   * You can now browse multiple local (NFS) file connections.&#x20;
 * Dupes
   * Added linkID column for exact match in both UI and REST API. linkID can now be either included or excluded from Dupes for exact match.
+  * linkID is now shown at the aggregate level for Exact Match.
+    * We recommend using this feature from a primary key perspective for its first iteration.&#x20;
+    * The aggregate function used is min().&#x20;
+      * For example: if you have 6 occurrences, you will get 1 example linkID, the min.
 
 ## 2022.03&#x20;
 
