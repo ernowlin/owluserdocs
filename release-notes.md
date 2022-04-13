@@ -96,6 +96,8 @@
   * Data Preview for Temp files loading in Explorer now correctly shows the order of columns of the original Temp file.&#x20;
   * You can now drill in and search files within the connection.&#x20;
   * You can now browse multiple local (NFS) file connections.&#x20;
+* Scorecard
+  * You can now create scorecards with special characters "^\[A-Za-z0-9\_.]+$" in their names.&#x20;
 * Dupes
   * Added linkID column for exact match in both UI and REST API. linkID can now be either included or excluded from Dupes for exact match.
   * linkID is now shown at the aggregate level for Exact Match.
@@ -104,6 +106,10 @@
       * For example: if you have 6 occurrences, you will get 1 example linkID, the min.
 * API
   * Updated the /v2/getlistdataschemapreviewdbtablebycols API call method from GET to POST to support the long query (-q) or very large columns table.&#x20;
+
+#### Known Limitations
+
+*
 
 ## 2022.03&#x20;
 
