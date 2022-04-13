@@ -97,7 +97,7 @@
   * You can now drill in and search files within the connection.&#x20;
   * You can now browse multiple local (NFS) file connections.&#x20;
 * Scorecard
-  * You can now create scorecards with special characters "^\[A-Za-z0-9\_.]+$" in their names.&#x20;
+  * You can now create scorecards with special characters "^\[A-Za-z0-9]+$" in their names.&#x20;
 * Dupes
   * Added linkID column for exact match in both UI and REST API. linkID can now be either included or excluded from Dupes for exact match.
   * linkID is now shown at the aggregate level for Exact Match.
@@ -109,7 +109,8 @@
 
 #### Known Limitations
 
-*
+* Scorecard
+  * Space " ", underscore "\_", and period "." are not yet supported for scorecard edit.&#x20;
 
 ## 2022.03&#x20;
 
