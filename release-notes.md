@@ -11,6 +11,7 @@
   * Changed the /v2/getlistdataschemapreviewdbtablebycols API call method from GET to POST to support the long query (-q) or very large columns table.&#x20;
   * Long type values larger than `Integer.Max` no longer breaks the Profile.&#x20;
   * View Findings now displays user's full name, if applicable, in Validate Modal. Assignment queue page also displays the full name of user, if applicable.
+  *
 * Alerts
   * You can once again use the Cancel action button on the Alerts page.
   * You can now set up alerts to reach multiple email recipients.&#x20;
@@ -86,6 +87,7 @@
   * Mean value once again displays in the Volume column.&#x20;
   * When connecting to MSSQL server on Windows from a Linux DQ environment, the connection no longer fails.
     * We recommend (not required) a TLS connection for MSSQL connections from a DQ Linux environment with a properly signed certificate setup on MSSQL server to connect only via TLS.
+  * You can now edit annotations in the Labels tab.&#x20;
 * S3
   * Added an enhancement for -addlib flag.
 * Connections
