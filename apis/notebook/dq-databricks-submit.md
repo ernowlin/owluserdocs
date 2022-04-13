@@ -14,7 +14,7 @@ Please note that these are only examples to demonstrate how we ran a DQ spark su
 
 #### Limitations
 
-There are a few limitation to spark-submit jobs in Databricks listed in this section: [https://docs.databricks.com/jobs.html#create-a-job](https://docs.databricks.com/jobs.html#create-a-job)\
+There are a few limitations to spark-submit jobs in Databricks listed in this section: [https://docs.databricks.com/jobs.html#create-a-job](https://docs.databricks.com/jobs.html#create-a-job)\
 &#x20;Also, spark-submit is only on new clusters from both the UI via Jobs or calling the REST APIs. See Step 4 in: [https://docs.databricks.com/jobs.html#create-a-job](https://docs.databricks.com/jobs.html#create-a-job) where it lists that spark-submit is handled by new clusters only.\
 
 
