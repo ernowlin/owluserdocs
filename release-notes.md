@@ -26,7 +26,8 @@
   * Added a pop-up success message for when the correct syntax rule passes for Freeform rules with secondary datasets after the Validate button is clicked.&#x20;
 * Security
   * Vulnerabilities identified by Jfrog
-    * Vulns 0, criticals, high vulnerabilities
+    * Vulns 2, criticals 2, high vulnerabilities
+    * For a visual readout, see the DQ Security Metrics section below.
   * Authorization restriction is now enforced for the following endpoints:&#x20;
     * /v2/deletefiledir&#x20;
     * /v2/getRunIdsByDataset&#x20;
@@ -109,8 +110,16 @@
 
 #### Known Limitations
 
+* Profile
+  * Special characters are not currently supported in annotations in the Label tab.
 * Scorecard
   * Space " ", underscore "\_", and period "." are not yet supported for scorecard edit.&#x20;
+
+#### DQ Security Metrics
+
+![Vulnerabilities over time](<.gitbook/assets/vulns-over-time-2022-04 (2).png>)
+
+![Criticals table](<.gitbook/assets/critical-table-2022-04 (1).png>)
 
 ## 2022.03&#x20;
 
