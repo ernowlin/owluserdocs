@@ -2,6 +2,24 @@
 
 ## 2022.04
 
+#### Install
+
+{% hint style="success" %}
+For standalone installations, within the setup.sh script find/replace the variable for **spark\_package**.&#x20;
+
+
+
+Change spark-3.0.1-bin-hadoop3.2.tgz to spark-3.1.2-bin-hadoop3.2.tgz
+{% endhint %}
+
+```
+spark_package=${SPARK_PACKAGE:-"spark-3.0.1-bin-hadoop3.2.tgz"}
+
+# replace with 
+
+spark_package=${SPARK_PACKAGE:-"spark-3.1.2-bin-hadoop3.2.tgz"}
+```
+
 #### Fixes / Enhancements
 
 * DQ Job
