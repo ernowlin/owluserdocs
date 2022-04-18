@@ -34,6 +34,8 @@ spark_package=${SPARK_PACKAGE:-"spark-3.1.2-bin-hadoop3.2.tgz"}
   * If email\_server table is not yet configured, a helpful message will now display in the Description column in the job log directing you to register an email Server under Admin - Alerts. The job will still run successfully.&#x20;
 * Rules
   * You can now modify Rules definitions from the primary DQ Job dashboard without loading the Rules page.
+  * Mean value check once again triggers correctly for Integer and Long columns.&#x20;
+    * This fix triggers the mean value check for Integer and Long columns and shows an infinity percentage change in behavior for a period, depending on -bhlb. After this period, it should disappear.&#x20;
   * For Native SQL rules, jobs now behave the same whether or not a semicolon ";" is included in the SQL query.&#x20;
   * You can now use a hyphen "-" in a dataset name.&#x20;
     * Acceptable special characters now include a hyphen "-", period ".", and underscore "\_".
