@@ -4,7 +4,7 @@
 
 In this page we will demonstrate two paths to run a spark submit job on Databricks's cluster. First approach is to run a DQ spark submit job using Databricks UI and the second approach is by invoking Databricks rest API.
 
-Please note that these are only examples to demonstrate how we ran a DQ spark submit on Databricks's cluster. These paths are **NOT** supported in production and DQ team does **NOT** support any bug coverages or professional services or customer questions for these flows. Limitations
+Please note that these are only examples to demonstrate how we ran a DQ spark submit on Databricks's cluster. These paths are **NOT** supported in production and DQ team does **NOT** support any bug coverages or professional services or customer questions for these flows.&#x20;
 
 #### Limitations
 
