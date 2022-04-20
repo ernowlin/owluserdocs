@@ -73,7 +73,9 @@ Pushdown and parallel JDBC cannot be used together.  If you are using pushdown, 
 
 ![](<../.gitbook/assets/Screen Shot 2020-05-07 at 7.33.16 PM.png>)
 
-By gathering a variety of different statistics, Owl's profile can provide a great deal of insight about the dataset. &#x20;
+By gathering a variety of different statistics, Collibra DQ's profile can provide a great deal of insight about the dataset. &#x20;
+
+To see the difference between baseline (historical) and current values, Collibra DQ provides a **Delta %** change column. In the Delta % change column, data is represented in a pie chart for quick visualization of the changes.
 
 {% hint style="info" %}
 Profile includes a range of statistics
