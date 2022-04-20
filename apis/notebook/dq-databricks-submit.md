@@ -30,16 +30,15 @@ The entire subnet must be whitelisted to connect to the database. As specified i
 
 #### Upload DQ's jars in DBFS
 
-The jars should be manually uploaded in Databricks file system. The steps can be found on Databricks website.
+The jars should be manually uploaded in Databricks file system. The steps can be found on Databricks website: [https://docs.databricks.com/data/databricks-file-system.html#access-dbfs](https://docs.databricks.com/data/databricks-file-system.html#access-dbfs)
 
-#### Environment variables for the new  cluster :
+#### Environment variables for the new cluster:
 
-These environment variables should be set on the new cluster.
+Here is the documentation from Databricks about how to set up environment variables: [https://docs.databricks.com/clusters/configure.html#environment-variables](https://docs.databricks.com/clusters/configure.html#environment-variables)
 
-`SPRING_DATASOURCE_URL=xx`\
-`SPRING_DATASOURCE_USERNAME=xx`\
-`SPRING_DATASOURCE_DRIVER_CLASS_NAME=xx`\
-`LICENSE_KEY=xx // This is DQ's license key`
+These CDQ environment variables should be set on the new cluster`:` \
+\
+<mark style="color:orange;">`SPRING_DATASOURCE_URL=xx`</mark>\ <mark style="color:orange;">`SPRING_DATASOURCE_USERNAME=xx`</mark>\ <mark style="color:orange;">`SPRING_DATASOURCE_DRIVER_CLASS_NAME=xx`</mark>\ <mark style="color:orange;">`LICENSE_KEY=xx // This is DQ's license key`</mark>
 
 ![Setting up DQ's environment variables for the new cluster.](<../../.gitbook/assets/configure-new-cluster (1).png>)
 
@@ -92,7 +91,8 @@ Once the job is submitted, you can login to your DQ web instance and check the j
 
 There are public REST APIS available for the Jobs API, [including the latest version](https://docs.databricks.com/dev-tools/api/latest/jobs.html).
 
-For this path we need to do the steps 1-4 of the the previous section and then call directly the REST API using Postman, or your preferred API testing tool.&#x20;
+For this path we need to do the steps 1-4 of the the previous section and then call directly the REST API using Postman, or your preferred API testing tool. We assume that as per step 2, CDQ jars are uploaded to the DBFS path in the location dbfs:/FileStore/cdq.\
+Also JDBC postgres driver should be uploaded to DBFS. For example:  dbfs:/`FileStore/cdq/owl/drivers/postgres`
 
 #### Steps:
 
@@ -110,7 +110,84 @@ Sample JSON payload:&#x20;
 `Cache-Control: no-cache`\
 `Postman-Token: xxxxxxxx`
 
-<mark style="color:orange;">{</mark> <mark style="color:orange;"></mark><mark style="color:orange;">`"tasks": [ { "task_key": "CDQ-SparkSubmitCallFinal", "spark_submit_task": { "parameters": [ "--class", "com.owl.core.cli.OwlCheck", "dbfs:/FileStore/cdq/owl-core-2022.02-SPARK301-jar-with-dependencies.jar", "-lib", "dbfs:/FileStore/cdq/owl/drivers/postgres", "-q", "select * from public.agent", "-bhlb", "10", "-rd", "2022-03-16", "-driver", "owl.com.org.postgresql.Driver", "-drivermemory", "4g", "-cxn", "metastore", "-h", "xxxs.amazonaws.com:xxx/postgres", "-ds", "public.agent_2", "-deploymode", "cluster", "-owluser", "admin" ] }, "new_cluster": { "cluster_name": "", "spark_version": "7.3.x-scala2.12", "aws_attributes": { "zone_id": "us-east-1e", "first_on_demand": 1, "availability": "SPOT_WITH_FALLBACK", "spot_bid_price_percent": 100, "ebs_volume_count": 0 }, "node_type_id": "i3.xlarge", "spark_env_vars": { "SPRING_DATASOURCE_URL": "jdbc:postgresql://xxx-xx-xxs.amazonaws.com:xx/postgres", "SPRING_DATASOURCE_PASSWORD":"xxx", "SPRING_DATASOURCE_USERNAME":"xxx", "SPRING_DATASOURCE_DRIVER_CLASS_NAME":"org.postgresql.Driver", "LICENSE_KEY": "xxxx" }, "enable_elastic_disk": false, "num_workers": 8 }, "timeout_seconds": 0 } ] }`</mark>\ <mark style="color:orange;">``</mark>
+
+
+```json
+{
+  "tasks": [
+    {
+      "task_key": "CDQ-SparkSubmitCallFinal",
+      "spark_submit_task": {
+        "parameters": [
+          "--class",
+          "com.owl.core.cli.OwlCheck",
+          "dbfs:/FileStore/cdq/owl-core-2022.02-SPARK301-jar-with-dependencies.jar",
+          "-lib",
+          "dbfs:/FileStore/cdq/owl/drivers/postgres",
+          "-q",
+          "select * from public.agent",
+          "-bhlb",
+          "10",
+          "-rd",
+          "2022-03-16",
+          "-driver",
+          "owl.com.org.postgresql.Driver",
+          "-drivermemory",
+          "4g",
+          "-cxn",
+          "metastore",
+          "-h",
+          "xxxs.amazonaws.com:xxx/postgres",
+          "-ds",
+          "public.agent_2",
+          "-deploymode",
+          "cluster",
+          "-owluser",
+          "admin"
+        ]
+      },
+      "new_cluster": {
+        "cluster_name": "",
+        "spark_version": "7.3.x-scala2.12",
+        "aws_attributes": {
+          "zone_id": "us-east-1e",
+          "first_on_demand": 1,
+          "availability": "SPOT_WITH_FALLBACK",
+          "spot_bid_price_percent": 100,
+          "ebs_volume_count": 0
+        },
+        "node_type_id": "i3.xlarge",
+        "spark_env_vars": {
+          "SPRING_DATASOURCE_URL": "jdbc:postgresql://xxx-xx-xxs.amazonaws.com:xx/postgres",
+          "SPRING_DATASOURCE_PASSWORD": "xxx",
+          "SPRING_DATASOURCE_USERNAME": "xxx",
+          "SPRING_DATASOURCE_DRIVER_CLASS_NAME": "org.postgresql.Driver",
+          "LICENSE_KEY": "xxxx"
+        },
+        "enable_elastic_disk": false,
+        "num_workers": 8
+      },
+      "timeout_seconds": 0
+    }
+  ]
+}
+```
+
+Values to be updated in above payload are:
+
+<mark style="color:blue;">Cluster variables:</mark> \
+`"SPRING_DATASOURCE_URL":` \
+`"SPRING_DATASOURCE_PASSWORD":`\
+`"SPRING_DATASOURCE_USERNAME":`\
+`"LICENSE_KEY": //CDQ License key`\
+``
+
+<mark style="color:blue;">CDQ variables</mark>\ <mark style="color:blue;"></mark>Users can customize the variables based on the activity they choose from CDQ Web. They can copy the variables from Run CMD option of their DQ job and paste it in their Json message.\
+``
+
+#### Authenticate the Databricks REST API
+
+Here is the Databricks documentation about how to create a personal access token: [https://docs.databricks.com/dev-tools/api/latest/authentication.html](https://docs.databricks.com/dev-tools/api/latest/authentication.html)
 
 ![Authentication setup for Databricks Rest API](../../.gitbook/assets/authentication-setup-databricks.png)
 

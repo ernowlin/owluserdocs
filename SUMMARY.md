@@ -170,7 +170,7 @@
   * [Export and Import Example](apis/rest-apis/rules-import-export.md)
   * [Time Zone API](apis/rest-apis/owl-time-zone-api.md)
 * [Swagger](apis/swagger.md)
-* [Notebook/Spark](apis/notebook/README.md)
+* [Notebook APIs](apis/notebook/README.md)
   * [CDQ Notebook APIs in Databricks](apis/notebook/cdq-notebook-apis-in-databricks.md)
   * [Spark-shell Sample](apis/notebook/spark-shell-sample.md)
   * [Dupe](apis/notebook/dupe.md)
