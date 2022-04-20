@@ -73,8 +73,8 @@ spark.catalog.clearCache
 ```scala
 val connProps = Map(
 "driver" -> "org.postgresql.Driver", 
-"user" -> "xx", 
-"password" -> "xxxx",
+"user" -> "????", 
+"password" -> "????",
 "url" -> "jdbc:postgresql://xxx:0000/postgres",
 "dbtable" -> "public.example_data") 
 //--- Load Spark DataFrame ---//
@@ -88,8 +88,8 @@ display(df) // view your data
 val pgHost = "xxxx.amazonaws.com" 
 val pgDatabase = "postgres" 
 val pgSchema = "public"
-val pgUser = "xxxx" 
-val pgPass = "xxx"
+val pgUser = "???????" 
+val pgPass = "????"
 val pgPort = "0000"
 ```
 
@@ -103,8 +103,8 @@ var date = "2018-01-11"
 val opt = new OwlOptions()
 opt.dataset = dataset
 opt.runId = date
-opt.host = "owlpostgres.chzid9w0hpyi.us-east-1.rds.amazonaws.com"
-opt.port = "5432"
+opt.host = "xxxxx.amazonaws.com"
+opt.port = "xxx"
 opt.pgUser = pgUser
 opt.pgPassword = pgPass
 opt.jobId = new Identifier(UUID.randomUUID)
@@ -176,3 +176,8 @@ val profile = cdq.profileDF()
 profile.show()
 
 ```
+
+
+
+
+
