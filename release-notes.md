@@ -127,6 +127,7 @@ spark_package=${SPARK_PACKAGE:-"spark-3.1.2-bin-hadoop3.2.tgz"}
       * For example: if you have 6 occurrences, you will get 1 example linkID, the min.
 * API
   * Updated the /v2/getlistdataschemapreviewdbtablebycols API call method from GET to POST to support the long query (-q) or very large columns table.&#x20;
+  * Added a new SAML load balancer so the syestem picks the appropriate schema and SAML server URL for Swagger.
 
 #### Known Limitations
 
