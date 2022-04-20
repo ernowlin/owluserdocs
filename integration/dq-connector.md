@@ -92,7 +92,7 @@ You have now established destinations for where Collibra should ingest your User
 
 **1E. Assign Permissions for New Domains of DQ Assets (Rules, Metrics, Dimensions) (One-Time)**
 
-Please assign your Edge user as a 'Technical Steward' in each of the domains specified in 1D such that Edge can create and update assets into each respective domain. Ensure that your Edge user also has admin permissions assigned in order to create and update assets in the Catalog.&#x20;
+Please assign your Edge user as a **Technical Steward** in each of the domains specified in 1D, such that Edge can create and update assets into each respective domain. Ensure that your Edge user also has admin permissions assigned in order to create and update assets in the Catalog.&#x20;
 
 ![](https://lh3.googleusercontent.com/U5NnQT6ncu6XbL7YKWe8A0caumHxodHBCgU\_vJeJjWCyxYSzvGsRWWzH2HjjeVKYih4hvGXvDM7J1\_DB72EgdxoVLrRTNEQsg4enZotY7fEgjfxfI-cbz4vmFHxxzxEBQfUq\_ZpF)
 
