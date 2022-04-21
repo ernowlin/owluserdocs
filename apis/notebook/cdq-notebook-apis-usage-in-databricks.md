@@ -96,42 +96,46 @@ val pgPort = "0000"
 #### <mark style="color:blue;">Create Collibra DQ Test (Rules) and Detects Breaks</mark>
 
 ```scala
-var dataset = "cdq_notebook_db" 
+
+val dataset = "cdq_notebook_db_rules"
 var date = "2018-01-11"
 
 // Options
 val opt = new OwlOptions()
 opt.dataset = dataset
 opt.runId = date
-opt.host = "xxxxx.amazonaws.com"
-opt.port = "xxx"
+opt.host = pgHost
+opt.port = pgPort
 opt.pgUser = pgUser
 opt.pgPassword = pgPass
-opt.jobId = new Identifier(UUID.randomUUID)
-// Create a simple rule
- val simpleRule = OwlUtils.createRule(opt.dataset)
- simpleRule.setRuleNm("nyse-stocks-symbol")
-simpleRule.setRuleValue("symbol == 'BHK'")
-simpleRule.setRuleType("SQLG")
-simpleRule.setPerc(1.0)
-simpleRule.setPoints(1)
-simpleRule.setIsActive(1)
-simpleRule.setUserNm("admin")
-simpleRule.setPreviewLimit(8)
-//Scan
- val cdq = com.owl.core.util.OwlUtils.OwlContext(df, opt)
- cdq.removeAllRules(opt.dataset)
- .register(opt)
- .addRule(simpleRule)
-val rulesDf = cdq.rulesDF() 
 
-// Detects Breaks
+// Create a simple rule
+val simpleRule = OwlUtils.createRule(opt.dataset)
+      simpleRule.setRuleNm("nyse-stocks-symbol")
+      simpleRule.setRuleValue("symbol == 'BHK'")
+      simpleRule.setRuleType("SQLG")
+      simpleRule.setPerc(1.0)
+      simpleRule.setPoints(1)
+      simpleRule.setIsActive(1)
+      simpleRule.setUserNm("admin")
+      simpleRule.setPreviewLimit(8)
+
+// Scan 
+val cdq = com.owl.core.util.OwlUtils.OwlContext(df, opt)
+cdq.removeAllRules(opt.dataset)
+.register(opt)
+.addRule(simpleRule)
+cdq.owlCheck()
 
 val breaks = cdq.getRuleBreakRows("nyse-stocks-symbol")
-println("--------------Rules:----------------\n")
-rulesDf.show()
 println("--------------Breaks:----------------\n")
-breaks.show()
+display(breaks)
+
+val badRecords = breaks.drop("_dataset","_run_id", "_rule_name", "owl_id")
+display(badRecords)
+
+val goodRecords = df.except(badRecords)
+display(goodRecords)
 ```
 
 <mark style="color:green;"></mark>
@@ -159,25 +163,29 @@ The breaks and the rules can be viewed in CDQ web as well.
 #### <mark style="color:blue;">Create Collibra DQ Test (Profile)</mark>
 
 ```scala
-val dataset = "cdq_notebook_db_profile" 
+val dataset = "cdq_notebook_db_profile3"
 var date = "2018-01-11"
+
 // Options
 val options = new OwlOptions()
-options.dataset = dataset 
-options.runId = date 
-options.host = "xxx.amazonaws.com" 
-options.port = "0000"
-options.pgUser = pgUser 
+options.dataset = dataset
+options.runId = date
+options.host = pgHost
+options.port = pgPort
+options.pgUser = pgUser
 options.pgPassword = pgPass
-options.jobId = new Identifier(UUID.randomUUID)
+
+//Scan
+val cdq = OwlUtils.OwlContext(df, opt)
 cdq.register(options)
-cdq.owlCheck() 
-val profile = cdq.profileDF() 
+cdq.owlCheck()
+val profile = cdq.profileDF()
 profile.show()
 
 ```
 
 
 
+![CDQ Profile Run In Databricks](<../../.gitbook/assets/Screen Shot 2022-04-21 at 10.30.21 AM (1).png>)
 
-
+![The Profile result can be viewed in CDQ Web.](<../../.gitbook/assets/Screen Shot 2022-04-21 at 10.27.59 AM.png>)
