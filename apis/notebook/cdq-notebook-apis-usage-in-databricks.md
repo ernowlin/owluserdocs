@@ -1,12 +1,24 @@
+---
+description: Learn how to create CDQ jobs in Databricks notebook.
+---
+
 # CDQ Notebook APIs Usage In Databricks
 
 ### Introduction
 
-In this page we demonstrate the detailed steps to upload and add CDQ jars to a Databricks cluster and to run a CDQ job by invoking CDQ APIs (aka activities).
+This document provides how to guidance to help you to upload and add CDQ jars to a Databricks cluster and to run a CDQ job by invoking CDQ APIs (aka activities).
+
+
+
+### Design
+
+
+
+![Running CDQ jobs from Scala and Pyspark notebooks.](<../../.gitbook/assets/3\_DQ\_Compute\_(Databricks)\_to\_Data\_(Delta Lake)\_to\_Control\_Plane (1).gif>)
 
 ### CDQ  Environment Setup&#x20;
 
-In this section, we explain step by step of how to set up your CDQ environment in Databricks. This is the first step towards invoking CDQ APIs in Databricks.
+In this section, we explain the steps involved in setting up your CDQ environment in Databricks. This is the first step towards invoking CDQ APIs in Databricks.
 
 #### Step 1: Upload CDQ Core jar to Databricks
 
@@ -189,3 +201,15 @@ profile.show()
 ![CDQ Profile Run In Databricks](<../../.gitbook/assets/Screen Shot 2022-04-21 at 10.30.21 AM (1).png>)
 
 ![The Profile result can be viewed in CDQ Web.](<../../.gitbook/assets/Screen Shot 2022-04-21 at 10.27.59 AM.png>)
+
+### Limitations
+
+CDQ activities can not be called independently for the time being. owlCheck() function should be called before calling any of the activities. For example to get the profile DataFrame you should call below code snippet:
+
+```
+cdq.owlCheck()
+cdq.getProfileDF()
+```
+
+
+
