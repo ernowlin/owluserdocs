@@ -253,7 +253,3 @@
     * [Multi-tenancy support through SAML RelayState](security/configuration/authentication-with-saml-idp/multi-tenancy-support-through-saml-relaystate.md)
   * [Securing Passwords](security/configuration/securing-passwords.md)
   * [SSL Setup (HTTPS)](security/configuration/ssl-setup-https.md)
-
-***
-
-* [Page 1](page-1.md)
