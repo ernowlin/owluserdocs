@@ -132,17 +132,26 @@ val simpleRule = OwlUtils.createRule(opt.dataset)
       simpleRule.setUserNm("admin")
       simpleRule.setPreviewLimit(8)
 
-// Scan 
+// Pre Routine 
 val cdq = com.owl.core.util.OwlUtils.OwlContext(df, opt)
 cdq.removeAllRules(opt.dataset)
 .register(opt)
 .addRule(simpleRule)
-cdq.owlCheck()
 
+// Scan
+val results = cdq.owlCheck()
+
+//See Json Results(Option for downstream processing)
+
+println("--------------Results:----------------\n")
+println(results)
+
+//Post Routine, See DataFrame Results (Option for downstream processing)
 val breaks = cdq.getRuleBreakRows("nyse-stocks-symbol")
 println("--------------Breaks:----------------\n")
 display(breaks)
 
+// Different Options for handling bad records
 val badRecords = breaks.drop("_dataset","_run_id", "_rule_name", "owl_id")
 display(badRecords)
 
@@ -202,7 +211,87 @@ profile.show()
 
 ![The Profile result can be viewed in CDQ Web.](<../../.gitbook/assets/Screen Shot 2022-04-21 at 10.27.59 AM.png>)
 
-### Limitations
+#### <mark style="color:blue;">Create Collibra DQ Test (Dupes)</mark>
+
+```scala
+val dataset = "cdq_notebook_db_dupe"
+var date = "2018-01-11"
+
+// Options
+val options = new OwlOptions()
+options.dataset = dataset
+options.runId = date
+options.host = pgHost
+options.port = pgPort
+options.pgUser = pgUser
+options.pgPassword = pgPass
+
+opt.dupe.ignoreCase = true
+opt.dupe.on = true
+opt.dupe.lowerBound = 99
+opt.dupe.include = Array("SYMBOL", "TRADE_DATE")
+
+//Scan
+val cdq = OwlUtils.OwlContext(df, opt)
+cdq.register(options)
+cdq.owlCheck()
+
+val dupesDf = cdq.getDupeRecords
+dupesDf.show()
+
+```
+
+![CDQ Dupes Run In Databricks](<../../.gitbook/assets/Screen Shot 2022-04-21 at 2.43.27 PM.png>)
+
+
+
+![ Dupes results can be viewed in CDQ Web.](<../../.gitbook/assets/Screen Shot 2022-04-21 at 2.39.33 PM.png>)
+
+#### <mark style="color:blue;">Create Collibra DQ Test (Outlier)</mark>
+
+```scala
+import scala.collection.JavaConverters._
+import java.util
+import java.util.{ArrayList, List, UUID}
+
+val dataset = "cdq_notebook_db_outlier"
+var date = "2018-01-11"
+
+// Options
+val options = new OwlOptions()
+options.dataset = dataset
+options.runId = date
+options.host = pgHost
+options.port = pgPort
+options.pgUser = pgUser
+options.pgPassword = pgPass
+
+opt.dupe.on = false
+
+val dlMulti: util.List[OutlierOpt] = new util.ArrayList[OutlierOpt]
+val outlierOpt = new OutlierOpt()
+outlierOpt.combine = true
+outlierOpt.dateColumn = "trade_date"
+outlierOpt.lookback = 4
+outlierOpt.key = Array("symbol")
+outlierOpt.include = Array("high")
+outlierOpt.historyLimit = 10
+dlMulti.add(outlierOpt)
+
+opt.setOutliers(dlMulti)
+
+val cdq = OwlUtils.OwlContext(df, opt)
+        .register(opt)
+
+cdq.owlCheck
+val outliers = cdq.getOutliers()
+outliers.show
+outliers.select("value")
+```
+
+
+
+### Known API Limitations&#x20;
 
 CDQ activities can not be called independently for the time being. owlCheck() function should be called before calling any of the activities. For example to get the profile DataFrame you should call below code snippet:
 
