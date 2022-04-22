@@ -169,6 +169,7 @@
   * [Export and Import API](apis/rest-apis/export-and-import-api.md)
   * [Export and Import Example](apis/rest-apis/rules-import-export.md)
   * [Time Zone API](apis/rest-apis/owl-time-zone-api.md)
+  * [Livy](apis/rest-apis/livy.md)
 * [Swagger](apis/swagger.md)
 * [Notebook APIs](apis/notebook/README.md)
   * [CDQ Notebook APIs Usage In Databricks](apis/notebook/cdq-notebook-apis-usage-in-databricks.md)
