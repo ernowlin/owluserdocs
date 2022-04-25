@@ -85,7 +85,7 @@ spring.agent.datasource.driver-class-name=org.postgresql.Driver
 
 ![Fig 2: Admin Console](../.gitbook/assets/DQ-Admin-Console-2.png.png)
 
-* Identify the row with the agent to edit .&#x20;
+* Identify the row with the agent to edit.&#x20;
 
 ![Fig 3: Agent Management Table](../.gitbook/assets/DQ-Admin-Console-3.png)
 
