@@ -139,7 +139,8 @@ cdq.removeAllRules(opt.dataset)
 .addRule(simpleRule)
 
 // Scan
-val results = cdq.owlCheck()
+cdq.owlCheck()
+val results =  cdq.hoot()
 
 //See Json Results(Option for downstream processing)
 
