@@ -269,6 +269,20 @@ Click the clock icon in the navigation pane to navigate to the Jobs Page. Wait 1
 chmod 400 ~/Downloads/ssh_pem_key
 ```
 
+### Make sure working directory has permissions
+
+For example, if I SSH into the machine with user `owldq` and use my default home directory location `/home/owldq/`
+
+```
+### Ensure appropriate permissions 
+### drwxr-xr-x
+
+chmod -R 755 /home/owldq
+
+```
+
+### Reinstall Postgres
+
 ```
 ### Postgres data directly initialization failed 
 ### Postgres permission denied errors
@@ -281,12 +295,16 @@ chmod -R 755 /home/owldq
 ./setup.sh -owlbase=$OWL_BASE -user=$OWL_METASTORE_USER -pgpassword=$OWL_METASTORE_PASS -options=postgres
 ```
 
+### Permissions for ssh keys when starting Spark
+
 ```
 ### Spark standalone permission denied after using ./start-all.sh 
 
 ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 ```
+
+### Permissions if log files are not writeable
 
 ```
 ### Changing permissiongs on individual log files 
@@ -295,11 +313,15 @@ sudo chmod 777 /home/owldq/owl/pids/owl-agent.pid
 sudo chmod 777 /home/owldq/owl/pids/owl-web.pid
 ```
 
+### Getting the hostname of the instance
+
 ```
 ### Getting the hostname of the instance
 
 hostname -f
 ```
+
+### Checking/deleting space of spark worker directory
 
 ```
 ### Checking worker nodes disk space 
@@ -307,6 +329,21 @@ hostname -f
 sudo du -ah | sort -hr | head -5
 sudo find /home/owldq/owl/spark/work/* -mtime +1 -type f -delete
 ```
+
+### Increase Thread pool / Thread Pool Exhausted
+
+```
+# vi owl-env.sh
+# modify these lines
+
+export SPRING_DATASOURCE_POOL_MAX_WAIT=500
+export SPRING_DATASOURCE_POOL_MAX_SIZE=30
+export SPRING_DATASOURCE_POOL_INITIAL_SIZE=10
+
+# restart web and agent
+```
+
+### Too many open files configuration
 
 ```
 ### "Too many open files error message"
@@ -324,6 +361,8 @@ sudo vi /etc/security/limits.conf
 *               soft    nofile           8192
 *               hard    nofile           10000
 ```
+
+### Redirecting Spark Scratch
 
 ```
 ### Redirect Spark scratch to another location
