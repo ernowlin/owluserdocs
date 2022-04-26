@@ -338,7 +338,7 @@ sudo find /home/owldq/owl/spark/work/* -mtime +1 -type f -delete
 
 export SPRING_DATASOURCE_POOL_MAX_WAIT=500
 export SPRING_DATASOURCE_POOL_MAX_SIZE=30
-export SPRING_DATASOURCE_POOL_INITIAL_SIZE=10
+export SPRING_DATASOURCE_POOL_INITIAL_SIZE=5
 
 # restart web and agent
 ```
