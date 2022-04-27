@@ -112,6 +112,7 @@ spark_package=${SPARK_PACKAGE:-"spark-3.1.2-bin-hadoop3.2.tgz"}
 * Connections
   * Added new Jconn4 driver for encrypted connections.
   * You can now save a local (NFS) file directory as a connection type.&#x20;
+  * See our new connnections page for definitive clarificaiton on support, test, and what is packaged in 2002.04. 
 * Explorer
   * When toggling between fullfile and Union LookBack options, `-fullfile` and `-fllb` flags can no longer be generated together in the DQ Job command line.
   * Data Preview for Temp files loading in Explorer now correctly shows the order of columns of the original Temp file.&#x20;
