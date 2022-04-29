@@ -23,7 +23,7 @@ Let's proceed after gathering all prerequisites!
 
 ## Step 1: Create and Configure Edge and DQ Connector
 
-**1A. Create Edge site and Add Name e.g. 'Collibra-DQ-Edge' and Description (One-Time)**
+#### **1A. Create Edge site and Add Name e.g. 'Collibra-DQ-Edge' and Description (One-Time)**
 
 ![Where: Collibra Data Intelligence Cloud Settings -\&gt; Edge -\&gt; Click ‘Create Edge site’](https://lh6.googleusercontent.com/H7aAEkqf4L0RK6xhTSG4yONGafGKhUvHiSz1SPh9c7kyEPfXmhkwWKtr3twcZt6SMo\_KBWj4JNStxURftlc3qeQ7VCyZXng3gUu6GHTCKjoIgMSYwy2tAcyRP\_KFUImGVrYN2tYC)
 
@@ -33,7 +33,7 @@ Let's proceed after gathering all prerequisites!
 **Please see:** [**https://productresources.collibra.com/docs/cloud-edge/latest/Default.htm**](https://productresources.collibra.com/docs/cloud-edge/latest/Default.htm) **for more detailed information on Edge installation and configuration**
 {% endhint %}
 
-**1B. Establish Edge’s Connection To Each Data Source (One-Time For Each Source)**
+#### **1B. Establish Edge’s Connection To Each Data Source (One-Time For Each Source)**
 
 Additional Steps in Collibra DG include:
 
