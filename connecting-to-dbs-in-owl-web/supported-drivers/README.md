@@ -79,3 +79,5 @@ Delta Lake and JDBC connectivity has been validated against Spark 3.01 CDQ packa
 {% hint style="danger" %}
 Spark submit using the Databricks spark master url is not supported.&#x20;
 {% endhint %}
+
+![Latest update on CDQ - Databricks connections status](<../../.gitbook/assets/Screen Shot 2022-04-29 at 8.41.45 AM.png>)
