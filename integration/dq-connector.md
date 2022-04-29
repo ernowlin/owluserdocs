@@ -117,6 +117,7 @@ Now we need to add a few relations and update global assignment characteristics
 DQ Connector is an Edge capability that will facilitate communication with your Collibra DQ instance
 
 * Settings -> Edge -> Capabilities -> Add Capability -> Select 'DQ Connector' -> Input your Collibra DQ URL e.g. 'customerdq.collibra.com:port' input username and password
+* Under the JWT Issuer, please ensure that you have the correct schema name for the database you are connecting to (either 'public' if single tenant, or the name of tenant).
 
 {% hint style="info" %}
 Remember from previous step 1D, you will need to provide your resource / UUIDs for your specified domains for DQ Rules, Metrics, and Dimensions
