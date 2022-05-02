@@ -243,6 +243,8 @@ Refer to [Agent Configuration Parameters](https://docs.owl-analytics.com/install
 
 ![Fig 4: Expected final output of edited agent based on this tutorial](<../../.gitbook/assets/image (67).png>)
 
+![Set the deployment mode option to Client for a Spark Standalone master](<../../.gitbook/assets/image (99).png>)
+
 ## 8. Create DB Connection for DQ Job
 
 Follow the steps on [How to Add DB Connection via UI](https://docs.owl-analytics.com/installation/agent-configuration#how-to-add-db-connection-via-ui) page to add `metastore` database connection. For demo purposes, we will run a DQ Job against local DQ Metadata Storage.&#x20;
