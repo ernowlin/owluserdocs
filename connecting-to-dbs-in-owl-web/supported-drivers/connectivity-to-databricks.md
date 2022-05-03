@@ -9,7 +9,7 @@
 ## **JDBC (Supported)**
 
 {% hint style="info" %}
-**Certification and support is being added from 2022.05 forward.**
+**Certification, support and optional packaging is available from 2022.05**
 {% endhint %}
 
 ### URL
