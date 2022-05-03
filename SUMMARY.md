@@ -2,6 +2,7 @@
 
 * [Collibra Data Quality & Observability](README.md)
 * [Release Notes](release-notes.md)
+* [Builds](builds.md)
 
 ## Installation
 
