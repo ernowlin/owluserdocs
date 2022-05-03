@@ -1,5 +1,20 @@
 # Release Notes
 
+## 2022.05 (In Progress)
+
+#### Fixes / Enhancements
+
+* DQ Job
+  * You can no longer update the dataset name (-ds) from the command line.&#x20;
+    * A helpful error message now appears if changes are made to -ds.&#x20;
+* Outliers
+  * Added "username" to outlier boundary table to track who creates the boundary.
+    * Outlier boundary now saves correctly.
+* Profile
+  * You can now edit or delete semantics by clicking anywhere in the semantics cell of the profile column table.&#x20;
+* API
+  * Enhanced API calls for the Save function.
+
 ## 2022.04
 
 #### Install

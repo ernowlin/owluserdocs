@@ -31,13 +31,13 @@
 
 Link to [Databricks download](https://databricks.com/spark/jdbc-drivers-download)
 
-## **Notebook**
+## **Notebook (Supported)**
 
 * Pyspark SDK
 * Scala SDK&#x20;
 * [Example](https://dq-docs.collibra.com/apis/notebook/cdq-notebook-apis-usage-in-databricks)
 
-## **Spark Submit**
+## **Spark Submit (Not Supported)**
 
 * Spark Master URL&#x20;
 * Databricks Jobs API&#x20;
