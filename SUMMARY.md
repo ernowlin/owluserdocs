@@ -24,6 +24,7 @@
 * [Supported Connections](connecting-to-dbs-in-owl-web/supported-drivers/README.md)
   * [Connectivity to Athena](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-athena.md)
   * [Connectivity to BigQuery](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-bigquery.md)
+  * [Connectivity to Databricks](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-databricks.md)
   * [Connectivity to Hive](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-hive/README.md)
     * [Connecting to CDH 5.16 Hive SSL/TLS/Kerberos Setup](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-hive/connecting-to-cdh-5.16-hive-ssl-tls-kerberos-setup.md)
   * [Connectivity to Oracle](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-oracle.md)
