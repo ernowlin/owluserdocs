@@ -18,6 +18,10 @@ The following is a list of drivers certified for production use.
 
 ## Under Evaluation
 
+{% hint style="success" %}
+Databricks JDBC is targeted to be certified, tested, and packaged (optional) starting in the May 2022 release (2022.05).
+{% endhint %}
+
 The following is a list of drivers which are under evaluation (not certified yet for production usage). These connections are currently ineligible for escalated support services.&#x20;
 
 ### Connections - Tech Preview
