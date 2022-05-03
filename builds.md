@@ -32,6 +32,10 @@ Starting in 2022.04 the builds will follow a new naming convention to designate 
 
 3.2.0-2022.04-ABHGCSGCRS-291&#x20;
 
+{% hint style="warning" %}
+The default build is considered the secure build with no optional drivers included.
+{% endhint %}
+
 ## **Description**
 
 Example: 2022.04-ABDGCSHLMS-302
