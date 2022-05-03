@@ -9,7 +9,12 @@
     * A helpful error message now appears if changes are made to -ds.&#x20;
 * Outliers
   * Added "username" to outlier boundary table to track who creates the boundary.
-    * Outlier boundary now saves correctly.
+    * Outlier boundary once again saves correctly after addition of username.
+* Rules
+  * A new tooltip on the Rules tab indicates that you can hover over stat rules to see their conditions.
+* Security
+  * When Azure AD SSO sends a groups.link assertion, the application now tries to resolve the groups via the link.&#x20;
+    * You can activate this setting by using the property, SAML\_GROUP\_LINK\_PROP, in the environment.
 * Profile
   * You can now edit or delete semantics by clicking anywhere in the semantics cell of the profile column table.&#x20;
 * API
