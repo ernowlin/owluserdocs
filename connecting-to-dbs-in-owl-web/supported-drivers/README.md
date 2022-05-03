@@ -76,7 +76,7 @@ The following is a list of drivers which are under evaluation (not certified yet
 
 Please refer to this [page](https://dq-docs.collibra.com/connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-databricks) for more details on [Databricks support](https://dq-docs.collibra.com/connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-databricks)
 
-The only supported Databricks spark submit option is to use a [notebook](../../dq-job-examples/data-quality-pipelines/aws-databricks-dq-pipeline.md) to initiate the job (Scala and Pyspark options).  This is intended for pipeline developers and users knowledgeable with Databricks and notebooks.  This form factor is ideal for incorporating data quality within existing Spark ETL data flows.  The results are still available for business users to consume.  The configuration is not intended for business users to implement. There are three ways that Databricks users can run cdq jobs using Databricks cluster or JDBC connection.\
+The only supported Databricks spark submit option is to use a [notebook](../../dq-job-examples/data-quality-pipelines/aws-databricks-dq-pipeline.md) to initiate the job (Scala and Pyspark options).  This is intended for pipeline developers and users knowledgeable with Databricks and notebooks.  This form factor is ideal for incorporating data quality within existing Spark ETL data flows.  The results are still available for business users to consume.  The configuration is not intended for business users to implement. There are three ways that Databricks users can run CDQ jobs using Databricks cluster or JDBC connection.\
 \
 1\. **Notebook**\
 Users can directly open a notebook, upload CDQ jars and run a CDQ job on Databricks cluster. The full steps are explained in below page. CDQ supports this flow in production.&#x20;
@@ -106,4 +106,4 @@ Delta Lake and JDBC connectivity has been validated against Spark 3.01 CDQ packa
 Spark submit using the Databricks spark master url is not supported.&#x20;
 {% endhint %}
 
-![Latest update on CDQ - Databricks connections testing status](<../../.gitbook/assets/Screen Shot 2022-04-29 at 8.41.45 AM.png>)
+![CDQ Production support for Databricks.](<../../.gitbook/assets/Screen Shot 2022-05-03 at 10.39.42 AM.png>)
