@@ -74,7 +74,27 @@ The following is a list of drivers which are under evaluation (not certified yet
 
 #### Databricks
 
-The only supported Databricks spark submit option is to use a [notebook](../../dq-job-examples/data-quality-pipelines/aws-databricks-dq-pipeline.md) to initiate the job (Scala and Pyspark options).  This is intended for pipeline developers and users knowledgeable with Databricks and notebooks.  This form factor is ideal for incorporating data quality within existing Spark ETL data flows.  The results are still available for business users to consume.  The configuration is not intended for business users to implement.
+The only supported Databricks spark submit option is to use a [notebook](../../dq-job-examples/data-quality-pipelines/aws-databricks-dq-pipeline.md) to initiate the job (Scala and Pyspark options).  This is intended for pipeline developers and users knowledgeable with Databricks and notebooks.  This form factor is ideal for incorporating data quality within existing Spark ETL data flows.  The results are still available for business users to consume.  The configuration is not intended for business users to implement. There are three ways that Databricks users can run cdq jobs using Databricks clusters.\
+\
+1\. **Notebook**:\
+Users can directly open a notebook, upload CDQ jars and run a CDQ job on Databricks cluster. The full steps are explained in below page. CDQ supports this flow in production.&#x20;
+
+[https://dq-docs.collibra.com/apis/notebook/cdq-notebook-apis-usage-in-databricks](https://dq-docs.collibra.com/apis/notebook/cdq-notebook-apis-usage-in-databricks)
+
+**2. Spark-Submit API:**
+
+There are two ways to run a spark submit job on Databricks's cluster. The first approach is to run a CDQ spark submit job using Databricks UI and the second approach is by invoking Databricks rest API.\
+\
+We have tested  both approaches against different cluster versions of DataBricks (See below table). Below is the full documentation to demonstrate these paths.\
+[https://dq-docs.collibra.com/apis/notebook/dq-databricks-submit](https://dq-docs.collibra.com/apis/notebook/dq-databricks-submit)
+
+\
+Please note that these are only examples to demonstrate how to achieve DQ spark submit to Databricks's cluster. These paths are **not** supported in production and DQ team does **not** support any bug coverages or professional services or customer questions for these flows. \
+
+
+**3. Databricks JDBC**
+
+CDQ users can create JDBC connections in CDQ UI and connect to their Databricks instances. This flow is under development.
 
 {% hint style="warning" %}
 Delta Lake and JDBC connectivity has been validated against Spark 3.01 CDQ package, Databricks 7.3 LTS and SparkJDBC41.jar.  This is available as Preview.  No other combinations have been certified at this time.
