@@ -14,7 +14,7 @@
 
 ### URL
 
-`jdbc:spark://`**`<your-account-here>`**`.cloud.databricks.com:443/default;transportMode=http;ssl=1;httpPath=sql/protocolv1/o/639171477642820/0329-133041-8y8dbmh5;AuthMech=3;UID=token;PWD=`**`<your-token-here>`**
+`jdbc:spark://`**`<your-account-here>.`**`cloud.databricks.com:443/default;transportMode=http;ssl=1;httpPath=sql/protocolv1/o/639171477642820/0329-133041-8y8dbmh5;AuthMech=3;UID=token;PWD=`**`<your-token-here>`**
 
 ### **Driver**
 
