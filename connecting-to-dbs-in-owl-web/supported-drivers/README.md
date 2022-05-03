@@ -74,7 +74,7 @@ The following is a list of drivers which are under evaluation (not certified yet
 
 #### Databricks
 
-The only supported Databricks spark submit option is to use a [notebook](../../dq-job-examples/data-quality-pipelines/aws-databricks-dq-pipeline.md) to initiate the job (Scala and Pyspark options).  This is intended for pipeline developers and users knowledgeable with Databricks and notebooks.  This form factor is ideal for incorporating data quality within existing Spark ETL data flows.  The results are still available for business users to consume.  The configuration is not intended for business users to implement. There are three ways that Databricks users can run cdq jobs using Databricks clusters.\
+The only supported Databricks spark submit option is to use a [notebook](../../dq-job-examples/data-quality-pipelines/aws-databricks-dq-pipeline.md) to initiate the job (Scala and Pyspark options).  This is intended for pipeline developers and users knowledgeable with Databricks and notebooks.  This form factor is ideal for incorporating data quality within existing Spark ETL data flows.  The results are still available for business users to consume.  The configuration is not intended for business users to implement. There are three ways that Databricks users can run cdq jobs using Databricks cluster or JDBC connection.\
 \
 1\. **Notebook**:\
 Users can directly open a notebook, upload CDQ jars and run a CDQ job on Databricks cluster. The full steps are explained in below page. CDQ supports this flow in production.&#x20;
@@ -94,7 +94,7 @@ Please note that these are only examples to demonstrate how to achieve DQ spark 
 
 **3. Databricks JDBC**
 
-CDQ users can create JDBC connections in CDQ UI and connect to their Databricks instances. This flow is under development.
+CDQ users can create JDBC connections in CDQ UI and connect to their Databricks database. This flow is under development.
 
 {% hint style="warning" %}
 Delta Lake and JDBC connectivity has been validated against Spark 3.01 CDQ package, Databricks 7.3 LTS and SparkJDBC41.jar.  This is available as Preview.  No other combinations have been certified at this time.
@@ -104,4 +104,4 @@ Delta Lake and JDBC connectivity has been validated against Spark 3.01 CDQ packa
 Spark submit using the Databricks spark master url is not supported.&#x20;
 {% endhint %}
 
-![Latest update on CDQ - Databricks connections status](<../../.gitbook/assets/Screen Shot 2022-04-29 at 8.41.45 AM.png>)
+![Latest update on CDQ - Databricks connections testing status](<../../.gitbook/assets/Screen Shot 2022-04-29 at 8.41.45 AM.png>)
