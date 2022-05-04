@@ -46,7 +46,7 @@ Example: 2022.04-ABDGCSHLMS-302
 
 2022-4: Release number
 
-302 - It is unique build number appended every
+302 - A unique build number appended&#x20;
 
 ## **Default Drivers**&#x20;
 
