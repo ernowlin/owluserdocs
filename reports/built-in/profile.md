@@ -10,7 +10,7 @@ Search for a particular dataset and run to generate an exportable dataset profil
 
 ### Search for a dataset&#x20;
 
-![](<../../.gitbook/assets/image (137) (1).png>)
+![](<../../.gitbook/assets/image (137).png>)
 
 
 
