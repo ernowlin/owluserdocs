@@ -16,6 +16,16 @@ net.snowflake.client.jdbc.SnowflakeDriver
 
 The previous driver class, `com.snowflake.client.jdbc.SnowflakeDriver`, is still supported but is deprecated (i.e. it will be removed in a future release, TBD).&#x20;
 
+### Limit Databases Displayed
+
+Add this connection property to limit the databases and tables displayed in the Explorer view. This will reduce the entries in the Explorer window to only those tables that the user can access.&#x20;
+
+![](<../../.gitbook/assets/image (137).png>)
+
+```
+CLIENT_METADATA_REQUEST_USE_CONNECTION_CTX=TRUE
+```
+
 #### Connection Parameters
 
 For documentation on individual connection parameters, see the [JDBC Driver Connection Parameter Reference](https://docs.snowflake.com/en/user-guide/jdbc-parameters.html).`<account_identifier>`
