@@ -67,7 +67,7 @@ Let's proceed after gathering all prerequisites!
 
 ![Completed Data Quality Rule Modification Example](<../.gitbook/assets/image (138).png>)
 
-![Example: DQ Synchronization Request with Rules Request optional checkbox](<../.gitbook/assets/image (165).png>)
+![Example: DQ Synchronization Request with Rules Request optional checkbox](<../.gitbook/assets/image (165) (1).png>)
 
 ## Step 3: Manage Data Quality Issues
 

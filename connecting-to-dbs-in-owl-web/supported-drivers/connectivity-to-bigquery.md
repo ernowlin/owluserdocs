@@ -7,6 +7,8 @@
 3. **Create a JDBC connection** (for example only do not use this JDBC URL):\
    jdbc:bigquery://https://www.googleapis.com/bigquery/v2:443;ProjectId=;OAuthType=0;OAuthServiceAcctEmail=<1234567890>[-compute@developer.gserviceaccount.com;OAuthPvtKeyPath=/opt/ext/bq-gcp.json;Timeout=86400](mailto:-compute@developer.gserviceaccount.com;OAuthPvtKeyPath=/opt/ext/owl-gcp.json;Timeout=86400)
 4. **Requires a path to a JSON file** that contains the service account for authorization. That same file is provided to the Spark session to make a direct to storage connection for maximum parallelism once Core fires up.”
+   1. Helpful tip: This JSON file can be uploaded to your bigquery directory using the "add driver" \
+      ![](<../../.gitbook/assets/image (165).png>)
 
 The above and explained there are actually a number of others steps which must be performed to achieve success:
 
