@@ -6,15 +6,19 @@ Starting in 2022.04 the builds will follow a new naming convention to designate 
 **Please note the optional drivers only impact container versions of Collibra Data Quality and does not impact Standalone installation packages.**
 {% endhint %}
 
-## **Available Packages**
+## **Available Containers**
 
 #### Collibra Data Quality
 
 2022.04-L-303&#x20;
 
-2022.04-AL-302 2022.04-296&#x20;
+2022.04-AL-302&#x20;
 
-2022.04-A-295 2022.04-ALL-294&#x20;
+2022.04-296&#x20;
+
+2022.04-A-295&#x20;
+
+2022.04-ALL-294&#x20;
 
 2022.04-ABHGCSGCRS-291
 
