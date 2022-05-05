@@ -26,6 +26,10 @@ Before configuring SAML authentication, you must add the following required prop
 | SAML\_ENABLED    | <p>Whether Collibra DQ uses SAML.</p><p>If set to <code>false</code>, users sign in with a username and password.</p><p>If set to <code>true</code>, SAML handles the authentication request.</p>   |
 | SAML\_ENTITY\_ID | <p>The name of the application for the identity provider, for example <em>Collibra DQ</em>.</p><p>It is an immutable unique identifier of the service provider for the identity provider (IDP).</p> |
 
+{% hint style="warning" %}
+Please see CORS\_ALLOWED\_ORIGINS in the Optional properties section below if you have SAML configured in DQ, or if the app sits behind a load balancer.&#x20;
+{% endhint %}
+
 #### Optional properties: general
 
 You can further configure your SAML setup with the following optional properties.
