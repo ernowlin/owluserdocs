@@ -10,25 +10,30 @@
   * Stop Job action is no longer enabled for K8s.
 * Outliers
   * Added "username" to outlier boundary table to track who creates the boundary.
-    * Outlier boundary once again saves correctly after addition of username.
+    * The Outlier boundary once again saves correctly after the addition of a username.
 * Rules
-  * A new tooltip on the Rules tab indicates that you can hover over stat rules to see their conditions.
+  * Enhanced Rules drill-in capabilities:
+    * You can now use configurable Preview Limit drill-ins  for Simple and Freeform rules.
+  * You can now hover over stat rules to see their conditions.
+  * Fixed an issue that was causing jobs to fail when Day from By dropdown was selected.
 * Security
   * The Highcharts CVSS2: 9.3/CVSS3: 9.8 vulnerability has been resolved.
   * The LOGJAM (CVE-2015-400) SSL/TLS vulnerability has been resolved.&#x20;
   * The SpringShell (CVE-2022-22965) vulnerability has been resolved.
   * TLS < 1.2 is no longer supported.
   * When Azure AD SSO sends a groups.link assertion, the application now tries to resolve the groups via the link.&#x20;
-    * You can activate this setting by using the property, SAML\_GROUP\_LINK\_PROP, in the environment.
+    * You can now activate this setting by using the property, SAML\_GROUP\_LINK\_PROP.
 * Profile
-  * You can now edit or delete semantics by clicking anywhere in the semantics cell of the profile column table.&#x20;
+  * You can now edit or delete semantics by clicking anywhere in the semantics cell of the Profile column table.&#x20;
 * Connections
   * You can now view a list of all packaged and optionally packaged drivers on our new [Builds page](https://dq-docs.collibra.com/builds).
-  * Added new Databricks JDBC driver.
+  * The Databricks JDBC driver is now available.
+* Explorer
+  * You can once again edit schema and table name from the Catalog page.
 * Scorecard
   * Single space " ", underscore "\_", and periods "." are now supported characters when saving Scorecard name.
 * API
-  * Enhanced API calls for the Save function.
+  * Improved API calls for the UserManagement Save function.
 
 ## 2022.04
 
