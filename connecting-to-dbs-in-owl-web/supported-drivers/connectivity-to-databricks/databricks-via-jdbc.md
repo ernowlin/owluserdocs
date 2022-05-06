@@ -6,7 +6,7 @@
 
 Input JDBC credentials
 
-![](../../../.gitbook/assets/make\_a\_connection.gif)
+![](<../../../.gitbook/assets/make\_a\_connection (1).gif>)
 
 
 
