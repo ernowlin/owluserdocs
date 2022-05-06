@@ -31,7 +31,7 @@
   * You can now edit or delete semantics by clicking anywhere in the semantics cell of the Profile column table.&#x20;
 * Connections
   * You can now view a list of all packaged and optionally packaged drivers on our new [Builds page](https://dq-docs.collibra.com/builds).
-  * The Databricks JDBC driver is now available.
+  * The [Databricks JDBC driver](https://dq-docs.collibra.com/connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-databricks/databricks-via-jdbc) is now available.
 * Explorer
   * You can once again edit schema and table name from the Catalog page.
 * Scorecard
