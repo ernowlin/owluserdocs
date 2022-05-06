@@ -55,6 +55,7 @@
       * [Data Type Rules](dq-visuals/rules/rule-types/stat-rules/data-type-rules.md)
   * [Rule Templates](dq-visuals/rules/rule-templates.md)
   * [Rule Library](dq-visuals/rules/dq-rule-automation.md)
+  * [Rule Preview](dq-visuals/rules/rule-preview.md)
   * [Rule Discovery](dq-visuals/rules/data-concepts-and-semantics.md)
 * [More](dq-visuals/more/README.md)
   * [Explorer (no-code)](dq-visuals/more/explorer-2.md)
