@@ -13,10 +13,14 @@
     * The Outlier boundary once again saves correctly after the addition of a username.
 * Rules
   * Enhanced Rules drill-in capabilities:
-    * You can now use configurable Preview Limit drill-ins  for Simple and Freeform rules.
+    * You can now configure Preview Limits on drill-ins for Freeform and Simple rules.
   * You can now hover over stat rules to see their conditions.
   * Fixed an issue that was causing jobs to fail when Day from By dropdown was selected.
 * Security
+  * The OS vulnerabilities from the images of Collibra DQ 2022.04 have been resolved by using the base image of RHEL8 to build the images for Collibra DQ 2022.05. The following OS utilities will not be available in the 2022.05 release images:
+    * Unified, OpenSSL crypto/stack
+    * Full YUM stack
+    * OS tools, including tar, gzip, vi, and curl
   * The Highcharts CVSS2: 9.3/CVSS3: 9.8 vulnerability has been resolved.
   * The LOGJAM (CVE-2015-400) SSL/TLS vulnerability has been resolved.&#x20;
   * The SpringShell (CVE-2022-22965) vulnerability has been resolved.
