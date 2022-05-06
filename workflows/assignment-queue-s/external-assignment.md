@@ -8,7 +8,16 @@ Collibra DQ has the ability to link to an Assignment Queue. You can assign any i
 To configure a queue, you must have ROLE\_ADMIN or ROLE\_CONNECTION\_MANAGER.
 {% endhint %}
 
-1. Go to the **Admin Console** and click **Assignment Queues**.\
-   <img src="../../.gitbook/assets/Screen Shot 2020-07-07 at 5.06.59 AM.png" alt="" data-size="original">
-2. **Add** or **Edit** a Service Now configuration from the corresponding page.\
-   <img src="../../.gitbook/assets/Screen Shot 2020-07-07 at 5.16.11 AM.png" alt="" data-size="original">
+
+
+Go to the **Admin Console** and click **Assignment Queues**.\
+
+
+![](<../../.gitbook/assets/image (131).png>)
+
+****
+
+**Add** or **Edit** a Service Now configuration from the corresponding page.\
+
+
+![](../../.gitbook/assets/servicenow\_save.gif)

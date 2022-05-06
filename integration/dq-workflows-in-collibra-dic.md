@@ -111,7 +111,7 @@ Ensure that the DQ alerts set for you are providing helpful details
 
 ### 4C. Update Subscription Settings
 
-![](<../.gitbook/assets/image (131).png>)
+![](<../.gitbook/assets/image (131) (1).png>)
 
 For every subscription set up for a Subscriber, the Manage DQ Subscriptions modal will cycle through for your review. You can update **Threshold**, add or delete **Notification Days**, add or delete **Tables** or **Columns**, rename the **Subscription title**, **Save the new settings**, or simply **Unsubscribe**.
 
