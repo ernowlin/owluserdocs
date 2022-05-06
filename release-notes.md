@@ -12,7 +12,7 @@
   * Added "username" to outlier boundary table to track who creates the boundary.
     * The Outlier boundary once again saves correctly after the addition of a username.
 * Rules
-  * Enhanced Rules drill-in capabilities:
+  * Enhanced [Rules Preview](https://dq-docs.collibra.com/dq-visuals/rules/rule-preview) drill-in capabilities:
     * You can now configure Preview Limits on drill-ins for Freeform and Simple rules.
   * You can now hover over stat rules to see their conditions.
   * Fixed an issue that was causing jobs to fail when Day from By dropdown was selected.
