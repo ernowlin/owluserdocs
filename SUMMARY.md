@@ -70,6 +70,13 @@
   * [Pushdown](dq-visuals/more/pushdown.md)
   * [Summary](dq-visuals/more/overview.md)
 
+## Scorecards
+
+* [Overview](scorecards/dataset-scorecard/README.md)
+  * [Scoring](scorecards/dataset-scorecard/owl-dq-screen-shots.md)
+* [Page View](scorecards/group-scorecard.md)
+* [List View](scorecards/list-view.md)
+
 ## Alerts
 
 * [Email Batch Alerts](alerts/email-batch-alerts.md)
@@ -80,13 +87,6 @@
 * [Schedule a Job](scheduler/schedule-owlchecks.md)
 * [Schedule Management](scheduler/schedule-management/README.md)
   * [View/Re-Run Scheduled Jobs](scheduler/schedule-management/view-re-run-scheduled-jobs.md)
-
-## Scorecards
-
-* [Overview](scorecards/dataset-scorecard/README.md)
-  * [Scoring](scorecards/dataset-scorecard/owl-dq-screen-shots.md)
-* [Page View](scorecards/group-scorecard.md)
-* [List View](scorecards/list-view.md)
 
 ## Reports
 
@@ -103,8 +103,8 @@
   * [Internal Assignment](workflows/assignment-queue-s/internal-assignment.md)
   * [External assignment](workflows/assignment-queue-s/external-assignment.md)
   * [FAQ](workflows/assignment-queue-s/faq.md)
-* [Item Labeling](workflows/item-labeling.md)
-* [Peak vs Off Peak](workflows/peak-vs-off-peak.md)
+* [Item Labeling](workflows/item-labeling/README.md)
+  * [Peak vs Off Peak](workflows/item-labeling/peak-vs-off-peak.md)
 
 ## Integration
 
@@ -181,14 +181,14 @@
   * [What is OwlDQ](projects/why-owl/what-is-owldq.md)
   * [DQ is the difference](projects/why-owl/data-quality.md)
   * [Prescriptive Personas](projects/why-owl/prescriptive-personas.md)
-* [Data Projects](projects/data-projects/README.md)
-  * [Builds a Better DQ Dashboard](projects/data-projects/builds-a-better-dq-dashboard.md)
-  * [Ensures CCPA & GDPR](projects/data-projects/ccpa-and-gdpr.md)
-  * [Makes your Data Lake better.](projects/data-projects/data-quality-monitoring.md)
-  * [Speeds Migrations/Enables Replications](projects/data-projects/migrations.md)
-  * [Assists Data Aggregation](projects/data-projects/assists-data-aggregation.md)
-  * [Creating a Data Quality Pipeline](projects/data-projects/creating-a-data-quality-pipeline.md)
 * [Use Cases](projects/use-cases/README.md)
+  * [Data Projects](projects/use-cases/data-projects/README.md)
+    * [Builds a Better DQ Dashboard](projects/use-cases/data-projects/builds-a-better-dq-dashboard.md)
+    * [Ensures CCPA & GDPR](projects/use-cases/data-projects/ccpa-and-gdpr.md)
+    * [Makes your Data Lake better.](projects/use-cases/data-projects/data-quality-monitoring.md)
+    * [Speeds Migrations/Enables Replications](projects/use-cases/data-projects/migrations.md)
+    * [Assists Data Aggregation](projects/use-cases/data-projects/assists-data-aggregation.md)
+    * [Creating a Data Quality Pipeline](projects/use-cases/data-projects/creating-a-data-quality-pipeline.md)
   * [Bank Loans](projects/use-cases/bank-loans.md)
   * [Bloomberg Data](projects/use-cases/bloomberg-data.md)
   * [Cyber Anomalies in Real-Time](projects/use-cases/cyber-anomalies-in-real-time.md)

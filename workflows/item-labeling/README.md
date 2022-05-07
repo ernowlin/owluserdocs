@@ -8,7 +8,7 @@ description: Quickly click on items to trigger re-training
 Note: There are limitations with item labeling.  Not all line items are eligible for all labeling options (Validate, Invalidate, Resolve).  Please see the breakdown below on which options are available per DQ detection tab. Some of this is by design.  Additionally, we are normalizing the actions and updating documentation for clarity.
 {% endhint %}
 
-![](../.gitbook/assets/item\_label.gif)
+![](../../.gitbook/assets/item\_label.gif)
 
 ## Re-train the Owl DQ Model
 
@@ -28,6 +28,6 @@ Shapes - Validate, Invalidate, Resolve
 
 Users can assign items or label for future runs.
 
-![Each item will have an action to assign or dismiss the item.](<../.gitbook/assets/image (153).png>)
+![Each item will have an action to assign or dismiss the item.](<../../.gitbook/assets/image (153).png>)
 
-![](<../.gitbook/assets/image (129).png>)
+![](<../../.gitbook/assets/image (129).png>)
