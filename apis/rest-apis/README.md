@@ -1,4 +1,4 @@
-# REST APIs
+# Rest
 
 ![](../../.gitbook/assets/APIs.gif)
 
@@ -32,30 +32,203 @@ status = /v3/jobs{jobId}/status
 findings = /v3/jobs/{jobId}/findings
 ```
 
-### Generate Client SDK
 
-1. Go to [https://editor.swagger.io/](https://editor.swagger.io)
-2. Click File Import URL
-3. Paste a URL that looks like this  [https://\<host>/v2/api-docs?group=Product%20API](https://146.148.84.143/v2/api-docs?group=Product%20API)
-4. Click generate client (python, java, scala, C#)
 
-![](<../../.gitbook/assets/Screen Shot 2021-08-03 at 9.05.13 AM.png>)
+### JWT Token For Auth
+
+```
+import requests
+import json
+url = "http://localhost:9000/auth/signin"
+payload = json.dumps({
+  "username": "<user>",
+  "password": "<pass>",
+  "iss": "public"
+})
+headers = {
+  'Content-Type': 'application/json'
+}
+response = requests.request("POST", url, headers=headers, data=payload)
+print(response.text)
+```
+
+```
+curl --location --request POST 'http://localhost:9000/auth/signin' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "username": "<user>",
+    "password": "<pass>",
+    "iss": "public"
+}'
+```
+
+## Python Example
+
+Alternatively, you can use the rest endpoints directly. This example shows how it can be done with Python.
+
+1. Create a dataset def&#x20;
+   1. using the UI (Explorer) or&#x20;
+   2. using the dataset-def-api (https://\<ip>/swagger-ui.html#/dataset-def-api)
+2. Confirm your Python environment has the appropriate modules and imports&#x20;
+3. Fill-in the variables and customize to your preference
+   1. url, user and pass&#x20;
+   2. dataset, runDate, and agentName
 
 ```python
-#Python SDK Example 
+import requests
+import json
 
-#GET CMDLINE
-cmdLine = get_job_cmdline(dataset)
+# Authenticate
+owl = "https://<url>"
+url = "https://<url>/auth/signin"
+payload = json.dumps({
+  "username": "<user>", # Edit Here 
+  "password": "<pass>", # Edit Here 
+  "iss": "public"       # Edit Here 
+})
+headers = {
+  'Content-Type': 'application/json'
+}
+response = requests.request("POST", url, headers=headers, data=payload, verify=False)
+owl_header = {'Authorization': 'Bearer ' + response.json()['token']}
 
-#SUBMIT JOB
-job_id = run(dataset, run_date)
 
-#CHECK STATUS
-status = get_job_status(job_id)
+# Run
+dataset = '<your_dataset_name>'    # Edit Here 
+runDate = '2021-08-08'             # Edit Here 
+agentName = '<your_agent_name'     # Edit Here  
 
-#GET DQ ISSUES
-status = get_job_findings(dataset, run_date)
+response = requests.post(
+    url = owl + '/v3/jobs/run?agentName='+agentName+'&dataset='+dataset+'&runDate='+runDate,
+    headers=owl_header, 
+    verify=False
+)
+
+jobId = str(response.json()['jobId'])
+
+
+# Status
+for stat in range(100):
+    time.sleep(1)
+
+    response = requests.get(
+        url = owl + '/v3/jobs/'+jobId,
+        headers=owl_header, 
+        verify=False
+    )
+    
+    job = response.json()
+    
+    if job['status'] == 'FINISHED':
+        break
+
+
+# Results
+response = requests.get(
+    url = owl + '/v3/jobs/'+jobId+'/findings',
+    headers=owl_header, 
+    verify=False
+)
+
+print(response.json())
 ```
+
+This assumes you have created a dataset definition using the UI or from the template.&#x20;
+
+#### Command Line instead of JSON dataset def
+
+You can run a similar job submission using the cmd line. Please note it is easiest to get the saved command line from the dataset-def-api **/v3/datasetDefs/{dataset}/cmdline** (with proper escaping) and passed to the **/v3/jobs/runCmdLine**.
+
+## Breaking Down The Sections
+
+### Submit the Job
+
+Send in a dataset name, date and agent to submit the job. This kicks off the engine to go do the work.
+
+```python
+# Run
+dataset = 'API_V3'
+runDate = '2021-08-08'
+agentName = 'owldq-owl-agent-owldq-dev-0'
+
+response = requests.post(
+    url = owl + '/v3/jobs/run?agentName='+agentName+'&dataset='+dataset+'&runDate='+runDate,
+    headers=owl_header
+)
+
+jobId = str(response.json()['jobId'])
+```
+
+### Get the Status
+
+Using the jobId returned from the job submission, you can check the status.  In the example above, there is an interval to wait for the job to complete. You can create your own logic and orchestrate more precisely.
+
+```python
+response = requests.get(
+    url = owl + '/v3/jobs/'+jobId,
+    headers=owl_header
+)
+```
+
+### Get the Results
+
+Using the same jobId returned from the job submission, you can check the results.  You will get a detailed json object with all the capabilities and detections in one payload.  This is where you would decision, based on your organization and process.
+
+```python
+response = requests.get(
+    url = owl + '/v3/jobs/'+jobId,
+    headers=owl_header
+)
+```
+
+### Python Example Raw
+
+```python
+import requests
+import json
+
+# Variables
+owl = 'https://<ip_address>'             #Edit 
+user = '<user>'                          #Edit 
+password = '<password>'                  #Edit 
+tenant = 'public'                        #Edit 
+dataset = '<your_dataset_name>'          #Edit 
+runDate = '2021-08-08'                   #Edit 
+agentName = 'your_agent_name'            #Edit 
+
+# Authenticate
+url = owl+'/auth/signin'
+payload = json.dumps({"username": user, "password": password, "iss": tenant })
+headers = {'Content-Type': 'application/json'}
+response = requests.request("POST", url, headers=headers, data=payload, verify=False)
+owl_header = {'Authorization': 'Bearer ' + response.json()['token']}
+
+# Run
+response = requests.post(url = owl + '/v3/jobs/run?agentName='+agentName+'&dataset='+dataset+'&runDate='+runDate, headers=owl_header, verify=False)
+jobId = str(response.json()['jobId'])
+
+# Status
+for stat in range(100):
+    time.sleep(1)
+
+    response = requests.get(url = owl + '/v3/jobs/'+jobId, headers=owl_header, verify=False)
+    status = response.json()['status']
+    
+    if status == 'FINISHED':
+        break
+
+# Results
+response = requests.get(url = owl + '/v3/jobs/'+jobId+'/findings', headers=owl_header,  verify=False)
+
+```
+
+### Internal API
+
+Collibra DQ also exposes the internal API so that all potential operations are available.  The caveat is that these calls may change over time or expose underlying functionality.
+
+![](<../../.gitbook/assets/image (35).png>)
+
+![](<../../.gitbook/assets/image (37).png>)
 
 ### Dataset Definition
 
@@ -439,198 +612,29 @@ The JSON for the full dataset definition.  It can be more terse to send in the c
 
 ![](<../../.gitbook/assets/image (37).png>)
 
-### JWT Token For Auth
 
-```
-import requests
-import json
-url = "http://localhost:9000/auth/signin"
-payload = json.dumps({
-  "username": "<user>",
-  "password": "<pass>",
-  "iss": "public"
-})
-headers = {
-  'Content-Type': 'application/json'
-}
-response = requests.request("POST", url, headers=headers, data=payload)
-print(response.text)
-```
 
-```
-curl --location --request POST 'http://localhost:9000/auth/signin' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "username": "<user>",
-    "password": "<pass>",
-    "iss": "public"
-}'
-```
+### Generate Client SDK
 
-## Python Example
+1. Go to [https://editor.swagger.io/](https://editor.swagger.io)
+2. Click File Import URL
+3. Paste a URL that looks like this  [https://\<host>/v2/api-docs?group=Product%20API](https://146.148.84.143/v2/api-docs?group=Product%20API)
+4. Click generate client (python, java, scala, C#)
 
-Alternatively, you can use the rest endpoints directly. This example shows how it can be done with Python.
-
-1. Create a dataset def&#x20;
-   1. using the UI (Explorer) or&#x20;
-   2. using the dataset-def-api (https://\<ip>/swagger-ui.html#/dataset-def-api)
-2. Confirm your Python environment has the appropriate modules and imports&#x20;
-3. Fill-in the variables and customize to your preference
-   1. url, user and pass&#x20;
-   2. dataset, runDate, and agentName
+![](<../../.gitbook/assets/Screen Shot 2021-08-03 at 9.05.13 AM.png>)
 
 ```python
-import requests
-import json
+#Python SDK Example 
 
-# Authenticate
-owl = "https://<url>"
-url = "https://<url>/auth/signin"
-payload = json.dumps({
-  "username": "<user>", # Edit Here 
-  "password": "<pass>", # Edit Here 
-  "iss": "public"       # Edit Here 
-})
-headers = {
-  'Content-Type': 'application/json'
-}
-response = requests.request("POST", url, headers=headers, data=payload, verify=False)
-owl_header = {'Authorization': 'Bearer ' + response.json()['token']}
+#GET CMDLINE
+cmdLine = get_job_cmdline(dataset)
 
+#SUBMIT JOB
+job_id = run(dataset, run_date)
 
-# Run
-dataset = '<your_dataset_name>'    # Edit Here 
-runDate = '2021-08-08'             # Edit Here 
-agentName = '<your_agent_name'     # Edit Here  
+#CHECK STATUS
+status = get_job_status(job_id)
 
-response = requests.post(
-    url = owl + '/v3/jobs/run?agentName='+agentName+'&dataset='+dataset+'&runDate='+runDate,
-    headers=owl_header, 
-    verify=False
-)
-
-jobId = str(response.json()['jobId'])
-
-
-# Status
-for stat in range(100):
-    time.sleep(1)
-
-    response = requests.get(
-        url = owl + '/v3/jobs/'+jobId,
-        headers=owl_header, 
-        verify=False
-    )
-    
-    job = response.json()
-    
-    if job['status'] == 'FINISHED':
-        break
-
-
-# Results
-response = requests.get(
-    url = owl + '/v3/jobs/'+jobId+'/findings',
-    headers=owl_header, 
-    verify=False
-)
-
-print(response.json())
+#GET DQ ISSUES
+status = get_job_findings(dataset, run_date)
 ```
-
-This assumes you have created a dataset definition using the UI or from the template.&#x20;
-
-#### Command Line instead of JSON dataset def
-
-You can run a similar job submission using the cmd line. Please note it is easiest to get the saved command line from the dataset-def-api **/v3/datasetDefs/{dataset}/cmdline** (with proper escaping) and passed to the **/v3/jobs/runCmdLine**.
-
-## Breaking Down The Sections
-
-### Submit the Job
-
-Send in a dataset name, date and agent to submit the job. This kicks off the engine to go do the work.
-
-```python
-# Run
-dataset = 'API_V3'
-runDate = '2021-08-08'
-agentName = 'owldq-owl-agent-owldq-dev-0'
-
-response = requests.post(
-    url = owl + '/v3/jobs/run?agentName='+agentName+'&dataset='+dataset+'&runDate='+runDate,
-    headers=owl_header
-)
-
-jobId = str(response.json()['jobId'])
-```
-
-### Get the Status
-
-Using the jobId returned from the job submission, you can check the status.  In the example above, there is an interval to wait for the job to complete. You can create your own logic and orchestrate more precisely.
-
-```python
-response = requests.get(
-    url = owl + '/v3/jobs/'+jobId,
-    headers=owl_header
-)
-```
-
-### Get the Results
-
-Using the same jobId returned from the job submission, you can check the results.  You will get a detailed json object with all the capabilities and detections in one payload.  This is where you would decision, based on your organization and process.
-
-```python
-response = requests.get(
-    url = owl + '/v3/jobs/'+jobId,
-    headers=owl_header
-)
-```
-
-### Python Example Raw
-
-```python
-import requests
-import json
-
-# Variables
-owl = 'https://<ip_address>'             #Edit 
-user = '<user>'                          #Edit 
-password = '<password>'                  #Edit 
-tenant = 'public'                        #Edit 
-dataset = '<your_dataset_name>'          #Edit 
-runDate = '2021-08-08'                   #Edit 
-agentName = 'your_agent_name'            #Edit 
-
-# Authenticate
-url = owl+'/auth/signin'
-payload = json.dumps({"username": user, "password": password, "iss": tenant })
-headers = {'Content-Type': 'application/json'}
-response = requests.request("POST", url, headers=headers, data=payload, verify=False)
-owl_header = {'Authorization': 'Bearer ' + response.json()['token']}
-
-# Run
-response = requests.post(url = owl + '/v3/jobs/run?agentName='+agentName+'&dataset='+dataset+'&runDate='+runDate, headers=owl_header, verify=False)
-jobId = str(response.json()['jobId'])
-
-# Status
-for stat in range(100):
-    time.sleep(1)
-
-    response = requests.get(url = owl + '/v3/jobs/'+jobId, headers=owl_header, verify=False)
-    status = response.json()['status']
-    
-    if status == 'FINISHED':
-        break
-
-# Results
-response = requests.get(url = owl + '/v3/jobs/'+jobId+'/findings', headers=owl_header,  verify=False)
-
-```
-
-### Internal API
-
-Collibra DQ also exposes the internal API so that all potential operations are available.  The caveat is that these calls may change over time or expose underlying functionality.
-
-![](<../../.gitbook/assets/image (35).png>)
-
-![](<../../.gitbook/assets/image (37).png>)

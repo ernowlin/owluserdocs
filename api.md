@@ -1,8 +1,8 @@
 # APIs
 
-## [Rest](apis-1/rest-apis/)
+## [Rest](apis/rest-apis/)
 
-Please see the [REST API](apis-1/rest-apis/) section for more details.
+Please see the [REST API](apis/rest-apis/) section for more details.
 
 ```
 import requests
@@ -36,9 +36,9 @@ response = requests.get(url = owl + '/v3/jobs/'+jobId+'/findings', headers=owl_h
 
 ```
 
-## [Notebook](apis-1/notebook/)
+## [Notebook](apis/notebook/)
 
-Please see [the Databricks example](apis-1/notebook/cdq-notebook-apis-usage-in-databricks.md) for more information
+Please see [the Databricks example](apis/notebook/cdq-notebook-apis-usage-in-databricks.md) for more information
 
 ```
 val dataset = "cdq_notebook"
