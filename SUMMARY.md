@@ -86,8 +86,8 @@
 
 ## Alerts
 
-* [Email Batch Alerts](alerts/email-batch-alerts.md)
 * [Email Alerts](alerts/email-alerts.md)
+* [Email Batch Alerts](alerts/email-batch-alerts.md)
 
 ## Reports
 
@@ -120,11 +120,6 @@
 
 ## Solutions <a href="#projects" id="projects"></a>
 
-* [Our Approach](projects/why-owl/README.md)
-  * [Our Story](projects/why-owl/our-story/README.md)
-    * [DQ is the difference](projects/why-owl/our-story/data-quality.md)
-    * [What is CDQ](projects/why-owl/our-story/what-is-owldq.md)
-  * [Prescriptive Personas](projects/why-owl/prescriptive-personas.md)
 * [Use Cases](projects/use-cases/README.md)
   * [Data Projects](projects/use-cases/data-projects/README.md)
     * [Builds a Better DQ Dashboard](projects/use-cases/data-projects/builds-a-better-dq-dashboard.md)
@@ -133,6 +128,11 @@
     * [Speeds Migrations/Enables Replications](projects/use-cases/data-projects/migrations.md)
     * [Assists Data Aggregation](projects/use-cases/data-projects/assists-data-aggregation.md)
     * [Creating a Data Quality Pipeline](projects/use-cases/data-projects/creating-a-data-quality-pipeline.md)
+    * [Our Approach](projects/use-cases/data-projects/why-owl/README.md)
+      * [Our Story](projects/use-cases/data-projects/why-owl/our-story/README.md)
+        * [DQ is the difference](projects/use-cases/data-projects/why-owl/our-story/data-quality.md)
+        * [What is CDQ](projects/use-cases/data-projects/why-owl/our-story/what-is-owldq.md)
+      * [Prescriptive Personas](projects/use-cases/data-projects/why-owl/prescriptive-personas.md)
   * [Bank Loans](projects/use-cases/bank-loans.md)
   * [Bloomberg Data](projects/use-cases/bloomberg-data.md)
   * [Cyber Anomalies in Real-Time](projects/use-cases/cyber-anomalies-in-real-time.md)

@@ -45,15 +45,15 @@ where
     B.id is null OR (A.email != B.email)
 ```
 
-## Cross-Table (Guided).  Use our wizard to do ad-hoc analysis and visual setup.
+#### Cross-Table (Guided).  Use our wizard to do ad-hoc analysis and visual setup.
 
 {% embed url="https://www.youtube.com/watch?v=uQ0tilvBUKc" %}
 
-## Join Example Example (vs. cross-table guided seen above).
+#### Join Example Example (vs. cross-table guided seen above).
 
 {% embed url="https://www.youtube.com/watch?v=BFw5ZIzwewQ" %}
 
-## Multi-part condition rules with the rule builder.  Combines profiling metrics & builder in one screen.
+#### Multi-part condition rules with the rule builder.  Combines profiling metrics & builder in one screen.
 
 {% embed url="https://www.youtube.com/watch?v=Zkw23umvf8o&feature=youtu.be&t=16" %}
 

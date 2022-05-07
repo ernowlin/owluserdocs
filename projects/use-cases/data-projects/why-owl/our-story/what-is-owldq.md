@@ -100,7 +100,7 @@ description: CDQ is an intelligent data validation tool.
 
 Every feature, visual, and component within Owl is intended to make the analysis and implementation of data checks easier.
 
-![](<../../../.gitbook/assets/Screenshot 2020-07-19 at 7.31.37 PM.png>)
+![](<../../../../../.gitbook/assets/Screenshot 2020-07-19 at 7.31.37 PM.png>)
 
 ## Why?
 
