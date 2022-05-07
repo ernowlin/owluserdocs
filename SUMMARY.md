@@ -35,8 +35,8 @@
   * [Connectivity to Redshift](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-redshift.md)
   * [Connectivity to Snowflake](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-snowflake.md)
   * [Connectivity to SQL Server](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-sql-server.md)
-* [Add a Connection](connecting-to-dbs-in-owl-web/owl-db-connection.md)
-* [Add Connection to Agent](connecting-to-dbs-in-owl-web/add-connection-to-agent.md)
+* [Add a Connection](connecting-to-dbs-in-owl-web/owl-db-connection/README.md)
+  * [Add Connection to Agent](connecting-to-dbs-in-owl-web/owl-db-connection/add-connection-to-agent.md)
 
 ## Features <a href="#dq-visuals" id="dq-visuals"></a>
 
@@ -76,17 +76,18 @@
   * [Scoring](scorecards/dataset-scorecard/owl-dq-screen-shots.md)
 * [Page View](scorecards/group-scorecard.md)
 * [List View](scorecards/list-view.md)
-
-## Alerts
-
-* [Email Batch Alerts](alerts/email-batch-alerts.md)
-* [Email Alerts](alerts/email-alerts.md)
+* [Pulse View](scorecards/pulse-view.md)
 
 ## Scheduler
 
 * [Schedule a Job](scheduler/schedule-owlchecks.md)
 * [Schedule Management](scheduler/schedule-management/README.md)
   * [View/Re-Run Scheduled Jobs](scheduler/schedule-management/view-re-run-scheduled-jobs.md)
+
+## Alerts
+
+* [Email Batch Alerts](alerts/email-batch-alerts.md)
+* [Email Alerts](alerts/email-alerts.md)
 
 ## Reports
 
