@@ -324,7 +324,7 @@ Added UUIDs for Jobs may take additional time on initial startup after upgrade
 * Export / Import
   * Fixed issue that import could not accommodate more than one table insert
   * Fixed bug where certain values were inadvertently inserted into RegEx rules upon Export
-  * New endpoints added for [db-export and db-import](apis/rest-apis/export-and-import-api.md)
+  * New endpoints added for [db-export and db-import](apis-1/rest-apis/export-and-import-api.md)
 * Connection
   * Fixed Out Of Memory issue with Dremio
     * Explicitly added limit clause in the preview query within Update Scope

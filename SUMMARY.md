@@ -3,7 +3,7 @@
 * [Collibra Data Quality & Observability](README.md)
 * [Release Notes](release-notes.md)
 * [Builds](builds.md)
-* [API](api.md)
+* [APIs](apis.md)
 
 ## Installation
 
@@ -225,25 +225,25 @@
 
 ## APIs
 
-* [Rest](apis/rest-apis/README.md)
-  * [Swagger](apis/rest-apis/swagger.md)
-  * [Find the endpoint](apis/rest-apis/find-the-endpoint.md)
-  * [Export and Import API](apis/rest-apis/export-and-import-api.md)
-  * [Export and Import Example](apis/rest-apis/rules-import-export.md)
-  * [Assignment API](apis/rest-apis/assignmentapi.md)
-  * [Time Zone API](apis/rest-apis/owl-time-zone-api.md)
-  * [Livy](apis/rest-apis/livy.md)
-* [Notebook](apis/notebook/README.md)
-  * [CDQ Notebook APIs Usage In Databricks](apis/notebook/cdq-notebook-apis-usage-in-databricks.md)
-  * [DQ-Databricks Submit](apis/notebook/dq-databricks-submit.md)
-  * [Notebook API](apis/notebook/notebook-api/README.md)
-    * [Load](apis/notebook/notebook-api/load.md)
-    * [Profile](apis/notebook/notebook-api/profile.md)
-    * [Dupe](apis/notebook/notebook-api/dupe.md)
-    * [Source](apis/notebook/notebook-api/source.md)
-    * [OwlOptions (base)](apis/notebook/notebook-api/owloptions-base.md)
-  * [JWT](apis/notebook/jwt.md)
-  * [Cookie](apis/notebook/cookie.md)
+* [Rest](apis-1/rest-apis/README.md)
+  * [Swagger](apis-1/rest-apis/swagger.md)
+  * [Find the endpoint](apis-1/rest-apis/find-the-endpoint.md)
+  * [Export and Import API](apis-1/rest-apis/export-and-import-api.md)
+  * [Export and Import Example](apis-1/rest-apis/rules-import-export.md)
+  * [Assignment API](apis-1/rest-apis/assignmentapi.md)
+  * [Time Zone API](apis-1/rest-apis/owl-time-zone-api.md)
+  * [Livy](apis-1/rest-apis/livy.md)
+* [Notebook](apis-1/notebook/README.md)
+  * [CDQ Notebook APIs Usage In Databricks](apis-1/notebook/cdq-notebook-apis-usage-in-databricks.md)
+  * [DQ-Databricks Submit](apis-1/notebook/dq-databricks-submit.md)
+  * [Notebook API](apis-1/notebook/notebook-api/README.md)
+    * [Load](apis-1/notebook/notebook-api/load.md)
+    * [Profile](apis-1/notebook/notebook-api/profile.md)
+    * [Dupe](apis-1/notebook/notebook-api/dupe.md)
+    * [Source](apis-1/notebook/notebook-api/source.md)
+    * [OwlOptions (base)](apis-1/notebook/notebook-api/owloptions-base.md)
+  * [JWT](apis-1/notebook/jwt.md)
+  * [Cookie](apis-1/notebook/cookie.md)
 
 ## Security
 
