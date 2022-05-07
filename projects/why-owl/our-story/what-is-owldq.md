@@ -1,12 +1,10 @@
 ---
-description: OwlDQ is an intelligent data validation tool.
+description: CDQ is an intelligent data validation tool.
 ---
 
-# What is OwlDQ
+# What is CDQ
 
-### Relief for Backlogged Resources. No more bottlenecks for business users. Confidence your data is validated.
-
-## 8 Ways to Add-Value Using OwlDQ
+## 8 Ways to Add-Value Using CDQ
 
 1.  **Crowdsourcing**
 
@@ -33,22 +31,7 @@ description: OwlDQ is an intelligent data validation tool.
 
     “Easy to see top priorities for improvement”&#x20;
 
-{% hint style="danger" %}
-* Another expensive project missing deadlines?
-* Tired of wasting an afternoon unwinding ETL / ingestion jobs?
-* Know the dread of another fire drill?
-* Is it crazy to think your time can be better spent than wading through data issues?
-{% endhint %}
-
-### OwlDQ Detects Unintended Data Errors Without Human Bottlenecks.
-
-{% embed url="https://www.youtube.com/watch?v=sR6ACeO8d34" %}
-Systematically Eliminate Your Biggest Data Blind Spots.
-{% endembed %}
-
-### **Focus on Adding Business Value & Avoid Expensive, Complex Commitments**
-
-## What Savings Does OwlDQ Provide?&#x20;
+## What Savings Does CDQ Provide?&#x20;
 
 ### **Save Hours of Effort with Auto-generated Data Validation Checks**
 
@@ -79,7 +62,7 @@ Systematically Eliminate Your Biggest Data Blind Spots.
 * Too busy responding to fire drills to implement new projects
 {% endhint %}
 
-## How Can OwlDQ Help?
+## How Can CDQ Help?
 
 #### _Click a button and smile - knowing baseline validation checks are applied - instead of spending hours manually digging through data & stitching together scripts_
 
@@ -111,15 +94,15 @@ Systematically Eliminate Your Biggest Data Blind Spots.
 
 #### **Boost productivity. 80% faster than manual coding. Minimize development costs. Get faster, easier access to data quality metrics. Show line of business users how to self-service.**
 
-## What **makes OwlDQ unique**?
+## What **makes CDQ unique**?
 
-### **OwlDQ is The Only Tool Business & Technical Users Will Love**&#x20;
+### **CDQ is The Only Tool Business & Technical Users Will Love**&#x20;
 
 Every feature, visual, and component within Owl is intended to make the analysis and implementation of data checks easier.
 
-![](<../../.gitbook/assets/Screenshot 2020-07-19 at 7.31.37 PM.png>)
+![](<../../../.gitbook/assets/Screenshot 2020-07-19 at 7.31.37 PM.png>)
 
-## Why Use Owl?
+## Why?
 
 ### Because Humans Can’t Predict Every Which Way Data Can Go Wrong.
 
@@ -145,10 +128,6 @@ Every feature, visual, and component within Owl is intended to make the analysis
 {% endtab %}
 {% endtabs %}
 
-### Schedule a Conversation
 
-OwlDQ offers a low-hanging fruit opportunity to extend your data quality toolset.
-
-The fact that data quality is a consistent pain point suggests it's important to many business-critical functions and legacy products not getting the job done.
 
 ### ****

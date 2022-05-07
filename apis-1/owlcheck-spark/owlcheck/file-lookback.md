@@ -2,11 +2,11 @@
 
 As of 2021.11 this option is exposed in the Explorer under the DQ Job section. Users can persist (save) this option by clicking the Union Lookback checkbox.
 
-![](../../.gitbook/assets/union-lookback-checkbox.png)
+![](../../../.gitbook/assets/union-lookback-checkbox.png)
 
 ### Union Lookback (-fllb)
 
-Union Lookback, or File Lookback (-fllb) as it is also known, is used with [deep learning ](../../dq-visuals/more/outliers.md#numerical-outliers)or [pattern matching](../../dq-visuals/more/pattern-mining.md). In the example below it is used with deep learning.&#x20;
+Union Lookback, or File Lookback (-fllb) as it is also known, is used with [deep learning ](../../../dq-visuals/more/outliers.md#numerical-outliers)or [pattern matching](../../../dq-visuals/more/pattern-mining.md). In the example below it is used with deep learning.&#x20;
 
 File Lookback is used to check DQ Check history for previous files.
 

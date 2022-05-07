@@ -8,7 +8,7 @@ A SparkSubmit will be launched for each table, so make sure the agent configurat
 
 **Global Parameters**
 
-![Global Parameters](../../.gitbook/assets/global-params.png)
+![Global Parameters](../../../.gitbook/assets/global-params.png)
 
 &#x20;**Histogram** and **Correlation**: Enable or Disable
 
@@ -26,7 +26,7 @@ A SparkSubmit will be launched for each table, so make sure the agent configurat
 
 **Per Table Parameters**
 
-![](../../.gitbook/assets/table-params.png)
+![](../../../.gitbook/assets/table-params.png)
 
 &#x20;**Columns**: The columns to select from (if none are specified, we assume all columns to be selected).
 

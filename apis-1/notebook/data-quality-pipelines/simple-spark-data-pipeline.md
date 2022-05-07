@@ -70,7 +70,7 @@ Notice that Owl returns results as Dataframes.  This is a fantastic abstraction 
 
 While the spark DF.show() is a nice and convenient output format, you may prefer a rich UI visual that tracks the data tests over time.  The UI provides trend analysis, data drift, data relationships and more.
 
-![](../../.gitbook/assets/owl-profiler.png)
+![](../../../.gitbook/assets/owl-profiler.png)
 
 ## Duplicates
 
