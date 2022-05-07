@@ -14,19 +14,19 @@ http://<YOUR_IP_ADDRESS>/swagger-ui.html
 
 Swagger can be found in the application under the Admin section labeled APIs.
 
-![](<../.gitbook/assets/image (125).png>)
+![](<../../.gitbook/assets/image (125).png>)
 
 You will find a direct link to the Swagger page&#x20;
 
-![](<../.gitbook/assets/image (121).png>)
+![](<../../.gitbook/assets/image (121).png>)
 
 Toggle between Product API and Internal API&#x20;
 
-![](<../.gitbook/assets/image (166).png>)
+![](<../../.gitbook/assets/image (166).png>)
 
 
 
 For example swagger API please visit - [http://\<YOUR\_IP>:9000/v2/api-docs?group=UI Internal](http://35.194.91.201:9003/v2/api-docs?group=UI%20Internal) &#x20;
 
-![](../.gitbook/assets/owl-swagger.png)
+![](../../.gitbook/assets/owl-swagger.png)
 

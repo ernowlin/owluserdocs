@@ -650,7 +650,7 @@ rule_repo
 #### New Feature
 
 * Alert
-  * Alert notification page displaying a searchable list of alerts emails sent. [Email Alerts](workflows/email-alerts.md#example-alert-in-your-inbox)
+  * Alert notification page displaying a searchable list of alerts emails sent. [Email Alerts](alerts/email-alerts.md#example-alert-in-your-inbox)
 * Job Page
   * UI refresh
   * New chart with successful and failed jobs

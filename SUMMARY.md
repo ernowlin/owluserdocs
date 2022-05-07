@@ -3,6 +3,7 @@
 * [Collibra Data Quality & Observability](README.md)
 * [Release Notes](release-notes.md)
 * [Builds](builds.md)
+* [API](api.md)
 
 ## Installation
 
@@ -69,66 +70,10 @@
   * [Pushdown](dq-visuals/more/pushdown.md)
   * [Summary](dq-visuals/more/overview.md)
 
-## DQ JOB Examples
+## Alerts
 
-* [Batch](dq-job-examples/owlcheck-spark/README.md)
-  * [DQ Job JDBC](dq-job-examples/owlcheck-spark/job-jdbc.md)
-  * [DQ Job BigQuery](dq-job-examples/owlcheck-spark/owlcheck-bigquery.md)
-  * [DQ Job Databricks](dq-job-examples/owlcheck-spark/owlcheck-databricks.md)
-  * [DQ Job Hive](dq-job-examples/owlcheck-spark/job-hive.md)
-  * [DQ Job Files](dq-job-examples/owlcheck-spark/job-files.md)
-  * [DQ Job HDFS](dq-job-examples/owlcheck-spark/owlcheck-hdfs.md)
-  * [DQ Job JSON](dq-job-examples/owlcheck-spark/job-json.md)
-  * [DQ Job MySql](dq-job-examples/owlcheck-spark/job-mysql.md)
-  * [DQ Job MongoDB](dq-job-examples/owlcheck-spark/owlcheck-mongodb.md)
-  * [DQ Job S3](dq-job-examples/owlcheck-spark/owlcheck-s3.md)
-  * [DQ Job Snowflake](dq-job-examples/owlcheck-spark/owlcheck-snowflake.md)
-* [Pipelines](dq-job-examples/data-quality-pipelines/README.md)
-  * [Simple](dq-job-examples/data-quality-pipelines/simple-spark-data-pipeline.md)
-  * [Advanced](dq-job-examples/data-quality-pipelines/spark-dq-pipeline.md)
-  * [Rules](dq-job-examples/data-quality-pipelines/owl-rules-dq-pipeline/README.md)
-    * [Global rules](dq-job-examples/data-quality-pipelines/owl-rules-dq-pipeline/global-rules.md)
-    * [SQL based rules](dq-job-examples/data-quality-pipelines/owl-rules-dq-pipeline/sql-based-rules/README.md)
-      * [Simple rule](dq-job-examples/data-quality-pipelines/owl-rules-dq-pipeline/sql-based-rules/simple-rule.md)
-      * [Freeform SQL](dq-job-examples/data-quality-pipelines/owl-rules-dq-pipeline/sql-based-rules/freeform-sql.md)
-    * [Data type based rules](dq-job-examples/data-quality-pipelines/owl-rules-dq-pipeline/data-type-based-rules.md)
-  * [Outliers](dq-job-examples/data-quality-pipelines/notebook-outlier-example.md)
-  * [Column Match](dq-job-examples/data-quality-pipelines/notebook-colmatch-example.md)
-  * [AWS DataBricks](dq-job-examples/data-quality-pipelines/aws-databricks-dq-pipeline.md)
-  * [Azure DataBricks](dq-job-examples/data-quality-pipelines/azure-databricks-dq-pipeline.md)
-  * [Options API](dq-job-examples/data-quality-pipelines/owl-options-api.md)
-  * [FAQs](dq-job-examples/data-quality-pipelines/frequently-asked-questions.md)
-* [Advanced](dq-job-examples/owlcheck/README.md)
-  * [DQ Job Back Run](dq-job-examples/owlcheck/owlcheck-backrun.md)
-  * [DQ Job Cron](dq-job-examples/owlcheck/owlcheck-cron.md)
-  * [DQ Job Kafka](dq-job-examples/owlcheck/job-kafka.md)
-  * [DQ Job LinkId](dq-job-examples/owlcheck/owlcheck-linkid.md)
-  * [DQ Job Validate Source](dq-job-examples/owlcheck/owlcheck-validate-source.md)
-  * [DQ Job 43M rows](dq-job-examples/owlcheck/owlcheck-43m-rows.md)
-  * [Add Date Column](dq-job-examples/owlcheck/add-date-column.md)
-  * [AutoProfile](dq-job-examples/owlcheck/autoprofile.md)
-  * [Cloudera CLASSPATH](dq-job-examples/owlcheck/cloudera-classpath.md)
-  * [Column Matching](dq-job-examples/owlcheck/cluster-health-report.md)
-  * [Date Time Variable Options](dq-job-examples/owlcheck/date-time-variable-options.md)
-  * [Deploy Mode](dq-job-examples/owlcheck/deploy-mode.md)
-  * [Explorer (advanced)](dq-job-examples/owlcheck/explorer.md)
-  * [File Look Back](dq-job-examples/owlcheck/file-lookback.md)
-  * [Filter & Filter Not](dq-job-examples/owlcheck/filter.md)
-  * [Multiple Pattern Relationships](dq-job-examples/owlcheck/multiple-pattern-combinations.md)
-  * [Nulls in Datasets](dq-job-examples/owlcheck/zero-if-null.md)
-  * [Transform](dq-job-examples/owlcheck/owlcheck-transform.md)
-
-## Collibra DIC Integration <a href="#integration" id="integration"></a>
-
-* [DQ Connector](integration/dq-connector.md)
-* [DQ Workflows](integration/dq-workflows-in-collibra-dic.md)
-
-## Scorecards
-
-* [Overview](scorecards/dataset-scorecard/README.md)
-  * [Scoring](scorecards/dataset-scorecard/owl-dq-screen-shots.md)
-* [Page View](scorecards/group-scorecard.md)
-* [List View](scorecards/list-view.md)
+* [Email Batch Alerts](alerts/email-batch-alerts.md)
+* [Email Alerts](alerts/email-alerts.md)
 
 ## Scheduler
 
@@ -136,25 +81,12 @@
 * [Schedule Management](scheduler/schedule-management/README.md)
   * [View/Re-Run Scheduled Jobs](scheduler/schedule-management/view-re-run-scheduled-jobs.md)
 
-## WORKFLOWS / ALERTS <a href="#workflows" id="workflows"></a>
+## Scorecards
 
-* [Email Batch Alerts](workflows/email-batch-alerts.md)
-* [Email Alerts](workflows/email-alerts.md)
-* [Assignment Queue(s)](workflows/assignment-queue-s/README.md)
-  * [Internal Assignment](workflows/assignment-queue-s/internal-assignment.md)
-  * [External assignment](workflows/assignment-queue-s/external-assignment.md)
-  * [FAQ](workflows/assignment-queue-s/faq.md)
-
-## Labeling / Training
-
-* [Item Labeling](labeling-training/item-labeling.md)
-* [Peak vs Off Peak](labeling-training/peak-vs-off-peak.md)
-
-## Catalog
-
-* [Overview](catalog/catalog.md)
-* [Business Units](catalog/business-units.md)
-* [Catalog Bulk Actions](catalog/catalog-bulk-actions.md)
+* [Overview](scorecards/dataset-scorecard/README.md)
+  * [Scoring](scorecards/dataset-scorecard/owl-dq-screen-shots.md)
+* [Page View](scorecards/group-scorecard.md)
+* [List View](scorecards/list-view.md)
 
 ## Reports
 
@@ -165,28 +97,82 @@
   * [Summary Reports](reports/built-in/owl-summary-reports.md)
 * [Custom](reports/custom.md)
 
-## APIs
+## Workflows
 
-* [REST APIs](apis/rest-apis/README.md)
-  * [Find the endpoint](apis/rest-apis/find-the-endpoint.md)
-  * [Assignment API](apis/rest-apis/assignmentapi.md)
-  * [Export and Import API](apis/rest-apis/export-and-import-api.md)
-  * [Export and Import Example](apis/rest-apis/rules-import-export.md)
-  * [Time Zone API](apis/rest-apis/owl-time-zone-api.md)
-  * [Livy](apis/rest-apis/livy.md)
-* [Swagger](apis/swagger.md)
-* [Notebook APIs](apis/notebook/README.md)
-  * [CDQ Notebook APIs Usage In Databricks](apis/notebook/cdq-notebook-apis-usage-in-databricks.md)
-  * [Spark-shell Sample](apis/notebook/spark-shell-sample.md)
-  * [Dupe](apis/notebook/dupe.md)
-  * [Load](apis/notebook/load.md)
-  * [Source](apis/notebook/source.md)
-  * [Profile](apis/notebook/profile.md)
-  * [Notebook API](apis/notebook/notebook-api/README.md)
-    * [OwlOptions (base)](apis/notebook/notebook-api/owloptions-base.md)
-  * [JWT](apis/notebook/jwt.md)
-  * [Cookie](apis/notebook/cookie.md)
-  * [DQ-Databricks Submit](apis/notebook/dq-databricks-submit.md)
+* [Assignment Queue(s)](workflows/assignment-queue-s/README.md)
+  * [Internal Assignment](workflows/assignment-queue-s/internal-assignment.md)
+  * [External assignment](workflows/assignment-queue-s/external-assignment.md)
+  * [FAQ](workflows/assignment-queue-s/faq.md)
+* [Item Labeling](workflows/item-labeling.md)
+* [Peak vs Off Peak](workflows/peak-vs-off-peak.md)
+
+## Integration
+
+* [DQ Connector](integration/dq-connector.md)
+* [DQ Workflows](integration/dq-workflows-in-collibra-dic.md)
+
+## Catalog
+
+* [Overview](catalog/catalog.md)
+* [Business Units](catalog/business-units.md)
+* [Catalog Bulk Actions](catalog/catalog-bulk-actions.md)
+
+## Examples
+
+* [Batch](examples/owlcheck-spark/README.md)
+  * [DQ Job JDBC](examples/owlcheck-spark/job-jdbc.md)
+  * [DQ Job BigQuery](examples/owlcheck-spark/owlcheck-bigquery.md)
+  * [DQ Job Databricks](examples/owlcheck-spark/owlcheck-databricks.md)
+  * [DQ Job Hive](examples/owlcheck-spark/job-hive.md)
+  * [DQ Job Files](examples/owlcheck-spark/job-files.md)
+  * [DQ Job HDFS](examples/owlcheck-spark/owlcheck-hdfs.md)
+  * [DQ Job JSON](examples/owlcheck-spark/job-json.md)
+  * [DQ Job MySql](examples/owlcheck-spark/job-mysql.md)
+  * [DQ Job MongoDB](examples/owlcheck-spark/owlcheck-mongodb.md)
+  * [DQ Job S3](examples/owlcheck-spark/owlcheck-s3.md)
+  * [DQ Job Snowflake](examples/owlcheck-spark/owlcheck-snowflake.md)
+* [Pipelines](examples/data-quality-pipelines/README.md)
+  * [Simple](examples/data-quality-pipelines/simple-spark-data-pipeline.md)
+  * [Advanced](examples/data-quality-pipelines/spark-dq-pipeline.md)
+  * [Rules](examples/data-quality-pipelines/owl-rules-dq-pipeline/README.md)
+    * [Global rules](examples/data-quality-pipelines/owl-rules-dq-pipeline/global-rules.md)
+    * [SQL based rules](examples/data-quality-pipelines/owl-rules-dq-pipeline/sql-based-rules/README.md)
+      * [Simple rule](examples/data-quality-pipelines/owl-rules-dq-pipeline/sql-based-rules/simple-rule.md)
+      * [Freeform SQL](examples/data-quality-pipelines/owl-rules-dq-pipeline/sql-based-rules/freeform-sql.md)
+    * [Data type based rules](examples/data-quality-pipelines/owl-rules-dq-pipeline/data-type-based-rules.md)
+  * [Outliers](examples/data-quality-pipelines/notebook-outlier-example.md)
+  * [Column Match](examples/data-quality-pipelines/notebook-colmatch-example.md)
+  * [AWS DataBricks](examples/data-quality-pipelines/aws-databricks-dq-pipeline.md)
+  * [Azure DataBricks](examples/data-quality-pipelines/azure-databricks-dq-pipeline.md)
+  * [Options API](examples/data-quality-pipelines/owl-options-api.md)
+  * [FAQs](examples/data-quality-pipelines/frequently-asked-questions.md)
+* [Advanced](examples/owlcheck/README.md)
+  * [DQ Job Back Run](examples/owlcheck/owlcheck-backrun.md)
+  * [DQ Job Cron](examples/owlcheck/owlcheck-cron.md)
+  * [DQ Job Kafka](examples/owlcheck/job-kafka.md)
+  * [DQ Job LinkId](examples/owlcheck/owlcheck-linkid.md)
+  * [DQ Job Validate Source](examples/owlcheck/owlcheck-validate-source.md)
+  * [DQ Job 43M rows](examples/owlcheck/owlcheck-43m-rows.md)
+  * [Add Date Column](examples/owlcheck/add-date-column.md)
+  * [AutoProfile](examples/owlcheck/autoprofile.md)
+  * [Cloudera CLASSPATH](examples/owlcheck/cloudera-classpath.md)
+  * [Column Matching](examples/owlcheck/cluster-health-report.md)
+  * [Date Time Variable Options](examples/owlcheck/date-time-variable-options.md)
+  * [Deploy Mode](examples/owlcheck/deploy-mode.md)
+  * [Explorer (advanced)](examples/owlcheck/explorer.md)
+  * [File Look Back](examples/owlcheck/file-lookback.md)
+  * [Filter & Filter Not](examples/owlcheck/filter.md)
+  * [Multiple Pattern Relationships](examples/owlcheck/multiple-pattern-combinations.md)
+  * [Nulls in Datasets](examples/owlcheck/zero-if-null.md)
+  * [Spark-shell Sample](examples/owlcheck/spark-shell-sample.md)
+  * [Transform](examples/owlcheck/owlcheck-transform.md)
+
+## Benchmarks
+
+* [Performance Settings](benchmarks/performance-settings.md)
+* [Performance Tests](benchmarks/performance-tests.md)
+* [Performance Tuning](benchmarks/performance-tuning/README.md)
+  * [Performance Considerations](benchmarks/performance-tuning/benchmark-faq.md)
 
 ## Solutions <a href="#projects" id="projects"></a>
 
@@ -194,8 +180,7 @@
   * [Our Story](projects/why-owl/our-story.md)
   * [What is OwlDQ](projects/why-owl/what-is-owldq.md)
   * [DQ is the difference](projects/why-owl/data-quality.md)
-* [Best Practices](projects/best-practices/README.md)
-  * [Prescriptive Personas](projects/best-practices/prescriptive-personas.md)
+  * [Prescriptive Personas](projects/why-owl/prescriptive-personas.md)
 * [Data Projects](projects/data-projects/README.md)
   * [Builds a Better DQ Dashboard](projects/data-projects/builds-a-better-dq-dashboard.md)
   * [Ensures CCPA & GDPR](projects/data-projects/ccpa-and-gdpr.md)
@@ -214,13 +199,7 @@
   * [Security Reference Data](projects/use-cases/security-reference-data.md)
   * [Smart Meter Data](projects/use-cases/smart-meter-data.md)
   * [Validating Data Movement](projects/use-cases/copying-or-moving-data.md)
-
-## Benchmarks
-
-* [Performance Settings](benchmarks/performance-settings.md)
-* [Performance Tests](benchmarks/performance-tests.md)
-* [Performance Tuning](benchmarks/performance-tuning/README.md)
-  * [Performance Considerations](benchmarks/performance-tuning/benchmark-faq.md)
+* [Best Practices](projects/best-practices.md)
 
 ## Architecture
 
@@ -243,6 +222,28 @@
   * [Dataset Audit Trail](admin/audit/dataset-audit-trail.md)
   * [Security Audit Trail](admin/audit/security-audit-trail.md)
   * [User Audit Trail](admin/audit/user-audit-trail.md)
+
+## APIs
+
+* [Rest](apis/rest-apis/README.md)
+  * [Swagger](apis/rest-apis/swagger.md)
+  * [Find the endpoint](apis/rest-apis/find-the-endpoint.md)
+  * [Export and Import API](apis/rest-apis/export-and-import-api.md)
+  * [Export and Import Example](apis/rest-apis/rules-import-export.md)
+  * [Assignment API](apis/rest-apis/assignmentapi.md)
+  * [Time Zone API](apis/rest-apis/owl-time-zone-api.md)
+  * [Livy](apis/rest-apis/livy.md)
+* [Notebook](apis/notebook/README.md)
+  * [CDQ Notebook APIs Usage In Databricks](apis/notebook/cdq-notebook-apis-usage-in-databricks.md)
+  * [DQ-Databricks Submit](apis/notebook/dq-databricks-submit.md)
+  * [Notebook API](apis/notebook/notebook-api/README.md)
+    * [Load](apis/notebook/notebook-api/load.md)
+    * [Profile](apis/notebook/notebook-api/profile.md)
+    * [Dupe](apis/notebook/notebook-api/dupe.md)
+    * [Source](apis/notebook/notebook-api/source.md)
+    * [OwlOptions (base)](apis/notebook/notebook-api/owloptions-base.md)
+  * [JWT](apis/notebook/jwt.md)
+  * [Cookie](apis/notebook/cookie.md)
 
 ## Security
 
