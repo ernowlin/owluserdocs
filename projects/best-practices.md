@@ -4,7 +4,7 @@
 
 **Tenant names should be lower case only.**&#x20;
 
-![](<../../.gitbook/assets/image (141).png>)
+![](<../.gitbook/assets/image (141).png>)
 
 ### **Understanding owl activities and what the key/date columns mean for each**
 
