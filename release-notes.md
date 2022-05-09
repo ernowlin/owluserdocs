@@ -15,13 +15,16 @@
   * Fixed an issue that caused jobs to fail when Day from By dropdown was selected.
 * Rules
   * [Rules Preview](https://dq-docs.collibra.com/dq-visuals/rules/rule-preview) drill-in capabilities are now improved:
-    * You can now configure Preview Limits on drill-ins for Freeform and Simple rules.
+    * You can now configure Rules Preview Limits on drill-ins for Freeform and Simple rules.
+    * You can now set any positive number (ex. 2, 150, etc.) as the Rules Preview Limit.
+    * When a rule is labelled as BREAKING for rule types other than Freeform and SQL, UI text now displays, "Data preview records are only available for Freeform and Simple rules."
   * You can now hover over stat rules to see their conditions.
 * Security
   * The OS vulnerabilities from the images of Collibra DQ 2022.04 have been resolved by using the base image of RHEL8 to build the images for Collibra DQ 2022.05. The following OS utilities will not be available in the 2022.05 release images:
     * Unified, OpenSSL crypto/stack
     * Full YUM stack
     * OS tools, including tar, gzip, and vi
+  * AD users can again use auth/signin REST API.
   * The Highcharts CVSS2: 9.3/CVSS3: 9.8 vulnerability is resolved.
   * The LOGJAM (CVE-2015-400) SSL/TLS vulnerability is resolved.&#x20;
   * The SpringShell (CVE-2022-22965) vulnerability is resolved.
@@ -37,8 +40,12 @@
   * You can now view a list of all packaged and optionally packaged drivers on our new [Builds page](https://dq-docs.collibra.com/builds).
   * The [Databricks JDBC driver](https://dq-docs.collibra.com/connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-databricks/databricks-via-jdbc) is now available.
   * You can now add Databricks datasets using the Databricks Simba driver.
+* Catalog
+  * Fixed an issue where the deletion of a dataset caused orphaned links to datasets in other areas of Collibra DQ.
 * Admin
+  * You can now access the new Usage page to view monthly historical usage statistics.
   * AD users with Admin privileges can now add Business Units.
+  * AD users with Admin privileges can now manage local users.
 * Explorer
   * You can again edit schema and table name from the Catalog page.
   * Fixed an issue when viewing Schema in View Data wizard.
