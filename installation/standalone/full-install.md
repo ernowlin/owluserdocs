@@ -345,6 +345,12 @@ export SPRING_DATASOURCE_POOL_INITIAL_SIZE=5
 # restart web and agent
 ```
 
+### Active Database Queries
+
+```
+select * from pg_stat_activity where state='active'
+```
+
 ### Too many open files configuration
 
 ```
