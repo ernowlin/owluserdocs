@@ -30,21 +30,27 @@
     * You can now activate this setting by using the property, SAML\_GROUP\_LINK\_PROP.
 * Profile
   * You can now edit or delete semantics by clicking anywhere in the semantics cell of the Profile column table.&#x20;
+  * You can now save annotations with special characters.
+    * Special characters that are not currently supported include percent sign `%`, backslash `\`, and caret `^`.
+  * Fixed an issue where columns of broken rules were not highlighted.
 * Connections
   * You can now view a list of all packaged and optionally packaged drivers on our new [Builds page](https://dq-docs.collibra.com/builds).
   * The [Databricks JDBC driver](https://dq-docs.collibra.com/connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-databricks/databricks-via-jdbc) is now available.
+  * You can now add Databricks datasets using the Databricks Simba driver.
+* Admin
+  * AD users with Admin privileges can now add Business Units.
 * Explorer
   * You can again edit schema and table name from the Catalog page.
   * Fixed an issue when viewing Schema in View Data wizard.
 * Scorecard
-  * Single space " ", underscore "\_", and periods "." are now supported characters when saving Scorecard name.
+  * Single-space `` , underscore `_`, and period `.` are now supported characters when saving Scorecard name.
 * API
   * Improved API calls for the UserManagement Save function.
 
 #### Known Limitations
 
 * Explorer
-  * Except for underscore "\_", special characters are not currently supported in schema or table names.&#x20;
+  * Except for underscore `_`, special characters are not currently supported in schema or table names.&#x20;
 
 ## 2022.04
 
