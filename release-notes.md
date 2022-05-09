@@ -8,22 +8,23 @@
   * You can no longer update the dataset name (`-ds`) from the command line.&#x20;
     * A helpful error message now appears if changes are made to `-ds`.&#x20;
   * Stop Job action is no longer enabled for K8s.
+  * Fixed an issue for Dremio jobs where jobs hang when editing or cloning an existing dataset.
 * Outliers
   * Added "username" to outlier boundary table to track who creates the boundary.
-    * The Outlier boundary once again saves correctly after the addition of a username.
+    * The Outlier boundary again saves correctly after the addition of a username.
+  * Fixed an issue that caused jobs to fail when Day from By dropdown was selected.
 * Rules
-  * Enhanced [Rules Preview](https://dq-docs.collibra.com/dq-visuals/rules/rule-preview) drill-in capabilities:
+  * [Rules Preview](https://dq-docs.collibra.com/dq-visuals/rules/rule-preview) drill-in capabilities are now improved:
     * You can now configure Preview Limits on drill-ins for Freeform and Simple rules.
   * You can now hover over stat rules to see their conditions.
-  * Fixed an issue that was causing jobs to fail when Day from By dropdown was selected.
 * Security
   * The OS vulnerabilities from the images of Collibra DQ 2022.04 have been resolved by using the base image of RHEL8 to build the images for Collibra DQ 2022.05. The following OS utilities will not be available in the 2022.05 release images:
     * Unified, OpenSSL crypto/stack
     * Full YUM stack
-    * OS tools, including tar, gzip, vi, and curl
-  * The Highcharts CVSS2: 9.3/CVSS3: 9.8 vulnerability has been resolved.
-  * The LOGJAM (CVE-2015-400) SSL/TLS vulnerability has been resolved.&#x20;
-  * The SpringShell (CVE-2022-22965) vulnerability has been resolved.
+    * OS tools, including tar, gzip, and vi
+  * The Highcharts CVSS2: 9.3/CVSS3: 9.8 vulnerability is resolved.
+  * The LOGJAM (CVE-2015-400) SSL/TLS vulnerability is resolved.&#x20;
+  * The SpringShell (CVE-2022-22965) vulnerability is resolved.
   * TLS < 1.2 is no longer supported.
   * When Azure AD SSO sends a groups.link assertion, the application now tries to resolve the groups via the link.&#x20;
     * You can now activate this setting by using the property, SAML\_GROUP\_LINK\_PROP.
@@ -33,11 +34,17 @@
   * You can now view a list of all packaged and optionally packaged drivers on our new [Builds page](https://dq-docs.collibra.com/builds).
   * The [Databricks JDBC driver](https://dq-docs.collibra.com/connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-databricks/databricks-via-jdbc) is now available.
 * Explorer
-  * You can once again edit schema and table name from the Catalog page.
+  * You can again edit schema and table name from the Catalog page.
+  * Fixed an issue when viewing Schema in View Data wizard.
 * Scorecard
   * Single space " ", underscore "\_", and periods "." are now supported characters when saving Scorecard name.
 * API
   * Improved API calls for the UserManagement Save function.
+
+#### Known Limitations
+
+* Explorer
+  * Except for underscore "\_", special characters are not currently supported in schema or table names.&#x20;
 
 ## 2022.04
 
@@ -152,7 +159,7 @@ spark_package=${SPARK_PACKAGE:-"spark-3.1.2-bin-hadoop3.2.tgz"}
   * Added new Jconn4 driver for encrypted connections.
   * You can now save a local (NFS) file directory as a connection type.&#x20;
   * See our newest [connections ](https://dq-docs.collibra.com/connecting-to-dbs-in-owl-web/supported-drivers)page for a definitive guide to driver support.&#x20;
-  * BigQuery is now certified for production, but removed from packaged install for K8's docker.
+  * BigQuery is now certified for production, but removed from packaged install for K8s docker.
 * Explorer
   * When toggling between fullfile and Union LookBack options, `-fullfile` and `-fllb` flags can no longer be generated together in the DQ Job command line.
   * Data Preview for Temp files loading in Explorer now correctly shows the order of columns of the original Temp file.&#x20;
