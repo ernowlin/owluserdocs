@@ -77,7 +77,7 @@
 
 ![Vulns over time](.gitbook/assets/vulns-over-time-2022-05.png)
 
-![Criticals table](.gitbook/assets/critical-table-2022-05.png)
+![Criticals table](<.gitbook/assets/critical-table-2022-05 (1).png>)
 
 ## 2022.04
 
