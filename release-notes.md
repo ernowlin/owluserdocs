@@ -1,6 +1,6 @@
 # Release Notes
 
-## 2022.05 (In Progress)
+## 2022.05
 
 #### Fixes / Enhancements
 
@@ -20,6 +20,9 @@
     * When a rule is labelled as BREAKING for rule types other than Freeform and SQL, UI text now displays, "Data preview records are only available for Freeform and Simple rules."
   * You can now hover over stat rules to see their conditions.
 * Security
+  * Vulnerabilities identified by Jfrog
+    * Vulns 0, criticals 0, high severity 9
+    * For a visual readout, see the DQ Security Metrics section below.
   * The OS vulnerabilities from the images of Collibra DQ 2022.04 have been resolved by using the base image of RHEL8 to build the images for Collibra DQ 2022.05. The following OS utilities will not be available in the 2022.05 release images:
     * Unified, OpenSSL crypto/stack
     * Full YUM stack
@@ -46,6 +49,7 @@
   * You can now access the new Usage page to view monthly historical usage statistics.
   * AD users with Admin privileges can now add Business Units.
   * AD users with Admin privileges can now manage local users.
+  * \*Tech Preview\* \[TP] You can now use the ServiceNow integration through a proxy server from the Assignment Queues screen.&#x20;
   * The Agent Groups (H/A) feature is marked for deprecation and will be removed from the app in the 2022.06 release.&#x20;
 * Explorer
   * You can again edit schema and table name from the Catalog page.
@@ -59,6 +63,21 @@
 
 * Explorer
   * Except for underscore `_`, special characters are not currently supported in schema or table names.&#x20;
+* Admin
+  * \*Tech Preview\* \[TP] ServiceNow integration
+    * Only the local Docker container proxy has been tested and verified.
+    * The Test Connection button's validating credentials capabilities is currently limited if the ServiceNow URL is valid.
+    * The Validate All Rules function currently results in a failure.
+    * You cannot edit an active ServiceNow assignment.
+      * Invalidate/Validate or Resolve actions result in a failure.
+    * You can assign a ServiceNow ticket with an embedded URL when escaped with double quotes.
+      * No assignment is sent without this process.
+
+#### DQ Security Metrics
+
+![Vulns over time](.gitbook/assets/vulns-over-time-2022-05.png)
+
+![Criticals table](.gitbook/assets/critical-table-2022-05.png)
 
 ## 2022.04
 
