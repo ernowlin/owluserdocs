@@ -26,7 +26,7 @@
 * [Supported Connections](connecting-to-dbs-in-owl-web/supported-drivers/README.md)
   * [Connectivity to Athena](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-athena.md)
   * [Connectivity to BigQuery](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-bigquery.md)
-  * [Connectivity to Databricks](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-databricks/README.md)
+  * [Connectivity to Databricks](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-databricks.md)
     * [Databricks via JDBC](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-databricks/databricks-via-jdbc.md)
   * [Connectivity to Hive](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-hive/README.md)
     * [Connecting to CDH 5.16 Hive SSL/TLS/Kerberos Setup](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-hive/connecting-to-cdh-5.16-hive-ssl-tls-kerberos-setup.md)
@@ -35,7 +35,7 @@
   * [Connectivity to Redshift](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-redshift.md)
   * [Connectivity to Snowflake](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-snowflake.md)
   * [Connectivity to SQL Server](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-sql-server.md)
-* [Add a Connection](connecting-to-dbs-in-owl-web/owl-db-connection/README.md)
+* [Add a Connection](connecting-to-dbs-in-owl-web/owl-db-connection.md)
   * [Add Connection to Agent](connecting-to-dbs-in-owl-web/owl-db-connection/add-connection-to-agent.md)
 
 ## Features <a href="#dq-visuals" id="dq-visuals"></a>

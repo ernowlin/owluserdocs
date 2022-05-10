@@ -129,3 +129,88 @@ helm upgrade --install --namespace <namespace> \
 <deployment-name> \
 /path/to/chart/owldq
 ```
+
+## Troubleshooting + Helpful Commands
+
+This guide is to provide the most common commands to run when troubleshooting a DQ environment that is deployed on Kubernetes. For a basic overview of Kubernetes and other relevant knowledge.
+
+```
+### Provide documentation on syntax and flags in the terminal
+
+kubectl help
+
+### To see how to use Kubernetes resources
+
+kubectl api-resources -o wide
+```
+
+### Viewing Kubernetes Resources
+
+```
+### Get Pods, their names & details in all Namespaces
+
+kubectl get pods -A -o wide
+
+### Get all Namespaces in a cluster
+
+kubectl get namespaces
+
+### Get Services in all Namespaces
+
+kubectl get services -A -o wide
+
+### List all deployments in all namespaces:
+
+kubectl get deployments -A -o wide
+```
+
+### Logs & Events
+
+```
+### List Events sorted by timestamp in all namespaces
+
+kubectl get events -A --sort-by=.metadata.creationTimestamp
+
+### Get logs from a specific pod:
+
+kubectl logs [my-pod-name]
+
+```
+
+### Resource Allocation
+
+```
+### If the Kubernetes Metrics Server is installed, 
+### the top command allows you to see the resource consumption for nodes or podscode
+
+kubectl top node
+kubectl top pod
+
+### If the Kubernetes Metrics Server is NOT installed, use
+
+kubectl describe nodes | grep Allocated -A 10 
+```
+
+### Configuration
+
+```
+### Get current-context
+
+kubectl config current-context
+
+### See all configs for the entire cluster
+
+kubectl config view
+```
+
+### Authorization Issues
+
+```
+### Check to see if I can read pod logs for current user & context
+
+kubectl auth can-i get pods --subresource=log
+
+### Check to see if I can do everything in my current namespace ("*" means all)
+
+kubectl auth can-i '*' '*'
+```

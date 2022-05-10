@@ -186,7 +186,7 @@ Set max cores to 1 in the job limit settings.&#x20;
 
 ## **6. Add a Connection**
 
-This is the same process of adding a connection found [here ](../connecting-to-dbs-in-owl-web/owl-db-connection/)with one difference.  You will map the connection to your agent upon establishing a connection.  **This is different than mapping a connection and an agent in the self-hosted application.**
+This is the same process of adding a connection found [here ](../connecting-to-dbs-in-owl-web/owl-db-connection.md)with one difference.  You will map the connection to your agent upon establishing a connection.  **This is different than mapping a connection and an agent in the self-hosted application.**
 
 Select your target agent using the **Target Agent drop-down**. This drop-down will populate with existing agents.  Here is where you will select the agent name from the previous step.
 
