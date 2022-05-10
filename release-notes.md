@@ -46,6 +46,7 @@
   * You can now access the new Usage page to view monthly historical usage statistics.
   * AD users with Admin privileges can now add Business Units.
   * AD users with Admin privileges can now manage local users.
+  * The Agent Groups (H/A) feature is marked for deprecation and will be removed from the app in the 2022.06 release.&#x20;
 * Explorer
   * You can again edit schema and table name from the Catalog page.
   * Fixed an issue when viewing Schema in View Data wizard.
