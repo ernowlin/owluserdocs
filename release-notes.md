@@ -190,7 +190,7 @@ spark_package=${SPARK_PACKAGE:-"spark-3.1.2-bin-hadoop3.2.tgz"}
   * Added an enhancement for -addlib flag.
 * Connections
   * Added new Jconn4 driver for encrypted connections.
-  * You can now save a local (NFS) file directory as a connection type.&#x20;
+  * Tech Preview - You can now save a local (NFS) file directory as a connection type.&#x20;
   * See our newest [connections ](https://dq-docs.collibra.com/connecting-to-dbs-in-owl-web/supported-drivers)page for a definitive guide to driver support.&#x20;
   * BigQuery is now certified for production, but removed from packaged install for K8s docker.
 * Explorer
