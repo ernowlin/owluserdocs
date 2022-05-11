@@ -16,6 +16,7 @@ Set a preview limit
 4. Create your SQL rule in the **Expr** field and enter a unique name for your rule in the **Name** field.
 5. Enter an even number in **Preview Limit (Rows)**.
 6. Click **Save**.
+7. Run the **DQ Job** to execute the rules assigned to the dataset.&#x20;
 
 {% hint style="info" %}
 Note: Freeform and Simple rule are the only two rule types supported at this time.
