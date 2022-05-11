@@ -56,6 +56,7 @@
   * The Agent Groups (H/A) feature is marked for deprecation and will be removed from the app in the 2022.06 release.&#x20;
 * Explorer
   * You can again edit schema and table name from the Catalog page.
+  * You can now navigate to a specific behavior tab directly from the Assignments page.
   * Fixed an issue when viewing Schema in View Data wizard.
 * Scorecard
   * Single-space `` , underscore `_`, and period `.` are now supported characters when saving Scorecard name.
