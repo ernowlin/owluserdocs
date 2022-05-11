@@ -15,8 +15,11 @@
   * Fixed an issue that caused jobs to fail when Day from By dropdown was selected.
 * Rules
   * [Rules Preview](https://dq-docs.collibra.com/dq-visuals/rules/rule-preview) drill-in capabilities are now improved:
-    * You can now configure Rules Preview Limits on drill-ins for Freeform and Simple rules.
-    * You can now set any positive number (ex. 2, 150, etc.) as the Rules Preview Limit.
+    * You can now configure Preview Limits based on the individual rule.
+      * Freeform and Simple rules are currently supported for the Preview Limit feature.
+    * You can now set any positive number as the Rules Preview Limit.
+      * When you update a Preview Limit value, you must re-run to apply the updated limit value.
+    * On the DQ Job page, the details of an individual rule now displays a paginated sub-table of all the break records.
     * When a rule is labelled as BREAKING for rule types other than Freeform and SQL, UI text now displays, "Data preview records are only available for Freeform and Simple rules."
   * You can now hover over stat rules to see their conditions.
 * Security
