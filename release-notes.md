@@ -61,6 +61,9 @@
   * Single-space `` , underscore `_`, and period `.` are now supported characters when saving Scorecard name.
 * API
   * Improved API calls for the UserManagement Save function.
+* Reporting
+  * \*Tech Preview\* \[TP] Rule Summary page enhancements
+    * You can now filter rule breaks by a specified date range and view charts for Most Used Rule Types, Dataset with Most Rule, and Top Rules Run.
 
 #### Known Limitations
 
@@ -75,6 +78,12 @@
       * Invalidate/Validate or Resolve actions result in a failure.
     * You can assign a ServiceNow ticket with an embedded URL when escaped with double quotes.
       * No assignment is sent without this process.
+* Reporting
+  * \*Tech Preview\* Rule Summary page enhancements
+    * Sorting any column returns an error.
+    * User must use date picker as manual date entry is not honored.
+    * The start and end date are out of order when navigating to the page.
+    * The last page on the paginated list does not change when date criteria is updated.
 
 #### DQ Security Metrics
 
