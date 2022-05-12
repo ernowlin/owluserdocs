@@ -2,10 +2,10 @@
 
 ## Requirements
 
-| Resource                 | Notes                                                  | Provisioned by |
-| ------------------------ | ------------------------------------------------------ | -------------- |
-| Centos 7 or Redhat 7 VM  | Minimum resources - 8 cores, 16gb memory, 50gb storage | Customer       |
-| Setup Script             | Downloaded by curl command in first step               | Collibra       |
+| Resource                 | Notes                                                                                                                                                         | Provisioned by |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
+| Centos 7 or Redhat 7 VM  | Minimum resources - 8 cores, 16gb memory, 50gb storage. Sudo access is needed for the install and should have outbound network access to download the script. | Customer       |
+| Setup Script             | Download using the curl command below                                                                                                                         | Collibra       |
 
 ## Commands
 
