@@ -14,11 +14,11 @@ Starting in 2022.04 the builds will follow a new naming convention to designate 
 
 #### Collibra Data Quality
 
-2022.04-L-303&#x20;
+2022.05 _(Coming Soon)_
 
 #### Spark
 
-3.2.0-2022.04-L-303&#x20;
+3.2.0-2022.05 _(Coming Soon)_
 
 </details>
 
