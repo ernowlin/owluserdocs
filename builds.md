@@ -8,33 +8,43 @@ Starting in 2022.04 the builds will follow a new naming convention to designate 
 
 ## **Available Containers**
 
+<details>
+
+<summary><strong>2022.05</strong></summary>
+
 #### Collibra Data Quality
 
 2022.04-L-303&#x20;
-
-2022.04-AL-302&#x20;
-
-2022.04-296&#x20;
-
-2022.04-A-295&#x20;
-
-2022.04-ALL-294&#x20;
-
-2022.04-ABHGCSGCRS-291
 
 #### Spark
 
 3.2.0-2022.04-L-303&#x20;
 
-3.2.0-2022.04-AL-302 1.6 GB&#x20;
+</details>
 
-3.2.0-2022.04-296&#x20;
+<details>
 
-3.2.0-2022.04-A-295&#x20;
+<summary>2022.04</summary>
 
-3.2.0-2022.04-ALL-294&#x20;
+**Collibra Data Quality**
 
-3.2.0-2022.04-ABHGCSGCRS-291&#x20;
+2022.04-L-303 \
+2022.04-AL-302 \
+2022.04-296 \
+2022.04-A-295 \
+2022.04-ALL-294 2\
+022.04-ABHGCSGCRS-291
+
+**Spark**
+
+3.2.0-2022.04-L-303 \
+****3.2.0-2022.04-AL-302 \
+3.2.0-2022.04-296 \
+3.2.0-2022.04-A-295 \
+3.2.0-2022.04-ALL-294 \
+3.2.0-2022.04-ABHGCSGCRS-291
+
+</details>
 
 {% hint style="warning" %}
 The default build is considered the secure build with no optional drivers included.
