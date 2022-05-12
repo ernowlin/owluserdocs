@@ -20,6 +20,9 @@ Starting in 2022.04 the builds will follow a new naming convention to designate 
 * 2022.05-AL-715
 * 2022.05-H-716
 * 2022.05-AHM-717
+* 2022.05-HM-718
+* 2022.05-ABGCSHMS-719
+* 2022.05-720 (Secure Build)
 
 #### Spark
 
@@ -29,6 +32,9 @@ Starting in 2022.04 the builds will follow a new naming convention to designate 
 * 3.2.0-2022.05-AL-715
 * 3.2.0-2022.05-H-716
 * 3.2.0-2022.05-AHM-717
+* 3.2.0-2022.05-HM-718
+* 3.2.0-2022.05-ABGCSHMS-719
+* 3.2.0-2022.05-720 (Secure Build)
 
 </details>
 
@@ -56,8 +62,8 @@ Starting in 2022.04 the builds will follow a new naming convention to designate 
 
 </details>
 
-{% hint style="warning" %}
-The default build is considered the secure build with no optional drivers included.
+{% hint style="success" %}
+The default build is considered the Secure Build with no optional drivers included and no critical vulnerabilities.
 {% endhint %}
 
 ## **Description**
