@@ -66,7 +66,15 @@ Builds follow a naming convention to indicate which [optional](builds.md#optiona
 The default build is considered the Secure Build with no optional drivers included and no critical vulnerabilities.
 {% endhint %}
 
-### Example Docker pull commands for a build with Livy
+## Config Map Example
+
+These are the configs to change the versions. You will find find a complete list of versions for [CDQ and Spark here](https://dq-docs.collibra.com/builds#available-containers).
+
+```
+--set global.version.owl=2022.05-720 --set global.version.spark=3.2.0-2022.05-720
+```
+
+## Pull Examples
 
 Docker pull [https://gcr.io/owl-hadoop-cdh/owl-agent:2022.05-L-714](https://gcr.io/owl-hadoop-cdh/owl-agent:2022.05-L-714)
 
