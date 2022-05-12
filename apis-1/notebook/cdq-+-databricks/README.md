@@ -2,19 +2,17 @@
 description: Learn how to create CDQ jobs in Databricks notebook.
 ---
 
-# CDQ Notebook APIs Usage In Databricks
+# CDQ + Databricks
 
 ### Introduction
 
 This document provides how to guidance to help you to upload and add CDQ jars to a Databricks cluster and to run a CDQ job by invoking CDQ APIs (aka activities).
 
-
-
 ### Design
 
 
 
-![Running CDQ jobs from Scala and Pyspark notebooks.](<../../.gitbook/assets/3\_DQ\_Compute\_(Databricks)\_to\_Data\_(Delta Lake)\_to\_Control\_Plane (1).gif>)
+![Running CDQ jobs from Scala and Pyspark notebooks.](<../../../.gitbook/assets/3\_DQ\_Compute\_(Databricks)\_to\_Data\_(Delta Lake)\_to\_Control\_Plane (1).gif>)
 
 ### CDQ  Environment Setup&#x20;
 
@@ -31,7 +29,7 @@ The first step is to get the CDQ jar file. Once you have the cdq jar package fil
 
 Running this command instructs tar to extract the files from the zipped file. From the list of the files, you need to upload the owl-core-xxxx-jar-with-dependancies.jar to our Databricks file system which will be explained in the next section.
 
-![Extracting the owl jar files from owl package zipped file.](<../../.gitbook/assets/Screen Shot 2022-04-19 at 11.33.36 AM.png>)
+![Extracting the owl jar files from owl package zipped file.](<../../../.gitbook/assets/Screen Shot 2022-04-19 at 11.33.36 AM.png>)
 
 #### Step 2. Upload the file to Databricks file system using UI 
 
@@ -46,13 +44,13 @@ The jars should be manually uploaded in Databricks file system. Below is the qui
 \
 
 
-![Upload owl-core-xxxx-jar-with-dependancies.jar to DBFS.](<../../.gitbook/assets/Screen Shot 2022-04-19 at 11.40.34 AM.png>)
+![Upload owl-core-xxxx-jar-with-dependancies.jar to DBFS.](<../../../.gitbook/assets/Screen Shot 2022-04-19 at 11.40.34 AM.png>)
 
 #### Step 3. Install CDQ library in your Databricks cluster
 
 
 
-![Install owl-core-xxxx-jar-with-dependancies.jar in your cluster.](<../../.gitbook/assets/Screen Shot 2022-04-19 at 11.47.46 AM.png>)
+![Install owl-core-xxxx-jar-with-dependancies.jar in your cluster.](<../../../.gitbook/assets/Screen Shot 2022-04-19 at 11.47.46 AM.png>)
 
 Once this step is completed, you can create a workspace and start using CDQ APIs.\
 \
@@ -174,11 +172,11 @@ breaks.write.parquet("/tmp/databricks-df-example.parquet")
 
 Below image shows the code snippet and the result in Databricks:&#x20;
 
-![Create CDQ Test Rules In DataBricks](<../../.gitbook/assets/Screen Shot 2022-04-20 at 2.18.09 PM (1).png>)
+![Create CDQ Test Rules In DataBricks](<../../../.gitbook/assets/Screen Shot 2022-04-20 at 2.18.09 PM (1).png>)
 
 The breaks and the rules can be viewed in CDQ web as well.
 
-![](<../../.gitbook/assets/Screen Shot 2022-04-20 at 2.12.24 PM.png>)
+![](<../../../.gitbook/assets/Screen Shot 2022-04-20 at 2.12.24 PM.png>)
 
 
 
@@ -208,9 +206,9 @@ profile.show()
 
 
 
-![CDQ Profile Run In Databricks](<../../.gitbook/assets/Screen Shot 2022-04-21 at 10.30.21 AM (1).png>)
+![CDQ Profile Run In Databricks](<../../../.gitbook/assets/Screen Shot 2022-04-21 at 10.30.21 AM (1).png>)
 
-![The Profile result can be viewed in CDQ Web.](<../../.gitbook/assets/Screen Shot 2022-04-21 at 10.27.59 AM.png>)
+![The Profile result can be viewed in CDQ Web.](<../../../.gitbook/assets/Screen Shot 2022-04-21 at 10.27.59 AM.png>)
 
 #### <mark style="color:blue;">Create Collibra DQ Test (Dupes)</mark>
 
@@ -242,11 +240,11 @@ dupesDf.show()
 
 ```
 
-![CDQ Dupes Run In Databricks](<../../.gitbook/assets/Screen Shot 2022-04-21 at 2.43.27 PM.png>)
+![CDQ Dupes Run In Databricks](<../../../.gitbook/assets/Screen Shot 2022-04-21 at 2.43.27 PM.png>)
 
 
 
-![ Dupes results can be viewed in CDQ Web.](<../../.gitbook/assets/Screen Shot 2022-04-21 at 2.39.33 PM.png>)
+![ Dupes results can be viewed in CDQ Web.](<../../../.gitbook/assets/Screen Shot 2022-04-21 at 2.39.33 PM.png>)
 
 #### <mark style="color:blue;">Create Collibra DQ Test (Outlier)</mark>
 
@@ -289,8 +287,6 @@ val outliers = cdq.getOutliers()
 outliers.show
 outliers.select("value")
 ```
-
-
 
 ### Known API Limitations&#x20;
 

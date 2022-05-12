@@ -40,7 +40,7 @@ These CDQ environment variables should be set on the new cluster`:` \
 \
 <mark style="color:orange;">`SPRING_DATASOURCE_URL=xx`</mark>\ <mark style="color:orange;">`SPRING_DATASOURCE_USERNAME=xx`</mark>\ <mark style="color:orange;">`SPRING_DATASOURCE_DRIVER_CLASS_NAME=xx`</mark>\ <mark style="color:orange;">`LICENSE_KEY=xx // This is DQ's license key`</mark>
 
-![Setting up DQ's environment variables for the new cluster.](<../../.gitbook/assets/configure-new-cluster (1).png>)
+![Setting up DQ's environment variables for the new cluster.](<../../../.gitbook/assets/configure-new-cluster (1).png>)
 
 #### JSON payload&#x20;
 
@@ -81,7 +81,7 @@ Once you have completed the above steps, you can [create a spark submit job](htt
 
 You can then add the environment variables to the cluster and click Run on Databricks UI.
 
-![Create a job in Databricks UI](../../.gitbook/assets/create-job-spark-submit.png)
+![Create a job in Databricks UI](../../../.gitbook/assets/create-job-spark-submit.png)
 
 #### Check the result in DQ web:
 
@@ -189,10 +189,10 @@ Values to be updated in above payload are:
 
 Here is the Databricks documentation about how to create a personal access token: [https://docs.databricks.com/dev-tools/api/latest/authentication.html](https://docs.databricks.com/dev-tools/api/latest/authentication.html)
 
-![Authentication setup for Databricks Rest API](../../.gitbook/assets/authentication-setup-databricks.png)
+![Authentication setup for Databricks Rest API](../../../.gitbook/assets/authentication-setup-databricks.png)
 
 #### View the job's result in DQ web
 
 You can view the result of your job run by navigating to the DQ Jobs page.
 
-![DQ job submitted from Databricks API](../../.gitbook/assets/job-submit-success-databricks.png)
+![DQ job submitted from Databricks API](../../../.gitbook/assets/job-submit-success-databricks.png)

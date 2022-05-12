@@ -38,7 +38,7 @@ response = requests.get(url = owl + '/v3/jobs/'+jobId+'/findings', headers=owl_h
 
 ## [Notebook](apis-1/notebook/)
 
-Please see [the Databricks example](apis-1/notebook/cdq-notebook-apis-usage-in-databricks.md) for more information
+Please see [the Databricks example](apis-1/notebook/cdq-+-databricks/) for more information
 
 ```
 val dataset = "cdq_notebook"
