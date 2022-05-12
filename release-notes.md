@@ -24,6 +24,7 @@
   * You can now hover over stat rules to see their conditions.
   * Data Concepts is renamed Data Categories.
   * Semantics is renamed Data Classes.
+  * When a Data Class is assigned to a dataset via Profile controls, a rule is now created.
 * Security
   * Vulnerabilities identified by Jfrog
     * Vulns 0, criticals 0, high severity 9
