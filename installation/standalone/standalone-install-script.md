@@ -1,5 +1,9 @@
 # Standalone Install (Script)
 
+{% hint style="success" %}
+To get access to the install script contact **info@collibra.com**
+{% endhint %}
+
 ## Requirements
 
 | Resource                 | Notes                                                                                                                                                                               | Provisioned by |
