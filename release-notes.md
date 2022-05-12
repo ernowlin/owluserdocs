@@ -71,6 +71,12 @@
 
 #### Known Limitations
 
+{% hint style="warning" %}
+Delta Files\
+\
+A bug was introduced as a result of removing CVEs in 2022.05. If you use Delta files -`delta` it is not advised  upgrade, until an update is available.
+{% endhint %}
+
 * Explorer
   * Except for underscore `_`, special characters are not currently supported in schema or table names.&#x20;
 * Admin
