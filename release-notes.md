@@ -79,6 +79,8 @@
       * Invalidate/Validate or Resolve actions result in a failure.
     * You can assign a ServiceNow ticket with an embedded URL when escaped with double quotes.
       * No assignment is sent without this process.
+* Multi Tenant
+  * Tenant names should be lower case. Use lower case characters, when creating a tenant from the multi tenant admin page. The current limitation is around the schema that is generated
 * Reporting
   * \*Tech Preview\* Rule Summary page enhancements
     * Sorting any column returns an error.
