@@ -66,6 +66,16 @@ Starting in 2022.04 the builds will follow a new naming convention to designate 
 The default build is considered the Secure Build with no optional drivers included and no critical vulnerabilities.
 {% endhint %}
 
+### Example Docker pull commands for a build with Livy
+
+Docker pull [https://gcr.io/owl-hadoop-cdh/owl-agent:2022.05-L-714](https://gcr.io/owl-hadoop-cdh/owl-agent:2022.05-L-714)
+
+Docker pull [https://gcr.io/owl-hadoop-cdh/owl-livy:3.2.0-2022.05-L-714](https://gcr.io/owl-hadoop-cdh/owl-livy:3.2.0-2022.05-L-714)
+
+Docker pull [https://gcr.io/owl-hadoop-cdh/owl-web:2022.05-L-714](https://gcr.io/owl-hadoop-cdh/owl-web:2022.05-L-714)
+
+Docker pull [https://gcr.io/owl-hadoop-cdh/spark:3.2.0-2022.05-L-714](https://gcr.io/owl-hadoop-cdh/spark:3.2.0-2022.05-L-714)
+
 ## **Description**
 
 Example: 2022.04-ABDGCSHLMS-302
