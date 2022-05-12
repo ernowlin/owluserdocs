@@ -59,6 +59,8 @@
 
 * Explorer
   * Except for underscore `_`, special characters are not currently supported in schema or table names.&#x20;
+* Multi Tenant
+  * Tenant names should be lower case. Use lower case characters, when creating a tenant from the multi tenant admin page. The current limitation is around the schema that is generated.
 
 ## 2022.04
 
