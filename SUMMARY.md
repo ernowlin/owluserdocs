@@ -9,7 +9,7 @@
 
 * [Standalone](installation/standalone/README.md)
   * [Standalone Install](installation/standalone/full-install.md)
-  * [Standalone Install (Simple)](installation/standalone/standalone-install-simple.md)
+  * [Standalone Install (Trial)](installation/standalone/standalone-install-trial.md)
   * [Standalone Upgrade](installation/standalone/standalone-upgrade.md)
   * [Standalone Sizing](installation/standalone/standalone-sizing.md)
 * [Hadoop](installation/hadoop/README.md)
