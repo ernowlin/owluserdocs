@@ -9,14 +9,14 @@
 
 ## AWS
 
-| Image        | <p>Quickest option for 1 server install in AWS Cloud.</p><p></p><p><em>*All software and data lives in your VPC.</em></p> | _Coming Soon_ |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| Terraform    | Hooks into AWS cloud services like EKS for ephemeral compute and RDS for cloud database                                   | _Coming Soon_ |
-| Market Place | Amazon Marketplace option                                                                                                 | _Coming Soon_ |
+| Image       | <p>Quickest option for 1 server install in AWS Cloud.</p><p></p><p><em>*All software and data lives in your VPC.</em></p> | _Coming Soon_ |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| Terraform   | Hooks into AWS cloud services like EKS for ephemeral compute and RDS for cloud database                                   | _Coming Soon_ |
+| Marketplace | Amazon Marketplace option                                                                                                 | _Coming Soon_ |
 
 ## GCP
 
 | Image           | <p>Quickest option for 1 server install in GCP Cloud.</p><p></p><p><em>*All software and data lives in your VPC</em></p>                                       | _Coming Soon_ |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | Cloud Formation | <p>Hooks into GCP cloud services like GKE for ephemeral compute and rds for cloud database.</p><p></p><p><em>*All software and data lives in your VPC</em></p> | _Coming Soon_ |
-| Market          | Google Marketplace option                                                                                                                                      | _Coming Soon_ |
+| Marketplace     | Google Marketplace option                                                                                                                                      | _Coming Soon_ |
