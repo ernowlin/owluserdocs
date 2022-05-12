@@ -24,5 +24,5 @@
 
 
 {% hint style="success" %}
-Please contact Collibra for more information at **info@collibra.com**
+For more information please contact **info@collibra.com**
 {% endhint %}
