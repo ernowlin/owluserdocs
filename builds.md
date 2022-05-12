@@ -1,6 +1,6 @@
 # Builds
 
-Starting in 2022.04 the builds will follow a new naming convention to designate which optional drivers are packaged.  This is a requirement to only deliver containers with specific jar files.&#x20;
+Builds follow a naming convention to indicate which [optional](builds.md#optional-drivers) drivers are packaged. &#x20;
 
 {% hint style="info" %}
 **Please note the optional drivers only impact container versions of Collibra Data Quality and does not impact Standalone installation packages.**
