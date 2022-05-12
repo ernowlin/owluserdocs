@@ -4,7 +4,7 @@
 
 | Edge          | Provides a Cloud application in Collibra Cloud but an Edge component on your premise to safeguard your data.                                                                                                                    | [Click Here](installation/cloud.md)                                       |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| Standard      | <p>Install script for standard install.</p><p></p><p><em>*All software and data resides in your VPC.</em></p>                                                                                                                   | [Click Here](installation/standalone/standalone-install-trial.md)         |
+| Standard      | <p>Install script for standard install.</p><p></p><p><em>*All software and data resides in your VPC.</em></p>                                                                                                                   | [Click Here](installation/standalone/standalone-install-script.md)        |
 | Containerized | Standard Install script + container configuration, that walks you through how to containerize the components in your env using Helm charts and K8. This provides the ability to use compute pools and containerized components. | [Click Here](installation/cloud-native-owldq/preparing-for-deployment.md) |
 
 ## AWS
