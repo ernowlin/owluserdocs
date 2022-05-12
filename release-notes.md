@@ -60,7 +60,7 @@
 * Explorer
   * You can again edit schema and table name from the Catalog page.
   * You can now navigate to a specific behavior tab directly from the Assignments page.
-  * Fixed an issue when viewing Schema in View Data wizard.
+  * Fixed an issue when viewing Schemas in View Data wizard.
 * Scorecard
   * Single-space `` , underscore `_`, and period `.` are now supported characters when saving Scorecard name.
 * API
