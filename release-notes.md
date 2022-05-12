@@ -22,6 +22,8 @@
     * On the DQ Job page, the details of an individual rule now displays a paginated sub-table of all the break records.
     * When a rule is labelled as BREAKING for rule types other than Freeform and SQL, UI text now displays, "Data preview records are only available for Freeform and Simple rules."
   * You can now hover over stat rules to see their conditions.
+  * Data Concepts is renamed Data Categories.
+  * Semantics is renamed Data Classes.
 * Security
   * Vulnerabilities identified by Jfrog
     * Vulns 0, criticals 0, high severity 9
