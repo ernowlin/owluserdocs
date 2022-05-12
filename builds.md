@@ -78,11 +78,11 @@ Docker pull [https://gcr.io/owl-hadoop-cdh/spark:3.2.0-2022.05-L-714](https://gc
 
 ## **Description**
 
-Example: 2022.04-ABDGCSHLMS-302
+Example: [2022.05-L-714](https://gcr.io/owl-hadoop-cdh/owl-agent:2022.05-L-714)
 
-2022-4: Release number
-
-302 - A unique build number appended&#x20;
+**2022-05**: Release number (Year and Month)\
+**L**: Optional Livy package included\
+**714** - A unique number appended to each build
 
 ## **Default Drivers**&#x20;
 
