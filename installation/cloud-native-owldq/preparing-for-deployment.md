@@ -6,13 +6,13 @@ You need a machine with the following files and packages to run the installation
 
 ### Prerequisites
 
-* [Helm](https://helm.sh).
-* [kubectl](https://kubernetes.io/docs/tasks/tools/).
+* [Helm](https://helm.sh)
+* [kubectl](https://kubernetes.io/docs/tasks/tools/)
 * Cloud command line SDK, such as gcloud CLI, AWS CLI or similar.
 
 ### Files
 
-* The helm chart.\*
+* The helm chart.
 * &#x20;JKS files with secrets created in kubectl:
   * _owldq-ssl-secret_
   * _owldq-pull-secret_\*
