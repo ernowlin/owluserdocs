@@ -12,11 +12,10 @@ Retention based purge of data can be turned on to allow data to automatically be
 
 Once enabled, what type of data is removed?
 
-* Dataset statistics
-* Data\_Preview
-* Dataset\_Field
-* Rule\_Breaks
-* Job Ledger
+* data\_preview _(Drill-in records for rules, outliers, shapes, etc.)_
+* dataset\_field _(profiling stats)_
+* rule\_breaks _(Rule Exception records)_
+* dataset\_scan _(Job Ledger)_
 
 ### **Setup**
 
@@ -80,3 +79,12 @@ export DATASETS_PER_ROW=1000
 export RUNS_THRESHOLD=4
 export ROW_COUNT_THRESHOLD=200000
 ```
+
+**For example (using the settings above):**
+
+When data\_preivew table has 200k rows \
+Look for datasets with 1000+ rows in data\_prevew table \
+And have at least 4 scans\
+Then delete the oldest scan for those datasets
+
+Auto clean and time-based retention run on a routine thread that triggers while the web application is running.  It looks for clean-up candidates every few minutes when AUTOCLEAN=true or cleaner\_retention\_enabled=TRUE.
