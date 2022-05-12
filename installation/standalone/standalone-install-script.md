@@ -43,3 +43,7 @@ If all the processes are up and running, open the browser and try
 ``[`http://<server_name/ip>:9000`](http://\<server\_name/ip>:9000)
 
 Configure your [agent](../agent-configuration.md) and [connections](../../connecting-to-dbs-in-owl-web/owl-db-connection/) as normal.
+
+**Complete Installation Guide**
+
+{% file src="../../.gitbook/assets/Installation script-v1.1.docx" %}
