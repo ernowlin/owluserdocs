@@ -76,13 +76,10 @@ These are the configs to change the versions. You will find find a complete list
 
 ## Pull Examples
 
-Docker pull [https://gcr.io/owl-hadoop-cdh/owl-agent:2022.05-L-714](https://gcr.io/owl-hadoop-cdh/owl-agent:2022.05-L-714)
-
-Docker pull [https://gcr.io/owl-hadoop-cdh/owl-livy:3.2.0-2022.05-L-714](https://gcr.io/owl-hadoop-cdh/owl-livy:3.2.0-2022.05-L-714)
-
-Docker pull [https://gcr.io/owl-hadoop-cdh/owl-web:2022.05-L-714](https://gcr.io/owl-hadoop-cdh/owl-web:2022.05-L-714)
-
-Docker pull [https://gcr.io/owl-hadoop-cdh/spark:3.2.0-2022.05-L-714](https://gcr.io/owl-hadoop-cdh/spark:3.2.0-2022.05-L-714)
+docker pull [https://gcr.io/owl-hadoop-cdh/owl-agent:2022.05-L-714](https://gcr.io/owl-hadoop-cdh/owl-agent:2022.05-L-714)\
+docker pull [https://gcr.io/owl-hadoop-cdh/owl-livy:3.2.0-2022.05-L-714](https://gcr.io/owl-hadoop-cdh/owl-livy:3.2.0-2022.05-L-714)\
+docker pull [https://gcr.io/owl-hadoop-cdh/owl-web:2022.05-L-714](https://gcr.io/owl-hadoop-cdh/owl-web:2022.05-L-714)\
+docker pull [https://gcr.io/owl-hadoop-cdh/spark:3.2.0-2022.05-L-714](https://gcr.io/owl-hadoop-cdh/spark:3.2.0-2022.05-L-714)
 
 ## **Description**
 
