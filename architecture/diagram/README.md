@@ -2,7 +2,7 @@
 
 ### Collibra DQ Architecture
 
-![](../../.gitbook/assets/2022-05-12\_19-37-46.png)
+![](../../.gitbook/assets/2022-05-12\_21-11-46.png)
 
 ### High-Level Diagram <a href="#howlstandalone" id="howlstandalone"></a>
 
