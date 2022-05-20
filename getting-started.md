@@ -1,7 +1,3 @@
----
-layout: landing
----
-
 # Getting Started
 
 ## Standard
