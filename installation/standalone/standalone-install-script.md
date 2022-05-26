@@ -21,7 +21,7 @@ Your pem file should have correct permissions. A simple command to confirm the p
 
 ## Commands
 
-After you enter your SSH into the Centos or Redhat VM, run these commands from the command line
+After you enter your SSH into the Centos or Redhat VM, run these commands from the command line:
 
 #### Step 1 - Download the script
 
@@ -47,7 +47,7 @@ The most common directory to use for installation is your user directory (/home/
 
 ### BYOL (Optional)
 
-Use the same command, you can bring your own license or use a different download link.
+Using the same command, you can bring your own license or use a different download link.
 
 ```shell
 ./cdq_install.sh "<Installer Download Link>" "<License Key>"
