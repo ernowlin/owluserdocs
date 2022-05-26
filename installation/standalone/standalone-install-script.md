@@ -11,7 +11,7 @@
 | Permission     | sudo                                  |             |
 | Install Script | Download using the curl command below | Collibra    |
 
-You need to access the machine either through a cloud shell or SSH. This snippet is an example SSH command.
+Access the machine through either a cloud shell or SSH. The snippet below is an example SSH command.
 
 ```shell
 ssh -i <your_key> <user>@<public-ipv4-ip-address> 
@@ -21,7 +21,7 @@ Your pem file should have correct permissions. A simple command to confirm the p
 
 ## Commands
 
-These commands would be run from the command line, after you SSH into the Centos or Redhat VM.
+After you enter your SSH into the Centos or Redhat VM, run these commands from the command line.
 
 #### Step 1 - Download the script
 
@@ -42,7 +42,7 @@ sudo ./cdq_install.sh
 ```
 
 {% hint style="info" %}
-The most common directory to use for installation is your user directory (/home/\<user>). You do not need to create any directories. The install script will create the correct directory structure.  The user should have sudo access to perform the installation and the directory should not be a restricted system directory.
+The most common directory to use for installation is your user directory (/home/\<user>). You do not need to create any directories. The install script will create the correct directory structure. The user should have sudo access to perform the installation and the directory should not be a restricted system directory.
 {% endhint %}
 
 ### BYOL (Optional)
