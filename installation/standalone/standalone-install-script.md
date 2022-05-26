@@ -1,7 +1,3 @@
----
-layout: editorial
----
-
 # Standalone Install (Script)
 
 ## Requirements

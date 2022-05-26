@@ -1,3 +1,7 @@
+---
+layout: landing
+---
+
 # Getting Started
 
 ![](<.gitbook/assets/Screen Shot 2022-05-26 at 9.56.55 AM.png>)
