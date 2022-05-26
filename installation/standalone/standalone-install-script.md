@@ -14,7 +14,7 @@ To access the install script contact **info@collibra.com**
 ## Commands
 
 ```
-curl -o cdq_install.sh https://<collibra-url>/cdq_install.sh
+curl -o cdq_install.sh https://owl-packages.s3.amazonaws.com/MP/cdq_install.sh
 sudo chmod +x cdq_install.sh 
 sudo ./cdq_install.sh
 ```
