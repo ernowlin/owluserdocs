@@ -21,7 +21,7 @@ Your pem file should have correct permissions. A simple command to confirm the p
 
 ## Commands
 
-After you enter your SSH into the Centos or Redhat VM, run these commands from the command line.
+After you enter your SSH into the Centos or Redhat VM, run these commands from the command line
 
 #### Step 1 - Download the script
 
