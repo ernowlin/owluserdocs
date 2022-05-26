@@ -1,10 +1,14 @@
+---
+layout: landing
+---
+
 # Standalone Install (Script)
 
 ## Requirements
 
 | Resource       | Notes                                 | Provided by |
 | -------------- | ------------------------------------- | ----------- |
-| OS             | Red Hat 7 or Centos 7                 |             |
+| OS             | Red Hat 7 or Centos 7                 | Customer    |
 | Memory         | 16gb Ram                              |             |
 | Cores          | 8                                     |             |
 | Storage        | 50                                    |             |
@@ -13,7 +17,7 @@
 
 You need to access the machine either through a cloud shell or SSH. The example below
 
-```
+```shell
 ssh -i <your_key> <user>@<public-ipv4-ip-address> 
 ```
 
@@ -23,19 +27,19 @@ These commands would be run from the command line, after you SSH into the Centos
 
 #### Step 1 - Download the script
 
-```
+```shell
 curl -o cdq_install.sh https://owl-packages.s3.amazonaws.com/MP/cdq_install.sh
 ```
 
 #### Step 2 - Modify script permission
 
-```
+```shell
 sudo chmod +x cdq_install.sh 
 ```
 
 #### Step 3 - Run the script
 
-```
+```shell
 sudo ./cdq_install.sh
 ```
 
