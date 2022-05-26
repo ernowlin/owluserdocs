@@ -13,7 +13,13 @@ These commands would be run from the command line, after you SSH into the Centos
 
 ```
 curl -o cdq_install.sh https://owl-packages.s3.amazonaws.com/MP/cdq_install.sh
+```
+
+```
 sudo chmod +x cdq_install.sh 
+```
+
+```
 sudo ./cdq_install.sh
 ```
 
