@@ -55,7 +55,7 @@ Complete row, column, conformity, and value checks between any two distinct stor
 
 We don’t want you to get stuck writing a bunch of reconciliation checks we’ve already written!  Focus on other stuff that actually moves your project forward.
 
-For more information, please contact **info@owl-analytics.com** or **schedule a demo at** [**www.owldq.com**](http://www.owldq.com/) ****&#x20;
+For more information, please contact **info@owl-analytics.com** or **schedule a demo at** [**www.owldq.com**](http://www.owldq.com) ****&#x20;
 
 
 

@@ -616,7 +616,7 @@ The JSON for the full dataset definition.  It can be more terse to send in the c
 
 ### Generate Client SDK
 
-1. Go to [https://editor.swagger.io/](https://editor.swagger.io/)
+1. Go to [https://editor.swagger.io/](https://editor.swagger.io)
 2. Click File Import URL
 3. Paste a URL that looks like this  [https://\<host>/v2/api-docs?group=Product%20API](https://146.148.84.143/v2/api-docs?group=Product%20API)
 4. Click generate client (python, java, scala, C#)

@@ -6,7 +6,7 @@ You need a machine with the following files and packages to run the installation
 
 ### Prerequisites
 
-* [Helm](https://helm.sh/)
+* [Helm](https://helm.sh)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/)
 * Cloud command line SDK, such as gcloud CLI, AWS CLI or similar.
 

@@ -1,5 +1,12 @@
 # Release Notes
 
+## 2022.06 (In Progress)
+
+* DQ Job
+  * Fixed an issue with the Learning Phase in the Behavior feature. (ticket #82907)
+* Admin
+  * The Agent Group (H/A) and its associated endpoints are now deprecated. (ticket #83086)
+
 ## 2022.05
 
 #### Fixes / Enhancements
