@@ -9,11 +9,17 @@
 
 ## Commands
 
+These commands would be run from the command line, after you SSH into the Centos or Redhat VM.
+
 ```
 curl -o cdq_install.sh https://owl-packages.s3.amazonaws.com/MP/cdq_install.sh
 sudo chmod +x cdq_install.sh 
 sudo ./cdq_install.sh
 ```
+
+{% hint style="info" %}
+The most common directory to use for installation is your user directory (/home/\<user>). You do not need to create any directories. The install script will create the correct directory structure.  The user should have sudo access to perform the installation and the directory should not be a restricted system directory.
+{% endhint %}
 
 ### BYOL (Optional)
 
