@@ -1,5 +1,5 @@
 ---
-layout: landing
+layout: editorial
 ---
 
 # Standalone Install (Script)
@@ -15,7 +15,7 @@ layout: landing
 | Permission     | sudo                                  |             |
 | Install Script | Download using the curl command below | Collibra    |
 
-You need to access the machine either through a cloud shell or SSH. The example below
+You need to access the machine either through a cloud shell or SSH. This snippet is an example SSH command.
 
 ```shell
 ssh -i <your_key> <user>@<public-ipv4-ip-address> 
@@ -51,7 +51,7 @@ The most common directory to use for installation is your user directory (/home/
 
 Use the same command, you can bring your own license or use a different download link.
 
-```
+```shell
 ./cdq_install.sh "<Installer Download Link>" "<License Key>"
 ```
 
@@ -59,7 +59,7 @@ Use the same command, you can bring your own license or use a different download
 
 Once the installation script is completed, check processes details on server.
 
-```
+```shell
 ps -ef | grep -i spark  
 ps -ef | grep -i owl-web
 ps -ef | grep -i owl-agent
