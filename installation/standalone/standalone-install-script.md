@@ -1,15 +1,11 @@
 # Standalone Install (Script)
 
-{% hint style="success" %}
-To access the install script contact **info@collibra.com**
-{% endhint %}
-
 ## Requirements
 
-| Resource                 | Notes                                                                                                                                                                               | Provisioned by |
-| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
-| Centos 7 or Redhat 7 VM  | Minimum resources - 8 cores, 16gb memory, 50gb storage. Sudo access is needed for the install and should have outbound network access to download the script and installer package. | Customer       |
-| Install Script           | Download using the curl command below                                                                                                                                               | Collibra       |
+| Resource                 | Notes                                                                                                                                                                               | Provided by |
+| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| Centos 7 or Redhat 7 VM  | Minimum resources - 8 cores, 16gb memory, 50gb storage. Sudo access is needed for the install and should have outbound network access to download the script and installer package. | Customer    |
+| Install Script           | Download using the curl command below                                                                                                                                               | Collibra    |
 
 ## Commands
 
