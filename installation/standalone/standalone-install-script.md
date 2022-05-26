@@ -17,6 +17,8 @@ You need to access the machine either through a cloud shell or SSH. This snippet
 ssh -i <your_key> <user>@<public-ipv4-ip-address> 
 ```
 
+Your pem file should have correct permissions. A simple command to confirm the permissions is `sudo chmod 400 <your_key>`
+
 ## Commands
 
 These commands would be run from the command line, after you SSH into the Centos or Redhat VM.
