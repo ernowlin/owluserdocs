@@ -10,7 +10,7 @@
 You need to access the machine either through a cloud shell or SSH. The example below
 
 ```
-ssh -i <your_key> <user>@<external_ip_address> 
+ssh -i <your_key> <user>@<public-ipv4-ip-address> 
 ```
 
 ## Commands
