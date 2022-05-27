@@ -5,9 +5,9 @@
 | Resource       | Notes                                 | Provided by |
 | -------------- | ------------------------------------- | ----------- |
 | OS             | Red Hat 7 or Centos 7                 | Customer    |
-| Memory         | 16gb Ram                              |             |
+| Memory         | 16 GB Ram                             |             |
 | Cores          | 8                                     |             |
-| Storage        | 50                                    |             |
+| Storage        | 50 GB Disk                            |             |
 | Permission     | sudo                                  |             |
 | Install Script | Download using the curl command below | Collibra    |
 
