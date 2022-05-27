@@ -81,14 +81,15 @@ The only supported Databricks spark submit option is to use a [notebook](../../a
 1\. **Notebook**\
 Users can directly open a notebook, upload CDQ jars and run a CDQ job on Databricks cluster. The full steps are explained in below page. CDQ supports this flow in production.&#x20;
 
-[https://dq-docs.collibra.com/apis/notebook/cdq-notebook-apis-usage-in-databricks](https://dq-docs.collibra.com/apis/notebook/cdq-notebook-apis-usage-in-databricks)
+[https://dq-docs.collibra.com/apis-1/notebook/cdq-+-databricks](https://dq-docs.collibra.com/apis-1/notebook/cdq-+-databricks)
 
 **2. Spark-Submit**
 
 There are two ways to run a spark submit job on Databricks's cluster. The first approach is to run a CDQ spark submit job using Databricks UI and the second approach is by invoking Databricks rest API.\
 \
 We have tested  both approaches against different cluster versions of DataBricks (See below table). Below is the full documentation to demonstrate these paths.\
-[https://dq-docs.collibra.com/apis/notebook/dq-databricks-submit](https://dq-docs.collibra.com/apis/notebook/dq-databricks-submit)
+[https://dq-docs.collibra.com/apis-1/notebook/cdq-+-databricks/dq-databricks-submit](https://dq-docs.collibra.com/apis-1/notebook/cdq-+-databricks/dq-databricks-submit)\
+
 
 \
 Please note that these are only examples to demonstrate how to achieve DQ spark submit to Databricks's cluster. These paths are **not** supported in production and DQ team does **not** support any bug coverages or professional services or customer questions for these flows. \
