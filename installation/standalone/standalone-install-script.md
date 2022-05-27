@@ -38,7 +38,7 @@ sudo chmod +x cdq_install.sh
 #### Step 3 - Run the script
 
 ```shell
-sudo ./cdq_install.sh
+echo | ./cdq_install.sh
 ```
 
 {% hint style="info" %}
@@ -73,3 +73,23 @@ Configure your [agent](../agent-configuration.md) and [connections](../../connec
 **Complete Installation Guide**
 
 {% file src="../../.gitbook/assets/Installation script-v1.1.docx" %}
+
+### Troubleshooting
+
+#### Common error messages
+
+If you receive an error with the message, "Application already running on port 8080," enter the following command:
+
+```shell
+sudo netstat -plten |grep java
+```
+
+You can then use a `kill` command to kill the process.
+
+```shell
+kill -9 <appId>
+```
+
+{% hint style="success" %}
+If you receive a "permission denied" error message, make sure that you are using `sudo`.
+{% endhint %}
