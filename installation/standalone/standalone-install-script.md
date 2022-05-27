@@ -17,6 +17,10 @@ Access the machine through either a cloud shell or SSH. The snippet below is an 
 ssh -i <your_key> <user>@<public-ipv4-ip-address> 
 ```
 
+```shell
+ssh -i ~/.ssh/abc.pem centos@22.000.111.3333
+```
+
 Your pem file should have correct permissions. A simple command to confirm the permissions is `sudo chmod 400 <your_key>`
 
 ## Commands
