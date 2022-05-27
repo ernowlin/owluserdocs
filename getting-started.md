@@ -6,16 +6,16 @@ layout: landing
 
 ![](<.gitbook/assets/Screen Shot 2022-05-26 at 9.56.55 AM.png>)
 
-| Standard      | <p>The install script for a standard install. </p><p></p><p><em>All software and data resides in your VPC.</em><br><em></em><br><em></em>Install time: 2 minutes</p>                                                                                                               | [Click Here](installation/standalone/standalone-install-script.md)        |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| Containerized | <p>Standard Install script + container configuration. This guide walks you through setup and deployment using Helm charts and K8s. This option gives you the ability to use compute pools and containerized components. </p><p><strong></strong></p><p>Install time: 5 minutes</p> | [Click Here](installation/cloud-native-owldq/preparing-for-deployment.md) |
-| Edge          | <p>Provides a cloud application in Collibra Cloud but an Edge component on your premise to safeguard your data. </p><p><strong></strong></p><p>Install time: 2 hours</p>                                                                                                           | [Click Here](installation/cloud.md)                                       |
+| Standard      | <p>The install script for a standard install. </p><p></p><p><em>All software and data resides in your VPC.</em><br><em></em><br><em></em>Install time: <code>2 minutes</code></p>          | [Click Here](installation/standalone/standalone-install-script.md)        |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
+| Containerized | <p>Uses Helm Charts and K8. For users who what WebApp and Compute components in containers. Compute pools supported</p><p><strong></strong></p><p>Install time: <code>5 minutes</code></p> | [Click Here](installation/cloud-native-owldq/preparing-for-deployment.md) |
+| Edge          | <p>Provides a cloud application in Collibra Cloud but an Edge component on your premise to safeguard your data. </p><p><strong></strong></p><p>Install time: <code>2 hours</code></p>      | [Click Here](installation/cloud.md)                                       |
 
 ![](<.gitbook/assets/Screen Shot 2022-05-26 at 10.02.36 AM.png>)
 
-| Marketplace     | <p>The Google Marketplace option is a simple, 1-click image installation. This is the quickest option for single server install in GCP.<br><br><em>All software and data resides in your VPC</em>.</p> | Available June 15, 2022 |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------- |
-| Cloud Formation | <p>Hooks into GCP cloud services like GKE for ephemeral compute and RDS for cloud database.</p><p></p><p><em>All software and data resides in your VPC.</em></p>                                       | Coming soon             |
+| Marketplace     | <p>The Google Marketplace option is a simple, 1-click image installation. This is the quickest option for single server install in GCP.<br><br><em>All software and data resides in your VPC</em>. </p><p></p><p>Install time: <code>2 minutes</code> </p> | Available June 15, 2022 |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
+| Cloud Formation | <p>Hooks into GCP cloud services like GKE for ephemeral compute and RDS for cloud database.</p><p></p><p><em>All software and data resides in your VPC.</em></p>                                                                                           | Coming soon             |
 
 ![](<.gitbook/assets/Screen Shot 2022-05-26 at 10.06.32 AM.png>)
 
