@@ -49,6 +49,18 @@ echo | ./cdq_install.sh
 The most common directory to use for installation is your user directory (/home/\<user>). You do not need to create any directories. The install script will create the correct directory structure. The user should have sudo access to perform the installation and the directory should not be a restricted system directory.
 {% endhint %}
 
+#### Step 4 - Click URL
+
+Login to the application using user: `admin` password: `admin123` for the first time.
+
+```html
+http://<server_name/ip>:9000
+```
+
+{% hint style="info" %}
+Make sure you have access to the server and port.  Adding the correct security group or  whitelisting your IP address is a common step to be able to access an application running on a cloud server.
+{% endhint %}
+
 ### BYOL (Optional)
 
 Using the same command, you can bring your own license or use a different download link.
@@ -69,8 +81,6 @@ ps -ef | grep -i postgres
 ```
 
 If all the processes are up and running, open the browser and try
-
-``[`http://<server_name/ip>:9000`](http://\<server\_name/ip>:9000)
 
 Configure your [agent](../agent-configuration.md) and [connections](../../connecting-to-dbs-in-owl-web/owl-db-connection/) as normal.
 
