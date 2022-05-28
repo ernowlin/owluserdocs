@@ -23,8 +23,8 @@ Builds follow a naming convention to indicate which [optional](builds.md#optiona
 * 2022.05-AD-723
 * 2022-05-BDG-751
 * 2022.05.2-L-737
-* 2022.05.2.AHM-738
-* 2022.05.2.HM-739
+* 2022.05.2-AHM-738
+* 2022.05.2-HM-739
 * 2022.05.2-H-740
 
 #### Spark
