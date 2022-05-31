@@ -28,6 +28,10 @@ Data may not always enter your data pipeline on time and as expected due to week
 | fllbminrow | File Lookback Minimum Rows: determines minimum number of rows that a previous file scan needs to be counted as file lookback | <p>-fllbminrow 1 (counts nay DQ scans with 1 or more row in minimum history)</p><p>-fllbminrow 0 (default behavior, row count does not matter)</p> |
 | dllb       | Date Lookback: determines how many days of learning                                                                          | -dllb 5 (5 days)                                                                                                                                   |
 
+### Upper & Lower Bound Limits
+
+Collibra DQ automatically detects and flags data that falls outside of preset **Upper Bound** or **Lower Bound** limits. If data is detected outside of these limits, an alert is generated to notify of an outlier. Setting these limits allows you to finetune your ability to identify outliers.
+
 ## Categorical Outliers
 
 Categorical Outliers are much different than numerical outliers and require separate techniques to automatically capture meaningful anomalies. The details regarding Owl's methodology and testing can be found below, 3 minute read on the topic.
