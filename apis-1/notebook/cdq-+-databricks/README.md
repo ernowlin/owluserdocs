@@ -54,7 +54,18 @@ The jars should be manually uploaded in Databricks file system. Below is the qui
 
 Once this step is completed, you can create a workspace and start using CDQ APIs.\
 \
+\
+**Step4. (Optional) Update datasource pool size**\
+****This step is only necessary if you get _PoolExhaustedException_ when you call CDQ APIs.\
+To solve the issue you can simply update the connection pool size in the spark environment.\
+\
+`SPRING_DATASOURCE_POOL_MAX_WAIT=500`\
+`SPRING_DATASOURCE_POOL_MAX_SIZE=30`\
+`SPRING_DATASOURCE_POOL_INITIAL_SIZE=5`\
+``\
+``Here is the documentation from Databricks about how to set up environment variables: [https://docs.databricks.com/clusters/configure.html#environment-variables](https://docs.databricks.com/clusters/configure.html#environment-variables)
 
+![Add CDQ environment variables to Databricks's cluster](<../../../.gitbook/assets/Screen Shot 2022-05-30 at 3.40.43 PM.png>)
 
 ### CDQ Working Example in DataBricks
 
@@ -296,6 +307,4 @@ CDQ activities can not be called independently for the time being. owlCheck() fu
 cdq.owlCheck()
 cdq.getProfileDF()
 ```
-
-
 
