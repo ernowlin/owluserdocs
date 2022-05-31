@@ -4,7 +4,7 @@ layout: landing
 
 # Getting Started
 
-![](.gitbook/assets/stanard-install-img.png)
+![](.gitbook/assets/standard-dq-install.png)
 
 | Standard      | <p>The install script for a standard install. </p><p></p><p><em>All software and data resides in your VPC.</em><br><em></em><br><em></em>Install time: <code>2 minutes</code></p>                 | [Click Here](installation/standalone/standalone-install-script.md)        |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
