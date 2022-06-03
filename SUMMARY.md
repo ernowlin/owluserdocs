@@ -265,3 +265,8 @@
     * [Multi-tenancy support through SAML RelayState](security/configuration/authentication-with-saml-idp/multi-tenancy-support-through-saml-relaystate.md)
   * [Securing Passwords](security/configuration/securing-passwords.md)
   * [SSL Setup (HTTPS)](security/configuration/ssl-setup-https.md)
+
+## Legal
+
+* [Agreements](legal/agreements/README.md)
+  * [Collibra Evaluation Agreement](legal/agreements/collibra-evaluation-agreement.md)
