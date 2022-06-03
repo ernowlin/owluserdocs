@@ -84,4 +84,4 @@ Here is an example JDBC string connection we used that take into account the fol
 
 #### Example URL
 
-jdbc:snowflake://\<ACCOUNT\_NAME>/?tracing=all\&useProxy=true\&proxyHost=10.142.22.37\&proxyPort=8080\&proxyUser=xyz\&proxyPassword=xyz\&nonProxyHosts=\*.[privatelink.snowflakecomputing.com](http://privatelink.snowflakecomputing.com)%[7Csfc-eu-ds1-customer-stage.s3.eu-central-1.amazonaws.com](http://7csfc-eu-ds1-customer-stage.s3.eu-central-1.amazonaws.com)
+jdbc:snowflake://\<ACCOUNT\_NAME>/?tracing=all\&useProxy=true\&proxyHost=10.142.22.37\&proxyPort=8080\&proxyUser=xyz\&proxyPassword=xyz\&nonProxyHosts=\*.[privatelink.snowflakecomputing.com](http://privatelink.snowflakecomputing.com/)%[7Csfc-eu-ds1-customer-stage.s3.eu-central-1.amazonaws.com](http://7csfc-eu-ds1-customer-stage.s3.eu-central-1.amazonaws.com/)

@@ -11,6 +11,7 @@
 * [Standalone](installation/standalone/README.md)
   * [Standalone Install](installation/standalone/full-install.md)
   * [Standalone Install (Script)](installation/standalone/standalone-install-script.md)
+  * [Standalone Install (CloudFormation)](installation/standalone/standalone-install-cloudformation.md)
   * [Standalone Upgrade](installation/standalone/standalone-upgrade.md)
   * [Standalone Sizing](installation/standalone/standalone-sizing.md)
 * [Hadoop](installation/hadoop/README.md)
