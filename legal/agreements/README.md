@@ -1,3 +1,3 @@
 # Agreements
 
-This section contains legal agreements specific to Collibra Data Quality.
+This section contains legal agreements specific to Collibra.
