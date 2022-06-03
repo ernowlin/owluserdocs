@@ -228,7 +228,10 @@
 * [Architecture Diagram](architecture/diagram/README.md)
   * [ERD](architecture/diagram/erd.md)
 * [System Requirements](architecture/system-requirements/README.md)
+  * [Supported Operating Systems](architecture/system-requirements/supported-operating-systems.md)
   * [Hardware Sizing](architecture/system-requirements/hardware-sizing.md)
+  * [Minimum System Requirements](architecture/system-requirements/minimum-system-requirements.md)
+  * [Supported Web Browsers](architecture/system-requirements/supported-web-browsers.md)
 * [Build Versions](architecture/build-versions.md)
 * [Diagrams](architecture/diagrams.md)
 

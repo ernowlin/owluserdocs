@@ -27,7 +27,7 @@
     * You can now set any positive number as the Rules Preview Limit.
       * When you update a Preview Limit value, you must re-run to apply the updated limit value.
     * On the DQ Job page, the details of an individual rule now displays a paginated sub-table of all the break records.
-    * When a rule is labelled as BREAKING for rule types other than Freeform and SQL, UI text now displays, "Data preview records are only available for Freeform and Simple rules."
+    * When a rule is labeled as BREAKING for rule types other than Freeform and SQL, UI text now displays, "Data preview records are only available for Freeform and Simple rules."
   * You can now hover over stat rules to see their conditions.
   * Data Concepts is renamed Data Categories.
   * Semantics is renamed Data Classes.
@@ -81,7 +81,7 @@
 {% hint style="warning" %}
 Delta Files\
 \
-A bug was introduced as a result of removing CVEs in 2022.05. If you use Delta files -`delta` it is not advised  upgrade, until an update is available.
+A bug was introduced as a result of removing CVEs in 2022.05. If you use Delta files -`delta` it is not advised to upgrade until an update is available.
 {% endhint %}
 
 * Explorer
@@ -95,7 +95,7 @@ A bug was introduced as a result of removing CVEs in 2022.05. If you use Delta f
       * Invalidate/Validate or Resolve actions result in a failure.
     * You can assign a ServiceNow ticket with an embedded URL when escaped with double quotes.
       * No assignment is sent without this process.
-* Multi Tenant
+* Multi-Tenant
   * Tenant names should be lower case. Use lower case characters, when creating a tenant from the multi tenant admin page. The current limitation is around the schema that is generated
 * Reporting
   * \*Tech Preview\* Rule Summary page enhancements

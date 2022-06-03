@@ -74,7 +74,7 @@ The default build is considered the Secure Build with no optional drivers includ
 
 ## Config Map Example
 
-These are the configs to change the versions. You will find find a complete list of versions for [CDQ and Spark here](https://dq-docs.collibra.com/builds#available-containers).
+These are the configs to change the versions. For a complete list of versions for CDQ and Spark, refer to the Available Containers section above.
 
 ```
 --set global.version.owl=2022.05-720 --set global.version.spark=3.2.0-2022.05-720

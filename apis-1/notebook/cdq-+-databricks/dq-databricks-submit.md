@@ -104,7 +104,7 @@ Also JDBC postgres driver should be uploaded to DBFS. For example:  dbfs:/`FileS
 Sample JSON payload:&#x20;
 
 `POST /api/2.1/jobs/runs/submit HTTP/1.1`\
-`Host:` [`xxxxxx.cloud.databricks.com`](http://dbc-9a4426da-9755.cloud.databricks.com/)``\
+`Host:` [`xxxxxx.cloud.databricks.com`](http://dbc-9a4426da-9755.cloud.databricks.com)``\
 `Content-Type: application/json`\
 `Authorization: Bearer`` `~~`xxxxxxxxxxxxx`~~\
 `Cache-Control: no-cache`\
