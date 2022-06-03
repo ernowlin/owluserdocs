@@ -19,9 +19,9 @@ layout: landing
 
 ![](.gitbook/assets/aw-install.png)
 
-| Marketplace    | <p>The Amazon Marketplace option is a simple, 1-click image installation. This is the quickest option for single server install in AWS Cloud.<br><br><em>All software and data resides in your VPC</em>.</p> | Available June 30, 2022  |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------ |
-| CloudFormation | <p>Hooks into AWS cloud services like EKS for ephemeral compute and RDS for cloud database.<br><br><em>All software and data resides in your VPC</em>.</p>                                                   | Available August 1, 2022 |
+| Marketplace    | <p>The Amazon Marketplace option is a simple, 1-click image installation. This is the quickest option for single server install in AWS Cloud.<br><br><em>All software and data resides in your VPC</em>.</p> | Available June 30, 2022                                                    |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- |
+| CloudFormation | <p>Hooks into AWS cloud services like EKS for ephemeral compute and RDS for cloud database.<br><br><em>All software and data resides in your VPC</em>.</p>                                                   | [Click Here](installation/standalone/standalone-install-cloudformation.md) |
 
 
 
