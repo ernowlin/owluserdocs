@@ -2,13 +2,6 @@
 
 This section describes how to install and configure Collibra Data Quality using the AWS CloudFormation stack.
 
-Primary components of Collibra Data Quality include:
-
-* OWL-WEB
-* OWL-Agent
-* OWL-Metastore (Postgres DB)
-* Spark
-
 ## Prerequisites
 
 To install Collibra Data Quality using the AWS CloudFormation stack, you need an AWS user account with permissions to provision AWS resources.
