@@ -23,8 +23,10 @@ layout: landing
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- |
 | CloudFormation | <p>Hooks into AWS cloud services like EKS for ephemeral compute and RDS for cloud database.<br><br><em>All software and data resides in your VPC</em>.<br><br>Install time: <code>12 minutes</code></p>      | [Click Here](installation/standalone/standalone-install-cloudformation.md) |
 
-
+{% hint style="info" %}
+Please see the [Collibra Evaluation Agreement](legal/agreements/collibra-evaluation-agreement.md) for the terms and conditions on Collibra's evaluation offerings.
+{% endhint %}
 
 {% hint style="success" %}
-For more information please contact **info@collibra.com**
+For more information, please contact **info@collibra.com**
 {% endhint %}
