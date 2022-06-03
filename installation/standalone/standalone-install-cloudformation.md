@@ -15,14 +15,13 @@ To install Collibra Data Quality using the AWS CloudFormation stack, you need an
 
 ## Steps
 
-1\. Login to your AWS account and navigate to **CloudFormation**.
+1\. Login to your AWS account and navigate to **CloudFormation** from the search bar.
 
-2\. Click the **Create stack** button and provide the S3 location for the template.
+2\. In CloudFormation, click the **Create stack** button and provide the S3 location for the template.
 
-\
-[https://owl-packages.s3.amazonaws.com/MP/CDQ\_AWSCF\_TEMPLATE\_REHL.YAML](https://owl-packages.s3.amazonaws.com/MP/CDQ\_AWSCF\_TEMPLATE\_REHL.YAML)
-
-
+```
+https://owl-packages.s3.amazonaws.com/MP/CDQ_AWSCF_TEMPLATE_REHL.YAML
+```
 
 ![](<../../.gitbook/assets/dq-aws-install-1 (2).png>)
 
@@ -49,7 +48,7 @@ This process takes 10-15 minutes to spin up the EC2 instance and deploy Collibra
 8\. In the **Value** column, click the CDQ Login URL.&#x20;
 
 {% hint style="info" %}
-Your DQ instance comes with sample data and prewired DB connections.
+Your CDQ instance comes with sample data and prewired DB connections.
 {% endhint %}
 
 9\. To uninstall and release the resource, delete the stack.
