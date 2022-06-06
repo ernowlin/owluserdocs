@@ -24,5 +24,5 @@ Testing native rules can be done quickly by limiting the results or using an ext
 {% endhint %}
 
 {% hint style="warning" %}
-At this rule type you won't have mismatch highlighting and record breakdown on the UI, just the score itself!&#x20;
+This rule type is not eligible to store break records, just the score itself! Additionally the rule will apply the logic directly to the JDBC connection. Native rules will run on the entire population of the data, regardless of any scope set for the DQ job (-q flag defined in the scope section of Explorer).  Any filter or predicate clause entered in the -q flag should be added to the logic of the Native rule as well.&#x20;
 {% endhint %}
