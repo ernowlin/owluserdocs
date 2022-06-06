@@ -2,6 +2,8 @@
 
 ## 2022.06 (In Progress)
 
+#### Fixes / Enhancements
+
 * DQ Job
   * Fixed an issue with the Learning Phase in the Behavior feature. (ticket #82907)
     * Once CDQ has the minimum number of completed successful scans, the learning status now changes to PASSING or BREAKING based on the results.
@@ -25,6 +27,10 @@
   * Fixed an issue which caused the Date range condition to incorrectly display results when using an Oracle connection. (#85802)
   * Fixed an issue which threw an error message when Transform was checked with Date Range condition when using a Postgres connection. (#85802)
   * Fixed an issue where an equals sign `=` used in a `-transform` expression from Run CMD caused jobs to fail. (#71547)
+  * Fixed an issue where schema and table names containing underscores `_` were not accepted.
+* API
+  * You can now access API quick links page from the Admin Console submenu.&#x20;
+  * When using Swagger, UI text now indicates when a field is case sensitive.&#x20;
 
 ## 2022.05
 
