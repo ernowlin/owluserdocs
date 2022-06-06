@@ -7,6 +7,9 @@
     * Once CDQ has the minimum number of completed successful scans, the learning status now changes to PASSING or BREAKING based on the results.
 * Agent
   * The Explorer page and Scheduler modal now display the same agents. (#86175)
+* Security
+  * Major vulnerabilities related to Spring, ESAPI, and Swagger have been addressed.
+  * Sensitive UI fields such as username no longer allow autocomplete.&#x20;
 * Connections
   * From the Athena driver, you can now use `MetadataRetrievalMethod=Query` for database queries from the Connection URL. (#86139)
   * Fixed an issue where error messages on failed connections did not display informational text. (#85527)
@@ -21,6 +24,7 @@
   * You can now view calculated views for SAP Hana when creating a DQ Job on the Explorer page. (#83147, 84328)
   * Fixed an issue which caused the Date range condition to incorrectly display results when using an Oracle connection. (#85802)
   * Fixed an issue which threw an error message when Transform was checked with Date Range condition when using a Postgres connection. (#85802)
+  * Fixed an issue where an equals sign `=` used in a `-transform` expression from Run CMD caused jobs to fail. (#71547)
 
 ## 2022.05
 
