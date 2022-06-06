@@ -4,8 +4,23 @@
 
 * DQ Job
   * Fixed an issue with the Learning Phase in the Behavior feature. (ticket #82907)
+    * Once CDQ has the minimum number of completed successful scans, the learning status now changes to PASSING or BREAKING based on the results.
+* Agent
+  * The Explorer page and Scheduler modal now display the same agents. (#86175)
+* Connections
+  * From the Athena driver, you can now use `MetadataRetrievalMethod=Query` for database queries from the Connection URL. (#86139)
+  * Fixed an issue where error messages on failed connections did not display informational text. (#85527)
+* Catalog
+  * The Graph option is no longer available in Quick links.
 * Admin
-  * The Agent Group (H/A) and its associated endpoints are now deprecated. (ticket #83086)
+  * The Agent Group (H/A) and its associated endpoints are now deprecated. (#83086)
+  * Fixed an issue where the Add Data Category button was missing without required permissions. (#86625)
+  * When a session expires on an Admin page, you are now redirected to the login page.&#x20;
+  * The Admin Limits page now displays informational text that only limits of Tenant - Admin type shall be displayed on the page.&#x20;
+* Explorer
+  * You can now view calculated views for SAP Hana when creating a DQ Job on the Explorer page. (#83147, 84328)
+  * Fixed an issue which caused the Date range condition to incorrectly display results when using an Oracle connection. (#85802)
+  * Fixed an issue which threw an error message when Transform was checked with Date Range condition when using a Postgres connection. (#85802)
 
 ## 2022.05
 
