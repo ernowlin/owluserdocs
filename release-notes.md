@@ -21,7 +21,7 @@
   * The Agent Group (H/A) and its associated endpoints are now deprecated. (#83086)
   * Fixed an issue where the Add Data Category button was missing without required permissions. (#86625)
   * When a session expires on an Admin page, you are now redirected to the login page.&#x20;
-  * The Admin Limits page now displays informational text that only limits of Tenant - Admin type are displayed on the page.&#x20;
+  * The Admin Limits page now displays informational text indicating that only limits of Tenant - Admin type are displayed on the page.&#x20;
 * Explorer
   * You can now view calculated views for SAP Hana when creating a DQ Job on the Explorer page. (#83147, 84328)
   * Fixed an issue which caused the Date range condition to incorrectly display results when using an Oracle connection. (#85802)
