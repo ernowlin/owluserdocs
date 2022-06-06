@@ -56,7 +56,6 @@ opt.pgPassword = pgPass
 // Pre Routine 
 val cdq = com.owl.core.util.OwlUtils.OwlContext(df, opt)
 .register(opt)
-.addRule(simpleRule)
 
 // Scan
 cdq.owlCheck()
