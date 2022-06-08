@@ -35,7 +35,7 @@ Link to [Databricks download](https://databricks.com/spark/jdbc-drivers-download
 
 * Pyspark SDK
 * Scala SDK&#x20;
-* [Example](https://dq-docs.collibra.com/apis/notebook/cdq-notebook-apis-usage-in-databricks)
+* [Example](https://dq-docs.collibra.com/apis-1/notebook/cdq-+-databricks)
 
 ## **Spark Submit (Not Supported)**
 
@@ -43,7 +43,7 @@ Link to [Databricks download](https://databricks.com/spark/jdbc-drivers-download
 * Databricks Jobs API&#x20;
   * Rest
   * UI
-  * [Example](https://dq-docs.collibra.com/apis/notebook/dq-databricks-submit)
+  * [Example](https://dq-docs.collibra.com/apis-1/notebook/cdq-+-databricks/dq-databricks-submit)
 
 {% hint style="info" %}
 While these are not officially supported, there is reference architecture and implementation pattern how to do a Databricks Job submission.&#x20;
