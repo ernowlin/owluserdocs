@@ -1,0 +1,272 @@
+# Table of contents
+
+* [Collibra Data Quality & Observability](README.md)
+* [Getting Started](getting-started.md)
+* [Release Notes](release-notes.md)
+* [Builds](builds.md)
+* [APIs](apis.md)
+
+## Installation
+
+* [Standalone](installation/standalone/README.md)
+  * [Standalone Install](installation/standalone/full-install.md)
+  * [Standalone Install (Script)](installation/standalone/standalone-install-script.md)
+  * [Standalone Install (CloudFormation)](installation/standalone/standalone-install-cloudformation.md)
+  * [Standalone Upgrade](installation/standalone/standalone-upgrade.md)
+  * [Standalone Sizing](installation/standalone/standalone-sizing.md)
+* [Hadoop](installation/hadoop/README.md)
+  * [Hadoop Install](installation/hadoop/hadoop-integration.md)
+  * [EMR / Dataproc / HDI](installation/hadoop/emr.md)
+* [Cloud native](installation/cloud-native-owldq/README.md)
+  * [Cloud native requirements](installation/cloud-native-owldq/preparing-for-deployment.md)
+  * [Cloud native install](installation/cloud-native-owldq/deploying-cloud-native-owldq.md)
+  * [EKS / GKE / AKS](installation/cloud-native-owldq/aks-eks-gke-kubernetes-deployment.md)
+* [Cloud](installation/cloud.md)
+* [Agent](installation/agent-configuration.md)
+
+## Connections <a href="#connecting-to-dbs-in-owl-web" id="connecting-to-dbs-in-owl-web"></a>
+
+* [Supported Connections](connecting-to-dbs-in-owl-web/supported-drivers/README.md)
+  * [Connectivity to Athena](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-athena.md)
+  * [Connectivity to BigQuery](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-bigquery.md)
+  * [Connectivity to Databricks](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-databricks/README.md)
+    * [Databricks via JDBC](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-databricks/databricks-via-jdbc.md)
+  * [Connectivity to Hive](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-hive/README.md)
+    * [Connecting to CDH 5.16 Hive SSL/TLS/Kerberos Setup](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-hive/connecting-to-cdh-5.16-hive-ssl-tls-kerberos-setup.md)
+  * [Connectivity to Oracle](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-oracle.md)
+  * [Connectivity to Presto](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-presto.md)
+  * [Connectivity to Redshift](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-redshift.md)
+  * [Connectivity to Snowflake](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-snowflake.md)
+  * [Connectivity to SQL Server](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-sql-server.md)
+* [Add a Connection](connecting-to-dbs-in-owl-web/owl-db-connection/README.md)
+  * [Add Connection to Agent](connecting-to-dbs-in-owl-web/owl-db-connection/add-connection-to-agent.md)
+
+## Features <a href="#dq-visuals" id="dq-visuals"></a>
+
+* [Profile (automatic)](dq-visuals/profile.md)
+* [Behavior (automatic)](dq-visuals/behaviors.md)
+* [Rules (user-defined)](dq-visuals/rules/README.md)
+  * [Adding a Rule](dq-visuals/rules/creating-a-business-rule.md)
+  * [Scores](dq-visuals/rules/scores.md)
+  * [Dimensions](dq-visuals/rules/dimensions.md)
+  * [Rule Types](dq-visuals/rules/rule-types/README.md)
+    * [SQL Based Rules](dq-visuals/rules/rule-types/sql-based-rules/README.md)
+      * [Simple](dq-visuals/rules/rule-types/sql-based-rules/simple.md)
+      * [Freeform](dq-visuals/rules/rule-types/sql-based-rules/freeform/README.md)
+        * [Cross-Dataset Rules](dq-visuals/rules/rule-types/sql-based-rules/freeform/easier-rule-examples.md)
+      * [Native](dq-visuals/rules/rule-types/sql-based-rules/native-sql.md)
+    * [Stat Rules](dq-visuals/rules/rule-types/stat-rules/README.md)
+      * [Data Type Rules](dq-visuals/rules/rule-types/stat-rules/data-type-rules.md)
+  * [Rule Templates](dq-visuals/rules/rule-templates.md)
+  * [Rule Library](dq-visuals/rules/dq-rule-automation.md)
+  * [Rule Preview](dq-visuals/rules/rule-preview.md)
+  * [Rule Discovery](dq-visuals/rules/data-concepts-and-semantics.md)
+* [More](dq-visuals/more/README.md)
+  * [Explorer (no-code)](dq-visuals/more/explorer-2.md)
+  * [Schema (automatic)](dq-visuals/more/schema-evolution.md)
+  * [Shapes (automatic)](dq-visuals/more/shapes.md)
+  * [Duplicates (advanced)](dq-visuals/more/duplicates.md)
+  * [Outliers (advanced)](dq-visuals/more/outliers.md)
+  * [Patterns (advanced)](dq-visuals/more/pattern-mining.md)
+  * [Records (advanced)](dq-visuals/more/missing-records.md)
+  * [Source (advanced)](dq-visuals/more/validate-source.md)
+  * [Pushdown](dq-visuals/more/pushdown.md)
+  * [Summary](dq-visuals/more/overview.md)
+
+## Scorecards
+
+* [Overview](scorecards/dataset-scorecard/README.md)
+  * [Scoring](scorecards/dataset-scorecard/owl-dq-screen-shots.md)
+* [Page View](scorecards/group-scorecard.md)
+* [List View](scorecards/list-view.md)
+* [Pulse View](scorecards/pulse-view.md)
+
+## Scheduler
+
+* [Schedule a Job](scheduler/schedule-owlchecks.md)
+* [Schedule Management](scheduler/schedule-management/README.md)
+  * [View/Re-Run Scheduled Jobs](scheduler/schedule-management/view-re-run-scheduled-jobs.md)
+
+## Alerts
+
+* [Email Alerts](alerts/email-alerts.md)
+* [Email Batch Alerts](alerts/email-batch-alerts.md)
+
+## Reports
+
+* [Built-In](reports/built-in/README.md)
+  * [Completeness Report](reports/built-in/completeness-report.md)
+  * [Coverage Report](reports/built-in/coverage-report.md)
+  * [Dataset Report](reports/built-in/profile.md)
+  * [Summary Reports](reports/built-in/owl-summary-reports.md)
+* [Custom](reports/custom.md)
+
+## Workflows
+
+* [Assignment Queue(s)](workflows/assignment-queue-s/README.md)
+  * [Internal Assignment](workflows/assignment-queue-s/internal-assignment.md)
+  * [External assignment](workflows/assignment-queue-s/external-assignment.md)
+  * [FAQ](workflows/assignment-queue-s/faq.md)
+* [Item Labeling](workflows/item-labeling/README.md)
+  * [Peak vs Off Peak](workflows/item-labeling/peak-vs-off-peak.md)
+
+## Integration
+
+* [DQ Connector](integration/dq-connector.md)
+* [DQ Workflows](integration/dq-workflows-in-collibra-dic.md)
+
+## Catalog
+
+* [Overview](catalog/catalog.md)
+* [Business Units](catalog/business-units.md)
+* [Catalog Bulk Actions](catalog/catalog-bulk-actions.md)
+
+## Solutions <a href="#projects" id="projects"></a>
+
+* [Use Cases](projects/use-cases/README.md)
+  * [Data Projects](projects/use-cases/data-projects/README.md)
+    * [Builds a Better DQ Dashboard](projects/use-cases/data-projects/builds-a-better-dq-dashboard.md)
+    * [Ensures CCPA & GDPR](projects/use-cases/data-projects/ccpa-and-gdpr.md)
+    * [Makes your Data Lake better.](projects/use-cases/data-projects/data-quality-monitoring.md)
+    * [Speeds Migrations/Enables Replications](projects/use-cases/data-projects/migrations.md)
+    * [Assists Data Aggregation](projects/use-cases/data-projects/assists-data-aggregation.md)
+    * [Creating a Data Quality Pipeline](projects/use-cases/data-projects/creating-a-data-quality-pipeline.md)
+    * [Our Approach](projects/use-cases/data-projects/why-owl/README.md)
+      * [Our Story](projects/use-cases/data-projects/why-owl/our-story/README.md)
+        * [DQ is the difference](projects/use-cases/data-projects/why-owl/our-story/data-quality.md)
+        * [What is CDQ](projects/use-cases/data-projects/why-owl/our-story/what-is-owldq.md)
+      * [Prescriptive Personas](projects/use-cases/data-projects/why-owl/prescriptive-personas.md)
+  * [Bank Loans](projects/use-cases/bank-loans.md)
+  * [Bloomberg Data](projects/use-cases/bloomberg-data.md)
+  * [Cyber Anomalies in Real-Time](projects/use-cases/cyber-anomalies-in-real-time.md)
+  * [Financial FxRate Data](projects/use-cases/financial-fxrate-data.md)
+  * [Healthcare Data Quality](projects/use-cases/healthcare-dq-in-2-minutes.md)
+  * [Health Insurance Claims Data](projects/use-cases/insurance-data.md)
+  * [Intraday Positions](projects/use-cases/intraday-positions.md)
+  * [Security Reference Data](projects/use-cases/security-reference-data.md)
+  * [Smart Meter Data](projects/use-cases/smart-meter-data.md)
+  * [Validating Data Movement](projects/use-cases/copying-or-moving-data.md)
+* [Best Practices](projects/best-practices.md)
+
+## Benchmarks
+
+* [Performance Settings](benchmarks/performance-settings.md)
+* [Performance Tests](benchmarks/performance-tests.md)
+* [Performance Tuning](benchmarks/performance-tuning/README.md)
+  * [Performance Considerations](benchmarks/performance-tuning/benchmark-faq.md)
+
+## APIs
+
+* [Rest](apis-1/rest-apis/README.md)
+  * [Swagger](apis-1/rest-apis/swagger.md)
+  * [Find the endpoint](apis-1/rest-apis/find-the-endpoint.md)
+  * [Export and Import API](apis-1/rest-apis/export-and-import-api.md)
+  * [Export and Import Example](apis-1/rest-apis/rules-import-export.md)
+  * [Assignment API](apis-1/rest-apis/assignmentapi.md)
+  * [Time Zone API](apis-1/rest-apis/owl-time-zone-api.md)
+  * [Cookie](apis-1/rest-apis/cookie.md)
+  * [JWT](apis-1/rest-apis/jwt.md)
+  * [Livy](apis-1/rest-apis/livy.md)
+* [Notebook](apis-1/notebook/README.md)
+  * [CDQ + Databricks](apis-1/notebook/cdq-+-databricks/README.md)
+    * [DQ-Databricks Submit](apis-1/notebook/cdq-+-databricks/dq-databricks-submit.md)
+  * [Examples](apis-1/notebook/data-quality-pipelines/README.md)
+    * [Simple](apis-1/notebook/data-quality-pipelines/simple-spark-data-pipeline.md)
+    * [Advanced](apis-1/notebook/data-quality-pipelines/spark-dq-pipeline.md)
+    * [Rules](apis-1/notebook/data-quality-pipelines/owl-rules-dq-pipeline/README.md)
+      * [Global rules](apis-1/notebook/data-quality-pipelines/owl-rules-dq-pipeline/global-rules.md)
+      * [SQL based rules](apis-1/notebook/data-quality-pipelines/owl-rules-dq-pipeline/sql-based-rules/README.md)
+        * [Simple rule](apis-1/notebook/data-quality-pipelines/owl-rules-dq-pipeline/sql-based-rules/simple-rule.md)
+        * [Freeform SQL](apis-1/notebook/data-quality-pipelines/owl-rules-dq-pipeline/sql-based-rules/freeform-sql.md)
+      * [Data type based rules](apis-1/notebook/data-quality-pipelines/owl-rules-dq-pipeline/data-type-based-rules.md)
+    * [Outliers](apis-1/notebook/data-quality-pipelines/notebook-outlier-example.md)
+    * [Column Match](apis-1/notebook/data-quality-pipelines/notebook-colmatch-example.md)
+    * [AWS DataBricks](apis-1/notebook/data-quality-pipelines/aws-databricks-dq-pipeline.md)
+    * [Azure DataBricks](apis-1/notebook/data-quality-pipelines/azure-databricks-dq-pipeline.md)
+    * [Options (base)](apis-1/notebook/data-quality-pipelines/owloptions-base.md)
+    * [Options API](apis-1/notebook/data-quality-pipelines/owl-options-api.md)
+    * [Classes](apis-1/notebook/data-quality-pipelines/notebook-api/README.md)
+      * [Load](apis-1/notebook/data-quality-pipelines/notebook-api/load.md)
+      * [Profile](apis-1/notebook/data-quality-pipelines/notebook-api/profile.md)
+      * [Dupe](apis-1/notebook/data-quality-pipelines/notebook-api/dupe.md)
+      * [Source](apis-1/notebook/data-quality-pipelines/notebook-api/source.md)
+    * [FAQs](apis-1/notebook/data-quality-pipelines/frequently-asked-questions.md)
+* [Command Line](apis-1/owlcheck-spark/README.md)
+  * [DQ Job JDBC](apis-1/owlcheck-spark/job-jdbc.md)
+  * [DQ Job BigQuery](apis-1/owlcheck-spark/owlcheck-bigquery.md)
+  * [DQ Job Databricks](apis-1/owlcheck-spark/owlcheck-databricks.md)
+  * [DQ Job Hive](apis-1/owlcheck-spark/job-hive.md)
+  * [DQ Job Files](apis-1/owlcheck-spark/job-files.md)
+  * [DQ Job HDFS](apis-1/owlcheck-spark/owlcheck-hdfs.md)
+  * [DQ Job JSON](apis-1/owlcheck-spark/job-json.md)
+  * [DQ Job MySql](apis-1/owlcheck-spark/job-mysql.md)
+  * [DQ Job MongoDB](apis-1/owlcheck-spark/owlcheck-mongodb.md)
+  * [DQ Job S3](apis-1/owlcheck-spark/owlcheck-s3.md)
+  * [DQ Job Snowflake](apis-1/owlcheck-spark/owlcheck-snowflake.md)
+  * [Advanced](apis-1/owlcheck-spark/owlcheck/README.md)
+    * [DQ Job Back Run](apis-1/owlcheck-spark/owlcheck/owlcheck-backrun.md)
+    * [DQ Job Cron](apis-1/owlcheck-spark/owlcheck/owlcheck-cron.md)
+    * [DQ Job Kafka](apis-1/owlcheck-spark/owlcheck/job-kafka.md)
+    * [DQ Job LinkId](apis-1/owlcheck-spark/owlcheck/owlcheck-linkid.md)
+    * [DQ Job Validate Source](apis-1/owlcheck-spark/owlcheck/owlcheck-validate-source.md)
+    * [DQ Job 43M rows](apis-1/owlcheck-spark/owlcheck/owlcheck-43m-rows.md)
+    * [Add Date Column](apis-1/owlcheck-spark/owlcheck/add-date-column.md)
+    * [AutoProfile](apis-1/owlcheck-spark/owlcheck/autoprofile.md)
+    * [Cloudera CLASSPATH](apis-1/owlcheck-spark/owlcheck/cloudera-classpath.md)
+    * [Column Matching](apis-1/owlcheck-spark/owlcheck/cluster-health-report.md)
+    * [Date Time Variable Options](apis-1/owlcheck-spark/owlcheck/date-time-variable-options.md)
+    * [Deploy Mode](apis-1/owlcheck-spark/owlcheck/deploy-mode.md)
+    * [Explorer (advanced)](apis-1/owlcheck-spark/owlcheck/explorer.md)
+    * [File Look Back](apis-1/owlcheck-spark/owlcheck/file-lookback.md)
+    * [Filter & Filter Not](apis-1/owlcheck-spark/owlcheck/filter.md)
+    * [Multiple Pattern Relationships](apis-1/owlcheck-spark/owlcheck/multiple-pattern-combinations.md)
+    * [Nulls in Datasets](apis-1/owlcheck-spark/owlcheck/zero-if-null.md)
+    * [Spark-shell Sample](apis-1/owlcheck-spark/owlcheck/spark-shell-sample.md)
+    * [Transform](apis-1/owlcheck-spark/owlcheck/owlcheck-transform.md)
+
+## Architecture
+
+* [Architecture Diagram](architecture/diagram/README.md)
+  * [ERD](architecture/diagram/erd.md)
+* [System Requirements](architecture/system-requirements/README.md)
+  * [Supported Operating Systems](architecture/system-requirements/supported-operating-systems.md)
+  * [Hardware Sizing](architecture/system-requirements/hardware-sizing.md)
+  * [Minimum System Requirements](architecture/system-requirements/minimum-system-requirements.md)
+  * [Supported Web Browsers](architecture/system-requirements/supported-web-browsers.md)
+* [Build Versions](architecture/build-versions.md)
+* [Diagrams](architecture/diagrams.md)
+
+## Admin
+
+* [Overview](admin/admin-console-overview.md)
+* [Configuration](admin/configuration/README.md)
+  * [Multi-Tenancy](admin/configuration/multi-tenancy.md)
+  * [Time Based Data Retention](admin/configuration/time-based-data-retention.md)
+  * [Set up SMTP](admin/configuration/smtp-setup.md)
+  * [Advanced](admin/configuration/custom-configurations.md)
+* [Audit](admin/audit/README.md)
+  * [Dataset Audit Trail](admin/audit/dataset-audit-trail.md)
+  * [Security Audit Trail](admin/audit/security-audit-trail.md)
+  * [User Audit Trail](admin/audit/user-audit-trail.md)
+
+## Security
+
+* [Overview](security/owl-security.md)
+* [Configuration](security/configuration/README.md)
+  * [Active Directory LDAP](security/configuration/authentication-with-active-directory-ldap/README.md)
+    * [AD Group to Owl Role Mapping](security/configuration/authentication-with-active-directory-ldap/ad-group-to-owl-role-mapping.md)
+  * [Connection Security](security/configuration/connection-security.md)
+  * [Dataset Security](security/configuration/dataset-security/README.md)
+    * [Dataset Masking](security/configuration/dataset-security/dataset-masking.md)
+  * [Local User Store Authentication](security/configuration/authentication-with-local-user-store/README.md)
+    * [Adding Local Users](security/configuration/authentication-with-local-user-store/adding-local-users.md)
+  * [Role Based Access Control (RBAC)](security/configuration/role-based-access-control-rbac.md)
+  * [SAML Authentication](security/configuration/authentication-with-saml-idp/README.md)
+    * [Multi-tenancy support through SAML RelayState](security/configuration/authentication-with-saml-idp/multi-tenancy-support-through-saml-relaystate.md)
+  * [Securing Passwords](security/configuration/securing-passwords.md)
+  * [SSL Setup (HTTPS)](security/configuration/ssl-setup-https.md)
+
+## Legal
+
+* [Agreements](legal/agreements/README.md)
+  * [Collibra Evaluation Agreement](legal/agreements/collibra-evaluation-agreement.md)
