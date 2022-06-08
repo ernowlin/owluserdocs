@@ -7,14 +7,23 @@
 * DQ Job
   * Fixed an issue with the Learning Phase in the Behavior feature. (ticket #82907)
     * Once CDQ has the minimum number of completed successful scans, the learning status now changes to PASSING or BREAKING based on the results.
+* Outliers
+  * Fixed an issue where file lookback did not identify expected outliers. (#87967)
+* Rules
+  * Fixed an issue where Data Classes with Date column types selected did not detect timestamps. (#83000)
 * Agent
   * The Explorer page and Scheduler modal now display the same agents. (#86175)
 * Security
   * Major vulnerabilities related to Spring, ESAPI, and Swagger have been addressed.
   * Sensitive UI fields such as username no longer allow autocomplete.&#x20;
+  * If configured, the ENV variable `XSS_CANONICALIZE_INPUT_ENABLED` should be removed from configmap or owl-env.sh.
 * Connections
   * From the Athena driver, you can now use `MetadataRetrievalMethod=Query` for database queries from the Connection URL. (#86139)
   * Fixed an issue where error messages on failed connections did not display informational text. (#85527)
+  * Fixed an issue where NFS file connections under Remote File connections caused jobs to fail. (#88156)
+    * Added File protocol for Spark load for NFS file system.
+    * Added nfs:// prefix wile adding a NFS connection.
+      * Also use File (file://) protocol with file path f or Spark read.
 * Catalog
   * The Graph option is no longer available in Quick links.
 * Admin
@@ -22,12 +31,14 @@
   * Fixed an issue where the Add Data Category button was missing without required permissions. (#86625)
   * When a session expires on an Admin page, you are now redirected to the login page.&#x20;
   * The Admin Limits page now displays informational text indicating that only limits of Tenant - Admin type are displayed on the page.&#x20;
+  * Fixed an issue when editing an existing data category which caused the 'Add new' modal to open instead of the 'Edit' modal. (#89617)
 * Explorer
   * You can now view calculated views for SAP Hana when creating a DQ Job on the Explorer page. (#83147, 84328)
   * Fixed an issue which caused the Date range condition to incorrectly display results when using an Oracle connection. (#85802)
   * Fixed an issue which threw an error message when Transform was checked with Date Range condition when using a Postgres connection. (#85802)
   * Fixed an issue where an equals sign `=` used in a `-transform` expression from Run CMD caused jobs to fail. (#71547)
   * Fixed an issue where schema and table names containing underscores `_` were not accepted.
+  * CLOB data types are unsupported by CDQ. (#86902)
 * API
   * You can now access API quick links page from the Admin Console submenu.&#x20;
   * When using Swagger, UI text now indicates when a field is case sensitive.&#x20;
