@@ -38,6 +38,9 @@
     * "mail.smtp.ehlo" -- default = true
     * "mail.debug" -- default = true
     * "mail.smtp.ssl.trust" -- default = : If set, and a socket factory hasn't been specified, enables use of a MailSSLSocketFactory. If set to "\*", all hosts are trusted. If set to a whitespace separated list of hosts, those hosts are trusted. Otherwise, trust depends on the certificate the server presents. (#76775, 88089)
+* Profile
+  * Mean value is now rounded appropriately within the Profile page.&#x20;
+    * For example: The value 2.4334334343345 is now rounded to 2.434.
 * Connections
   * From the Athena driver, you can now use `MetadataRetrievalMethod=Query` for database queries from the Connection URL. (#86139)
   * Fixed an issue where error messages on failed connections did not display informational text. (#85527)
