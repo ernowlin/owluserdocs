@@ -18,5 +18,5 @@ If you install a standalone environment, modify the \<install-dir>/config/owl-en
 
 
 {% hint style="info" %}
-For more information on Collibra's data sharing policies, please review Collibra's [Data sharing agreements and contracts](https://productresources.collibra.com/docs/collibra/latest/Content/DataPrivacy/DataSharingAgreements/co\_data-sharing-agreements.htm).
+For more information on Collibra's subprocessors, please review [Collibra's Subprocessors page](https://www.collibra.com/us/en/collibra-subprocessors).
 {% endhint %}
