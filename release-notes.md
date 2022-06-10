@@ -2,10 +2,6 @@
 
 ## 2022.06
 
-{% hint style="danger" %}
-**General Advisory:** There is a critical CVE `CVE-2016-1000027` that shows up in the image scan due to Spring version. This is a false positive and should be added to the exception list of the customer scan tools. We don’t use `HttpInvokerServiceExporter` anywhere in the application and are not impacted by it. There is no fix version available for it from Spring. More details are available at [Sonatype vulnerability CVE-2016-1000027 in Spring-web project · Issue #24434 · spring-projects/spring-fram](https://github.com/spring-projects/spring-framework/issues/24434)
-{% endhint %}
-
 #### Fixes / Enhancements
 
 * DQ Job
@@ -54,9 +50,8 @@
   * The Pendo integration is now active by default.
     * No sensitive information is collected; only high-level usage stats are collected.&#x20;
     * All new customers starting with 2022.06 onward will receive a new license.
-    *   It is requested that you update owl-env for Standalone and K8s configurations with the following license:
-
-        `--set global.web.usageMeter.pendo.accountId=cdq-trial-license`
+    * If you install a standalone environment, modify the \<install-dir>/config/owl-env.sh file by adding your license name\
+      `export DQ_INTEGRATION_PENDO_ACCOUNTID=<your-license-name>`
     * This new integration will not block or impair the functionality of the app in any way.
     * For more information on Collibra's data sharing policies, please review Collibra's [Data sharing agreements and contracts](https://productresources.collibra.com/docs/collibra/latest/Content/DataPrivacy/DataSharingAgreements/co\_data-sharing-agreements.htm).
   * The Agent Group (H/A) and its associated endpoints are now deprecated. (#83086)
