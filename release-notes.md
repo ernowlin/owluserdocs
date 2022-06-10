@@ -9,7 +9,11 @@
     * Once CDQ has the minimum number of completed successful scans, the learning status now changes to PASSING or BREAKING based on the results.
 * Outliers
   * Fixed an issue where file lookback did not identify expected outliers. (#87967)
+* Alerts
+  * When configuring email alerts, SMTP Username and SMTP password fields are still required fields. (#86033)
+    * Validation relaxation is planned for the 2022.07 release.
 * Rules
+  * Fixed an issue which caused rule breaks to report the opposite of what was defined when a [Generic Rule utilizing regex/rlike](https://collibra.zendesk.com/knowledge/articles/6572100149143/en-us?brand\_id=1497556) was created. (#86977)
   * Fixed an issue where Data Classes with Date column types selected did not detect timestamps. (#83000)
 * Agent
   * The Explorer page and Scheduler modal now display the same agents. (#86175)
@@ -17,6 +21,16 @@
   * Major vulnerabilities related to Spring, ESAPI, and Swagger have been addressed.
   * Sensitive UI fields such as username no longer allow autocomplete.&#x20;
   * If configured, the ENV variable `XSS_CANONICALIZE_INPUT_ENABLED` should be removed from configmap or owl-env.sh.
+  * When dataset security is turned on, you can now add role based authorization for editing existing datasets. (#87720)
+  * You can now override the following mail settings from the App Config page within the Configuration section of the Admin Console:&#x20;
+    * "mail.transport.protocol" -- default = smtp
+    * "mail.smtp.auth" -- default = true: If true, attempt to authenticate the user using the AUTH command
+    * "mail.smtp.auth.login.disable" -- default = false: If true, prevents use of the AUTH LOGIN command
+    * "mail.smtp.starttls.enable" -- default = true: If true, enables the use of the STARTTLS command (if supported by the server) to switch the connection to a TLS-protected connection before issuing any login commands.
+    * "mail.smtp.ssl.enable" -- default = false: If set to true, use SSL to connect and use the SSL port by default. Defaults to false for the "smtp" protocol and true for the "smtps" protocol.
+    * "mail.smtp.ehlo" -- default = true
+    * "mail.debug" -- default = true
+    * "mail.smtp.ssl.trust" -- default = : If set, and a socket factory hasn't been specified, enables use of a MailSSLSocketFactory. If set to "\*", all hosts are trusted. If set to a whitespace separated list of hosts, those hosts are trusted. Otherwise, trust depends on the certificate the server presents. (#76775, 88089)
 * Connections
   * From the Athena driver, you can now use `MetadataRetrievalMethod=Query` for database queries from the Connection URL. (#86139)
   * Fixed an issue where error messages on failed connections did not display informational text. (#85527)
@@ -27,21 +41,48 @@
 * Catalog
   * The Graph option is no longer available in Quick links.
 * Admin
+  * The Pendo integration is now active by default.
+    * No sensitive information is collected; only high-level usage stats are collected.&#x20;
+    * All new customers starting with 2022.06 onward will receive a new license.
+    *   It is requested that you update owl-env for Standalone and K8s configurations with the following license:
+
+        `--set global.web.usageMeter.pendo.accountId=cdq-trial-license`
+    * This new integration will not block or impair the functionality of the app in any way.
+    * For more information on Collibra's data sharing policies, please review Collibra's [Data sharing agreements and contracts](https://productresources.collibra.com/docs/collibra/latest/Content/DataPrivacy/DataSharingAgreements/co\_data-sharing-agreements.htm).
   * The Agent Group (H/A) and its associated endpoints are now deprecated. (#83086)
-  * Fixed an issue where the Add Data Category button was missing without required permissions. (#86625)
+  * Fixed an issue where the "Add Data Category" button was missing without required permissions. (#86625)
   * When a session expires on an Admin page, you are now redirected to the login page.&#x20;
   * The Admin Limits page now displays informational text indicating that only limits of Tenant - Admin type are displayed on the page.&#x20;
   * Fixed an issue when editing an existing data category which caused the 'Add new' modal to open instead of the 'Edit' modal. (#89617)
+  * From Configuration Settings, DB Limits is now called Data Retention Policy.
 * Explorer
   * You can now view calculated views for SAP Hana when creating a DQ Job on the Explorer page. (#83147, 84328)
   * Fixed an issue which caused the Date range condition to incorrectly display results when using an Oracle connection. (#85802)
   * Fixed an issue which threw an error message when Transform was checked with Date Range condition when using a Postgres connection. (#85802)
   * Fixed an issue where an equals sign `=` used in a `-transform` expression from Run CMD caused jobs to fail. (#71547)
   * Fixed an issue where schema and table names containing underscores `_` were not accepted.
-  * CLOB data types are unsupported by CDQ. (#86902)
+  * Fixed an issue that allowed jobs to run with a row limit of less than 1.
+  * Fixed an issue where incorrect files loaded for preview from BLOB containers with Livy enabled.
+  * CLOB data types are unsupported. (#86902)
+  * Improved performance and logic when drilling into a database and schema from the Explorer page.
 * API
   * You can now access API quick links page from the Admin Console submenu.&#x20;
   * When using Swagger, UI text now indicates when a field is case sensitive.&#x20;
+* Reporting
+  * \*Tech Preview\* \[TP] Rule Summary page enhancements
+    * You can now filter rule breaks by most frequent violations, most severe violations, and least violations.
+    * You can now view interactive pie charts with rules and dimension summaries.
+* UI
+  * The styling of the expandable legacy navigation pane and the react menu are now updated.
+* Legal
+  * Added a disclaimer to the DQ login page with a link to the [Collibra Evaluation Agreement](https://dq-docs.collibra.com/legal/agreements/collibra-evaluation-agreement).
+
+#### Known Limitations
+
+* Profile
+  * Spark does not currently support varchar data types. All varchar data types are converted to String. Other unsupported data types may also be converted incorrectly.&#x20;
+* Security
+  * Permissions on the Export task have not yet been addressed when dataset security is turned on and you add a role based authorization for editing existing datasets. (#87720)
 
 ## 2022.05
 
