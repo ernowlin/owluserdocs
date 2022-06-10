@@ -1,6 +1,6 @@
 # Release Notes
 
-## 2022.06 (In Progress)
+## 2022.06
 
 #### Fixes / Enhancements
 
@@ -37,7 +37,7 @@
   * Fixed an issue where NFS file connections under Remote File connections caused jobs to fail. (#88156)
     * Added File protocol for Spark load for NFS file system.
     * Added nfs:// prefix wile adding a NFS connection.
-      * Also use File (file://) protocol with file path f or Spark read.
+      * This will prepend the URI with the file:// protocol when an NFS file connection is loaded via Spark.
 * Catalog
   * The Graph option is no longer available in Quick links.
 * Admin
@@ -79,6 +79,9 @@
 
 #### Known Limitations
 
+* DQ Job
+  * When comparing JDBC (target) to remote files such as S3 (source), there is a known Spark bug for "Recursive view detected".&#x20;
+    * This validate source combination is not possible in 2022.06 using Spark 3.2.
 * Profile
   * Spark does not currently support varchar data types. All varchar data types are converted to String. Other unsupported data types may also be converted incorrectly.&#x20;
 * Security
