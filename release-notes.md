@@ -25,6 +25,7 @@
     * There is a critical CVE `CVE-2016-1000027` that shows up in the image scan due to Spring version. This is a false positive and should be added to the exception list of the customer scan tools. We don’t use `HttpInvokerServiceExporter` anywhere in the application and are not impacted by it.&#x20;
       * There is no fix version available for it from Spring. More details are available at [Sonatype vulnerability CVE-2016-1000027 in Spring-web project · Issue #24434 · spring-projects/spring-fram](https://github.com/spring-projects/spring-framework/issues/24434)
   * Major vulnerabilities related to Spring, ESAPI, and Swagger have been addressed.
+  * No cross DB reference is allowed in explorer while accessing SQL database connections.
   * Sensitive UI fields such as username no longer allow autocomplete.&#x20;
   * If configured, the ENV variable `XSS_CANONICALIZE_INPUT_ENABLED` should be removed from configmap or owl-env.sh.
   * When dataset security is turned on, you can now add role based authorization for editing existing datasets. (#87720)
