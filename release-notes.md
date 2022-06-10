@@ -58,7 +58,7 @@
     * If you install a standalone environment, modify the \<install-dir>/config/owl-env.sh file by adding your license name\
       `export DQ_INTEGRATION_PENDO_ACCOUNTID=<your-license-name>`
     * This new integration will not block or impair the functionality of the app in any way.
-    * For more information on Collibra's data sharing policies, please review Collibra's [Data sharing agreements and contracts](https://productresources.collibra.com/docs/collibra/latest/Content/DataPrivacy/DataSharingAgreements/co\_data-sharing-agreements.htm).
+    * For more information on Collibra's subprocessors, please review [Collibra's Subprocessors page](https://www.collibra.com/us/en/collibra-subprocessors).
   * The Agent Group (H/A) and its associated endpoints are now deprecated. (#83086)
   * Fixed an issue where the "Add Data Category" button was missing without required permissions. (#86625)
   * When a session expires on an Admin page, you are now redirected to the login page.&#x20;
