@@ -244,6 +244,7 @@
   * [Time Based Data Retention](admin/configuration/time-based-data-retention.md)
   * [Set up SMTP](admin/configuration/smtp-setup.md)
   * [Advanced](admin/configuration/custom-configurations.md)
+  * [Pendo](admin/configuration/pendo.md)
 * [Audit](admin/audit/README.md)
   * [Dataset Audit Trail](admin/audit/dataset-audit-trail.md)
   * [Security Audit Trail](admin/audit/security-audit-trail.md)
