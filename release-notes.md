@@ -71,7 +71,7 @@
   * CLOB data types are unsupported. (#86902)
   * Improved performance and logic when drilling into a database and schema from the Explorer page.
 * API
-  * You can now access API quick links page from the Admin Console submenu.&#x20;
+  * You can now access API quick links page from the Admin Console React page.&#x20;
   * When using Swagger, UI text now indicates when a field is case sensitive.&#x20;
 * Reporting
   * \*Tech Preview\* \[TP] Rule Summary page enhancements
