@@ -2,6 +2,10 @@
 
 ## 2022.06
 
+{% hint style="danger" %}
+**General Advisory:** There is a critical CVE `CVE-2016-1000027` that shows up in the image scan due to Spring version. This is a false positive and should be added to the exception list of the customer scan tools. We don’t use `HttpInvokerServiceExporter` anywhere in the application and are not impacted by it. There is no fix version available for it from Spring. More details are available at [Sonatype vulnerability CVE-2016-1000027 in Spring-web project · Issue #24434 · spring-projects/spring-fram](https://github.com/spring-projects/spring-framework/issues/24434)
+{% endhint %}
+
 #### Fixes / Enhancements
 
 * DQ Job
@@ -18,6 +22,12 @@
 * Agent
   * The Explorer page and Scheduler modal now display the same agents. (#86175)
 * Security
+  * Vulnerabilities identified by Jfrog
+    * Vulns 0, criticals 0, high severity 8
+    * For a visual readout, see the DQ Security Metrics section below.
+  * General advisory:
+    * There is a critical CVE `CVE-2016-1000027` that shows up in the image scan due to Spring version. This is a false positive and should be added to the exception list of the customer scan tools. We don’t use `HttpInvokerServiceExporter` anywhere in the application and are not impacted by it.&#x20;
+      * There is no fix version available for it from Spring. More details are available at [Sonatype vulnerability CVE-2016-1000027 in Spring-web project · Issue #24434 · spring-projects/spring-fram](https://github.com/spring-projects/spring-framework/issues/24434)
   * Major vulnerabilities related to Spring, ESAPI, and Swagger have been addressed.
   * Sensitive UI fields such as username no longer allow autocomplete.&#x20;
   * If configured, the ENV variable `XSS_CANONICALIZE_INPUT_ENABLED` should be removed from configmap or owl-env.sh.
@@ -86,6 +96,12 @@
   * Spark does not currently support varchar data types. All varchar data types are converted to String. Other unsupported data types may also be converted incorrectly.&#x20;
 * Security
   * Permissions on the Export task have not yet been addressed when dataset security is turned on and you add a role based authorization for editing existing datasets. (#87720)
+
+#### DQ Security Metrics
+
+![Vulns over time](.gitbook/assets/vulns-over-time-2022-06.png)
+
+![Criticals table](.gitbook/assets/critical-table-2022-06.png)
 
 ## 2022.05
 
