@@ -89,9 +89,11 @@
 
 #### Known Limitations
 
-* DQ Job
+* Validate Source
   * When comparing JDBC (target) to remote files such as S3 (source), there is a known Spark bug for "Recursive view detected".&#x20;
     * This validate source combination is not possible in 2022.06 using Spark 3.2.
+  * When using Bigquery as the source, the -libsrc needs to be manually modified to include the core (Spark Bigquery connector) directory.&#x20;
+    * For example, /home/centos/owl/drivers/bigquery**/core**
 * Profile
   * Spark does not currently support varchar data types. All varchar data types are converted to String. Other unsupported data types may also be converted incorrectly.&#x20;
 * Security
