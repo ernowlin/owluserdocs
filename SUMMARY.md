@@ -4,6 +4,8 @@
 * [Getting Started](getting-started.md)
 * [Release Notes](release-notes.md)
 * [Builds](builds.md)
+* [Copy of Builds](copy-of-builds.md)
+* [Copy of Builds](copy-of-builds-1.md)
 * [APIs](apis.md)
 
 ## Installation

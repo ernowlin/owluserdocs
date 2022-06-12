@@ -1,42 +1,24 @@
-# Builds
+# Copy of Builds
 
-Builds follow a naming convention to indicate which [optional](builds.md#optional-drivers) drivers are packaged. &#x20;
+Builds follow a naming convention to indicate which [optional](copy-of-builds.md#optional-drivers) drivers are packaged. &#x20;
 
 {% hint style="info" %}
 **Please note the optional drivers only impact container versions of Collibra Data Quality and does not impact Standalone installation packages.**
 {% endhint %}
 
-### **Available Containers**
+## **Available Containers**
 
-<details>
+****
 
-<summary>2022.06</summary>
+#### 2022.06
 
 #### Collibra Data Quality
 
-* 2022.06-L-819
-* 2022.06-AHM-820
-* 2022.06-H-821
-* 2022.06-HM-822
-* 2022.06-D-823
-* 2022.06-AL-824
-* 2022.06-AD-825
-* 2022.06-ABGCSHMS-826
+*
 
 #### Spark
 
-* 3.2.0-2022.06-L-819
-* 3.2.0-2022.06-AHM-820
-* 3.2.0-2022.06-H-821
-* 3.2.0-2022.06-HM-822
-* 3.2.0-2022.06-D-823
-* 3.2.0-2022.06-AL-824
-* 3.2.0-2022.06-AD-825
-* 3.2.0-2022.06-ABGCSHMS-826
-
-
-
-</details>
+*
 
 <details>
 
