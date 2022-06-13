@@ -22,6 +22,7 @@ Builds follow a naming convention to indicate which [optional](builds.md#optiona
 * 2022.06-AL-824
 * 2022.06-AD-825
 * 2022.06-ABGCSHMS-826
+* 2022.06-M-830
 
 #### Spark
 
@@ -33,6 +34,7 @@ Builds follow a naming convention to indicate which [optional](builds.md#optiona
 * 3.2.0-2022.06-AL-824
 * 3.2.0-2022.06-AD-825
 * 3.2.0-2022.06-ABGCSHMS-826
+* 3.2.0-2022.06-M-830
 
 
 
