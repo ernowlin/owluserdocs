@@ -13,13 +13,13 @@ layout: landing
 
 ![](.gitbook/assets/gcp-install.png)
 
-| Marketplace                     | <p>The Google Marketplace option is a simple, 1-click image installation. This is the quickest option for single server install in GCP.<br><br><em>All software and data resides in your VPC</em>. </p><p></p><p>Install time: <code>5 minutes</code> </p> | Available June 15, 2022 |
-| ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
-| Google Cloud Deployment Manager | <p>Hooks into GCP cloud services like GKE for ephemeral compute and RDS for cloud database.</p><p></p><p><em>All software and data resides in your VPC.</em></p>                                                                                           | Coming soon             |
+| Marketplace                     | <p>The Google Marketplace option is a simple, 1-click image installation. This is the quickest option for single server install in GCP.<br><br><em>All software and data resides in your VPC</em>. </p><p></p><p>Install time: <code>5 minutes</code> </p> | Available July 8, 2022 |
+| ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- |
+| Google Cloud Deployment Manager | <p>Hooks into GCP cloud services like GKE for ephemeral compute and RDS for cloud database.</p><p></p><p><em>All software and data resides in your VPC.</em></p>                                                                                           | Coming soon            |
 
 ![](.gitbook/assets/aw-install.png)
 
-| Marketplace    | <p>The Amazon Marketplace option is a simple, 1-click image installation. This is the quickest option for single server install in AWS Cloud.<br><br><em>All software and data resides in your VPC</em>.</p> | Available June 30, 2022                                                    |
+| Marketplace    | <p>The Amazon Marketplace option is a simple, 1-click image installation. This is the quickest option for single server install in AWS Cloud.<br><br><em>All software and data resides in your VPC</em>.</p> | Available July 8, 2022                                                     |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- |
 | CloudFormation | <p>Hooks into AWS cloud services like EKS for ephemeral compute and RDS for cloud database.<br><br><em>All software and data resides in your VPC</em>.<br><br>Install time: <code>12 minutes</code></p>      | [Click Here](installation/standalone/standalone-install-cloudformation.md) |
 
