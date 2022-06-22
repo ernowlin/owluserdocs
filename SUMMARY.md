@@ -255,7 +255,7 @@
 * [Overview](security/owl-security.md)
 * [Configuration](security/configuration/README.md)
   * [Active Directory LDAP](security/configuration/authentication-with-active-directory-ldap/README.md)
-    * [AD Group to Owl Role Mapping](security/configuration/authentication-with-active-directory-ldap/ad-group-to-owl-role-mapping.md)
+    * [AD Group to Role Mapping](security/configuration/authentication-with-active-directory-ldap/ad-group-to-owl-role-mapping.md)
   * [Connection Security](security/configuration/connection-security.md)
   * [Dataset Security](security/configuration/dataset-security/README.md)
     * [Dataset Masking](security/configuration/dataset-security/dataset-masking.md)
