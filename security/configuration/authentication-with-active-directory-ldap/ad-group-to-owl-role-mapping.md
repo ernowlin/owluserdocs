@@ -24,8 +24,9 @@ LDAP_GROUP_RESULT_NAME_ATTRIBUTE=CN
 
 ![](https://lh5.googleusercontent.com/b6FG3k6y73mbVt9eXl8AG9CORfKRGwvcJhR5pRNtx5F4lkjeWc8ZB6uKSd6M0BpoNmYv6Iw8Aai78XNH4fq3bEe6eITdr5f9DFOy9eBDg5b58KWMf94OZoza8I8cwNPMA3uStoUQ)
 
-Now that we’ve mapped an AD Group to an AD Role we can now log out and try to login as a domain user.  (REMEMBER: you will have to restart the owl-web by running ./owlmanage.sh restart\_owlweb when toggling AD Enabled).
+Now that we’ve mapped an AD Group to an AD Role we can now log out and try to login as a domain user.  (REMEMBER: you have to restart the owl-web by running ./owlmanage.sh restart\_owlweb when toggling AD Enabled).
 
 When logging into the Owl Web application please make sure to append the domain to the end of the user name as depicted below.
 
-![](http://18.204.201.140:8080/xwiki/bin/download/Documentation/Authentication%20and%20Authorization/WebHome/Screen%20Shot%202019-05-22%20at%2011.13.40%20AM.png?width=291\&height=241)
+![](../../../.gitbook/assets/dq-role-mapping-log-in-screen.png)
+
