@@ -19,9 +19,9 @@ layout: landing
 
 ![](.gitbook/assets/aw-install.png)
 
-| Marketplace    | <p>The Amazon Marketplace option is a simple, 1-click image installation. This is the quickest option for single server install in AWS Cloud.<br><br><em>All software and data resides in your VPC</em>.</p> | Available July 8, 2022                                                       |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
-| CloudFormation | <p>Hooks into AWS cloud services like EKS for ephemeral compute and RDS for cloud database.<br><br><em>All software and data resides in your VPC</em>.<br><br>Install time: <code>12 minutes</code></p>      | [Click Here](installation/standalone/standalone-install-aws-cloudformation/) |
+| Marketplace    | <p>The Amazon Marketplace option is a simple, 1-click image installation. This is the quickest option for single server install in AWS Cloud.<br><br><em>All software and data resides in your VPC</em>.</p> | Available July 8, 2022                                                         |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| CloudFormation | <p>Hooks into AWS cloud services like EKS for ephemeral compute and RDS for cloud database.<br><br><em>All software and data resides in your VPC</em>.<br><br>Install time: <code>12 minutes</code></p>      | [Click Here](installation/standalone/standalone-install-aws-cloudformation.md) |
 
 {% hint style="info" %}
 Please see the [Collibra Evaluation Agreement](legal/agreements/collibra-evaluation-agreement.md) for the terms and conditions on Collibra's evaluation offerings.
