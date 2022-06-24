@@ -14,11 +14,11 @@ To get started, you need a Collibra Data Quality account.
 
 ![Collibra Data Quality log in page](<../../.gitbook/assets/Screen Shot 2022-06-23 at 3.18.59 PM.png>)
 
-2\. Enter your **username** and **password** as follows:
+2\. Enter "admin" as your **Username** and your unique instance ID as your **Password**.
 
 {% hint style="success" %}
 Username: admin\
-Password: admin123
+Password: \<your\_instance\_id>
 {% endhint %}
 
 3\. From the home page, click the **Explorer** tab.
