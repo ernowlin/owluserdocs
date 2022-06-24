@@ -21,6 +21,8 @@ Username: admin\
 Password: \<your\_instance\_id>
 {% endhint %}
 
+![Find your instance ID](../../.gitbook/assets/dq-instanceid.png)
+
 3\. From the home page, click the **Explorer** tab.
 
 ![Open the Explorer tab](../../.gitbook/assets/dq-explorer-tab.png)
