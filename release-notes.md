@@ -1,5 +1,26 @@
 # Release Notes
 
+## 2022.07 (In Progress)
+
+#### Fixes / Enhancements
+
+* DQ Job
+  * Fixed an issue which prevented data from appearing in the Source tab when Source Observation RunId was clicked from the Assignments page.&#x20;
+  * Fixed an issue which caused Annotations with special characters to be truncated in the Label tab.&#x20;
+* Rules
+  * SQLF is now supported for Generic rules.
+  * When running a custom rule through Rule Discovery, the column names Repo and Column again display correctly.
+* Profile
+  * From the Labels tab, backslashes are now stripped from annotations when they are used for separation within strings.
+* API
+  * v2/getallscheduledjobs is now available as an enhancement of the original, v2getscheduledjobs.
+    * A UI integration is planned for a future release.&#x20;
+
+#### Known Limitations
+
+* Files
+  * When using CSV files, you cannot have a comma in the name.
+
 ## 2022.06
 
 #### Fixes / Enhancements
