@@ -365,9 +365,10 @@ cat /etc/security/limits.conf
 sudo vi /etc/security/limits.conf
 
 ### Increase the limit for example 
-### Add these 2 lines 
-*               soft    nofile           8192
-*               hard    nofile           10000
+### Add these 3 lines 
+fs.file-max=500000
+*               soft    nofile           58192
+*               hard    nofile           100000
 ```
 
 ### Redirecting Spark Scratch
