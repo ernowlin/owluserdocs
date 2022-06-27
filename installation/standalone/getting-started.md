@@ -18,7 +18,7 @@ To get started, you need a Collibra Data Quality account.
 
 {% hint style="success" %}
 Username: admin\
-Password: \<your\_instance\_id>
+Password: CDQ\<your\_instance\_id>
 {% endhint %}
 
 ![Find your instance ID](../../.gitbook/assets/dq-instanceid.png)
