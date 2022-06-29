@@ -1,4 +1,4 @@
-# Configuring Active Directory (AD)
+# Configuring Active Directory (AD/LDAP)
 
 ## Prerequisites
 
@@ -23,22 +23,22 @@ You have Admin permissions (ROLE ADMIN) assigned to your User Profile.
 
 ###
 
-| Setting             | Description                                                                                                                                                           |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| AD Enabled          | AD is enabled when checked.                                                                                                                                           |
-| LDAP Enabled        | LDAP is enabled when checked. In most cases, LDAP should be unchecked.                                                                                                |
-| Page Size           | The number of results displayed on one page.                                                                                                                          |
-| Host                | The hostname or URL of your LDAP or LDAPS server.                                                                                                                     |
-| Port                | The port to connect to your LDAP or LDAPS server. The default ports are **389** for LDAP and **636** for LDAPS.                                                       |
-| Base Path           | The path in the Root DSE of your directory where domain context is located. This path is what you set up as an LDAP client, expressed in **DC=,DC=** format.          |
-| Group Search Path   | Optional. The path beneath the base path in your directory which is used when validating AD setup for role mapping.                                                   |
-| Domain              | Optional. An AD-only configuration property used to narrow down group search.                                                                                         |
-| User Search Base    | Optional. The base DN of where the LDAP users for Collibra Data Quality are located. Used to narrow down your path for LDAP.                                          |
-| User Search Filter  | Optional. Used to filter for users located under a path.                                                                                                              |
-| Group Search Base   | Optional. The base DN of where all the groups are located. Only used for LDAP configurations.                                                                         |
-| Group Search Filter | Optional. The LDAP filter to which each group has to comply to be synchronized. Used to filter for groups located under a base DN. Only used for LDAP configurations. |
-| Bind User           | The DN of an admin user that is used for authentication, for example _admin@collibra.com_.                                                                            |
-| Bind Password       | The password of an admin user.                                                                                                                                        |
+| Setting             | Description                                                                                                                                                  |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| AD Enabled          | AD is enabled when checked.                                                                                                                                  |
+| LDAP Enabled        | LDAP is enabled when checked. In most cases, LDAP should be unchecked.                                                                                       |
+| Page Size           | The number of results displayed on one page.                                                                                                                 |
+| Host                | The hostname or URL of your LDAP or LDAPS server.                                                                                                            |
+| Port                | The port to connect to your LDAP or LDAPS server. The default ports are **389** for LDAP and **636** for LDAPS.                                              |
+| Base Path           | The path in the Root DSE of your directory where domain context is located. This path is what you set up as an LDAP client, expressed in **DC=,DC=** format. |
+| Group Search Path   | Optional. The path beneath the base path in your directory which is used when validating AD setup for role mapping.                                          |
+| Domain              | Optional. The domain name used to signify when non-local users log in. Only used for AD configurations.                                                      |
+| User Search Base    | Optional. The base DN of where the LDAP users for Collibra Data Quality are located. This is the lowest level container (OU) of user objects.                |
+| User Search Filter  | Optional. The LDAP filter used to narrow down user objects located under a path.                                                                             |
+| Group Search Base   | Optional. The base DN where all the groups are located. Only used for LDAP configurations.                                                                   |
+| Group Search Filter | Optional. The LDAP filter used to narrow down group objects located under a base DN. Only used for LDAP configurations.                                      |
+| Bind User           | The DN of an admin user that is used for authentication, for example _admin@collibra.com_.                                                                   |
+| Bind Password       | The password of an admin user.                                                                                                                               |
 
 ![Active Directory successfully configured](../../../.gitbook/assets/dq-active-directory-security-settings-success-message.png)
 
