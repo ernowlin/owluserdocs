@@ -9,9 +9,9 @@
 ## Installation
 
 * [Standalone](installation/standalone/README.md)
-  * [Getting Started](installation/standalone/getting-started.md)
   * [Standalone Install](installation/standalone/full-install.md)
   * [Standalone Install (Script)](installation/standalone/standalone-install-script.md)
+  * [Getting Started with AWS](installation/standalone/getting-started.md)
   * [Standalone Install (AWS CloudFormation)](installation/standalone/standalone-install-aws-cloudformation.md)
   * [Standalone Upgrade](installation/standalone/standalone-upgrade.md)
   * [Standalone Sizing](installation/standalone/standalone-sizing.md)
