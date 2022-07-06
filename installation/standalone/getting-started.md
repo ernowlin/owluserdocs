@@ -40,7 +40,7 @@ Password: CDQ\<your\_instance\_id>
 
 ## Additional resources
 
-* Visit the [Explorer page](../../dq-visuals/more/explorer-2.md) for more information on quickly connecting to your data sets.
-* Check out [Collibra Data Quality's Youtube channel](https://www.youtube.com/playlist?list=PLD2xg51w57tPl6q9NKwz90iuznQJamaB3) for more tutorials.&#x20;
+* See the [Explorer page](../../dq-visuals/more/explorer-2.md) for more information on quickly connecting to your data sets.
+* Watch [Collibra Data Quality's Youtube channel](https://www.youtube.com/playlist?list=PLD2xg51w57tPl6q9NKwz90iuznQJamaB3) for more tutorials.&#x20;
 * Register for [Collibra Data Quality's Product Showcase](https://citizens.collibra.com/agenda/session/508634) to learn more about Collibra Data Quality.
 
