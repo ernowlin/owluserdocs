@@ -9,7 +9,7 @@
   * Fixed an issue which caused Annotations with special characters to be truncated in the Label tab.
   * Fixed an issue which caused the Column (name) column of the Rules tab to display incorrectly when Run Discovery was used.
   * Fixed an issue where the Retrain button on the Record tab was disabled.
-  * You can again invalidate observations with single quotes ' from the Shapes tab.&#x20;
+  * You can again invalidate observations with single quotes `'` from the Shapes tab.&#x20;
   * The Hints tab now displays any available data (if applicable).
   * You can no longer change agents from the Scheduler modal.
 * Rules
@@ -51,6 +51,7 @@
 
 * Files
   * When using CSV files, you cannot have a comma in the name.
+*
 
 #### DQ Security Metrics
 
