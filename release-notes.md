@@ -1,25 +1,62 @@
 # Release Notes
 
-## 2022.07 (In Progress)
+## 2022.07
 
 #### Fixes / Enhancements
 
 * DQ Job
-  * Fixed an issue which prevented data from appearing in the Source tab when Source Observation RunId was clicked from the Assignments page.&#x20;
-  * Fixed an issue which caused Annotations with special characters to be truncated in the Label tab.&#x20;
+  * Fixed an issue which prevented data from appearing in the Source tab when Source Observation RunID was clicked from the Assignments page.
+  * Fixed an issue which caused Annotations with special characters to be truncated in the Label tab.
+  * Fixed an issue which caused the Column (name) column of the Rules tab to display incorrectly when Run Discovery was used.
+  * Fixed an issue where the Retrain button on the Record tab was disabled.
+  * You can again invalidate observations with single quotes ' from the Shapes tab.&#x20;
+  * The Hints tab now displays any available data (if applicable).
+  * You can no longer change agents from the Scheduler modal.
 * Rules
   * SQLF is now supported for Generic rules.
   * When running a custom rule through Rule Discovery, the column names Repo and Column again display correctly.
+* Alerts
+  * You can now send emails using unauthenticated SMTP servers.
+* Security
+  * Vulnerabilities identified by Jfrog
+    * Vulns 0, criticals 0, high severity 7
+    * For a visual readout, see the DQ Security Metrics section below.
+  * Fixed an issue which allowed jobs to be run from the command line regardless of connection permissions.&#x20;
+    * When Connection Security is enabled, lock the SQL Editor to prevent unauthorized access to other connections. (#87916)
+  * Fixed an issue which allowed View Only users to access some profile results and export the data to a CSV file.&#x20;
+    * Added an authorization check for data set access to the profile export feature, which allows only users with data set access to export the profile. (#87720)
+  * Backslashes `\` are no longer supported characters for AD usernames without disabling XSS for the updateadsecurityconfiguration API. (#88499)&#x20;
+  * Fixed an issue which prevented navigation back to the log in page when tenant access was denied. (#89024)
 * Profile
   * From the Labels tab, backslashes are now stripped from annotations when they are used for separation within strings.
+* Admin
+  * From Audit Trail, when administrators modify roles mapped to data sets or data sets mapped to roles, changes are now documented automatically, and display original and updated values.
+  * The Agent Group (H/A) and its associated endpoints are now deprecated.
+  * From Usage, you can now access a table and tiles reflective of your monthly usage metrics.
+* Explorer
+  * Fixed an issue with date range on Oracle connections, which caused end date to change to start date when Transform was selected.
+  * The Job Estimate modal again displays the correct number of rows for Sybase connections.
+* Scorecard
+  * Enhanced the layout of the Assignment Queues page.
 * API
   * v2/getallscheduledjobs is now available as an enhancement of the original, v2getscheduledjobs.
-    * A UI integration is planned for a future release.&#x20;
+    * A UI integration is planned for a future release.
+* Schedule
+  * Added an Active column to the scheduler export.&#x20;
+    * The RunJob column was removed. (#88799)
+* Reporting
+  * Fixed an issue which created misalignment of column headers in PDF exports. (#89739)
 
 #### Known Limitations
 
 * Files
   * When using CSV files, you cannot have a comma in the name.
+
+#### DQ Security Metrics
+
+![Vulns over time](.gitbook/assets/vulns-over-time-2022-07.png)
+
+![Criticals table](.gitbook/assets/critical-table-2022-07.png)
 
 ## 2022.06
 
@@ -44,14 +81,14 @@
     * Vulns 0, criticals 0, high severity 8
     * For a visual readout, see the DQ Security Metrics section below.
   * General advisory:
-    * There is a critical CVE `CVE-2016-1000027` that shows up in the image scan due to Spring version. This is a false positive and should be added to the exception list of the customer scan tools. We don’t use `HttpInvokerServiceExporter` anywhere in the application and are not impacted by it.&#x20;
+    * There is a critical CVE `CVE-2016-1000027` that shows up in the image scan due to Spring version. This is a false positive and should be added to the exception list of the customer scan tools. We don’t use `HttpInvokerServiceExporter` anywhere in the application and are not impacted by it.
       * [There is no fix version available for it from Spring. More details are available at Sonatype vulnerability CVE-2016-1000027 in Spring-web project · Issue #24434 · spring-projects/spring-framework](https://github.com/spring-projects/spring-framework/issues/24434)
   * Major vulnerabilities related to Spring, ESAPI, and Swagger have been addressed.
   * No cross DB reference is allowed in explorer while accessing SQL database connections.
-  * Sensitive UI fields such as username no longer allow autocomplete.&#x20;
+  * Sensitive UI fields such as username no longer allow autocomplete.
   * If configured, the ENV variable `XSS_CANONICALIZE_INPUT_ENABLED` should be removed from configmap or owl-env.sh.
   * When dataset security is turned on, you can now add role based authorization for editing existing datasets. (#87720)
-  * You can now override the following mail settings from the App Config page within the Configuration section of the Admin Console:&#x20;
+  * You can now override the following mail settings from the App Config page within the Configuration section of the Admin Console:
     * "mail.transport.protocol" -- default = smtp
     * "mail.smtp.auth" -- default = true: If true, attempt to authenticate the user using the AUTH command
     * "mail.smtp.auth.login.disable" -- default = false: If true, prevents use of the AUTH LOGIN command
@@ -61,7 +98,7 @@
     * "mail.debug" -- default = true
     * "mail.smtp.ssl.trust" -- default = : If set, and a socket factory hasn't been specified, enables use of a MailSSLSocketFactory. If set to "\*", all hosts are trusted. If set to a whitespace separated list of hosts, those hosts are trusted. Otherwise, trust depends on the certificate the server presents. (#76775, 88089)
 * Profile
-  * Mean value is now rounded appropriately within the Profile page.&#x20;
+  * Mean value is now rounded appropriately within the Profile page.
     * For example: The value 2.4334334343345 is now rounded to 2.434.
 * Connections
   * From the Athena driver, you can now use `MetadataRetrievalMethod=Query` for database queries from the Connection URL. (#86139)
@@ -74,7 +111,7 @@
   * The Graph option is no longer available in Quick links.
 * Admin
   * The Pendo integration is now active by default.
-    * No sensitive information is collected; only high-level usage stats are collected.&#x20;
+    * No sensitive information is collected; only high-level usage stats are collected.
     * All new customers starting with 2022.06 onward will receive a new license.
     * If you install a standalone environment, modify the \<install-dir>/config/owl-env.sh file by adding your license name\
       `export DQ_INTEGRATION_PENDO_ACCOUNTID=<your-license-name>`
@@ -82,8 +119,8 @@
     * For more information on Collibra's subprocessors, please review [Collibra's Subprocessors page](https://www.collibra.com/us/en/collibra-subprocessors).
   * The Agent Group (H/A) and its associated endpoints are now deprecated. (#83086)
   * Fixed an issue where the "Add Data Category" button was missing without required permissions. (#86625)
-  * When a session expires on an Admin page, you are now redirected to the login page.&#x20;
-  * The Admin Limits page now displays informational text indicating that only limits of Tenant - Admin type are displayed on the page.&#x20;
+  * When a session expires on an Admin page, you are now redirected to the login page.
+  * The Admin Limits page now displays informational text indicating that only limits of Tenant - Admin type are displayed on the page.
   * Fixed an issue when editing an existing data category which caused the 'Add new' modal to open instead of the 'Edit' modal. (#89617)
   * From Configuration Settings, DB Limits is now called Data Retention Policy.
 * Explorer
@@ -97,8 +134,8 @@
   * CLOB data types are unsupported. (#86902)
   * Improved performance and logic when drilling into a database and schema from the Explorer page.
 * API
-  * You can now access API quick links page from the Admin Console React page.&#x20;
-  * When using Swagger, UI text now indicates when a field is case sensitive.&#x20;
+  * You can now access API quick links page from the Admin Console React page.
+  * When using Swagger, UI text now indicates when a field is case sensitive.
 * Reporting
   * \*Tech Preview\* \[TP] Rule Summary page enhancements
     * You can now filter rule breaks by most frequent violations, most severe violations, and least violations.
@@ -111,19 +148,19 @@
 #### Known Limitations
 
 * Validate Source
-  * When comparing JDBC (target) to remote files such as S3 (source), there is a known Spark bug for "Recursive view detected".&#x20;
+  * When comparing JDBC (target) to remote files such as S3 (source), there is a known Spark bug for "Recursive view detected".
     * This validate source combination is not possible in 2022.06 using Spark 3.2.
-  * When using Bigquery as the source, the -libsrc needs to be manually modified to include the core (Spark Bigquery connector) directory.&#x20;
-    * For example, /home/centos/owl/drivers/bigquery**/core**
+  * When using Bigquery as the source, the -libsrc needs to be manually modified to include the core (Spark Bigquery connector) directory.
+    * For example, /home/centos/owl/drivers/bigquery\*\*/core\*\*
 * Profile
-  * Spark does not currently support varchar data types. All varchar data types are converted to String. Other unsupported data types may also be converted incorrectly.&#x20;
+  * Spark does not currently support varchar data types. All varchar data types are converted to String. Other unsupported data types may also be converted incorrectly.
 * Security
   * Permissions on the Export task have not yet been addressed when dataset security is turned on and you add a role based authorization for editing existing datasets. (#87720)
 
 #### DQ Security Metrics
 
 {% hint style="warning" %}
-There is a critical CVE `CVE-2016-1000027` that shows up in the image scan due to Spring version. This is a false positive and should be added to the exception list of the customer scan tools. We don’t use `HttpInvokerServiceExporter` anywhere in the application and are not impacted by it.&#x20;
+There is a critical CVE `CVE-2016-1000027` that shows up in the image scan due to Spring version. This is a false positive and should be added to the exception list of the customer scan tools. We don’t use `HttpInvokerServiceExporter` anywhere in the application and are not impacted by it.
 
 * There is no fix version available for it from Spring. More details are available at [Sonatype vulnerability CVE-2016-1000027 in Spring-web project · Issue #24434 · spring-projects/spring-framework](https://github.com/spring-projects/spring-framework/issues/24434)
 {% endhint %}
@@ -137,8 +174,8 @@ There is a critical CVE `CVE-2016-1000027` that shows up in the image scan due t
 #### Fixes / Enhancements
 
 * DQ Job
-  * You can no longer update the dataset name (`-ds`) from the command line.&#x20;
-    * A helpful error message now appears if changes are made to `-ds`.&#x20;
+  * You can no longer update the dataset name (`-ds`) from the command line.
+    * A helpful error message now appears if changes are made to `-ds`.
   * Stop Job action is no longer enabled for K8s.
   * Fixed an issue for Dremio jobs where jobs hang when editing or cloning an existing dataset.
 * Outliers
@@ -167,13 +204,13 @@ There is a critical CVE `CVE-2016-1000027` that shows up in the image scan due t
     * OS tools, including tar, gzip, and vi
   * AD users can again use auth/signin REST API.
   * The Highcharts CVSS2: 9.3/CVSS3: 9.8 vulnerability is resolved.
-  * The LOGJAM (CVE-2015-400) SSL/TLS vulnerability is resolved.&#x20;
+  * The LOGJAM (CVE-2015-400) SSL/TLS vulnerability is resolved.
   * The SpringShell (CVE-2022-22965) vulnerability is resolved.
   * TLS < 1.2 is no longer supported.
-  * When Azure AD SSO sends a groups.link assertion, the application now tries to resolve the groups via the link.&#x20;
+  * When Azure AD SSO sends a groups.link assertion, the application now tries to resolve the groups via the link.
     * You can now activate this setting by using the property, SAML\_GROUP\_LINK\_PROP.
 * Profile
-  * You can now edit or delete semantics by clicking anywhere in the semantics cell of the Profile column table.&#x20;
+  * You can now edit or delete semantics by clicking anywhere in the semantics cell of the Profile column table.
   * You can now save annotations with special characters.
     * Special characters that are not currently supported include percent sign `%`, backslash `\`, and caret `^`.
   * Fixed an issue where columns of broken rules were not highlighted.
@@ -184,17 +221,17 @@ There is a critical CVE `CVE-2016-1000027` that shows up in the image scan due t
 * Catalog
   * Fixed an issue where the deletion of a dataset caused orphaned links to datasets in other areas of Collibra DQ.
 * Admin
-  * \*Tech Preview\* \[TP] You can now use the ServiceNow integration through a proxy server from the Assignment Queues screen.&#x20;
+  * \*Tech Preview\* \[TP] You can now use the ServiceNow integration through a proxy server from the Assignment Queues screen.
   * You can now access the new Usage page to view monthly historical usage statistics.
   * AD users with Admin privileges can now add Business Units.
   * AD users with Admin privileges can now manage local users.
-  * The Agent Groups (H/A) feature is marked for deprecation and will be removed from the app in the 2022.06 release.&#x20;
+  * The Agent Groups (H/A) feature is marked for deprecation and will be removed from the app in the 2022.06 release.
 * Explorer
   * You can again edit schema and table name from the Catalog page.
   * You can now navigate to a specific behavior tab directly from the Assignments page.
   * Fixed an issue when viewing Schemas in View Data wizard.
 * Scorecard
-  * Single-space `` , underscore `_`, and period `.` are now supported characters when saving Scorecard name.
+  * Single-space \`\` , underscore `_`, and period `.` are now supported characters when saving Scorecard name.
 * API
   * Improved API calls for the UserManagement Save function.
 * Reporting
@@ -210,7 +247,7 @@ A bug was introduced as a result of removing CVEs in 2022.05. If you use Delta f
 {% endhint %}
 
 * Explorer
-  * Except for underscore `_`, special characters are not currently supported in schema or table names.&#x20;
+  * Except for underscore `_`, special characters are not currently supported in schema or table names.
 * Admin
   * \*Tech Preview\* \[TP] ServiceNow integration
     * Only the local Docker container proxy has been tested and verified.
@@ -240,9 +277,7 @@ A bug was introduced as a result of removing CVEs in 2022.05. If you use Delta f
 #### Install
 
 {% hint style="success" %}
-For standalone installations, within the setup.sh script find/replace the variable for **spark\_package**.&#x20;
-
-
+For standalone installations, within the setup.sh script find/replace the variable for **spark\_package**.
 
 Change spark-3.0.1-bin-hadoop3.2.tgz to spark-3.1.2-bin-hadoop3.2.tgz
 {% endhint %}
@@ -259,111 +294,111 @@ spark_package=${SPARK_PACKAGE:-"spark-3.1.2-bin-hadoop3.2.tgz"}
 
 * DQ Job
   * Entering negative values for the downscore is no longer supported and will now produce an error message.
-  * You can now invalidate schema with special characters.&#x20;
+  * You can now invalidate schema with special characters.
   * Spark table names of historical dataset loaded and other spark tables are now available on Jobs Log table.
-  * Long type values larger than `Integer.Max` no longer breaks the Profile.&#x20;
+  * Long type values larger than `Integer.Max` no longer breaks the Profile.
   * View Findings now displays user's full name, if applicable, in Validate Modal. Assignment queue page also displays the full name of user, if applicable.
 * Alerts
   * You can once again use the Cancel action button on the Alerts page.
-  * You can now set up alerts to reach multiple email recipients.&#x20;
-  * If email\_server table is not yet configured, a helpful message will now display in the Description column in the job log directing you to register an email Server under Admin - Alerts. The job will still run successfully.&#x20;
+  * You can now set up alerts to reach multiple email recipients.
+  * If email\_server table is not yet configured, a helpful message will now display in the Description column in the job log directing you to register an email Server under Admin - Alerts. The job will still run successfully.
 * Rules
   * You can now modify Rules definitions from the primary DQ Job dashboard without loading the Rules page.
-  * Mean value check once again triggers correctly for Integer and Long columns.&#x20;
-    * This fix triggers the mean value check for Integer and Long columns and shows an infinity percentage change in behavior for a period, depending on -bhlb. After this period, it should disappear.&#x20;
-  * For Native SQL rules, jobs now behave the same whether or not a semicolon ";" is included in the SQL query.&#x20;
-  * You can now use a hyphen "-" in a dataset name.&#x20;
+  * Mean value check once again triggers correctly for Integer and Long columns.
+    * This fix triggers the mean value check for Integer and Long columns and shows an infinity percentage change in behavior for a period, depending on -bhlb. After this period, it should disappear.
+  * For Native SQL rules, jobs now behave the same whether or not a semicolon ";" is included in the SQL query.
+  * You can now use a hyphen "-" in a dataset name.
     * Acceptable special characters now include a hyphen "-", period ".", and underscore "\_".
   * Added a tooltip that displays which condition is being checked in a DQ Job when using a Stat rule when you hover your cursor over a condition in the Condition column.
   * Improved the exception message for when there are no values for a specific column while using a Stat rule.
   * The WebUI passing boundaries range has been updated to ().
-  * For Freeform rules, IS Null and IS NOT NULL no longer return invalid results in the Validation tab.&#x20;
-  * Added a pop-up success message for when the correct syntax rule passes for Freeform rules with secondary datasets after the Validate button is clicked.&#x20;
+  * For Freeform rules, IS Null and IS NOT NULL no longer return invalid results in the Validation tab.
+  * Added a pop-up success message for when the correct syntax rule passes for Freeform rules with secondary datasets after the Validate button is clicked.
 * Security
   * Vulnerabilities identified by Jfrog
     * Vulns 2, criticals 2, high vulnerabilities
     * For a visual readout, see the DQ Security Metrics section below.
-  * Authorization restriction is now enforced for the following endpoints:&#x20;
-    * /v2/deletefiledir&#x20;
-    * /v2/getRunIdsByDataset&#x20;
-    * /v2/putDatasetWeight&#x20;
-    * /v2/checkListofFilesPath&#x20;
-    * /v2/getlistagents&#x20;
-    * /v2/checkDriver&#x20;
-    * /v2/getconnectionssensitive&#x20;
-    * /v2/getemailgroups&#x20;
-    * /v2/getemailserver&#x20;
-    * /v2/addemailgroup&#x20;
-    * /v2/validateEmailAddress&#x20;
-    * /v2/getlistoffiles&#x20;
-    * /v2/getlistoffilespath&#x20;
-    * /v2/getlistoffiles&#x20;
-    * /v2/getDriverDir&#x20;
-    * /v2/getlistrolesbydataset&#x20;
-    * /v2/getlistrolesbydistnctdatasets&#x20;
-    * /v2/getlistrolesbyfunctiontypename&#x20;
-    * /v2/getlistusersbyauthority&#x20;
-    * /v2/getlocalDBRoles&#x20;
-    * /v2/getsecuritysettingsbytype&#x20;
-    * /v2/getowlcheckinventory&#x20;
-    * /v2/getconnectionspwdmgrsensitive&#x20;
-    * /v2/getsecuritysettingsbycoltype&#x20;
-    * /v2/getdbuserlist&#x20;
-    * /v2/getdbuserdetailsbyuser&#x20;
-    * /v2/getexternaladgroupstointernalroles&#x20;
-    * /v2/getlistdatasets&#x20;
-    * /v2/getlistdatasetsbyrole&#x20;
-    * /v2/getaudittrailitems&#x20;
-    * /v2/get-all-audit&#x20;
-    * /v2/get-datasets-audit-trail-items&#x20;
-    * /v2/get-all-dataset-audit&#x20;
-    * /v2/getactivityaudit&#x20;
-    * /v2/getallactivityaudit&#x20;
-    * /v2/getlocaldbrolesbyuser&#x20;
-    * /v2/getdatasetaclsecurity&#x20;
-    * /v2/getexternaladgrouplist&#x20;
-    * /v2/getexternaladuserlist&#x20;
+  * Authorization restriction is now enforced for the following endpoints:
+    * /v2/deletefiledir
+    * /v2/getRunIdsByDataset
+    * /v2/putDatasetWeight
+    * /v2/checkListofFilesPath
+    * /v2/getlistagents
+    * /v2/checkDriver
+    * /v2/getconnectionssensitive
+    * /v2/getemailgroups
+    * /v2/getemailserver
+    * /v2/addemailgroup
+    * /v2/validateEmailAddress
+    * /v2/getlistoffiles
+    * /v2/getlistoffilespath
+    * /v2/getlistoffiles
+    * /v2/getDriverDir
+    * /v2/getlistrolesbydataset
+    * /v2/getlistrolesbydistnctdatasets
+    * /v2/getlistrolesbyfunctiontypename
+    * /v2/getlistusersbyauthority
+    * /v2/getlocalDBRoles
+    * /v2/getsecuritysettingsbytype
+    * /v2/getowlcheckinventory
+    * /v2/getconnectionspwdmgrsensitive
+    * /v2/getsecuritysettingsbycoltype
+    * /v2/getdbuserlist
+    * /v2/getdbuserdetailsbyuser
+    * /v2/getexternaladgroupstointernalroles
+    * /v2/getlistdatasets
+    * /v2/getlistdatasetsbyrole
+    * /v2/getaudittrailitems
+    * /v2/get-all-audit
+    * /v2/get-datasets-audit-trail-items
+    * /v2/get-all-dataset-audit
+    * /v2/getactivityaudit
+    * /v2/getallactivityaudit
+    * /v2/getlocaldbrolesbyuser
+    * /v2/getdatasetaclsecurity
+    * /v2/getexternaladgrouplist
+    * /v2/getexternaladuserlist
     * /v2//external-service-configuration
   * Local user accounts now have an account lockout feature implemented with the following restrictions:
     * A user's account will be locked if a password is entered incorrectly more than 10 times (configurable via app config).
     * The locked account can only be unlocked by Admin user in user management screen.
     * If an Admin is locked, another Admin can unlock their account.
     * If all the Admins are locked, enable the account via DB (ubdate users table "accountNonLocked" colun to "1").
-    * User cannot use forgot password  to reset password while the account is locked.&#x20;
-  * CORS restriction is now enforced for SAML and multi-tenancy.&#x20;
+    * User cannot use forgot password to reset password while the account is locked.
+  * CORS restriction is now enforced for SAML and multi-tenancy.
     * This breaks SAML unless the IDP is configured as a trusted origin in DQ, so the following property must be added to environment variables in order for DQ and SAML to work: CORS\_ALLOWED\_ORIGINS=${IDP-BASE-URL},${DQ-BASE-URL}
       * Replace ${IDP-BASE-URL} with the value of the actual IDP URL (For example: https://ping.auth.com)
       * Replace ${DQ-BASE-URL} with the value of the actual DQ Base URL (For example: https://dq-env.com)
   * SAML login no longer automatically triggers on the login page during an existing session when accessing DQ base URL. For SAML login, you should instead use /saml/login.
     * API requests (v2/v3) return proper JSON response in case of failures.
-    * auth/signin API is updated to provide JWT token for MT & local users.&#x20;
+    * auth/signin API is updated to provide JWT token for MT & local users.
 * Profile
-  * Mean value once again displays in the Volume column.&#x20;
+  * Mean value once again displays in the Volume column.
   * When connecting to MSSQL server on Windows from a Linux DQ environment, the connection no longer fails.
     * We recommend (not required) a TLS connection for MSSQL connections from a DQ Linux environment with a properly signed certificate setup on MSSQL server to connect only via TLS.
-  * You can now edit annotations in the Labels tab.&#x20;
+  * You can now edit annotations in the Labels tab.
 * S3
   * Added an enhancement for -addlib flag.
 * Connections
   * Added new Jconn4 driver for encrypted connections.
-  * Tech Preview - You can now save a local (NFS) file directory as a connection type.&#x20;
-  * See our newest [connections ](https://dq-docs.collibra.com/connecting-to-dbs-in-owl-web/supported-drivers)page for a definitive guide to driver support.&#x20;
+  * Tech Preview - You can now save a local (NFS) file directory as a connection type.
+  * See our newest [connections ](https://dq-docs.collibra.com/connecting-to-dbs-in-owl-web/supported-drivers)page for a definitive guide to driver support.
   * BigQuery is now certified for production, but removed from packaged install for K8s docker.
 * Explorer
   * When toggling between fullfile and Union LookBack options, `-fullfile` and `-fllb` flags can no longer be generated together in the DQ Job command line.
-  * Data Preview for Temp files loading in Explorer now correctly shows the order of columns of the original Temp file.&#x20;
-  * You can now drill in and search files within the connection.&#x20;
-  * You can now browse multiple local (NFS) file connections.&#x20;
+  * Data Preview for Temp files loading in Explorer now correctly shows the order of columns of the original Temp file.
+  * You can now drill in and search files within the connection.
+  * You can now browse multiple local (NFS) file connections.
 * Scorecard
-  * You can now create scorecards with special characters "^\[A-Za-z0-9]+$" in their names.&#x20;
+  * You can now create scorecards with special characters "^\[A-Za-z0-9]+$" in their names.
 * Dupes
   * Added linkID column for exact match in both UI and REST API. linkID can now be either included or excluded from Dupes for exact match.
   * linkID is now shown at the aggregate level for Exact Match.
-    * We recommend using this feature from a primary key perspective for its first iteration.&#x20;
-    * The aggregate function used is min().&#x20;
+    * We recommend using this feature from a primary key perspective for its first iteration.
+    * The aggregate function used is min().
       * For example: if you have 6 occurrences, you will get 1 example linkID, the min.
 * API
-  * Updated the /v2/getlistdataschemapreviewdbtablebycols API call method from GET to POST to support the long query (-q) or very large columns table.&#x20;
+  * Updated the /v2/getlistdataschemapreviewdbtablebycols API call method from GET to POST to support the long query (-q) or very large columns table.
   * Added a new SAML load balancer so the syestem picks the appropriate schema and SAML server URL for Swagger.
 
 #### Known Limitations
@@ -371,7 +406,7 @@ spark_package=${SPARK_PACKAGE:-"spark-3.1.2-bin-hadoop3.2.tgz"}
 * Profile
   * Special characters are not currently supported in annotations in the Label tab.
 * Scorecard
-  * Space " ", underscore "\_", and period "." are not yet supported for scorecard edit.&#x20;
+  * Space " ", underscore "\_", and period "." are not yet supported for scorecard edit.
 
 #### DQ Security Metrics
 
@@ -379,7 +414,7 @@ spark_package=${SPARK_PACKAGE:-"spark-3.1.2-bin-hadoop3.2.tgz"}
 
 ![Criticals table](<.gitbook/assets/critical-table-2022-04 (1).png>)
 
-## 2022.03&#x20;
+## 2022.03
 
 #### Fixes / Enhancements
 
@@ -469,18 +504,18 @@ Added UUIDs for Jobs may take additional time on initial startup after upgrade
   * Fixed issue where 'Reply Email' field did not properly accept user input value
     * Please note there are no (Collibra imposed) domain restrictions on Reply Email field
 * Security
-  * Stricter password policy is enforced on all user/tenant management screens/APIs.&#x20;
-    * The restriction is as follows: Minimum length of 8 characters&#x20;
-    * Maximum length of 20 characters.&#x20;
-    * At least one upper-case letter.&#x20;
-    * At least one numeric character.&#x20;
-    * At least one special character (supported are !,%,&,@,#,$,^,\*,?,\_,\~)&#x20;
-    * User ID and password cannot be the same.&#x20;
+  * Stricter password policy is enforced on all user/tenant management screens/APIs.
+    * The restriction is as follows: Minimum length of 8 characters
+    * Maximum length of 20 characters.
+    * At least one upper-case letter.
+    * At least one numeric character.
+    * At least one special character (supported are !,%,&,@,#,$,^,\*,?,\_,\~)
+    * User ID and password cannot be the same.
     * Password cannot contain user ID.
   * Change Password functionality on user profile requires a current password of the user.
   * Mitigated 64 critical, 15 high, and 12 medium vulnerabilities identified by JFrog ([internal-only report link](https://docs.google.com/spreadsheets/d/1yDfqfBO3T3uyw9z\_-zr2SESinTuRWmP\_TgYf\_tlHlk8/edit#gid=0))
   * Upgrade Log4J to 2.17.1
-    * Please follow [upgrade steps](release-notes.md#note-to-standalone-collibra-dq-customer-upgrades-we-have-upgraded-to-log4j-2.17-please-refer-to-for)&#x20;
+    * Please follow [upgrade steps](release-notes.md#note-to-standalone-collibra-dq-customer-upgrades-we-have-upgraded-to-log4j-2.17-please-refer-to-for)
   * Added connection security checks to users to prevent running jobs and query the tables that are not authorized per connection. This is applicable when `DB Connection Security` is enabled in the Admin Console under `General`.
   * Implemented stricter session management
   * Implemented CORS restriction to mitigate potential CSRF vulnerability
@@ -505,7 +540,7 @@ Added UUIDs for Jobs may take additional time on initial startup after upgrade
   * Rule name character limit of 100
   * Rule Builder page now returns error messages where the dataset contained 0 records
 * Catalog
-  * Renaming Dataset from Catalog page keeps associated rules&#x20;
+  * Renaming Dataset from Catalog page keeps associated rules
     * Clone only creates the dataset shell (with DQ job run configs, no additional rules, etc.) will be copied
   * Bulk actions support for Data Concepts
   * Fixed issue where child of business unit could be assigned as parent
@@ -532,7 +567,7 @@ Added UUIDs for Jobs may take additional time on initial startup after upgrade
 * Files
   * File names with spaces are now handled with double quotes t
   * Implemented Supported File Type Check at time of uploading the Temp Files via Explorer
-    * Default supported file types are “csv,json,parquet,avro,delta".&#x20;
+    * Default supported file types are “csv,json,parquet,avro,delta".
     * In order to add/update the supported file types and ensure validation, a new environment variable needs to be added in owl-env.sh as below: `export ALLOWED_UPLOAD_FILE_TYPES="csv,json,parquet,avro,delta"`
     * Tip: For remote files with delimiter, please use the csv dropdown options for files with .txt extension
   * \*Tech Preview\* \[TP] Users have ability to assign an agent when using temp file and local file Explorer paths without manually appending -master to agent or job (previous known limitation)
@@ -596,13 +631,13 @@ ALTER TABLE opt_owl ADD COLUMN IF NOT EXISTS job_uuid UUID
 * Rules
   * When creating rules, run-time limit for each rule (in minutes) can be set on the Rule page UI and on the V3 API (by setting `runTimeLimit` property). The default is 30 minutes if not explicitly set. This 30 minute limit sets the overall timeout limit for all rules in a particular job. For example, if there are 10 rules with 9 rules with 30 min limit and 1 rule as 90 min limit, then the DQ Job will wait up to 90 min for all 10 rules to finish. This is because all rules must finish before the Rule stage in DQ Job to finish and move to the next stage. We do not support async stages where one long running rule is running while the job itself moves on to the next stage.
   * Added ability to specify score of 0 to a rule
-  * Improvement to Stat Rules to fail without exception when result is not within range&#x20;
+  * Improvement to Stat Rules to fail without exception when result is not within range
 * Profile
   * Fixed ability to remove a business unit from a dataset
   * Fixed issue where data concepts were not correctly displaying on a dataset's Profile page
   * Fixed sensitive labels not being assigned from Discovery
   * Treat certain doubles, floats, decimal types as Decimal format that preserves length and prevents Java from truncating to E11 format
-  * Removed commas when displaying date columns &#x20;
+  * Removed commas when displaying date columns
 * Security
   * SAML Login fix for IDPs that use POST binding as default
 * S3
@@ -731,7 +766,7 @@ viewsEnabled=true
 #### Patches
 
 * 2021.11.1 Explorer
-  * Allow ampersand in metastore host name for additional parameters&#x20;
+  * Allow ampersand in metastore host name for additional parameters
   * In below example, support for ampersand needed for required SSL flags
 
 ```
@@ -748,14 +783,14 @@ metastore01.us-east1-b.c.customer-dq-prod.internal:5432/dev?sslmode=required&cur
 * Behavior
   * Schema is not eligible for invalidate
 * Files
-  * Local files using UPLOAD\_PATH, UPLOAD\_FILE\_PATH, and temp files are only eligible to be deployed using the default NO\_AGENT option. These are only intended for quick tests and not intended for production-scale use. Best practice is to use a remote file system connection (S3, Google storage or ADLS).&#x20;
-  * Delimiter support for special characters is limited.  Supported file delimiters are comma, pipe, tab, semicolon, double quote and single quote. Custom delimiters will work for many characters, but not all combinations.
+  * Local files using UPLOAD\_PATH, UPLOAD\_FILE\_PATH, and temp files are only eligible to be deployed using the default NO\_AGENT option. These are only intended for quick tests and not intended for production-scale use. Best practice is to use a remote file system connection (S3, Google storage or ADLS).
+  * Delimiter support for special characters is limited. Supported file delimiters are comma, pipe, tab, semicolon, double quote and single quote. Custom delimiters will work for many characters, but not all combinations.
   * Temp files and NO\_AGENT should have -master local\[\*] or -master spark://:7077 defined in freeform append of the agent options
 * DQ Job
-  * When submitting jobs via API from a different machine with a different timezone, timezone discrepancies are not accounted for automatically.  Best practice is to align each component to use UTC.
-  * Jobs submitted via API with a run date that include HH:MM in the -rd (run date) will submit to the job queue and leave a remnant ‘STAGED’ job &#x20;
+  * When submitting jobs via API from a different machine with a different timezone, timezone discrepancies are not accounted for automatically. Best practice is to align each component to use UTC.
+  * Jobs submitted via API with a run date that include HH:MM in the -rd (run date) will submit to the job queue and leave a remnant ‘STAGED’ job
 * Connections
-  * Postgres limits max connections per spark job.  The default is 100. Please refer to Postgres official documentation how to increase max\_connection and shared\_buffers.
+  * Postgres limits max connections per spark job. The default is 100. Please refer to Postgres official documentation how to increase max\_connection and shared\_buffers.
     * https://www.postgresql.org/docs/9.6/runtime-config-connection.html
   * BigQuery
     * Updating scope to include joins in BigQuery can only be materialized when tables are part of the same dataset collection
@@ -843,4 +878,4 @@ rule_repo
 
 #### **Please refer to an older version to see previous release notes**
 
-****[**https://dq-docs.collibra.com/v/2022.04/release-notes#2021.09-09-2021**](https://dq-docs.collibra.com/v/2022.04/release-notes#2021.09-09-2021)****
+[**https://dq-docs.collibra.com/v/2022.04/release-notes#2021.09-09-2021**](https://dq-docs.collibra.com/v/2022.04/release-notes#2021.09-09-2021)
