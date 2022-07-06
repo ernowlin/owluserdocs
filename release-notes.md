@@ -58,7 +58,7 @@
     * The special characters `!@#$%^&*()`in the description are not supported and will not persist to the ServiceNow assignment queue at this time.
     * Non-existent or invalid ServiceNow group does not return an error in CDQ.
       * As a result, the ServiceNow assignment will be generated with the default admin account as the owner.
-    * The new REACT UI is not yet supported for the ServiceNow integration.
+    * The new REACT UI is not yet supported for the ServiceNow Group integration.
 
 #### DQ Security Metrics
 
