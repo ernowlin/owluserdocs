@@ -6,7 +6,7 @@ We assume that a server running Centos 7 or RHEL 7 is setup and ready to install
 
 This tutorial assumes that you are installing DQ on a brand new compute instance on Google Cloud Platform. Google Cloud SDK setup with proper user permission is assumed. This is optional, as you are free to create Full Standalone Installation setup on any cloud service provider or on-premise.
 
-Please refer to the _**GOAL**_** ** paragraph for the intended outcome of each step and modify accordingly
+Please refer to the _**GOAL**_\*\* \*\* paragraph for the intended outcome of each step and modify accordingly
 
 {% hint style="info" %}
 The full install package supports Centos 7 and RHEL 7. If another OS flavor is required, please follow the basic install process.
@@ -27,7 +27,7 @@ gcloud compute ssh --zone "us-central1-a" --project "gcp-example-project" "cento
 **GOAL**
 
 1. Create a new compute instance on a cloud provider (if applicable)
-2. Access the server where DQ will be installed.&#x20;
+2. Access the server where DQ will be installed.
 {% endhint %}
 
 ## 2. Download DQ Full Package
@@ -57,7 +57,7 @@ rm dq-full-package.tar.gz
 
 ## 3. Install DQ + Postgres + Spark
 
-First set some variables for `OWL_BASE` (where to install DQ. In this tutorial, you are already in the directory that you want to install), `OWL_METASTORE_USER` (the Postgres username used by DQ Web Application  to access Postgres storage), and `OWL_METASTORE_PASS` (the Postgres password used by DQ Web Application  to access Postgres storage).&#x20;
+First set some variables for `OWL_BASE` (where to install DQ. In this tutorial, you are already in the directory that you want to install), `OWL_METASTORE_USER` (the Postgres username used by DQ Web Application to access Postgres storage), and `OWL_METASTORE_PASS` (the Postgres password used by DQ Web Application to access Postgres storage).
 
 ```
 ### base path that you want owl installed. No trailing
@@ -73,9 +73,9 @@ export OWL_METASTORE_PASS=H55Mt5EbXh1a%$aiX6
 
 ![List of off-line installed packages](../../.gitbook/assets/full-package-install-packages.png)
 
-One of the files extracted from the tarball is `setup.sh`. This script installs DQ and the required components. If a component already exist (e.g. Java 8 is already installed and `$JAVA_HOME` is set), then that component is not installed (i.e. Java 8 installation is skipped).&#x20;
+One of the files extracted from the tarball is `setup.sh`. This script installs DQ and the required components. If a component already exist (e.g. Java 8 is already installed and `$JAVA_HOME` is set), then that component is not installed (i.e. Java 8 installation is skipped).
 
-To control which components are installed, use `-options=...`parameter. The argument provided should be comma-delimited list of components to install (valid inputs: `spark`, `postgres`, `owlweb`, and `owlagent`. `-options=postgres,spark,owlweb,owlagent` means "install Postgres, Spark pseudo cluster, Owl Web Application, and Owl Agent". Note that Java is not part of the options. Java 8 installation is automatically checked and installed/skipped depending on availability.&#x20;
+To control which components are installed, use `-options=...`parameter. The argument provided should be comma-delimited list of components to install (valid inputs: `spark`, `postgres`, `owlweb`, and `owlagent`. `-options=postgres,spark,owlweb,owlagent` means "install Postgres, Spark pseudo cluster, Owl Web Application, and Owl Agent". Note that Java is not part of the options. Java 8 installation is automatically checked and installed/skipped depending on availability.
 
 You must at minimum specify `-options=spark,owlweb,owlagent` if you independently installed Postgres or using an external Postgres connection (as you can see in Step #3 if you choose that installation route)
 
@@ -121,7 +121,7 @@ please use owl owlmanage utility to configure license key and start owl-agent af
 **GOAL**
 
 1. Specify `OWL_BASE` path where DQ will be installed and specify Postgres environment variables
-2. &#x20;Install DQ Web with Postgres and Spark linked to DQ Agent (**all files will be in `$OWL_BASE/owl` sub-directory**) using `setup.sh` script provided. \
+2. Install DQ Web with Postgres and Spark linked to DQ Agent (**all files will be in `$OWL_BASE/owl` sub-directory**) using `setup.sh` script provided.\
    The location of `OWL_BASE` and Postgres are configurable, but we advise you to take the defaults.
 {% endhint %}
 
@@ -168,7 +168,7 @@ The database named `postgres` is used by default as DQ metadata storage. Changin
 **GOAL**
 
 1. Specify `OWL_BASE` path where DQ will be installed and specify Postgres environment variables
-2. &#x20;Install DQ Web and Spark linked to DQ Agent (**all files will be in `$OWL_BASE/owl` sub-directory**) using `setup.sh` script provided and link DQ Web to an existing Postgres server.
+2. Install DQ Web and Spark linked to DQ Agent (**all files will be in `$OWL_BASE/owl` sub-directory**) using `setup.sh` script provided and link DQ Web to an existing Postgres server.
 {% endhint %}
 
 ## 5. Verify DQ and Spark Installation
@@ -230,9 +230,9 @@ cat agent.properties
 
 Once the DQ Agent starts, it needs to be configured in DQ Web in order to successfully submit jobs to the local Spark (pseudo) cluster.
 
-The new agent has been setup with the template base path `/opt` and install path `/opt/owl`. The `owlmanage.sh start=owlagent` script does not respect  `OWL_BASE` environment. **We need to edit the Agent Configuration to follow our** `OWL_BASE`
+The new agent has been setup with the template base path `/opt` and install path `/opt/owl`. The `owlmanage.sh start=owlagent` script does not respect `OWL_BASE` environment. **We need to edit the Agent Configuration to follow our** `OWL_BASE`
 
-Follow the steps on [How To Configure Agent via UI](https://docs.owl-analytics.com/installation/agent-configuration#how-to-configure-agent-via-ui) page to configure the newly created DQ Agent and edit the following parameters in DQ Agent #2.&#x20;
+Follow the steps on [How To Configure Agent via UI](https://docs.owl-analytics.com/installation/agent-configuration#how-to-configure-agent-via-ui) page to configure the newly created DQ Agent and edit the following parameters in DQ Agent #2.
 
 * Replace all occurrence of `/opt/owl` with your `$OWL_BASE/owl/`in **Base Path**, **Collibra DQ Core JAR**, **Collibra DQ Core Logs**, **Collibra DQ Script**, and **Collibra DQ Web Logs**.
   * Note that **Base Path** here does not refer to `OWL_BASE`
@@ -241,15 +241,17 @@ Follow the steps on [How To Configure Agent via UI](https://docs.owl-analytics.c
 
 Refer to [Agent Configuration Parameters](https://docs.owl-analytics.com/installation/agent-configuration#agent-configuration-parameters) for parameters descriptions.
 
-![Fig 4: Expected final output of edited agent based on this tutorial](<../../.gitbook/assets/image (67).png>)
+Kindly note "Number of Core(s)" must be specified
+
+![Fig 4: Expected final output of edited agent based on this tutorial](<../../.gitbook/assets/Final Output of Agent.png>)
 
 ![Set the deployment mode option to Client for a Spark Standalone master](<../../.gitbook/assets/image (99).png>)
 
 ## 8. Create DB Connection for DQ Job
 
-Follow the steps on [How to Add DB Connection via UI](https://docs.owl-analytics.com/installation/agent-configuration#how-to-add-db-connection-via-ui) page to add `metastore` database connection. For demo purposes, we will run a DQ Job against local DQ Metadata Storage.&#x20;
+Follow the steps on [How to Add DB Connection via UI](https://docs.owl-analytics.com/installation/agent-configuration#how-to-add-db-connection-via-ui) page to add `metastore` database connection. For demo purposes, we will run a DQ Job against local DQ Metadata Storage.
 
-Follow the steps on [How To Link DB Connection to Agent via UI](https://docs.owl-analytics.com/installation/agent-configuration#how-to-link-db-connection-to-agent-via-ui) page to configure newly created DQ Agent.&#x20;
+Follow the steps on [How To Link DB Connection to Agent via UI](https://docs.owl-analytics.com/installation/agent-configuration#how-to-link-db-connection-to-agent-via-ui) page to configure newly created DQ Agent.
 
 Click the compass icon in the navigation pane to navigate to the Explorer Page. Click on the "metastore" connection, select the "public" schema, and then select the first table in the resulting list of tables. Once the preview and scope tab comes up, click "Build Model". When the Profile page comes up, click the "Run" button.
 
@@ -280,7 +282,6 @@ For example, if I SSH into the machine with user `owldq` and use my default home
 ### drwxr-xr-x
 
 chmod -R 755 /home/owldq
-
 ```
 
 ### Reinstall Postgres
@@ -379,7 +380,6 @@ SPARK_LOCAL_DIRS=/mnt/disks/sdb/tmp
 
 ### Set Spark to delete older files
 export SPARK_WORKER_OPTS="${SPARK_WORKER_OPTS} -Dspark.worker.cleanup.enabled=true -Dspark.worker.cleanup.interval=1800 -Dspark.worker.cleanup.appDataTtl=3600"
-
 ```
 
 Or change Spark storage with an agent configuration `-conf spark.local.dir=/home/owldq/owl/owltmp`
@@ -413,7 +413,6 @@ ps -aef|grep postgres
 ps -aef|grep owl-web
 ps -aef|grep owl-agent
 ps -aef|grep spark
-
 ```
 
 ## Starting Components
@@ -461,8 +460,8 @@ cd /home/owldq/owl/spark/sbin/
 
 #### Example: <a href="#example" id="example"></a>
 
-* The tar ball has been extracted to this folder on my EC2 Instance: _****_ `/home/ec2-user/packages/`
-* Owl will be running as the _****_ `ec2-user`
+* The tar ball has been extracted to this folder on my EC2 Instance: _\*\*\*\*_ `/home/ec2-user/packages/`
+* Owl will be running as the _\*\*\*\*_ `ec2-user`
 * The owl-web application will run on port `9000`
 * The base location for the setup.sh script to create the will be: `/home/ec2-user/`
 
@@ -470,8 +469,8 @@ cd /home/owldq/owl/spark/sbin/
 
 #### Example installing just the agent (perhaps on an Edge node of a hadoop cluster): <a href="#example-installing-just-the-agent-perhaps-on-an-edge-node-of-a-hadoop-cluster" id="example-installing-just-the-agent-perhaps-on-an-edge-node-of-a-hadoop-cluster"></a>
 
-* The Package has been extracted to this folder on my EC2 Instance: _****_ `/home/ec2-user/packages/`
-* Owl-agent will be running as the _****_ `ec2-user`
+* The Package has been extracted to this folder on my EC2 Instance: _\*\*\*\*_ `/home/ec2-user/packages/`
+* Owl-agent will be running as the _\*\*\*\*_ `ec2-user`
 * The base location for the setup.sh script to create the owl folder and place all packages under owl will be: `/home/ec2-user/`
 
 **`./setup.sh -user=ec2-user -owlbase=/home/ec2-user -owlpackage=/home/ec2-user/package -options=owlagent`**
@@ -498,44 +497,44 @@ export ORIENTDB\_HOST="localhost"
 
 Contents of the Owl-env.sh script and what is is used for.
 
-| OWL-ENV.SH Scripts                                                        | Meaning                                                                                                                                                                                                                                                                  |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| export ORIENTDB\_PORT="2424"                                              | Port that OrientDB is using                                                                                                                                                                                                                                              |
-| export SPARK\_CONF\_DIR="/home/danielrice/owl/cdh-spark-conf"             | directory on machine where the spark conf directory resides.                                                                                                                                                                                                             |
-| export INSTALL\_PATH="/home/danielrice/owl"                               | Installation directory of Owl                                                                                                                                                                                                                                            |
-| export JAVA\_HOME="/home/danielrice/jdk1.8.0\_131"                        | Java Home for Owl to leverage                                                                                                                                                                                                                                            |
-| export LOG\_PATH="/home/danielrice/owl/log"                               | Log path                                                                                                                                                                                                                                                                 |
-| export BASE\_PATH="/home/danielrice"                                      | The base location under which the owl director resides                                                                                                                                                                                                                   |
-| export SPARK\_MAJOR\_VERSION=2                                            | Spark Major version.  Owl only supports 2+ version of spark                                                                                                                                                                                                              |
-| export OWL\_LIBS="/home/danielrice/owl/libs"                              | Lib Directory to inject in spark -submit jobs                                                                                                                                                                                                                            |
-| export USE\_LIBS=0 #1 is on, 0 is off                                     | use the lib directory or not.  0 is the default.                                                                                                                                                                                                                         |
-| export SPARKSUBMITEXE="spark-submit"                                      | Spark submit executable command.  CDH using spark2-submit as example                                                                                                                                                                                                     |
-| export ext\_pass\_manage=0 #0 to disable 1 to enable                      | If using a password management system.  You can enable for password to be pulled from it.                                                                                                                                                                                |
-| export ext\_pass\_script="/opt/owl/bin/getpassword.sh"                    | Leverage password script to execute a get password script from the vault.                                                                                                                                                                                                |
-| TIMEOUT=900 #15 minutes in seconds                                        | Owl-Web user time out limits                                                                                                                                                                                                                                             |
-| PORT=9003 #owl-web port NUMBER                                            | default port to use for owl-web                                                                                                                                                                                                                                          |
-| SPRING\_LOG\_LEVEL=ERROR                                                  | logging level to be displayed in the owl-web.log                                                                                                                                                                                                                         |
-| SPRING\_DATASOURCE\_DRIVER\_CLASS\_NAME=org.postgresql.Driver             | driver class name for postgres metastore (used by web)                                                                                                                                                                                                                   |
-| export SPRING\_DATASOURCE\_URL=jdbc:postgresql://localhost:5432/postgres  | JDBC connection string to Owl Postgres metastore                                                                                                                                                                                                                         |
-| export SPRING\_DATASOURCE\_USERNAME=danielrice                            | Owl Postgres username                                                                                                                                                                                                                                                    |
-| export  SPRING\_DATASOURCE\_PASSWORD=3+017wfY1l1vmsvGYAyUcw5zGL           | Owl Postgres password                                                                                                                                                                                                                                                    |
-| export AUTOCLEAN=TRUE/FALSE                                               | TRUE/FALSE Enable/Disable automatically delete old datasets                                                                                                                                                                                                              |
-| export DATASETS\_PER\_ROW=200000                                          | Delete datasets after this threshold is hit (must be greater than the default to change)                                                                                                                                                                                 |
-| export ROW\_COUNT\_THRESHOLD=300000                                       | Delete rows after this threshold is hit (must be greater than the default to change)                                                                                                                                                                                     |
-| export SERVER\_HTTP\_ENABLED=true                                         | Enabling HTTP to owl web                                                                                                                                                                                                                                                 |
-| export OWL\_ENC=OFF #JAVA for java encryption                             | Enable Encryption (NOTE need to add to owl.properties also).  Has to be in form owl.enc=OFF within owl.properties file to disable, and in this form owl.enc=JAVA to enable. the owl.properties file is located in the owl install path /config folder (/opt/owl/config). |
-| PGDBPATH=/home/danielrice/owl/owl-postgres/bin/data                       | Path for Postgres DB                                                                                                                                                                                                                                                     |
-| export RUNS\_THRESHOLD=5000                                               | Delete runs after this threshold is hit (must be greater than the default to change)                                                                                                                                                                                     |
-| export HTTP\_SECONDARY\_PORT=9001                                         | Secondary HTTP port to use which is useful when SSL is enabled                                                                                                                                                                                                           |
-| export SERVER\_PORT=9000                                                  | same as PORT                                                                                                                                                                                                                                                             |
-| export SERVER\_HTTPS\_ENABLED=true                                        | enabling of SSL                                                                                                                                                                                                                                                          |
-| export SERVER\_SSL\_KEY\_TYPE=PKCS12                                      | certificate trust store                                                                                                                                                                                                                                                  |
-| export SERVER\_SSL\_KEY\_PASS=t2lMFWEHsQha3QaWnNaR8ALaFPH15Mh9            | certificate key password                                                                                                                                                                                                                                                 |
-| export SERVER\_SSL\_KEY\_ALIAS=owl                                        |  certificate key alias                                                                                                                                                                                                                                                   |
-| export SERVER\_REQUIRE\_SSL=true                                          | Override HTTP on and force HTTPS regardless of HTTP settings                                                                                                                                                                                                             |
-| export MULTITENANTMODE=FALSE                                              | Flipping to TRUE will enable multi tenant support                                                                                                                                                                                                                        |
-| export multiTenantSchemaHub=owlhub                                        | schema name used for multi tenancy                                                                                                                                                                                                                                       |
-| export OWL\_SPARKLOG\_ENABLE=false                                        | Enabling deeper spark logs when toggled to true                                                                                                                                                                                                                          |
+| OWL-ENV.SH Scripts                                                       | Meaning                                                                                                                                                                                                                                                                 |
+| ------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| export ORIENTDB\_PORT="2424"                                             | Port that OrientDB is using                                                                                                                                                                                                                                             |
+| export SPARK\_CONF\_DIR="/home/danielrice/owl/cdh-spark-conf"            | directory on machine where the spark conf directory resides.                                                                                                                                                                                                            |
+| export INSTALL\_PATH="/home/danielrice/owl"                              | Installation directory of Owl                                                                                                                                                                                                                                           |
+| export JAVA\_HOME="/home/danielrice/jdk1.8.0\_131"                       | Java Home for Owl to leverage                                                                                                                                                                                                                                           |
+| export LOG\_PATH="/home/danielrice/owl/log"                              | Log path                                                                                                                                                                                                                                                                |
+| export BASE\_PATH="/home/danielrice"                                     | The base location under which the owl director resides                                                                                                                                                                                                                  |
+| export SPARK\_MAJOR\_VERSION=2                                           | Spark Major version. Owl only supports 2+ version of spark                                                                                                                                                                                                              |
+| export OWL\_LIBS="/home/danielrice/owl/libs"                             | Lib Directory to inject in spark -submit jobs                                                                                                                                                                                                                           |
+| export USE\_LIBS=0 #1 is on, 0 is off                                    | use the lib directory or not. 0 is the default.                                                                                                                                                                                                                         |
+| export SPARKSUBMITEXE="spark-submit"                                     | Spark submit executable command. CDH using spark2-submit as example                                                                                                                                                                                                     |
+| export ext\_pass\_manage=0 #0 to disable 1 to enable                     | If using a password management system. You can enable for password to be pulled from it.                                                                                                                                                                                |
+| export ext\_pass\_script="/opt/owl/bin/getpassword.sh"                   | Leverage password script to execute a get password script from the vault.                                                                                                                                                                                               |
+| TIMEOUT=900 #15 minutes in seconds                                       | Owl-Web user time out limits                                                                                                                                                                                                                                            |
+| PORT=9003 #owl-web port NUMBER                                           | default port to use for owl-web                                                                                                                                                                                                                                         |
+| SPRING\_LOG\_LEVEL=ERROR                                                 | logging level to be displayed in the owl-web.log                                                                                                                                                                                                                        |
+| SPRING\_DATASOURCE\_DRIVER\_CLASS\_NAME=org.postgresql.Driver            | driver class name for postgres metastore (used by web)                                                                                                                                                                                                                  |
+| export SPRING\_DATASOURCE\_URL=jdbc:postgresql://localhost:5432/postgres | JDBC connection string to Owl Postgres metastore                                                                                                                                                                                                                        |
+| export SPRING\_DATASOURCE\_USERNAME=danielrice                           | Owl Postgres username                                                                                                                                                                                                                                                   |
+| export SPRING\_DATASOURCE\_PASSWORD=3+017wfY1l1vmsvGYAyUcw5zGL           | Owl Postgres password                                                                                                                                                                                                                                                   |
+| export AUTOCLEAN=TRUE/FALSE                                              | TRUE/FALSE Enable/Disable automatically delete old datasets                                                                                                                                                                                                             |
+| export DATASETS\_PER\_ROW=200000                                         | Delete datasets after this threshold is hit (must be greater than the default to change)                                                                                                                                                                                |
+| export ROW\_COUNT\_THRESHOLD=300000                                      | Delete rows after this threshold is hit (must be greater than the default to change)                                                                                                                                                                                    |
+| export SERVER\_HTTP\_ENABLED=true                                        | Enabling HTTP to owl web                                                                                                                                                                                                                                                |
+| export OWL\_ENC=OFF #JAVA for java encryption                            | Enable Encryption (NOTE need to add to owl.properties also). Has to be in form owl.enc=OFF within owl.properties file to disable, and in this form owl.enc=JAVA to enable. the owl.properties file is located in the owl install path /config folder (/opt/owl/config). |
+| PGDBPATH=/home/danielrice/owl/owl-postgres/bin/data                      | Path for Postgres DB                                                                                                                                                                                                                                                    |
+| export RUNS\_THRESHOLD=5000                                              | Delete runs after this threshold is hit (must be greater than the default to change)                                                                                                                                                                                    |
+| export HTTP\_SECONDARY\_PORT=9001                                        | Secondary HTTP port to use which is useful when SSL is enabled                                                                                                                                                                                                          |
+| export SERVER\_PORT=9000                                                 | same as PORT                                                                                                                                                                                                                                                            |
+| export SERVER\_HTTPS\_ENABLED=true                                       | enabling of SSL                                                                                                                                                                                                                                                         |
+| export SERVER\_SSL\_KEY\_TYPE=PKCS12                                     | certificate trust store                                                                                                                                                                                                                                                 |
+| export SERVER\_SSL\_KEY\_PASS=t2lMFWEHsQha3QaWnNaR8ALaFPH15Mh9           | certificate key password                                                                                                                                                                                                                                                |
+| export SERVER\_SSL\_KEY\_ALIAS=owl                                       | certificate key alias                                                                                                                                                                                                                                                   |
+| export SERVER\_REQUIRE\_SSL=true                                         | Override HTTP on and force HTTPS regardless of HTTP settings                                                                                                                                                                                                            |
+| export MULTITENANTMODE=FALSE                                             | Flipping to TRUE will enable multi tenant support                                                                                                                                                                                                                       |
+| export multiTenantSchemaHub=owlhub                                       | schema name used for multi tenancy                                                                                                                                                                                                                                      |
+| export OWL\_SPARKLOG\_ENABLE=false                                       | Enabling deeper spark logs when toggled to true                                                                                                                                                                                                                         |
 
 #### Configuration / owl.properties file <a href="#configuration-owl.properties-file" id="configuration-owl.properties-file"></a>
 
@@ -552,8 +551,6 @@ Contents of the Owl-env.sh script and what is is used for.
 | **spring.agent.datasource.username**                              | **{user}**                                            |
 | **spring.agent.datasource.password**                              | **{password}**                                        |
 | **spring.agent.datasource.driver-class-name**                     | **org.postgresql.Driver**                             |
-
-
 
 ## Starting Spark
 
