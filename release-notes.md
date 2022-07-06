@@ -25,7 +25,7 @@
     * When Connection Security is enabled, lock the SQL Editor to prevent unauthorized access to other connections. (#87916)
   * Fixed an issue which allowed View Only users to access some profile results and export the data to a CSV file.&#x20;
     * Added an authorization check for data set access to the profile export feature, which allows only users with data set access to export the profile. (#87720)
-  * Backslashes `\` are no longer supported characters for AD usernames without disabling XSS for the updateadsecurityconfiguration API. (#88499)&#x20;
+  * Backslashes `\` are no longer supported characters for AD usernames without disabling XSS for the /v2/updateadsecurityconfiguration API. (#88499)&#x20;
   * Fixed an issue which prevented navigation back to the log in page when tenant access was denied. (#89024)
 * Profile
   * From the Labels tab, backslashes are now stripped from annotations when they are used for separation within strings.
@@ -33,6 +33,8 @@
   * From Audit Trail, when administrators modify roles mapped to data sets or data sets mapped to roles, changes are now documented automatically, and display original and updated values.
   * The Agent Group (H/A) and its associated endpoints are now deprecated.
   * From Usage, you can now access a table and tiles reflective of your monthly usage metrics.
+  * \*Tech Preview\* \[TP] ServiceNow integration
+    * You can now assign incidents (validate action) to ServiceNow groups and users with the following fields included in the same request: caller\_id, description, short\_description, cmdb\_ci.
 * Explorer
   * Fixed an issue with date range on Oracle connections, which caused end date to change to start date when Transform was selected.
   * The Job Estimate modal again displays the correct number of rows for Sybase connections.
@@ -50,14 +52,16 @@
 #### Known Limitations
 
 * Rules
-  *
+  * To use the new SQLF feature for Generic rules, you must manually update the Generic rule type from SQLG to SQLF.
+    * A UI feature for this is planned for a future release.
 * Files
-  * When using CSV files, you cannot have a comma in the name.
+  * When using CSV files, you cannot have a comma `,` in the name.
 * Admin
   * \*Tech Preview\* \[TP] ServiceNow integration
-    * The special characters `!@#$%^&*()`in the description are not supported and will not persist to the ServiceNow assignment queue at this time.
-    * Non-existent or invalid ServiceNow group does not return an error in CDQ.
-      * As a result, the ServiceNow assignment will be generated with the default admin account as the owner.
+    * Special characters `!@#$%^&*()`in the description are not supported and will not persist to the ServiceNow assignment queue at this time.
+    * Empty or invalid ServiceNow group name does not return an error in CDQ.
+      * As a result, the ServiceNow assignment is generated with the default admin account as the owner if left empty or invalid.
+      * You must have a valid ServiceNow group name or its related sys\_id.&#x20;
     * The new REACT UI is not yet supported for the ServiceNow Group integration.
 
 #### DQ Security Metrics
