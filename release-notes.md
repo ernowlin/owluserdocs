@@ -6,7 +6,7 @@
 
 * DQ Job
   * Fixed an issue which prevented data from appearing in the Source tab when Source Observation RunID was clicked from the Assignments page.
-  * Fixed an issue which caused Annotations with special characters to be truncated in the Label tab.
+  * Fixed an issue which caused Annotations with special characters to be truncated in the Labels tab.
   * Fixed an issue which caused the Column (name) column of the Rules tab to display incorrectly when Run Discovery was used.
   * Fixed an issue where the Retrain button on the Record tab was disabled.
   * You can again invalidate observations with single quotes `'` from the Shapes tab.&#x20;
@@ -33,6 +33,7 @@
   * From Audit Trail, when administrators modify roles mapped to data sets or data sets mapped to roles, changes are now documented automatically, and display original and updated values.
   * The Agent Group (H/A) and its associated endpoints are now deprecated.
   * From Usage, you can now access a table and tiles reflective of your monthly usage metrics.
+  * Salesforce account ID can now be configured for use with Pendo logs.&#x20;
   * \*Tech Preview\* \[TP] ServiceNow integration
     * You can now assign incidents (validate action) to ServiceNow groups and users with the following fields included in the same request: caller\_id, description, short\_description, cmdb\_ci.
 * Explorer
@@ -54,6 +55,8 @@
 * Rules
   * To use the new SQLF feature for Generic rules, you must manually update the Generic rule type from SQLG to SQLF.
     * A UI feature for this is planned for a future release.
+* Explorer
+  * Drill-ins and jobs on Sybase connections run successfully, but connections to Sybase with encrypted passwords are currently unsupported.
 * Files
   * When using CSV files, you cannot have a comma `,` in the name.
 * Admin
