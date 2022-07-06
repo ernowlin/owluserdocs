@@ -241,7 +241,9 @@ Follow the steps on [How To Configure Agent via UI](https://docs.owl-analytics.c
 
 Refer to [Agent Configuration Parameters](https://docs.owl-analytics.com/installation/agent-configuration#agent-configuration-parameters) for parameters descriptions.
 
-![Fig 4: Expected final output of edited agent based on this tutorial](<../../.gitbook/assets/image (67).png>)
+Kindly note that one must specify the number of Cores in the Edit Agent Parameters.
+
+![Fig 4: Expected final output of edited agent based on this tutorial](<../../.gitbook/assets/Final Output of Agent (1).png>)
 
 ![Set the deployment mode option to Client for a Spark Standalone master](<../../.gitbook/assets/image (99).png>)
 
