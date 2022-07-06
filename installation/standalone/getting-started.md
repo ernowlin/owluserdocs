@@ -1,8 +1,15 @@
-# Getting Started
+# Getting Started with AWS
 
 ## Prerequisites
 
-To get started, you need a Collibra Data Quality account.
+To get started, you need
+
+* a Collibra Data Quality account.&#x20;
+* the following AWS permissions policies applied to launch Collibra Data Quality:
+
+![Required AWS permissions policies](../../.gitbook/assets/aws\_permissions.png)
+
+&#x20;
 
 ## Connecting to Collibra Data Quality
 
