@@ -10,7 +10,7 @@
   * Fixed an issue which caused the Column (name) column of the Rules tab to display incorrectly when Run Discovery was used.
   * Fixed an issue where the Retrain button on the Record tab was disabled.
   * You can again invalidate observations with single quotes `'` from the Shapes tab.&#x20;
-  * The Hints tab now displays any available data (if applicable).
+  * The Hints tab now displays any available data.
   * You can no longer change agents from the Scheduler modal.
 * Rules
   * SQLF is now supported for Generic rules.
@@ -39,6 +39,7 @@
 * Explorer
   * Fixed an issue with date range on Oracle connections, which caused end date to change to start date when Transform was selected.
   * The Job Estimate modal again displays the correct number of rows for Sybase connections.
+  * Fixed an issue with Source to Target where double quotes `"` were removed from the source file in database to file targets.&#x20;
 * Scorecard
   * Enhanced the layout of the Assignment Queues page.
 * API
