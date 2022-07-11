@@ -2,6 +2,10 @@
 
 ## 2022.07
 
+{% hint style="info" %}
+Standalone packages for the 2022.07 release have a version naming convention of `-RC`. This will revert back to the standard naming convention with the 2022.08 release, and has no impact on the safety or stability of standalone packages.&#x20;
+{% endhint %}
+
 #### Fixes / Enhancements
 
 * DQ Job
