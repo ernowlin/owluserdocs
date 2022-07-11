@@ -1,6 +1,6 @@
 # Builds
 
-Builds follow a naming convention to indicate which [optional](builds.md#optional-drivers) drivers are packaged. &#x20;
+Builds follow a naming convention to indicate which [optional](builds.md#optional-drivers) drivers are packaged.
 
 {% hint style="info" %}
 **Please note the optional drivers only impact container versions of Collibra Data Quality and does not impact Standalone installation packages.**
@@ -10,9 +10,87 @@ Builds follow a naming convention to indicate which [optional](builds.md#optiona
 
 <details>
 
-<summary>2022.06</summary>
+<summary>2022.07</summary>
 
 #### Collibra Data Quality
+
+* 2022.07-L-920
+
+<!---->
+
+* 2022.07-AHM-921
+
+<!---->
+
+* 2022.07-H-922
+
+<!---->
+
+* 2022.07-HM-923
+
+<!---->
+
+* 2022.07-D-924
+
+<!---->
+
+* 2022.07-AL-925
+
+<!---->
+
+* 2022.07-AD-926
+
+<!---->
+
+* 2022.07-ABGCSHMS-929
+
+<!---->
+
+* 2022.07-M-927
+
+#### Spark
+
+* 3.2.0-2022.07-L-920
+
+<!---->
+
+* 3.2.0-2022.07-AHM-921
+
+<!---->
+
+* 3.2.0-2022.07-H-922
+
+<!---->
+
+* 3.2.0-2022.07-HM-923
+
+<!---->
+
+* 3.2.0-2022.07-D-924
+
+<!---->
+
+* 3.2.0-2022.07-AL-925
+
+<!---->
+
+* 3.2.0-2022.07-AD-926
+
+<!---->
+
+* 3.2.0-2022.07-ABGCSHMS-929
+
+<!---->
+
+* 3.2.0-2022.07-M-927
+
+</details>
+
+<details>
+
+<summary>2022.06</summary>
+
+**Collibra Data Quality**
 
 * 2022.06-L-819
 * 2022.06-AHM-820
@@ -24,7 +102,7 @@ Builds follow a naming convention to indicate which [optional](builds.md#optiona
 * 2022.06-ABGCSHMS-826
 * 2022.06-M-830
 
-#### Spark
+**Spark**
 
 * 3.2.0-2022.06-L-819
 * 3.2.0-2022.06-AHM-820
@@ -36,15 +114,13 @@ Builds follow a naming convention to indicate which [optional](builds.md#optiona
 * 3.2.0-2022.06-ABGCSHMS-826
 * 3.2.0-2022.06-M-830
 
-
-
 </details>
 
 <details>
 
 <summary><strong>2022.05</strong></summary>
 
-#### Collibra Data Quality
+**Collibra Data Quality**
 
 * 2022.05-L-714
 * 2022.05-AL-715
@@ -59,7 +135,7 @@ Builds follow a naming convention to indicate which [optional](builds.md#optiona
 * 2022.05.2-HM-739
 * 2022.05.2-H-740
 
-#### Spark
+**Spark**
 
 * 3.2.0-2022.05-L-714
 * 3.2.0-2022.05-AL-715
@@ -82,20 +158,20 @@ Builds follow a naming convention to indicate which [optional](builds.md#optiona
 
 **Collibra Data Quality**
 
-* 2022.04-L-303&#x20;
-* 2022.04-AL-302&#x20;
-* 2022.04-296&#x20;
-* 2022.04-A-295&#x20;
+* 2022.04-L-303
+* 2022.04-AL-302
+* 2022.04-296
+* 2022.04-A-295
 * 2022.04-ALL-294 2
 * 022.04-ABHGCSGCRS-291
 
 **Spark**
 
-* 3.2.0-2022.04-L-303&#x20;
-* 3.2.0-2022.04-AL-302&#x20;
-* 3.2.0-2022.04-296&#x20;
-* 3.2.0-2022.04-A-295&#x20;
-* 3.2.0-2022.04-ALL-294&#x20;
+* 3.2.0-2022.04-L-303
+* 3.2.0-2022.04-AL-302
+* 3.2.0-2022.04-296
+* 3.2.0-2022.04-A-295
+* 3.2.0-2022.04-ALL-294
 * 3.2.0-2022.04-ABHGCSGCRS-291
 
 </details>
@@ -127,7 +203,7 @@ Example: [2022.05-L-714](https://gcr.io/owl-hadoop-cdh/owl-agent:2022.05-L-714)
 **L**: Optional Livy package included\
 **714** - A unique number appended to each build
 
-## **Default Drivers**&#x20;
+## **Default Drivers**
 
 _Always Packaged_
 

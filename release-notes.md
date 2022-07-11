@@ -56,6 +56,8 @@
 * Rules
   * To use the new SQLF feature for Generic rules, you must manually update the Generic rule type from SQLG to SQLF.
     * A UI feature for this is planned for a future release.
+  * Stat rules such as $rowCount do not work for secondary data sets or previous runId of the same data set via @t1 syntax.
+    * To work around this limitation, run a subquery to select count(\*) from the secondary data set or the previous runId.
 * Explorer
   * Drill-ins and jobs on Sybase connections run successfully, but connections to Sybase with encrypted passwords are currently unsupported.
 * Files
