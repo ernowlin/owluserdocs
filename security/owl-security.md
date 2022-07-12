@@ -4,6 +4,6 @@ Owl offers multiple methods of user authentication including a local user store 
 
 Security can be configured to meet your needs. Advanced options to segment groups and roles are available. Additionally, options for SAML and SSO are available.
 
-You can control configurations at the Web (UI), Postgres, and Application layers depending on your security requirements.  Encryption is available for data in-transit or at-rest.&#x20;
+You can control configurations at the Web (UI), Postgres, and Application layers depending on your security requirements. Encryption is available for data in-transit or at-rest.
 
-![](<../.gitbook/assets/image (125).png>)
+![Security options from the Admin Console](../.gitbook/assets/dq-security-admin.png)
