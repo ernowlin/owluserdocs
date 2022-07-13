@@ -74,8 +74,8 @@ Once the rule has been submitted please find the below list of rules with the ne
 
 ![](<../../.gitbook/assets/Screen Shot 2019-09-04 at 1.29.35 PM.png>)
 
-Rule scores will appear under the Rule tab on the Hoot page. You can also see more details in the bottom panel of the Rules page under the Rules and Results tabs.
+Rule scores will appear under the Rules tab on the findings page. You can also see more details in the bottom panel of the Rules page under the Rules and Results tabs.
 
-![Hoot page rule results](<../../.gitbook/assets/Screen Shot 2019-09-04 at 1.29.54 PM.png>)
+![Findings page rule results](<../../.gitbook/assets/Screen Shot 2019-09-04 at 1.29.54 PM.png>)
 
-![Rule page rule results (bottom panel)](<../../.gitbook/assets/Screen Shot 2019-09-04 at 1.30.07 PM.png>)
+![Rules page rule results (bottom panel)](<../../.gitbook/assets/Screen Shot 2019-09-04 at 1.30.07 PM.png>)

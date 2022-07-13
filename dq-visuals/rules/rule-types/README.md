@@ -2,11 +2,11 @@
 
 ## SQL-Based Rules
 
-Depending on the complexity, users can choose from short form or long form rules.&#x20;
+Depending on the complexity, you can choose from short-form or long-form rules.
 
-#### **Simple**&#x20;
+#### **Simple**
 
-Just the condition (short form).  For example, using the column email\_address. This runs against the dataframe and uses Spark SQL syntax.  An easy way to think about Simple rules is 'everything after the where clause'.&#x20;
+Just the condition (short-form). For example, using the column email\_address. This runs against the dataframe and uses Spark SQL syntax. Simple rules can be thought of as everything after the where clause.
 
 ```
 email_address is not null and email_address != '' 
@@ -27,13 +27,13 @@ All built-in spark functions are available to use. ([https://spark.apache.org/do
 
 #### Native
 
-Native rules use the SQL dialect of the underlying connection and database.  Files are not eligible for native SQL rules.  This is ideal if you want to use push-down profiling and you want to use existing SQL logic.  When coupled with push-down profiling, you can achieve a very minimal infrastructure footprint.
+Native rules use the SQL dialect of the underlying connection and database. Files are not eligible for native SQL rules. This is ideal if you want to use pushdown profiling and you want to use existing SQL logic. When coupled with pushdown profiling, you can achieve a very minimal infrastructure footprint.
 
 See the [native rules section](sql-based-rules/native-sql.md) for more details.
 
-## Stat
+## Stat rules
 
-Write rules against meta data and profiling stats.  Complex counts and ratios can be referenced with simple syntax. &#x20;
+Write rules against meta data and profiling stats. Complex counts and ratios can be referenced with simple syntax.
 
 See the[ stat rules section ](stat-rules/)for more details.
 
@@ -60,6 +60,3 @@ See the[ stat rules section ](stat-rules/)for more details.
 * **Mixed datatype check**
   * Rule type: DATATYPECHECK
   * **Description:** ---
-
-
-

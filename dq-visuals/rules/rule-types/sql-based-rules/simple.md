@@ -4,11 +4,11 @@ description: Just the condition after the "where" clause
 
 # Simple
 
-Depending on the complexity, users can choose from short form or long form rules.&#x20;
+Depending on the complexity, users can choose from short form or long form rules.
 
-#### **Simple**&#x20;
+#### **Simple**
 
-Just the condition (short form).  For example, using the column email\_address. This runs against the dataframe and uses Spark SQL syntax.  An easy way to think about Simple rules is 'everything after the where clause'.&#x20;
+Just the condition (short form). For example, using the column email\_address. This runs against the dataframe and uses Spark SQL syntax. Simple rules can be thought of as everything after the where clause.
 
 ```
 email_address is not null and email_address != '' 
