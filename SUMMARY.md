@@ -54,7 +54,7 @@
     * [SQL Based Rules](dq-visuals/rules/rule-types/sql-based-rules/README.md)
       * [Simple](dq-visuals/rules/rule-types/sql-based-rules/simple.md)
       * [Freeform](dq-visuals/rules/rule-types/sql-based-rules/freeform/README.md)
-        * [Cross-Dataset Rules](dq-visuals/rules/rule-types/sql-based-rules/freeform/easier-rule-examples.md)
+        * [Cross-Data Set Rules](dq-visuals/rules/rule-types/sql-based-rules/freeform/easier-rule-examples.md)
       * [Native](dq-visuals/rules/rule-types/sql-based-rules/native-sql.md)
     * [Stat Rules](dq-visuals/rules/rule-types/stat-rules/README.md)
       * [Data Type Rules](dq-visuals/rules/rule-types/stat-rules/data-type-rules.md)
