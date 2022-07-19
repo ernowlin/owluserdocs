@@ -58,7 +58,7 @@ http://<server_name/ip>:9000
 ```
 
 {% hint style="info" %}
-Make sure you have access to the server and port.  Adding the correct security group or  whitelisting your IP address is a common step to be able to access an application running on a cloud server.
+Make sure you have access to the server and port. Adding the correct security group or whitelisting your IP address is a common step to be able to access an application running on a cloud server.
 {% endhint %}
 
 ### BYOL (Optional)
@@ -71,7 +71,7 @@ Using the same command, you can bring your own license or use a different downlo
 
 ### Confirmation (Optional)
 
-Once the installation script is completed, check processes details on server.
+Once the installation script is complete, check the details of the processes on the server.
 
 ```shell
 ps -ef | grep -i spark  
@@ -80,7 +80,7 @@ ps -ef | grep -i owl-agent
 ps -ef | grep -i postgres
 ```
 
-If all the processes are up and running, open the browser and try
+When all of the processes are up and running, log into your standalone instance of Collibra Data Quality.
 
 Configure your [agent](../agent-configuration.md) and [connections](../../connecting-to-dbs-in-owl-web/owl-db-connection/) as normal.
 
