@@ -1,6 +1,6 @@
 # Connectivity to Databricks
 
-### There are three ways to utilize Databricks infrastructure with Collibra Data Quality.&#x20;
+### There are three ways to utilize Databricks infrastructure with Collibra Data Quality.
 
 * JDBC (Supported)
 * Notebook/SDK (Supported)
@@ -22,7 +22,7 @@
 
 ### Credentials
 
-`user: token` \
+`user: token`\
 `password: <your-user-generated-token>`
 
 ### **Jar**
@@ -34,17 +34,17 @@ Link to [Databricks download](https://databricks.com/spark/jdbc-drivers-download
 ## **Notebook (Supported)**
 
 * Pyspark SDK
-* Scala SDK&#x20;
-* [Example](https://dq-docs.collibra.com/apis/notebook/cdq-notebook-apis-usage-in-databricks)
+* Scala SDK
+* [Example](https://dq-docs.collibra.com/apis-1/notebook/cdq-+-databricks)
 
 ## **Spark Submit (Not Supported)**
 
-* Spark Master URL&#x20;
-* Databricks Jobs API&#x20;
+* Spark Master URL
+* Databricks Jobs API
   * Rest
   * UI
-  * [Example](https://dq-docs.collibra.com/apis/notebook/dq-databricks-submit)
+  * [Example](https://dq-docs.collibra.com/apis-1/notebook/cdq-+-databricks/dq-databricks-submit)
 
 {% hint style="info" %}
-While these are not officially supported, there is reference architecture and implementation pattern how to do a Databricks Job submission.&#x20;
+While these are not officially supported, there is reference architecture and implementation pattern how to do a Databricks Job submission.
 {% endhint %}
