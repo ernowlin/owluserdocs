@@ -251,19 +251,21 @@ Kindly note "Number of Core(s)" must be specified
 
 Follow the steps on [How to Add DB Connection via UI](https://docs.owl-analytics.com/installation/agent-configuration#how-to-add-db-connection-via-ui) page to add `metastore` database connection. For demo purposes, we will run a DQ Job against local DQ Metadata Storage.
 
-Follow the steps on [How To Link DB Connection to Agent via UI](https://docs.owl-analytics.com/installation/agent-configuration#how-to-link-db-connection-to-agent-via-ui) page to configure newly created DQ Agent.
+Follow the steps on [How To Link DB Connection to Agent via UI](https://dq-docs.collibra.com/installation/agent-configuration) page to configure newly created DQ Agent.
 
-Click the compass icon in the navigation pane to navigate to the Explorer Page. Click on the "metastore" connection, select the "public" schema, and then select the first table in the resulting list of tables. Once the preview and scope tab comes up, click "Build Model". When the Profile page comes up, click the "Run" button.
+Click the compass icon in the navigation pane to navigate to the Explorer page. Click the "metastore" connection, select the "public" schema, and select the first table in the resulting list of tables. From the preview and scope page, click Build Model. When the Profile page populates, click  Save/Run.
 
-![](<../../.gitbook/assets/Screenshot 2021-06-14 at 5.03.40 PM.png>)
+![](<../../.gitbook/assets/dq-standalone-install-create-db-connection-1 (1).png>)
 
-On the Run page, click the "Estimate Job" button, acknowledge the resource recommendations, and then click the "Run" button.
+On the Run page, click Estimate Job, acknowledge the resource recommendations, and click Run.
 
-![](<../../.gitbook/assets/Screenshot 2021-06-14 at 5.05.31 PM.png>)
+![](<../../.gitbook/assets/image (18).png>)
 
-Click the clock icon in the navigation pane to navigate to the Jobs Page. Wait 10 seconds and then click refresh several times with a few seconds in between clicks. The test DQ check should show and progress through a sequence of activities before settling in "Finished "status.
+Click the revolving arrows icon in the left navigation panel to navigate to the Jobs page.&#x20;
 
-![](<../../.gitbook/assets/Screenshot 2021-06-14 at 5.27.04 PM.png>)
+Wait 10 seconds and then click the refresh button above the Status column until the status shows that the DQ job is Finished. We recommend refreshing several times, pausing for a few seconds in between clicks. While a job runs, the Activity column tracks the sequence of activities DQ performs before it completes a job. A successful job shows its status as Finished last.&#x20;
+
+![](<../../.gitbook/assets/image (81).png>)
 
 ## Troubleshooting + Helpful Commands
 
