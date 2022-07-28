@@ -1,5 +1,79 @@
 # Release Notes
 
+## 2022.08 (In Progress)
+
+### New Features
+
+#### Rules
+
+* You can now write a SQLG-type stat rules on mean.&#x20;
+
+#### Connections
+
+* You can now connect to the Databricks JDBC driver from the Connections and Explorer pages.
+* SQL Server Kerberos is now set up, configured, and validated as working within DQ.&#x20;
+
+#### Reporting
+
+* You can now view rules totals in Pendo to track the number of rules in use for billing and usage purposes.
+
+### Enhancements
+
+#### Rules
+
+* Rule Summary enhancements:
+  * You can now select different time periods for analysis.&#x20;
+  * You can now view charts from three different pages, including Rule Detail Summary, Rule Breaks, and Rule Dimension Summary.&#x20;
+  * You can now sort by column.&#x20;
+
+#### Agent
+
+* You can now optionally configure individual time zones of DQ Job, Web, and Agent. You should only use this configuration when your instance and containers run in different system time zones. (ticket #87024)
+
+#### Outliers
+
+* The Outlier activity is now skipped when running an Outlier job without historical data.
+
+#### DQ Connector
+
+* The version of Collibra Integration Library is now updated to 2.4.12.
+
+#### Reports
+
+* The PDF option is now removed from the Data Set Finding page. To print dynamic column tables, use CSV or Excel options instead.&#x20;
+
+### Fixes&#x20;
+
+#### DQ Job
+
+* Fixed an issue that caused jobs using .TXT files to incorrectly render custom column names. (ticket #81808)
+  * Files with .TXT extensions are now treated as delimited files. Files with .TXT extensions that are not delimited files should use their respective file type from the file type dropdown.&#x20;
+* Fixed an issue with deployments on K8s where jobs failed when the volume name exceeded 63 characters. (ticket #85372)
+
+#### Rules
+
+* When using Freeform SQL rules with wild-card operators, rules again correctly pass validation. (ticket #89644)
+* Fixed an issue where certain results in TopN Values and Data Preview displayed in scientific notation. Scientific notation is now removed from the display. (ticket #82163, 89738)
+* Fixed an issue with regex rules that use the characters `)`, `,` , and `;` in the rlike, which caused DQ to append spaces to those characters and prevented the regex from operating correctly. (ticket #89417, 92958)
+* Fixed an issue that caused rules with column values containing parentheses `( )` to break due to the addition of padding before and after closing parentheses. (ticket #85176)
+* Fixed an issue that caused rules with special characters such as @ to display incorrectly on the Rules page, Conditions tab, and when exported to Excel.&#x20;
+
+#### Explorer
+
+* Fixed an issue that caused CLOB data types to be visible in both Source and Target. (ticket #86902)
+
+#### API
+
+* The REST API endpoint v2/updateRoleDatasets again correctly saves roles to data sets.
+
+### Known Limitations
+
+#### Admin
+
+* When adding a Sensitive Label or a Data Category, the Edit and Update functions do not display the selected record. To properly display the record, you must first refresh the page before editing or updating.&#x20;
+
+
+
 ## 2022.07
 
 {% hint style="info" %}
@@ -9,9 +83,9 @@ Standalone packages for the 2022.07 release have a version naming convention of 
 #### Fixes / Enhancements
 
 * DQ Job
-  * Fixed an issue which prevented data from appearing in the Source tab when Source Observation RunID was clicked from the Assignments page.
-  * Fixed an issue which caused Annotations with special characters to be truncated in the Labels tab.
-  * Fixed an issue which caused the Column (name) column of the Rules tab to display incorrectly when Run Discovery was used.
+  * Fixed an issue that prevented data from appearing in the Source tab when Source Observation RunID was clicked from the Assignments page.
+  * Fixed an issue that caused Annotations with special characters to be truncated in the Labels tab.
+  * Fixed an issue that caused the Column (name) column of the Rules tab to display incorrectly when Run Discovery was used.
   * Fixed an issue where the Retrain button on the Record tab was disabled.
   * You can again invalidate observations with single quotes `'` from the Shapes tab.&#x20;
   * The Hints tab now displays any available data.
@@ -25,12 +99,12 @@ Standalone packages for the 2022.07 release have a version naming convention of 
   * Vulnerabilities identified by Jfrog
     * Vulns 0, criticals 0, high severity 7
     * For a visual readout, see the DQ Security Metrics section below.
-  * Fixed an issue which allowed jobs to be run from the command line regardless of connection permissions.&#x20;
+  * Fixed an issue that allowed jobs to be run from the command line regardless of connection permissions.&#x20;
     * When Connection Security is enabled, lock the SQL Editor to prevent unauthorized access to other connections. (#87916)
-  * Fixed an issue which allowed View Only users to access some profile results and export the data to a CSV file.&#x20;
+  * Fixed an issue that allowed View Only users to access some profile results and export the data to a CSV file.&#x20;
     * Added an authorization check for data set access to the profile export feature, which allows only users with data set access to export the profile. (#87720)
   * Backslashes `\` are no longer supported characters for AD usernames without disabling XSS for the /v2/updateadsecurityconfiguration API. (#88499)&#x20;
-  * Fixed an issue which prevented navigation back to the log in page when tenant access was denied. (#89024)
+  * Fixed an issue that prevented navigation back to the log in page when tenant access was denied. (#89024)
 * Profile
   * From the Labels tab, backslashes are now stripped from annotations when they are used for separation within strings.
 * Admin
@@ -44,7 +118,7 @@ Standalone packages for the 2022.07 release have a version naming convention of 
   * Fixed an issue with date range on Oracle connections, which caused end date to change to start date when Transform was selected.
   * The Job Estimate modal again displays the correct number of rows for Sybase connections.
   * Fixed an issue with Source to Target where double quotes `"` were removed from the source file in database to file targets.&#x20;
-* Scorecard
+* Scorecards
   * Enhanced the layout of the Assignment Queues page.
 * API
   * v2/getallscheduledjobs is now available as an enhancement of the original, v2getscheduledjobs.
@@ -53,7 +127,7 @@ Standalone packages for the 2022.07 release have a version naming convention of 
   * Added an Active column to the scheduler export.&#x20;
     * The RunJob column was removed. (#88799)
 * Reporting
-  * Fixed an issue which created misalignment of column headers in PDF exports. (#89739)
+  * Fixed an issue that created misalignment of column headers in PDF exports. (#89739)
 
 #### Known Limitations
 
@@ -65,7 +139,7 @@ Standalone packages for the 2022.07 release have a version naming convention of 
 * Explorer
   * Drill-ins and jobs on Sybase connections run successfully, but connections to Sybase with encrypted passwords are currently unsupported.
 * Files
-  * When using CSV files, you cannot have a comma `,` in the name.
+  * When using CSV files, you cannot use a comma `,` in the name.
 * Admin
   * \*Tech Preview\* \[TP] ServiceNow integration
     * Special characters `!@#$%^&*()`in the description are not supported and will not persist to the ServiceNow assignment queue at this time.

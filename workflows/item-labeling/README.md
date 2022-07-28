@@ -34,7 +34,7 @@ The following action labels instruct Collibra on how to handle a finding:
 
 ## Validating a finding
 
-When you apply a validate label to a finding, you can assign it to another DQ user to review. This marks the finding for future runs and sends it to the internal [Assignments Queue](../assignments-queue/). You can also configure DQ to send assignments to an external queue, [such as ServiceNow](../assignments-queue/external-assignment.md).
+When you apply a validate label to a finding, you can assign it to another DQ user to review. This marks the finding for future runs and sends it to the internal [Assignments Queue](../assignments-queue/). You can also configure DQ to send assignments to an external queue, [such as ServiceNow](../assignment-queue-s/external-assignment.md).
 
 ## Invalidating a finding
 
