@@ -20,6 +20,7 @@ fname.$type != 'String' AND $rowCount < 800
 | **.$type**             | fname.$type != 'String'                  | alert when fname is not a string                                                                                                               |
 | **.$min**              | fname.$min > 'apple'                     | lexicographical sort works for strings and numbers                                                                                             |
 | **.$minNum**           | age.$minNum > 13                         | type casted to a numeric for simple number checks                                                                                              |
+| **.$mean**             | row\_id.$mean > '4.500'                  | alert when the mean is greater than a given value                                                                                              |
 | **.$max**              | fname.$max > 'apple'                     |                                                                                                                                                |
 | **.$maxNum**           | age.$maxNum > 13                         |                                                                                                                                                |
 | .**$uniqueCount**      | id.$uniqueCount != $rowCount             | alert when the uniqueCount of a field doesn't match the rowCount                                                                               |

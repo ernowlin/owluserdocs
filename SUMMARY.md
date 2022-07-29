@@ -106,8 +106,8 @@
 
 * [Assignments Queue](workflows/assignments-queue/README.md)
   * [Internal Assignment](workflows/assignments-queue/internal-assignment.md)
-  * [External assignment](workflows/assignment-queue-s/external-assignment.md)
-  * [FAQ](workflows/assignment-queue-s/faq.md)
+  * [External assignment](workflows/assignments-queue/external-assignment.md)
+  * [FAQ](workflows/assignments-queue/faq.md)
 * [Item Labeling](workflows/item-labeling/README.md)
   * [Peak vs Off Peak](workflows/item-labeling/peak-vs-off-peak.md)
 
