@@ -105,8 +105,8 @@ Double click the DQ Connection name to move from left to right. In Fig 5, DB Con
 
 ![Fig 6: How to add all connections to the selected DQ Agent](../.gitbook/assets/DQ-Agent-Config-Hint-1.png)
 
-{% content-ref url="../connecting-to-dbs-in-owl-web/owl-db-connection/add-connection-to-agent.md" %}
-[add-connection-to-agent.md](../connecting-to-dbs-in-owl-web/owl-db-connection/add-connection-to-agent.md)
+{% content-ref url="../connecting-to-dbs-in-owl-web/owl-db-connection/jdbc-connections/add-connection-to-agent.md" %}
+[add-connection-to-agent.md](../connecting-to-dbs-in-owl-web/owl-db-connection/jdbc-connections/add-connection-to-agent.md)
 {% endcontent-ref %}
 
 ## Agent Configuration Parameters

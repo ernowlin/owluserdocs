@@ -39,8 +39,16 @@
   * [Connectivity to Redshift](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-redshift.md)
   * [Connectivity to Snowflake](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-snowflake.md)
   * [Connectivity to SQL Server](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-sql-server.md)
-* [Add a Connection](connecting-to-dbs-in-owl-web/owl-db-connection/README.md)
-  * [Add Connection to Agent](connecting-to-dbs-in-owl-web/owl-db-connection/add-connection-to-agent.md)
+* [Adding Connections](connecting-to-dbs-in-owl-web/owl-db-connection/README.md)
+  * [JDBC connections](connecting-to-dbs-in-owl-web/owl-db-connection/jdbc-connections/README.md)
+    * [Adding a connection to a DQ Agent](connecting-to-dbs-in-owl-web/owl-db-connection/jdbc-connections/add-connection-to-agent.md)
+  * [Remote file connections](connecting-to-dbs-in-owl-web/owl-db-connection/remote-file-connections/README.md)
+    * [Connecting to S3](connecting-to-dbs-in-owl-web/owl-db-connection/remote-file-connections/connecting-to-s3.md)
+    * [Connecting to Google Cloud Storage](connecting-to-dbs-in-owl-web/owl-db-connection/remote-file-connections/connecting-to-google-cloud-storage.md)
+    * [Connecting to Azure Data Lake](connecting-to-dbs-in-owl-web/owl-db-connection/remote-file-connections/connecting-to-azure-data-lake.md)
+    * [Connecting to Azure Blob Storage](connecting-to-dbs-in-owl-web/owl-db-connection/remote-file-connections/connecting-to-azure-blob-storage.md)
+    * [Connecting to Hadoop Distributed File System (HDFS)](connecting-to-dbs-in-owl-web/owl-db-connection/remote-file-connections/connecting-to-hadoop-distributed-file-system-hdfs.md)
+  * [Streaming connections](connecting-to-dbs-in-owl-web/owl-db-connection/streaming-connections.md)
 
 ## Features <a href="#dq-visuals" id="dq-visuals"></a>
 
