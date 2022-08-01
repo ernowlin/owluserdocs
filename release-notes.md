@@ -12,6 +12,10 @@
 
 * You can now connect to the Databricks JDBC driver from the Connections and Explorer pages.
 * SQL Server Kerberos is now set up, configured, and validated as working within DQ.&#x20;
+* The following CData drivers are now supported:
+  * Athena
+  * BigQuery
+  * Databricks
 
 #### Reporting
 
@@ -28,19 +32,31 @@
 
 #### Agent
 
-* You can now optionally configure individual time zones of DQ Job, Web, and Agent. You should only use this configuration when your instance and containers run in different system time zones. (ticket #87024)
+* You can now optionally configure individual time zones of DQ Job, Web, and Agent. You should only use this configuration when your instance and containers run in different system time zones. (ticket #87024, #87155)
+
+#### Behavior
+
+* The Behavior tab now has a new column, Delta Percent Change (Δ % Change).&#x20;
+* You can now hover over tooltips for the following columns:
+  * Baseline
+  * % Change
+  * Δ % Change
+  * Zscore
+  * Score
+  * Action
 
 #### Outliers
 
 * The Outlier activity is now skipped when running an Outlier job without historical data.
-
-#### DQ Connector
-
-* The version of Collibra Integration Library is now updated to 2.4.12.
+* You can now update and modify record flags from the command line with `-rc`, `-rcKeys`, `-rcDateCol`, and `-rcTbin`.
 
 #### Reports
 
 * The PDF option is now removed from the Data Set Finding page. To print dynamic column tables, use CSV or Excel options instead.&#x20;
+
+#### DQ Connector
+
+* The version of Collibra Integration Library is now updated to 2.4.12.
 
 ### Fixes&#x20;
 
@@ -72,7 +88,13 @@
 
 * When adding a Sensitive Label or a Data Category, the Edit and Update functions do not display the selected record. To properly display the record, you must first refresh the page before editing or updating.&#x20;
 
+### Beta features
 
+#### DQ Job
+
+* Collibra is proud to launch a brand new feature, Snowflake Pushdown. Snowflake Pushdown allows for even faster processing and removes the need to set up a separate Spark compute platform to run Collibra Data Quality. Snowflake Pushdown is a beta feature only available by request. Contact your CSM to learn more about this feature.
+
+### DQ Security Metrics
 
 ## 2022.07
 
