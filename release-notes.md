@@ -6,7 +6,7 @@
 
 #### Rules
 
-* You can now write a SQLG-type stat rules on mean.&#x20;
+* You can now write SQLG-type stat rules on mean.&#x20;
 
 #### Connections
 
@@ -49,6 +49,11 @@
 
 * The Outlier activity is now skipped when running an Outlier job without historical data.
 * You can now update and modify record flags from the command line with `-rc`, `-rcKeys`, `-rcDateCol`, and `-rcTbin`.
+
+#### API
+
+* The v2/gethoot API now properly returns rule dimension information for data sets.&#x20;
+* The v3/jobs/run API now has improved 400 Bad Request error messages in specific circumstances.&#x20;
 
 #### Reports
 
