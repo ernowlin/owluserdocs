@@ -12,7 +12,7 @@
 
 * You can now connect to the Databricks JDBC driver from the Connections and Explorer pages.
 * SQL Server Kerberos is now set up, configured, and validated as working within DQ.&#x20;
-* The following CData drivers are now supported:
+* CData drivers are now supported for the following data sources:
   * Athena
   * BigQuery
   * Databricks
@@ -29,6 +29,8 @@
   * You can now select different time periods for analysis.&#x20;
   * You can now view charts from three different pages, including Rule Detail Summary, Rule Breaks, and Rule Dimension Summary.&#x20;
   * You can now sort by column.&#x20;
+
+#### Security
 
 #### Agent
 
@@ -71,6 +73,15 @@
   * Files with .TXT extensions are now treated as delimited files. Files with .TXT extensions that are not delimited files should use their respective file type from the file type dropdown.&#x20;
 * Fixed an issue with deployments on K8s where jobs failed when the volume name exceeded 63 characters. (ticket #85372)
 
+#### Agent
+
+* Fixed an issue that caused the v2/updateagent API to fail when numCores was empty. (ticket #89737, #92404, #92680)
+  * The numCores field is no longer a required field.&#x20;
+
+#### Validate Source
+
+* Fixed an issue that caused validate source jobs to fail when the pkey was mapped to different column names. (ticket #88778)
+
 #### Rules
 
 * When using Freeform SQL rules with wild-card operators, rules again correctly pass validation. (ticket #89644)
@@ -78,10 +89,11 @@
 * Fixed an issue with regex rules that use the characters `)`, `,` , and `;` in the rlike, which caused DQ to append spaces to those characters and prevented the regex from operating correctly. (ticket #89417, 92958)
 * Fixed an issue that caused rules with column values containing parentheses `( )` to break due to the addition of padding before and after closing parentheses. (ticket #85176)
 * Fixed an issue that caused rules with special characters such as @ to display incorrectly on the Rules page, Conditions tab, and when exported to Excel.&#x20;
+* Fixed an issue that prevented data sets with attached rules and roles from being renamed. (ticket #85731, #92059)
 
 #### Explorer
 
-* Fixed an issue that caused CLOB data types to be visible in both Source and Target. (ticket #86902)
+* Fixed an issue that prevented CLOB data types from being visible in both Source and Target. (ticket #86902)
 
 #### API
 
