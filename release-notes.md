@@ -116,6 +116,12 @@
 
 ### DQ Security Metrics
 
+{% hint style="warning" %}
+There is a critical CVE `CVE-2016-1000027` that shows up in the image scan due to Spring version. This is a false positive and should be added to the exception list of the customer scan tools. We don’t use `HttpInvokerServiceExporter` anywhere in the application and are not impacted by it.
+
+* There is no fix version available for it from Spring. More details are available at [Sonatype vulnerability CVE-2016-1000027 in Spring-web project · Issue #24434 · spring-projects/spring-framework](https://github.com/spring-projects/spring-framework/issues/24434)
+{% endhint %}
+
 ## 2022.07
 
 {% hint style="info" %}
