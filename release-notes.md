@@ -66,6 +66,10 @@
 
 ### Fixes&#x20;
 
+#### Connections
+
+* The new GCS jars are required to use GCS spark-history-server. (ticket #90623)
+
 #### DQ Job
 
 * Fixed an issue that caused jobs using .TXT files to incorrectly render custom column names. (ticket #81808)
