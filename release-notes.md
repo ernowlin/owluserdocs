@@ -39,13 +39,12 @@
 #### Behavior
 
 * The Behavior tab now has a new column, Delta Percent Change (Δ % Change).&#x20;
-* You can now hover over tooltips for the following columns:
+* You can now hover over new tooltips in the following columns:
   * Baseline
   * % Change
   * Δ % Change
   * Zscore
   * Score
-  * Action
 
 #### Outliers
 
