@@ -1,6 +1,6 @@
 # Release Notes
 
-## 2022.08 (In Progress)
+## 2022.08
 
 ### New Features
 
