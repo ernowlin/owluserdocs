@@ -7,7 +7,7 @@ description: Promoting and moving datasets across environments
 ## Pre-requirements
 
 {% hint style="warning" %}
-The database needs the [stored procedure](export-and-import-api.md#stored-procedure) (function) defined in order to use the Export/Import API.
+The database needs the [stored procedure](export-and-import-api.md#requirement-stored-procedure) (function) defined in order to use the Export/Import API.
 {% endhint %}
 
 ### V2 - Stable - available from 2022.02 release
