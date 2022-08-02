@@ -12,10 +12,6 @@
 
 * You can now connect to the Databricks JDBC driver from the Connections and Explorer pages.
 * SQL Server Kerberos is now set up, configured, and validated as working within DQ.&#x20;
-* CData drivers are now supported for the following data sources:
-  * Athena
-  * BigQuery
-  * Databricks
 
 #### Reporting
 
@@ -113,6 +109,10 @@
 #### DQ Job
 
 * Collibra is proud to launch a brand new feature, Snowflake Pushdown. Snowflake Pushdown allows for even faster processing and removes the need to set up a separate Spark compute platform to run Collibra Data Quality. Snowflake Pushdown is a beta feature only available by request. Contact your CSM to learn more about this feature.
+* CData drivers are now supported for the following data sources:
+  * Athena
+  * BigQuery
+  * Databricks
 
 ### DQ Security Metrics
 
