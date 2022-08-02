@@ -7,7 +7,7 @@ description: Promoting and moving datasets across environments
 ## Pre-requirements
 
 {% hint style="warning" %}
-The database needs the [stored procedure](export-and-import-api.md#stored-procedure) (function) defined in order to use the Export/Import API.&#x20;
+The database needs the [stored procedure](export-and-import-api.md#requirement-stored-procedure) (function) defined in order to use the Export/Import API.
 {% endhint %}
 
 ### V2 - Stable - available from 2022.02 release
@@ -20,33 +20,29 @@ The database needs the [stored procedure](export-and-import-api.md#stored-proced
 {% endswagger-description %}
 
 {% swagger-parameter in="query" name="datasets" required="true" type="List of strings" %}
-List of datasets to export. You need to give at least one 
+List of datasets to export. You need to give at least one
 
 **valid**
 
- dataset name into the list
+dataset name into the list
 {% endswagger-parameter %}
 
-{% swagger-parameter in="query" name="schema" type="String" %}
+{% swagger-parameter in="query" name="schema" type="String" required="false" %}
 Name of the schema/tenant where you want to perform the export.
 
-\
-
-
-
+\\
 
 _Default value: **public**_
 {% endswagger-parameter %}
 
-{% swagger-parameter in="query" type="String" name="tables" %}
+{% swagger-parameter in="query" type="String" name="tables" required="false" %}
 List of tables to export on the given schema & dataset(s).
 
-\
+\\
 
+If you leave it empty, the following tables will be exported altogether:
 
-If you leave it empty, the following tables will be exported altogether: 
-
-_**rule_repo, owl_catalog, owl_rule, alert_cond, owl_check_repo, job_schedule, alert_output**_
+_**rule\_repo, owl\_catalog, owl\_rule, alert\_cond, owl\_check\_repo, job\_schedule, alert\_output**_
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="List of SQL - INSERT statements as JSON list" %}
@@ -98,9 +94,7 @@ Format: JSON string list
 {% endswagger-response %}
 {% endswagger %}
 
-
-
-#### We suggest using db-export, but we will not remove get-exports.  We do expect to consolidate the newer logic behind the method.
+#### We suggest using db-export, but we will not remove get-exports. We do expect to consolidate the newer logic behind the method.
 
 #### Step 1c - Get-Exports
 
@@ -110,7 +104,7 @@ You can pass in several dataset names and several tables at once. This endpoint 
 Exports and Imports are currently limited to the 3 tables listed below.
 {% endhint %}
 
-**These are the three most common tables. These are the supported tables for re-promotion (running the export multiple times).  The most common use case is to copy jobs and rules from environment A to environment B.  Running the export/import sequence on the same environment likely result in a key constraint conflict, unless in-between edits are made to the insert payload.**
+**These are the three most common tables. These are the supported tables for re-promotion (running the export multiple times). The most common use case is to copy jobs and rules from environment A to environment B. Running the export/import sequence on the same environment likely result in a key constraint conflict, unless in-between edits are made to the insert payload.**
 
 * owl\_rule
 * job\_schedule
@@ -133,16 +127,16 @@ This is located under controller-scala (internal API)
 #### Step 2 - Run-Import
 
 {% hint style="info" %}
-You will want to perform a find/replace on the import payload to check for differences in connections, agents, spark and environment configurations.  Migrating to different environments typically requires the payload to be modified.
+You will want to perform a find/replace on the import payload to check for differences in connections, agents, spark and environment configurations. Migrating to different environments typically requires the payload to be modified.
 {% endhint %}
 
-Run import on the desired environment, passing the output of the previous statement to the body of the request&#x20;
+Run import on the desired environment, passing the output of the previous statement to the body of the request
 
 ```javascript
 http://<url>/v2/run-import
 ```
 
-#### Use Swagger to try it out&#x20;
+#### Use Swagger to try it out
 
 This is under controller-catalog
 
@@ -156,7 +150,7 @@ This would be the body of the POST.
 
 ## Requirement - Stored Procedure
 
-The following function needs to be created in the Collibra DQ metastore, before this can run.&#x20;
+The following function needs to be created in the Collibra DQ metastore, before this can run.
 
 ```
 CREATE OR REPLACE FUNCTION public.dump(p_schema text, p_table text, p_where text)
@@ -242,4 +236,3 @@ This assignment needs added.
 ```
 alter function dump(text, text, text) owner to <ownername>;
 ```
-
