@@ -19,6 +19,10 @@
 
 ### Enhancements
 
+#### Connections
+
+* You can now authenticate Oracle JDBC connections with Kerberos TGT, Keytab, and Password. (ticket #75267, #76030)
+
 #### Rules
 
 * Rule Summary enhancements:
