@@ -112,7 +112,7 @@
   * Athena
     * Driver Class: \
       `cdata.jdbc.amazonathena.AmazonAthenaDriver`
-    * Connection URL: `jdbc:cdata:amazonathena:AwsRegion=northernvirginia;User=AKIAQM6KV6N25HF543MN;Password=p0EruBEku4PdvyW10LmsFeG1Jid+SQBQWAAKLTlZ;S3StagingDirectory=s3://owl-transfer`
+    * Connection URL: `jdbc:cdata:amazonathena:AwsRegion=northernvirginia;User=<secret>;Password=<key>;S3StagingDirectory=s3://owl-transfer`
   * BigQuery
     * Driver Class: \
       `cdata.jdbc.googlebigquery.GoogleBigQueryDriver`
@@ -121,7 +121,7 @@
     * Driver Class: \
       `cdata.jdbc.databricks.DatabricksDriver`
     * Connection URL:\
-      `jdbc:Databricks:Server=dbc-9a4426da-9755.cloud.databricks.com:443;HTTPPath=sql/protocolv1/o/639171477642820/0428-163251-94wo3y7n;User=-----;Token=---`
+      `jdbc:Databricks:Server=dbc-9a4426da-9755.cloud.databricks.com:443;HTTPPath=sql/protocolv1/o/639171477642820/0428-163251-94wo3y7n;User=<secret>;Token=<key>`
 
 #### DQ Job
 
