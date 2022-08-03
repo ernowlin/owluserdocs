@@ -192,6 +192,7 @@
       * [Dupe](apis-1/notebook/data-quality-pipelines/notebook-api/dupe.md)
       * [Source](apis-1/notebook/data-quality-pipelines/notebook-api/source.md)
     * [FAQs](apis-1/notebook/data-quality-pipelines/frequently-asked-questions.md)
+  * [CDQ API + Zeppelin](apis-1/notebook/dq-databricks-submit.md)
 * [Command Line](apis-1/owlcheck-spark/README.md)
   * [DQ Job JDBC](apis-1/owlcheck-spark/job-jdbc.md)
   * [DQ Job BigQuery](apis-1/owlcheck-spark/owlcheck-bigquery.md)
