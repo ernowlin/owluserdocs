@@ -106,13 +106,26 @@
 
 ### Beta features
 
+#### Connections
+
+* CData drivers are now supported for the following data sources for public beta customers:
+  * Athena
+    * Driver Class: \
+      `cdata.jdbc.amazonathena.AmazonAthenaDriver`
+    * Connection URL: `jdbc:cdata:amazonathena:AwsRegion=northernvirginia;User=AKIAQM6KV6N25HF543MN;Password=p0EruBEku4PdvyW10LmsFeG1Jid+SQBQWAAKLTlZ;S3StagingDirectory=s3://owl-transfer`
+  * BigQuery
+    * Driver Class: \
+      `cdata.jdbc.googlebigquery.GoogleBigQueryDriver`
+    * Connection URL: `jdbc:googlebigquery:AuthScheme="OAuthJWT";ProjectId="owl-hadoop-cdh";InitiateOAuth="GETANDREFRESH";OAuthClientId="";OAuthAccessToken="";OAuthJWTCert="/opt/owl/bin/owl-bigquery.json";OAuthJWTCertType="GOOGLEJSON";OAuthJWTIssuer="1096839723485-compute@developer.gserviceaccount.com";`
+  * Databricks
+    * Driver Class: \
+      `cdata.jdbc.databricks.DatabricksDriver`
+    * Connection URL:\
+      `jdbc:Databricks:Server=dbc-9a4426da-9755.cloud.databricks.com:443;HTTPPath=sql/protocolv1/o/639171477642820/0428-163251-94wo3y7n;User=-----;Token=---`
+
 #### DQ Job
 
-* Collibra is proud to launch a brand new feature, Snowflake Pushdown. Snowflake Pushdown allows for even faster processing and removes the need to set up a separate Spark compute platform to run Collibra Data Quality. Snowflake Pushdown is a beta feature only available by request. Contact your CSM to learn more about this feature.
-* CData drivers are now supported for the following data sources:
-  * Athena
-  * BigQuery
-  * Databricks
+* Collibra is proud to launch a brand new feature, Snowflake Pushdown. Snowflake Pushdown allows for even faster processing and removes the need to set up a separate Spark compute platform to run Collibra Data Quality. Snowflake Pushdown is a private beta feature only available by request. Contact your CSM to learn more about this feature.
 
 ### DQ Security Metrics
 
