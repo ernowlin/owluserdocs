@@ -79,7 +79,10 @@
   * [Patterns (advanced)](dq-visuals/more/pattern-mining.md)
   * [Records (advanced)](dq-visuals/more/missing-records.md)
   * [Source (advanced)](dq-visuals/more/validate-source.md)
-  * [Pushdown](dq-visuals/more/pushdown.md)
+  * [Pushdown](dq-visuals/more/pushdown/README.md)
+    * [Snowflake Pushdown](dq-visuals/more/pushdown/snowflake-pushdown/README.md)
+      * [Features and Limitations of Snowflake Pushdown](dq-visuals/more/pushdown/snowflake-pushdown/features-and-limitations-of-snowflake-pushdown.md)
+      * [Running a Snowflake Pushdown job](dq-visuals/more/pushdown/snowflake-pushdown/running-a-snowflake-pushdown-job.md)
   * [Summary](dq-visuals/more/overview.md)
 
 ## Scorecards

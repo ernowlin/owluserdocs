@@ -85,3 +85,13 @@ Here is an example JDBC string connection we used that take into account the fol
 #### Example URL
 
 jdbc:snowflake://\<ACCOUNT\_NAME>/?tracing=all\&useProxy=true\&proxyHost=10.142.22.37\&proxyPort=8080\&proxyUser=xyz\&proxyPassword=xyz\&nonProxyHosts=\*.[privatelink.snowflakecomputing.com](http://privatelink.snowflakecomputing.com/)%[7Csfc-eu-ds1-customer-stage.s3.eu-central-1.amazonaws.com](http://7csfc-eu-ds1-customer-stage.s3.eu-central-1.amazonaws.com/)
+
+### Pushdown
+
+{% hint style="info" %}
+As of 2022.08, Snowflake Pushdown is only available as a private beta for participating customers.&#x20;
+{% endhint %}
+
+To run a Snowflake Pushdown job, you must opt in when setting up your Snowflake connection. To toggle Pushdown capabilities on, ensure that the Pushdown checkbox in the Snowflake connection modal is checked.&#x20;
+
+![](../../.gitbook/assets/dq-connections-snowflake-pushdown.png)
