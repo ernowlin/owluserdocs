@@ -92,7 +92,7 @@
 * Fixed an issue with regex rules that use the characters `)`, `,` , and `;` in the rlike, which caused DQ to append spaces to those characters and prevented the regex from operating correctly. (ticket #89417, 92958)
 * Fixed an issue that caused rules with column values containing parentheses `( )` to break due to the addition of padding before and after closing parentheses. (ticket #85176)
 * Fixed an issue that caused rules with special characters such as @ to display incorrectly on the Rules page, Conditions tab, and when exported to Excel.&#x20;
-* Fixed an issue that prevented data sets with attached rules and roles from being renamed. (ticket #85731, #92059)
+* Fixed an issue that prevented data sets with attached rules and roles from being renamed. (ticket #85731, #92059, #94315)
 
 #### Explorer
 
