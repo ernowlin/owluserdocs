@@ -1,7 +1,7 @@
 # Snowflake Pushdown
 
 {% hint style="info" %}
-As of 2022.08, Snowflake Pushdown is only available as a private beta for participating customers. Since this is a beta feature, some functionalities may be limited.&#x20;
+As of 2022.08, Snowflake Pushdown is only available as a private beta for participating customers. Since this is a beta feature, some capabilities may be limited.&#x20;
 {% endhint %}
 
 Pushdown is an alternative computation method for running a DQ job, where all of the job's processing is submitted to a SQL data warehouse, such as Snowflake. Snowflake Pushdown jobs generate SQL queries to offload the compute to the data source, reducing the amount of data transfer and Spark computation of the DQ Job.

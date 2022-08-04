@@ -1,7 +1,7 @@
 # Features and Limitations of Snowflake Pushdown
 
 {% hint style="info" %}
-As of 2022.08, Snowflake Pushdown is only available as a private beta for participating customers. Since this is a beta feature, some functionalities may be limited.&#x20;
+As of 2022.08, Snowflake Pushdown is only available as a private beta for participating customers. Since this is a beta feature, some capabilities may be limited.&#x20;
 {% endhint %}
 
 This section describes the features and limitations of using Collibra Data Quality's Snowflake Pushdown capability to run a DQ Job.

@@ -129,7 +129,7 @@
 
 #### DQ Job
 
-* Collibra is proud to launch a brand new feature, Snowflake Pushdown. Snowflake Pushdown allows for even faster processing and removes the need to set up a separate Spark compute platform to run Collibra Data Quality. Snowflake Pushdown is a private beta feature only available by request. Contact your CSM to learn more about this feature.
+* Collibra is proud to launch a brand new feature, Snowflake Pushdown. Snowflake Pushdown allows for even faster processing and removes the need to set up a separate Spark compute platform to run Collibra Data Quality. Snowflake Pushdown is a private beta feature only available by request. Since this is a beta feature, there are current limitations on some of its features. Contact your CSM to learn more about this feature.
 
 ### DQ Security Metrics
 
