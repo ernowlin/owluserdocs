@@ -62,7 +62,7 @@
 
 #### Reports
 
-* The PDF option is now removed from the Data Set Finding page. To print dynamic column tables, use CSV or Excel options instead. (ticket #89739)
+* The PDF option is now removed from the [Data Set Finding page](reports/built-in/profile.md). To print dynamic column tables, use CSV or Excel options instead. (ticket #89739)
 
 #### DQ Connector
 
