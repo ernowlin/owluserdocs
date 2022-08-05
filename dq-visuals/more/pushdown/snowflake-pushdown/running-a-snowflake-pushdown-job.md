@@ -12,8 +12,8 @@ You have an [active Snowflake connection](../../../../connecting-to-dbs-in-owl-w
 
 ## Steps
 
-1. From Explorer, select your Snowflake connection with the ![](../../../../.gitbook/assets/dq-pushdown-icon.png) icon next to it.\
-   **Note:** For the ![](../../../../.gitbook/assets/dq-pushdown-icon.png) icon to be visible, you need to enable Pushdown when you establish your Snowflake connection.
+1. From Explorer, select your Snowflake connection with the ![](<../../../../.gitbook/assets/dq-pushdown-icon (1).png>) icon next to it.\
+   **Note:** For the ![](<../../../../.gitbook/assets/dq-pushdown-icon (1).png>) icon to be visible, you need to enable Pushdown when you establish your Snowflake connection.
 2. Select your schema.
 3. Click Create DQ Job.
 4. Select columns from your schema.\
