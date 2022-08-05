@@ -6,7 +6,7 @@
 
 #### Rules
 
-* You can now write a SQLG-type stat rules on mean.&#x20;
+* You can now write SQLG-type stat rules on mean.&#x20;
 
 #### Connections
 
