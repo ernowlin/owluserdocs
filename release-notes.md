@@ -32,6 +32,11 @@
 
 #### Security
 
+* Vulnerabilities identified by Jfrog
+  * Vulns 0, criticals 0, high severity 7
+  * The majority of the current mediums are due to merging the dq-streaming module into core.
+  * For a visual readout, see the [DQ Security Metrics](release-notes.md#dq-security-metrics) section below.
+
 #### Agent
 
 * You can now optionally configure individual time zones of DQ Job, Web, and Agent. You should only use this configuration when your instance and containers run in different system time zones. (ticket #87024, #87155)
@@ -138,6 +143,10 @@ There is a critical CVE `CVE-2016-1000027` that shows up in the image scan due t
 
 * There is no fix version available for it from Spring. More details are available at [Sonatype vulnerability CVE-2016-1000027 in Spring-web project · Issue #24434 · spring-projects/spring-framework](https://github.com/spring-projects/spring-framework/issues/24434)
 {% endhint %}
+
+![DQ security vulnerabilities over 5 months](.gitbook/assets/vulns-over-time-2022-08.png)
+
+![Critical security vulnerabilities over 5 months](.gitbook/assets/critical-table-2022-08.png)
 
 ## 2022.07
 
