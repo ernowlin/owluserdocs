@@ -40,14 +40,11 @@
   * [Connectivity to Snowflake](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-snowflake.md)
   * [Connectivity to SQL Server](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-sql-server.md)
 * [Adding Connections](connecting-to-dbs-in-owl-web/owl-db-connection/README.md)
-  * [JDBC connections](connecting-to-dbs-in-owl-web/owl-db-connection/jdbc-connections.md)
   * [Remote file connections](connecting-to-dbs-in-owl-web/owl-db-connection/remote-file-connections/README.md)
-    * [Connecting to S3](connecting-to-dbs-in-owl-web/owl-db-connection/remote-file-connections/connecting-to-s3.md)
-    * [Connecting to Google Cloud Storage](connecting-to-dbs-in-owl-web/owl-db-connection/remote-file-connections/connecting-to-google-cloud-storage.md)
-    * [Connecting to Azure Data Lake](connecting-to-dbs-in-owl-web/owl-db-connection/remote-file-connections/connecting-to-azure-data-lake.md)
-    * [Connecting to Azure Blob Storage](connecting-to-dbs-in-owl-web/owl-db-connection/remote-file-connections/connecting-to-azure-blob-storage.md)
+    * [Preparing to connect to a remote file connection](connecting-to-dbs-in-owl-web/owl-db-connection/remote-file-connections/preparing-to-connect-to-a-remote-file-connection.md)
     * [Connecting to Hadoop Distributed File System (HDFS)](connecting-to-dbs-in-owl-web/owl-db-connection/remote-file-connections/connecting-to-hadoop-distributed-file-system-hdfs.md)
-  * [Streaming connections](connecting-to-dbs-in-owl-web/owl-db-connection/streaming-connections.md)
+    * [Connecting to a Network File System (NFS)](connecting-to-dbs-in-owl-web/owl-db-connection/remote-file-connections/connecting-to-a-network-file-system-nfs.md)
+    * [Connecting to Temp Files](connecting-to-dbs-in-owl-web/owl-db-connection/remote-file-connections/connecting-to-temp-files.md)
   * [Adding a connection to a DQ Agent](connecting-to-dbs-in-owl-web/owl-db-connection/add-connection-to-agent.md)
 
 ## Features <a href="#dq-visuals" id="dq-visuals"></a>
