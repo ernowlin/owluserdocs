@@ -2,7 +2,7 @@
 
 ### Owl Dataset Report <a href="#owl-weekly-rollup-reports" id="owl-weekly-rollup-reports"></a>
 
-Search for a particular dataset and run to generate an exportable dataset profile report. Click on the report icon\* in the left navigation and choose Dataset report. Provide a valid dataset name in the auto-complete search box to see the report output.
+Search for a particular dataset and run to generate an exportable dataset profile report. Click on the report icon\* in the left navigation and choose Data Set report. Provide a valid dataset name in the auto-complete search box to see the report output.
 
 ### Navigate to the Profile Report Section
 
