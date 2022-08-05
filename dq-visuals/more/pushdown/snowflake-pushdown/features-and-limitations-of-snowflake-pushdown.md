@@ -30,4 +30,5 @@ Currently, there are some limitations with Snowflake Pushdown since it is in pri
 * Only DQ Native Rules are supported, though support for Freeform rules is planned in a future release.
 * Profile and Rules are supported layers, but Outliers, Patterns, Dupes, Shapes, and Records are not yet supported.&#x20;
 * We do not currently support Okta integration, though support for it is planned in a future release.&#x20;
+* You cannot currently run a job from the command line. This functionality will be supported in an upcoming release.
 
