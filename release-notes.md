@@ -20,7 +20,7 @@
 
 #### Connections
 
-* You can now authenticate Oracle JDBC connections with Kerberos TGT, Keytab, and Password. (ticket #75267, #76030)
+* You can now authenticate Oracle JDBC connections with Kerberos TGT, Keytab, and Password. (tickets #75267, 76030)
 
 #### Rules
 
@@ -38,7 +38,7 @@
 
 #### Agent
 
-* You can now optionally configure individual time zones of DQ Job, Web, and Agent. You should only use this configuration when your instance and containers run in different system time zones. (ticket #87024, #87155)
+* You can now optionally configure individual time zones of DQ Job, Web, and Agent. You should only use this configuration when your instance and containers run in different system time zones. (tickets #87024, 87155)
 
 #### Behavior
 
@@ -82,7 +82,7 @@
 
 #### Agent
 
-* Fixed an issue that caused the v2/updateagent API to fail when numCores was empty. (ticket #89737, #92404, #92680)
+* Fixed an issue that caused the v2/updateagent API to fail when numCores was empty. (tickets #89737, 92404, 92680)
   * The numCores field is no longer a required field.&#x20;
 
 #### Validate Source
@@ -92,14 +92,14 @@
 #### Rules
 
 * When using Freeform SQL rules with wild-card operators, rules again correctly pass validation. (ticket #89644)
-* Fixed an issue with regex rules that use the characters `)`, `,` , and `;` in the rlike, which caused DQ to append spaces to those characters and prevented the regex from operating correctly. (ticket #89417, 92958)
+* Fixed an issue with regex rules that use the characters `)`, `,` , and `;` in the rlike, which caused DQ to append spaces to those characters and prevented the regex from operating correctly. (tickets #89417, 92958)
 * Fixed an issue that caused rules with column values containing parentheses `( )` to break due to the addition of padding before and after closing parentheses. (ticket #85176)
 * Fixed an issue that caused rules with special characters such as @ to display incorrectly on the Rules page, Conditions tab, and when exported to Excel.&#x20;
-* Fixed an issue that prevented data sets with attached rules and roles from being renamed. (ticket #85731, #92059, #94315)
+* Fixed an issue that prevented data sets with attached rules and roles from being renamed. (tickets #85731, 92059, 94315)
 
 #### Profile
 
-* Fixed an issue where certain results in TopN Values and Data Preview displayed in scientific notation. Scientific notation is now removed from the display. (ticket #82163, 89738)
+* Fixed an issue where certain results in TopN Values and Data Preview displayed in scientific notation. Scientific notation is now removed from the display. (tickets #82163, 89738)
 
 #### Explorer
 
