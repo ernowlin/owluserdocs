@@ -10,7 +10,6 @@
 
 #### Connections
 
-* You can now connect to the Databricks JDBC driver from the Connections and Explorer pages.
 * SQL Server Kerberos is now set up, configured, and validated as working within DQ.&#x20;
 
 #### Reporting
@@ -53,7 +52,7 @@
 
 #### Outliers
 
-* The Outlier activity is now skipped when an Outlier check is run without historical data.
+* Outlier checks are now optimized to skip in certain circumstances. Outlier checks are only skipped when the history load of a specified date column is empty.
 * You can now update and modify record flags from the command line with `-rc`, `-rcKeys`, `-rcDateCol`, and `-rcTbin`.
 
 #### API
@@ -93,11 +92,14 @@
 #### Rules
 
 * When using Freeform SQL rules with wild-card operators, rules again correctly pass validation. (ticket #89644)
-* Fixed an issue where certain results in TopN Values and Data Preview displayed in scientific notation. Scientific notation is now removed from the display. (ticket #82163, 89738)
 * Fixed an issue with regex rules that use the characters `)`, `,` , and `;` in the rlike, which caused DQ to append spaces to those characters and prevented the regex from operating correctly. (ticket #89417, 92958)
 * Fixed an issue that caused rules with column values containing parentheses `( )` to break due to the addition of padding before and after closing parentheses. (ticket #85176)
 * Fixed an issue that caused rules with special characters such as @ to display incorrectly on the Rules page, Conditions tab, and when exported to Excel.&#x20;
 * Fixed an issue that prevented data sets with attached rules and roles from being renamed. (ticket #85731, #92059, #94315)
+
+#### Profile
+
+* Fixed an issue where certain results in TopN Values and Data Preview displayed in scientific notation. Scientific notation is now removed from the display. (ticket #82163, 89738)
 
 #### Explorer
 
