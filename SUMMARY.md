@@ -43,9 +43,8 @@
   * [Remote file connections](connecting-to-dbs-in-owl-web/owl-db-connection/remote-file-connections/README.md)
     * [Preparing to connect to a remote file connection](connecting-to-dbs-in-owl-web/owl-db-connection/remote-file-connections/preparing-to-connect-to-a-remote-file-connection.md)
     * [Connecting to Hadoop Distributed File System (HDFS)](connecting-to-dbs-in-owl-web/owl-db-connection/remote-file-connections/connecting-to-hadoop-distributed-file-system-hdfs.md)
-    * [Connecting to a Network File System (NFS)](connecting-to-dbs-in-owl-web/owl-db-connection/remote-file-connections/connecting-to-a-network-file-system-nfs.md)
     * [Connecting to Temp Files](connecting-to-dbs-in-owl-web/owl-db-connection/remote-file-connections/connecting-to-temp-files.md)
-  * [Adding a connection to a DQ Agent](connecting-to-dbs-in-owl-web/owl-db-connection/add-connection-to-agent.md)
+  * [Adding a connection to a DQ Agent](connecting-to-dbs-in-owl-web/owl-db-connection/jdbc-connections/add-connection-to-agent.md)
 
 ## Features <a href="#dq-visuals" id="dq-visuals"></a>
 
@@ -76,7 +75,7 @@
   * [Patterns (advanced)](dq-visuals/more/pattern-mining.md)
   * [Records (advanced)](dq-visuals/more/missing-records.md)
   * [Source (advanced)](dq-visuals/more/validate-source.md)
-  * [Pushdown](dq-visuals/more/pushdown/README.md)
+  * [Pushdown](dq-visuals/more/pushdown.md)
     * [Snowflake Pushdown](dq-visuals/more/pushdown/snowflake-pushdown/README.md)
       * [Features and Limitations of Snowflake Pushdown](dq-visuals/more/pushdown/snowflake-pushdown/features-and-limitations-of-snowflake-pushdown.md)
       * [Running a Snowflake Pushdown job](dq-visuals/more/pushdown/snowflake-pushdown/running-a-snowflake-pushdown-job.md)

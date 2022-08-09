@@ -10,7 +10,7 @@
 
 #### Connections
 
-* SQL Server Kerberos is now set up, configured, and validated as working within DQ.&#x20;
+* A SQL Server Kerberos environment is now available in our data lake.
 
 #### Reporting
 

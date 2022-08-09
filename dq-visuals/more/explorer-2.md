@@ -108,8 +108,8 @@ Manually map the columns by dragging left to right or deselect columns
 \*Note if you do not see your agent, please verify the agent has been assigned to your connection via:
 {% endhint %}
 
-{% content-ref url="../../connecting-to-dbs-in-owl-web/owl-db-connection/add-connection-to-agent.md" %}
-[add-connection-to-agent.md](../../connecting-to-dbs-in-owl-web/owl-db-connection/add-connection-to-agent.md)
+{% content-ref url="../../connecting-to-dbs-in-owl-web/owl-db-connection/jdbc-connections/add-connection-to-agent.md" %}
+[add-connection-to-agent.md](../../connecting-to-dbs-in-owl-web/owl-db-connection/jdbc-connections/add-connection-to-agent.md)
 {% endcontent-ref %}
 
 _Admin Console-->Remote Agent--> (Link icon on far right)-->Map connections to this agent and then reload the explorer page_
