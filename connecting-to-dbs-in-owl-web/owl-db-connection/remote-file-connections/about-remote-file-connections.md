@@ -1,6 +1,10 @@
-# Preparing to connect to a remote file connection
+# About remote file connections
 
-This section is an overview of the supported data file formats. File formats differ in structure, so you might need to prepare your data before establishing a connection.&#x20;
+This section is an overview of the supported data file formats and the limitations of connecting to a remote file.&#x20;
+
+## Supported file types
+
+File formats differ in structure, so you might need to prepare your data before establishing a connection.&#x20;
 
 | Type                       | File structure  | Notes                                              |
 | -------------------------- | --------------- | -------------------------------------------------- |
@@ -12,4 +16,3 @@ This section is an overview of the supported data file formats. File formats dif
 | XML                        | Semi-structured |                                                    |
 | Delta                      | Semi-structured |                                                    |
 
-####

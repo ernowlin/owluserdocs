@@ -41,7 +41,7 @@
   * [Connectivity to SQL Server](connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-sql-server.md)
 * [Adding Connections](connecting-to-dbs-in-owl-web/owl-db-connection/README.md)
   * [Remote file connections](connecting-to-dbs-in-owl-web/owl-db-connection/remote-file-connections/README.md)
-    * [Preparing to connect to a remote file connection](connecting-to-dbs-in-owl-web/owl-db-connection/remote-file-connections/preparing-to-connect-to-a-remote-file-connection.md)
+    * [About remote file connections](connecting-to-dbs-in-owl-web/owl-db-connection/remote-file-connections/about-remote-file-connections.md)
     * [Connecting to Hadoop Distributed File System (HDFS)](connecting-to-dbs-in-owl-web/owl-db-connection/remote-file-connections/connecting-to-hadoop-distributed-file-system-hdfs.md)
     * [Connecting to Temp Files](connecting-to-dbs-in-owl-web/owl-db-connection/remote-file-connections/connecting-to-temp-files.md)
   * [Adding a connection to a DQ Agent](connecting-to-dbs-in-owl-web/owl-db-connection/jdbc-connections/add-connection-to-agent.md)
