@@ -28,11 +28,9 @@ jdbc:hive2://cdh-instance1.us-east1-b.c.owl-hadoop-cdh.internal:10000/default;Au
 
 **Kerberos Principal to use to Authenticate with =** principal=hive/cdh-instance1.us-east1-b.c.owl-hadoop-cdh.internal@CW.COM
 
-#### &#x20;<a href="#h-1" id="h-1"></a>
+### Within the Collibra DQ Web UI you have to specify the following (See ScreenShot below)
 
-### Within the Owl Web UI you have to specify the following (See ScreenShot below)
-
-![HS2Driver Connection for Owl using HS2 SSL/TLS/Kerberos](http://18.204.201.140:8080/xwiki/bin/download/Internal%20Documentation/Enabling%20TLS%2FSSL%20for%20Hiveserver2/WebHome/Screen%20Shot%202019-06-12%20at%209.25.13%20AM.png)
+![](../../../.gitbook/assets/dq-hive-connection.png)
 
 **Name =** hivessl
 
@@ -44,4 +42,4 @@ jdbc:hive2://cdh-instance1.us-east1-b.c.owl-hadoop-cdh.internal:10000/default;Au
 
 **Username =** [userspark@CW.COM](mailto:userspark@CW.COM)
 
-**Password =** password\\
+**Password =** password
