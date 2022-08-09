@@ -103,7 +103,7 @@
 
 #### Explorer
 
-* Fixed an issue that prevented CLOB data types from being visible in both Source and Target. (ticket #86902)
+* Fixed an issue that allowed CLOB data types to be visible in the Drag Columns to Target map in the Source tab. (ticket #86902)
 
 #### API
 
