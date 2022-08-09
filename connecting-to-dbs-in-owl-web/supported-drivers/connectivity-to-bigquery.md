@@ -113,9 +113,17 @@ Make sure the project and account have appropriate permissions. These are common
 
 ### Views
 
-Support for Bigquery views is available from the 2021.11 release and forward. There are Bigquery limitations on creating views from different datasets (collections). Optionally you can add the `viewsEnabled=true` parameter to the connection property when defining the connection.
+Support for BigQuery views is available from the 2021.11 release onward. There are BigQuery limitations on creating views from different data sets (collections). Optionally, you can add the `viewsEnabled=true` parameter to the connection property when defining the connection.
 
-![](<../../.gitbook/assets/image (102).png>)
+![](../../.gitbook/assets/dq-bq-spark-conn-addl-info.png)
+
+{% hint style="info" %}
+For read/write access to BigQuery, you can use the Spark BigQuery connector. To use this connector, ensure that the following configurations are set:
+
+* &#x20;`viewsEnabled` is set to true.
+* `materializationDataset` is set to a data set where the GCP user has table creation permission.
+* `materializationProject` is optional.
+{% endhint %}
 
 ### Spark Version 2
 

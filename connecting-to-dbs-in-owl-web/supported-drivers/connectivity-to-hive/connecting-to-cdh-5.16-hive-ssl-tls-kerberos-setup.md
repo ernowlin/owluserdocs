@@ -30,7 +30,7 @@ jdbc:hive2://cdh-instance1.us-east1-b.c.owl-hadoop-cdh.internal:10000/default;Au
 
 ### Within the Collibra DQ Web UI you have to specify the following (See ScreenShot below)
 
-![](../../../.gitbook/assets/dq-hive-connection.png)
+![](<../../../.gitbook/assets/dq-hive-connection (1).png>)
 
 **Name =** hivessl
 
