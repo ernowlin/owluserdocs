@@ -10,6 +10,42 @@ Builds follow a naming convention to indicate which [optional](builds.md#optiona
 
 <details>
 
+<summary>2022.08</summary>
+
+**Collibra Data Quality**
+
+* 2022.08-L-1132
+* 2022.08-AHM-1133
+* 2022.08-H-1134
+* 2022.08-HM-1135
+* 2022.08-D-1136
+* 2022.08-AL-1137
+* 2022.08-AD-1138
+* 2022.08-ABGCSHMS-1139
+* 2022.08-AGCSHLM-1140
+* 2022.08-M-1141
+* 2022.08-GCSL-1142
+* 2022.08-ADH-1143
+
+**Spark**
+
+* 3.2.0-2022.08-L-1132
+* 3.2.0-2022.08-AHM-1133
+* 3.2.0-2022.08-H-1134
+* 3.2.0-2022.08-HM-1135
+* 3.2.0-2022.08-D-1136
+* 3.2.0-2022.08-AL-1137
+* 3.2.0-2022.08-AD-1138
+* 3.2.0-2022.08-ABGCSHMS-1139
+* 3.2.0-2022.08-AGCSHLM-1140
+* 3.2.0-2022.08-M-1141
+* 3.2.0-2022.08-GCSL-1142
+* 3.2.0-2022.08-ADH-1143
+
+</details>
+
+<details>
+
 <summary>2022.07</summary>
 
 #### Collibra Data Quality
