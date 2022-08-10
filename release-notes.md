@@ -27,7 +27,6 @@
 * Rule Summary enhancements:
   * You can now select different time periods for analysis.&#x20;
   * You can now view charts from three different pages, including Rule Detail Summary, Rule Breaks, and Rule Dimension Summary.&#x20;
-  * You can now sort by column.&#x20;
 
 #### Security
 
@@ -111,28 +110,21 @@
 
 ### Known Limitations
 
+#### Rules
+
+* The Findings page displays results from computational stat rules on mean as a single-quote string. For example, '573523.87' > 6763
+* Column-level sorting for the Rule Summary feature is not currently available.&#x20;
+
 #### Admin
 
 * When adding a Sensitive Label or a Data Category, the Edit and Update functions do not display the selected record. To properly display the record, you must first refresh the page before editing or updating.&#x20;
 
+#### Session Activity
+
+* While the application UI is being redesigned, it is possible that when the application times out on the legacy side of the application, you might not be able to see it on the new React MUI side. This can happen when you have the DQ application open on multiple tabs.
+  * We are not currently tracking session timeout from the legacy UI to React.&#x20;
+
 ### Beta features
-
-#### Connections
-
-* CData drivers are now supported for the following data sources for public beta customers:
-  * Athena
-    * Driver Class: \
-      `cdata.jdbc.amazonathena.AmazonAthenaDriver`
-    * Connection URL: `jdbc:cdata:amazonathena:AwsRegion=northernvirginia;User=<secret>;Password=<key>;S3StagingDirectory=s3://owl-transfer`
-  * BigQuery
-    * Driver Class: \
-      `cdata.jdbc.googlebigquery.GoogleBigQueryDriver`
-    * Connection URL: `jdbc:googlebigquery:AuthScheme="OAuthJWT";ProjectId="owl-hadoop-cdh";InitiateOAuth="GETANDREFRESH";OAuthClientId="";OAuthAccessToken="";OAuthJWTCert="/opt/owl/bin/owl-bigquery.json";OAuthJWTCertType="GOOGLEJSON";OAuthJWTIssuer="1096839723485-compute@developer.gserviceaccount.com";`
-  * Databricks
-    * Driver Class: \
-      `cdata.jdbc.databricks.DatabricksDriver`
-    * Connection URL:\
-      `jdbc:Databricks:Server=dbc-9a4426da-9755.cloud.databricks.com:443;HTTPPath=sql/protocolv1/o/639171477642820/0428-163251-94wo3y7n;User=<secret>;Token=<key>`
 
 #### DQ Job
 

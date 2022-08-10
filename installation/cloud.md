@@ -5,7 +5,7 @@ description: Installation details for the Edge component for DQ Cloud.
 # Cloud
 
 {% hint style="success" %}
-This offering is in private beta and only available for select Collibra customers. Please contact a Collibra representative to learn more.
+This offering is in public beta and only available for select Collibra customers. Please contact a Collibra representative to learn more.
 {% endhint %}
 
 ## Requirements
@@ -46,12 +46,22 @@ This is where your DQ Job results will be stored
 * Network access to and from the VM where Edge is installed
 * User with ownership rights over the target database
 
+### CData Drivers
+
+The following CData drivers are required for participating public beta customers:
+
+| CData driver | Driver class                                     | Connection URL                                                                                                                                                                                                                                                                              |
+| ------------ | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Athena       | `cdata.jdbc.amazonathena.AmazonAthenaDriver`     | `jdbc:cdata:amazonathena:AwsRegion=northernvirginia;User=<secret>;Password=<key>;S3StagingDirectory=s3://owl-transfer`                                                                                                                                                                      |
+| BigQuery     | `cdata.jdbc.googlebigquery.GoogleBigQueryDriver` | `jdbc:googlebigquery:AuthScheme="OAuthJWT";ProjectId="owl-hadoop-cdh";InitiateOAuth="GETANDREFRESH";OAuthClientId="";OAuthAccessToken="";OAuthJWTCert="/opt/owl/bin/owl-bigquery.json";OAuthJWTCertType="GOOGLEJSON";OAuthJWTIssuer="1096839723485-compute@developer.gserviceaccount.com";` |
+| Databricks   | `cdata.jdbc.databricks.DatabricksDriver`         | `jdbc:Databricks:Server=dbc-9a4426da-9755.cloud.databricks.com:443;HTTPPath=sql/protocolv1/o/639171477642820/0428-163251-94wo3y7n;User=<secret>;Token=<key>`                                                                                                                                |
+
 ## **1. Obtain a Secure Collibra DQ Web URL**
 
 This is provisioned by Collibra. Along with the URL, credentials will be provided to access your instance.
 
 {% hint style="success" %}
-This offering is in private beta and only available for select Collibra customers. Please contact a Collibra representative to learn more.
+This offering is in public beta and only available for select Collibra customers. Please contact a Collibra representative to learn more.
 {% endhint %}
 
 ## **2. Install Postgres**
