@@ -24,25 +24,29 @@ This offering is in public beta and only available for select Collibra customers
 
 ### **VM**
 
-This is where your [Edge](https://productresources.collibra.com/docs/collibra/latest/Content/Edge/ref\_edge-faq.htm) site will be installed
+This is where your [Edge](https://productresources.collibra.com/docs/collibra/latest/Content/Edge/ref\_edge-faq.htm) site is installed.
 
-* Redhat 8 or Centos 8
+* RedHat 8 or Centos 8
 * SSH Access
-* 55gb+ Storage
-* 64gb RAM
+* 55 GB of free storage
+* 64 GB memory
 * 16 cores
 * Egress (outbound) network access on port 443
 * Network access to Postgres installed in step 2
+
+{% hint style="info" %}
+For medium to large workloads, we recommend that your VM has 32 cores, 128 GB memory, and 500 GB of free storage.
+{% endhint %}
 
 Edge installation requirements can be found [**here**](https://productresources.collibra.com/docs/collibra/latest/Content/Edge/EdgeSitesInstallation/ref\_edge-site-system-requirements.htm).
 
 ### **Postgres**
 
-This is where your DQ Job results will be stored
+This is where your DQ Job results are stored.
 
-* Version 11 or above
-* 100gb storage minimum
-* 4 cores minimum
+* Version 11 or later
+* A minimum of 100 GB of free storage
+* A minimum of 4 cores&#x20;
 * Network access to and from the VM where Edge is installed
 * User with ownership rights over the target database
 
