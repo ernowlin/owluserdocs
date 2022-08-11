@@ -35,7 +35,7 @@ This is where your [Edge](https://productresources.collibra.com/docs/collibra/la
 * Network access to Postgres installed in step 2
 
 {% hint style="info" %}
-For medium to large workloads, we recommend that your VM has 32 cores, 128 GB memory, and 500 GB of free storage.
+For medium to large workloads of more than 100M rows by 100 columns, we recommend that your VM has a minimum of 32 cores, 128 GB memory, and 500 GB of free storage.
 {% endhint %}
 
 Edge installation requirements can be found [**here**](https://productresources.collibra.com/docs/collibra/latest/Content/Edge/EdgeSitesInstallation/ref\_edge-site-system-requirements.htm).
