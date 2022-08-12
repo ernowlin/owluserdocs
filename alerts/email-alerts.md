@@ -1,38 +1,44 @@
+---
+description: >-
+  The Alert Email functionality allows you to send email to recipients when the
+  alert condition is satisfied for a specified data set.
+---
+
 # Email Alerts
 
-### Setting up an Email Server using the WebApp
+## Setting up an Email Server using the WebApp
 
-Navigate to OwlWeb URL. Then click the gear icon on the left in the admin section and click alerts.
+To configure the SMTP server, click the gear icon in the left navigation pane and then click **Alerts**.&#x20;
 
-![](../.gitbook/assets/dq-alert-email-server.png)
+![](../.gitbook/assets/dq-admin-alert-smtp-server.png)
 
-### Creating a Condition to Send an Alert
+## Creating a condition to send an alert
 
-Also shows some of the common rules associated with this dataset for quick reference while creating. Use the batch name to create a consolidated list of alerts and distribution list for a set of notifications per dataset.
+You can create specific conditions so that an email is sent to recipients when those conditions are met for specified data sets.
 
-![](<../.gitbook/assets/Screen Recording 2022-03-21 at 4.40.31 PM (1).gif>)
+To use the batch name to create a consolidated list of alerts and distribution lists for a set of notifications per data set, see [Email Batch Alerts](email-batch-alerts.md).
 
-## DQ Alert in your Inbox
+## DQ Alerts for data sets
 
-Below is what an alert email that makes it into your inbox will look like. Always smart to make sure your email client didn't mark it as spam and that the SMTP was setup properly. Some email clients automatically strip images therefore we try to keep the emails light on styling and straight to the point.
+You can set DQ alerts for data sets so that you are notified based on certain conditions that are triggered on the data sets. Below is what a data set email looks like in your inbox. Make sure your email client didn't mark the email as spam and that the SMTP server was set up properly.&#x20;
 
-![](<../.gitbook/assets/Screen Shot 2021-08-11 at 9.46.48 PM.png>)
+![](../.gitbook/assets/dq-quality-alert.png)
 
-## Failed DQ Job Email Alert
+## DQ Alerts for failed jobs
 
-There is also a scenario where the DQ job fails to run or has an exception and therefore never gets a chance to score the data or run the alert condition. This is is a FAILED alert.
+Another scenario is when the DQ Job fails to run or has an exception and, therefore, never gets the chance to score the data or run the alert condition. This is a failed alert that's automatically sent to the email address based on the Admin/SMTP settings defined in the `To Email (Default)` fields in the Admin console.
 
-![](<../.gitbook/assets/Screen Shot 2021-08-25 at 10.07.43 AM.png>)
+![](../.gitbook/assets/dq-failed-alert.png)
 
 ## Alert Notifications in Web UI
 
-There are also alert notifications in the web UI. This can be helpful to confirm that the email alerts were sent out and to whom should have received the notifications.
+There are also alert notifications in the web UI. This can be helpful to confirm that the email alerts were sent out and who should have received the notifications.
 
 ![](<../.gitbook/assets/Screen Shot 2021-08-12 at 8.03.07 AM.png>)
 
-### Setting up the EmailServer Programmatically
+### Setting up the Email Server programmatically
 
-If you are in a notebook or pipeline you may prefer to use the Scala/Spark API to create the Email Server
+If you are in a notebook or pipeline, you may prefer to use the Scala/Spark API to create the Email Server.
 
 ```scala
     val emailServer = OwlUtils.createEmailServer("smtp-relay.sendinblue.com", 587)
