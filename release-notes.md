@@ -8,19 +8,12 @@
 
 * You can now write SQLG-type [stat rules](dq-visuals/rules/rule-types/stat-rules/) on mean.&#x20;
 
-#### Connections
-
-* A SQL Server Kerberos environment is now available in our data lake.
-
-#### Reporting
-
-* You can now view rules totals in Pendo to track the number of rules in use for billing and usage purposes.
-
 ### Enhancements
 
 #### Connections
 
 * You can now authenticate Oracle JDBC connections with Kerberos TGT, Keytab, and Password. (tickets #75267, 76030)
+* You can now authenticate SQL Server JDBC connections with Kerberos Keytab in addition to basic authentication.
 
 #### Rules
 
