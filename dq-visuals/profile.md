@@ -30,11 +30,11 @@ You can find detailed instructions about [selecting the scope](more/explorer-2.m
 
 Owl automatically profiles datasets over time to enable drill-in for detailed insights an automated data quality. A profile is just the first step towards an amazing amount of auto discovery. Visualize segments of the dataset and how how the dataset is changing over time.
 
-Collibra DQ offers click or code options to run profiling.
+Collibra Data Quality offers click or code options to run profiling.
 
 ## Dataset Profile
 
-Owl creates a detailed profile of each dataset under management. This profile will later be used to both provide insight and automatically identify data quality issues.
+Collibra Data Quality creates a detailed profile of each dataset under management. This profile will later be used to both provide insight and automatically identify data quality issues.
 
 ![](<../.gitbook/assets/Screen Shot 2020-07-08 at 12.45.19 AM.png>)
 
@@ -77,11 +77,11 @@ By gathering a variety of different statistics, Collibra DQ's profile can provid
 
 To see the difference between baseline (historical) and current values, Collibra DQ provides a **Delta %** change column. In the Delta % change column, data is represented in a pie chart for quick visualization of the changes.
 
-To eleaborate on the quality metrics:
+To elaborate on the quality metrics:
 
-The profile can discover attributes then helps delineate the realtive metrics around numeric v. non-numeric discovered.&#x20;
+The profile can discover attributes then helps delineate the relative metrics around numeric v. non-numeric discovered.&#x20;
 
-* Filled - \[1] Integer - The perecentage of data that is numeric (or numeric) in a numeric (or non-numeric) discovered column.&#x20;
+* Filled - \[1] Integer - The percentage of data that is numeric (or non-numeric) in a numeric (or non-numeric) discovered column.&#x20;
 * Mixed - \[String] Integer - The percentage of data that is non-numeric (or numeric) in a numeric (or non-numeric) discovered column.&#x20;
 * Null - \[] - The percentage of data that has no value at all.
 * Empty - \[""] - The percentage of data that has a string instance of zero length.
@@ -104,10 +104,10 @@ Profile includes a range of statistics
 
 ## Sensitive Data Detection (Semantic)
 
-Owl can automatically identify any types of common PII columns.
+Collibra Data Quality can automatically identify any type of common PII columns.
 
 {% hint style="info" %}
-Owl is able to detect the following types of PII
+Collibra Data Quality is able to detect the following types of PII
 
 * EMAIL
 * PHONE
@@ -122,7 +122,7 @@ Owl is able to detect the following types of PII
 
 ![](<../.gitbook/assets/Screen Shot 2020-07-08 at 12.37.10 AM.png>)
 
-Once detected, Owl will tag the column in the Profile as the discovered type as well as automatically apply a rule. If the user can choose to decline any discovered tag by simply clicking on it and confirming the delete action. This action can also remove the rule associated with the tag.
+Once detected, Collibra Data Quality will tag the column in the Profile as the discovered type as well as automatically apply a rule. If the user can choose to decline any discovered tag by simply clicking on it and confirming the delete action. This action can also remove the rule associated with the tag.
 
 ![](<../.gitbook/assets/Screen Shot 2020-07-08 at 12.39.13 AM.png>)
 
@@ -134,12 +134,12 @@ Discover hidden relationships and measure the strength of those relationships.
 
 ## Histograms
 
-Often the first step in a data science project is to segment the data. Owl automatically does this using histograms.
+Often the first step in a data science project is to segment the data. Collibra Data Quality automatically does this using histograms.
 
 ![](../.gitbook/assets/owl-histogram.png)
 
 ## Data Preview
 
-After profiling the data, for those users with appropriate rights, Owl provides a glimpse of the dataset. The Data preview tab also provides a some basic insights such as highlights of Data Shape issues and Outliers (if enabled), and Column Filtergram visualization.
+After profiling the data, for those users with appropriate rights, Collibra Data Quality provides a glimpse of the dataset. The Data preview tab also provides a some basic insights such as highlights of Data Shape issues and Outliers (if enabled), and Column Filtergram visualization.
 
 ![](<../.gitbook/assets/Screen Shot 2020-05-07 at 7.57.29 PM.png>)
