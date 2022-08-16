@@ -77,6 +77,15 @@ By gathering a variety of different statistics, Collibra DQ's profile can provid
 
 To see the difference between baseline (historical) and current values, Collibra DQ provides a **Delta %** change column. In the Delta % change column, data is represented in a pie chart for quick visualization of the changes.
 
+To eleaborate on the quality metrics:
+
+The profile can discover attributes then helps delineate the realtive metrics around numeric v. non-numeric discovered.&#x20;
+
+* Filled - \[1] Integer - The perecentage of data that is numeric (or numeric) in a numeric (or non-numeric) discovered column.&#x20;
+* Mixed - \[String] Integer - The percentage of data that is non-numeric (or numeric) in a numeric (or non-numeric) discovered column.&#x20;
+* Null - \[] - The percentage of data that has no value at all.
+* Empty - \[""] - The percentage of data that has a string instance of zero length.
+
 {% hint style="info" %}
 Profile includes a range of statistics
 
