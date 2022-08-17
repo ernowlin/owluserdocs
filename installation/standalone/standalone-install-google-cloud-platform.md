@@ -13,7 +13,7 @@ You have:&#x20;
 ## Steps
 
 1. [Create a new Collibra Data Quality deployment](standalone-install-google-cloud-platform.md#step-1-create-a-new-collibra-data-quality-deployment)
-2. [Launch a new Collibra Data Quality deployment](standalone-install-google-cloud-platform.md#step-2-launching-a-new-collibra-data-quality-deployment)
+2. [Launch a new Collibra Data Quality deployment](standalone-install-google-cloud-platform.md#step-2-launch-a-new-collibra-data-quality-deployment)
 
 ### Step 1: Create a new Collibra Data Quality deployment
 
@@ -26,7 +26,7 @@ You have:&#x20;
    \>> The New Collibra CDQ deployment page opens.
 5. In the **New Collibra CDQ deployment** page, specify the following information:
 
-![](<../../.gitbook/assets/dq-google-cloud-marketplace-deployment-specifications (1).png>)
+![](../../.gitbook/assets/dq-google-cloud-marketplace-deployment-specifications.png)
 
 | Field                | Description                                            |
 | -------------------- | ------------------------------------------------------ |
