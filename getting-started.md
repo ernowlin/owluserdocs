@@ -13,9 +13,9 @@ layout: landing
 
 ![](.gitbook/assets/gcp-install.png)
 
-| Marketplace                     | <p>The Google Marketplace option is a simple, 1-click image installation. This is the quickest option for single-server install in GCP.<br><br><em>All software and data resides in your VPC</em>.</p><p>Install time: <code>5 minutes</code></p> | [Click Here](installation/standalone/standalone-install-google-cloud-platform.md) |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| Google Cloud Deployment Manager | <p>Hooks into GCP cloud services like GKE for ephemeral compute and RDS for cloud database.</p><p><em>All software and data resides in your VPC.</em></p>                                                                                         | Coming soon                                                                       |
+| Marketplace                     | <p>The Google Marketplace option is a simple, 1-click image installation. This is the quickest option for single-server install in GCP.<br><br><em>All software and data resides in your VPC</em>.<br></p><p>Install time: <code>5 minutes</code></p> | [Click Here](installation/standalone/standalone-install-google-cloud-platform.md) |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| Google Cloud Deployment Manager | <p>Hooks into GCP cloud services like GKE for ephemeral compute and RDS for cloud database.<br></p><p><em>All software and data resides in your VPC.</em></p>                                                                                         | Coming soon                                                                       |
 
 ![](.gitbook/assets/aw-install.png)
 
