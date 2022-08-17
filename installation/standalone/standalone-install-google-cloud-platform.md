@@ -79,6 +79,8 @@ To delete your deployment, go to the **Deployment Manager**. Select **Delete** a
 
 ![](../../.gitbook/assets/dq-google-cloud-marketplace-delete-deployment.png)
 
+When you select a deletion method, your deployment is permanently removed from the list of deployments on the Deployment Manager page.
+
 ## What's next?
 
 * Visit the [Explorer page](../../dq-visuals/more/explorer-2.md) for more information on quickly connecting to your data sets.
