@@ -70,6 +70,15 @@ After a successful deployment of Collibra Data Quality on GCP, it is possible th
 * Check the URL and remove the **s** from http**s**. Also remove the second trailing forward slash `/` after :9000.\
   Correct: http://\<your.instance>:9000/
 
+#### Deleting your deployment
+
+To delete your deployment, go to the **Deployment Manager**. Select **Delete** at the top of the screen and then from the dialog box, choose to either
+
+* Delete your deployment and all of its resources.
+* Delete your deployment but keep its resources.
+
+![](../../.gitbook/assets/dq-google-cloud-marketplace-delete-deployment.png)
+
 ## What's next?
 
 * Visit the [Explorer page](../../dq-visuals/more/explorer-2.md) for more information on quickly connecting to your data sets.
