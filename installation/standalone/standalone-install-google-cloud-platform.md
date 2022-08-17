@@ -17,8 +17,8 @@ You have:&#x20;
 
 ### Step 1: Create a new Collibra Data Quality deployment
 
-1. Sign in to your Google Cloud Marketplace account and choose your working project for Collibra Data Quality deployment.
-2. In the search bar, search for "Collibra" and press enter.\
+1. Sign in to your Google Cloud Marketplace account and choose your **working project** for Collibra Data Quality deployment.
+2. In the search bar, search for _**Collibra**_ and press enter.\
    \>> The search results populate.
 3. Select **Collibra CDQ**.\
    \>> The Collibra CDQ product page opens.
@@ -37,7 +37,7 @@ You have:&#x20;
 | Boot disk type       | The default is Standard Persistent Disk.               |
 | Boot disk size in GB | The default is 100.                                    |
 
-6\. Read and accept the Terms of Service.
+6\. Read and accept the **Terms of Service**.
 
 7\. Select **Deploy**.\
 &#x20;   \>> The **Deployment Manager** page opens.
@@ -52,7 +52,8 @@ GCP also sends you a confirmation email containing a direct link to the Deployme
 
 ![](../../.gitbook/assets/dq-google-cloud-marketplace-deployment-manager-success.png)
 
-2\. Sign in to your instance using the following one-time username and password: admin/admin123\
+2\. Sign in to your instance using the following one-time username and password: \
+&#x20;   `admin / admin123`\
 &#x20;   \>> The Collibra Data Quality landing page opens.
 
 {% hint style="info" %}
