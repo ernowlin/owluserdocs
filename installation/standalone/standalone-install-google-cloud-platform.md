@@ -8,7 +8,7 @@ You have:&#x20;
 
 * A Google user account.
 * A project for Google Cloud Platform to deploy Collibra Data Quality.
-* Deployment manager permissions provisioned by an admin.
+* Deployment Manager permissions provisioned by an admin.
 
 ## Steps
 
