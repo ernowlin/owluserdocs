@@ -31,7 +31,7 @@ Password: CDQ\<your\_instance\_id>
 
 ![Select a connection](<../../.gitbook/assets/Screen Shot 2022-06-23 at 3.17.29 PM.png>)
 
-## Additional resources
+## What's next?
 
 * Visit the [Explorer page](../../dq-visuals/more/explorer-2.md) for more information on quickly connecting to your data sets.
 * Visit [Collibra Data Quality's Youtube channel](https://www.youtube.com/playlist?list=PLD2xg51w57tPl6q9NKwz90iuznQJamaB3) for more tutorials.

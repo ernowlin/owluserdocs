@@ -13,6 +13,7 @@
   * [Standalone Install (Script)](installation/standalone/standalone-install-script.md)
   * [Getting Started with AWS](installation/standalone/getting-started.md)
   * [Standalone Install (AWS CloudFormation)](installation/standalone/standalone-install-aws-cloudformation.md)
+  * [Standalone Install (Google Cloud Platform)](installation/standalone/standalone-install-google-cloud-platform.md)
   * [Standalone Upgrade](installation/standalone/standalone-upgrade.md)
   * [Standalone Sizing](installation/standalone/standalone-sizing.md)
 * [Hadoop](installation/hadoop/README.md)
