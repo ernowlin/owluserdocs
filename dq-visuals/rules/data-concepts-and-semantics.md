@@ -6,17 +6,17 @@ description: >-
 
 # Rule Discovery
 
-## Data Concepts
+## Data Categories
 
-A data concept is the class or family of a dataset for example: _Loan Data, Stock Data, Position Limit Data, Retail Product Data, Patient Health Data, Interest Rate Data, etc..._ By giving data classes or "classifying" datasets we can transfer common understanding, rules and ML to datasets. This powerful technique allows a data steward to set up concepts once and enables the entire organization the ability to unify and standardize on common rules and terms, solving many metadata scale challenges.
+A data category is the category or family of a data set, for example, _s_tock data_, i_nterest rate data, and so on. By giving data categories, or classifying data sets, we can transfer (apply) common understanding, rules, and ML to data sets. This allows data stewards to set up concepts once and enables organizations to unify and standardize common rules and terms, solving many metadata scale challenges.
 
 {% hint style="info" %}
-Dataset Level
+Data set level
 
-**Security Reference Data** - Bloomberg financial data **Home Loan Data** - Mortgage application data
+**Security reference data** - Bloomberg financial data - **home loan data** - mortgage application data
 {% endhint %}
 
-## Semantics
+## Data Classes
 
 {% hint style="info" %}
 Column Level
@@ -24,7 +24,7 @@ Column Level
 EMAIL, ZIP CODE, SSN, CUSIP, GENDER, ADDRESS, CURRENCY CD, SKU, EIN, IP ADDRESS, PHONE, LICENSE, VIN, CREDIT CARD
 {% endhint %}
 
-A semantic is the "semantic type" of a column or attribute of a dataset. All columns have a physical type such as String, Int, Date etc... but the semantic understanding of what type of String is in the column can be very important. It also allows us to enforce DQ validation rules out of the box.
+A data class is the semantic type of a column or attribute of a data set, for example email, zip code, and so on. All columns have a physical type, such as String, Int, and Date, but the semantic understanding of what type of String is in the column can be very important. Data classes allow Collibra Data Quality to enforce DQ validation rules out of the box.
 
 Collibra Data Quality's semantic scanning self-identifies standard columns and automatically provides the proper protection. This makes it easy to get started adding common rules for specific use cases.
 

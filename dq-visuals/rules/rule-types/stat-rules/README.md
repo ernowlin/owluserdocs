@@ -12,8 +12,8 @@ fname.$type != 'String' AND $rowCount < 800
 | **$totalTimeInSeconds** | $totalTimeInSeconds > 25 | Alert when DQ job runs longer than 25 seconds. |
 | **$totalTimeInMinutes** | $totalTimeInMinutes > 5  | Alert when DQ job runs longer than 5 mins.     |
 | **$totalTimeInHours**   | $totalTimeInHours > 1    | Alert when DQ job runs longer than 1 hour.     |
-| **$rowCount**           | $rowCount < 9000         | Alert when row count less than 9,000           |
-| **$runId**              | $runId = '2020-01-24'    | Use the ${rd} variable in rules                |
+| **$rowCount**           | $rowCount < 9000         | Alert when row count less than 9,000.          |
+| **$runDate**            | $runDate = '2020-01-24'  | Use the ${rd} variable in rules.               |
 
 | Column Level Stat      | Rule Example                             | Description                                                                                                                                             |
 | ---------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
