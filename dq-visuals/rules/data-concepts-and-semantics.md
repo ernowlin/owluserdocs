@@ -8,7 +8,7 @@ description: >-
 
 ## Data Categories
 
-A data category is the category or family of a data set, for example, _s_tock data_, i_nterest rate data, and so on. By giving data categories, or classifying data sets, we can transfer (apply) common understanding, rules, and ML to data sets. This allows data stewards to set up concepts once and enables organizations to unify and standardize common rules and terms, solving many metadata scale challenges.
+A data category is the category or family of a data set, for example, __ stock data_,_ interest rate data, and so on. By giving data categories, or classifying data sets, we can transfer (apply) common understanding, rules, and ML to data sets. This allows data stewards to set up concepts once and enables organizations to unify and standardize common rules and terms, solving many metadata scale challenges.
 
 {% hint style="info" %}
 Data set level
