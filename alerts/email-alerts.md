@@ -6,7 +6,7 @@ description: >-
 
 # Email Alerts
 
-## Setting up an Email Server using the WebApp
+## Setting up an email server using the WebApp
 
 To configure the SMTP server, click the gear icon in the left navigation pane and then click **Alerts**.&#x20;
 
@@ -48,3 +48,24 @@ If you are in a notebook or pipeline, you may prefer to use the Scala/Spark API 
     Util.EmailServerDaoFactory.delete(emailServer)
     Util.EmailServerDaoFactory.insert(emailServer)
 ```
+
+## Setting up SMTP alerts without a username or password
+
+Some alert settings are configurable without requiring a username or password when you set up an email server. To configure this type of alert:
+
+1. Select the **gear icon** in the left navigation pane and then select **Settings**.&#x20;
+2. From Settings, select **App Config** in the upper right and then select **Add Custom**.&#x20;
+3. Enter a property in the **name** field and a value in the **value** field.&#x20;
+4. Select **Add**.&#x20;
+
+The following table contains the configurable properties.&#x20;
+
+| Property                  | Default Value | Description                                                                                                                                                                                                                                                                                         |
+| ------------------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| mail.smtp.auth            | True          | <p>When set to True, the server attempts to authenticate the user using the AUTH command. </p><p></p><p>When set to False, username and password authentication are turned off. </p>                                                                                                                |
+| mail.smtp.starttls.enable | True          | <p>When set to True and TLS is supported by the server, this enables the use of the STARTTLS command to switch the connection to a TLS-protected connection before issuing any login commands.</p><p></p><p>When TLS is not supported by your mail server, this property must be set to False. </p> |
+
+{% hint style="info" %}
+These properties are preset to their default values. For example, mail.smtp.auth is preset to True.
+{% endhint %}
+
