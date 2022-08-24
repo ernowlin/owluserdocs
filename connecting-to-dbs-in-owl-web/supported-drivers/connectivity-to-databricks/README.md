@@ -27,9 +27,11 @@
 
 ### **Jar**
 
-`SimbaJDBC42.jar`
+`SimbaJDBC42.jar`\
+`Version:` 2.6.22
 
-Link to [Databricks download](https://databricks.com/spark/jdbc-drivers-download)
+Link to [Databricks download](https://databricks.com/spark/jdbc-drivers-download)\
+Links to [older version of Databricks JDBC ](https://www.databricks.com/spark/jdbc-drivers-archive)
 
 ## **Notebook (Supported)**
 
