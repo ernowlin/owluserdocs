@@ -31,7 +31,7 @@
 `Version:` 2.6.22
 
 Link to [Databricks download](https://databricks.com/spark/jdbc-drivers-download)\
-Links to [older version of Databricks JDBC ](https://www.databricks.com/spark/jdbc-drivers-archive)
+Links to [older versions of Databricks JDBC ](https://www.databricks.com/spark/jdbc-drivers-archive)
 
 ## **Notebook (Supported)**
 
