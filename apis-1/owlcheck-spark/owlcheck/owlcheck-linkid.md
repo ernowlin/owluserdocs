@@ -13,7 +13,7 @@ There are two ways to provide the link ID:
 
 ## Combining link ID and Run Discovery
 
-To combine the features of link ID and Run Discovery, first enable link ID and then use [Run Discovery](https://dq-docs.collibra.com/dq-visuals/rules/data-concepts-and-semantics#run-discovery). This lets you apply sensitive labels to data classes and trigger breaks for all the records that do not match your link ID.&#x20;
+To combine the features of link ID and Run Discovery, first enable link ID and then use [Run Discovery](https://dq-docs.collibra.com/dq-visuals/rules/data-concepts-and-semantics#run-discovery). This lets you apply sensitivity labels to data classes and trigger breaks for all the records that do not match your link ID.&#x20;
 
 ### Link ID and the DQ Metastore
 
