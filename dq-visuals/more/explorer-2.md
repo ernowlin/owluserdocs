@@ -48,7 +48,7 @@ All UI functionality has corresponding API endpoints to define, run, and get res
 
 ## Profile
 
-![](<../../.gitbook/assets/image (1).png>)
+![](<../../.gitbook/assets/image (11).png>)
 
 #### Use the drop-downs to enable different analysis. Best practice is to leave the defaults.
 

@@ -131,7 +131,7 @@ There is a critical CVE `CVE-2016-1000027` that shows up in the image scan due t
 * There is no fix version available for it from Spring. More details are available at [Sonatype vulnerability CVE-2016-1000027 in Spring-web project · Issue #24434 · spring-projects/spring-framework](https://github.com/spring-projects/spring-framework/issues/24434)
 {% endhint %}
 
-![DQ security vulnerabilities over 5 months](<.gitbook/assets/vulns-over-time-2022-08 (1).png>)
+![DQ security vulnerabilities over 5 months](.gitbook/assets/vulns-over-time-2022-08.png)
 
 ![Critical security vulnerabilities over 5 months](.gitbook/assets/critical-table-2022-08.png)
 
