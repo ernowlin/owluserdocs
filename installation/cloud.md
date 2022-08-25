@@ -100,6 +100,12 @@ Install prerequisite Edge packages.
 sudo yum install -y container-selinux selinux-policy-base
 
 sudo yum install -y https://rpm.rancher.io/k3s/stable/common/centos/7/noarch/k3s-selinux-0.2-1.el7_8.noarch.rpm
+
+sudo firewall-cmd --zone=trusted --add-interface=lo --permanent
+
+sudo firewall-cmd --zone=trusted --add-interface=cni0 --permanent
+
+sudo firewall-cmd --reload
 ```
 
 Confirm you have the right Collibra DQ version pointer e.g. **2022.02-186** from your Cloud instance.
