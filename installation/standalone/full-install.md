@@ -241,7 +241,9 @@ Follow the steps on [How To Configure Agent via UI](https://docs.owl-analytics.c
 
 Refer to [Agent Configuration Parameters](https://docs.owl-analytics.com/installation/agent-configuration#agent-configuration-parameters) for parameters descriptions.
 
-Kindly note "Number of Core(s)" must be specified
+Number of Core(s) must be specified.
+
+To limit Spark cores from being used for each job, a common configuration for the **Free Form (Appended)** field is `-conf spark.cores.max=8`.
 
 ![Fig 4: Expected final output of edited agent based on this tutorial](<../../.gitbook/assets/Final Output of Agent.png>)
 
