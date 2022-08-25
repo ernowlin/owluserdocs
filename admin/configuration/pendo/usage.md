@@ -12,6 +12,8 @@ The Usage feature gives you the ability to analyze your monthly usage statistics
 * Total number of data sets.
 * Total number of columns.
 
+<figure><img src="../../../.gitbook/assets/dq-pendo-metrics-collected.png" alt=""><figcaption></figcaption></figure>
+
 ## Steps
 
 1. Click the gear icon and then click Admin Console.\
