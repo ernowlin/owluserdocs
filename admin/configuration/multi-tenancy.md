@@ -43,7 +43,7 @@ In order to setup multi-tenancy follow these steps
 
 * This is where DNS alias come into place. Assuming we left the owlhub as the multiTenantSchemaHub name we hit the drop down and select owlhub and click the arrow it will place owlhub.hub into the url. This means there also has to be a DNS Alias name for your selected multiTenantSchemaHub name. NOTE: Username and password for tenant management is mtadmin / mtadmin123
 
-![](<../../.gitbook/assets/image (5) (1).png>)
+![](<../../.gitbook/assets/image (5).png>)
 
 * Now that you logged into the Tenant Management screen using the hub DNS alias we can create our first tenant. In this example below I'm going to create a tenant named tenant1. First click the "+ Add Tenant" button in the top right part of the screen.
 
