@@ -1,5 +1,48 @@
 # Release Notes
 
+## 2022.09
+
+### New Features
+
+### Enhancements
+
+#### DQ Job
+
+* The Jobs chart now shows a dotted gray line to represent jobs in Submitted status.&#x20;
+* The Jobs chart now supports an hourly view option.
+
+#### Schema
+
+* From the Config tab in Explorer, a Check Header checkbox under DQ Job is now available for when column names contain special characters. The Check Header checkbox is checked by default.
+  * When checked, schema findings do not display when detected.
+  * When unchecked, schema findings display when detected.
+
+#### Scheduler
+
+* The findings page now displays a green indicator next to the Schedule icon when you schedule a job to run automatically. If Scheduler is inactive, a red indicator displays.&#x20;
+
+#### API
+
+* The v2/gethoot API now properly returns rule dimension information for data sets. (ticket #89973)
+
+### Fixes
+
+#### Explorer
+
+* Fixed an issue that prevented the Job Estimator from properly displaying row estimates when the run date was modified during a new job run. (ticket #90860)
+* Fixed an issue that prevented DQ jobs created using NFS connection types from displaying. (ticket #92479)
+
+#### Agent
+
+* Fixed an issue that caused the Agent Check to no longer attempt check-ins to the metastore on K8s deployments, which resulted in red (unhealthy) status. (ticket #92055, 92963)
+* Fixed an issue that prevented concurrent users from properly running Livy sessions. (ticket #92963, 90432)
+
+### Known Limitations
+
+### Beta Features
+
+### DQ Security Metrics
+
 ## 2022.08
 
 ### New Features
