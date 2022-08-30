@@ -2,11 +2,9 @@
 
 ## 2022.09
 
+### New Features
+
 ### Enhancements
-
-#### Rules
-
-* The Conditions column on the Rules tab now displays SQLG and SQLF rule definitions on hover.
 
 #### DQ Job
 
@@ -18,21 +16,6 @@
 * From the Config tab in Explorer, a Check Header checkbox under DQ Job is now available for when column names contain special characters. The Check Header checkbox is checked by default.
   * When checked, schema findings do not display when detected.
   * When unchecked, schema findings display when detected.
-
-#### Behavior
-
-* Mean values are now rounded on the Findings page.
-
-#### Explorer
-
-* SOH delimiters for files are now supported.&#x20;
-* The Only checkbox on all Build Layer tabs is now removed.
-* The Profile activity is now always enabled and no longer has an on/off switch.&#x20;
-
-#### Alerts
-
-* Only one email per alert is now sent when alerts are set up for a scheduled job.
-* You can now check the logs to see when an alert does not send in order to resend the email.
 
 #### Scheduler
 
@@ -62,8 +45,6 @@
 ### Known Limitations
 
 ### Beta Features
-
-* Collibra Data Quality is proud to announce its DQ Cloud public beta.
 
 ### DQ Security Metrics
 

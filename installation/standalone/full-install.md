@@ -302,6 +302,21 @@ chmod -R 755 /home/owldq
 ./setup.sh -owlbase=$OWL_BASE -user=$OWL_METASTORE_USER -pgpassword=$OWL_METASTORE_PASS -options=postgres
 ```
 
+### Changing Postgres password from SSH
+
+```
+### If you need to update your postgres password, you can leverage SSH into the VM
+### Connect to your hosted instance of Postgres
+
+sudo -i -u postgres
+psql -U postgres
+\password
+#Enter new password: ### Enter Strong Password
+#Enter it again: ### Re-enter Strong Password
+\q
+exit
+```
+
 ### Permissions for ssh keys when starting Spark
 
 ```
