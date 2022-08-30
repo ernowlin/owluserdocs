@@ -2,9 +2,11 @@
 
 ## 2022.09
 
-### New Features
-
 ### Enhancements
+
+#### Rules
+
+* The Conditions column on the Rules tab now displays SQLG and SQLF rule definitions on hover.
 
 #### DQ Job
 
@@ -29,7 +31,8 @@
 
 #### Alerts
 
-* Only one email per alert is now sent when a alerts are set up for a scheduled job.
+* Only one email per alert is now sent when alerts are set up for a scheduled job.
+* You can now check the logs to see when an alert does not send in order to resend the email.
 
 #### Scheduler
 
