@@ -17,6 +17,20 @@
   * When checked, schema findings do not display when detected.
   * When unchecked, schema findings display when detected.
 
+#### Behavior
+
+* Mean values are now rounded on the Findings page.
+
+#### Explorer
+
+* SOH delimiters for files are now supported.&#x20;
+* The Only checkbox on all Build Layer tabs is now removed.
+* The Profile activity is now always enabled and no longer has an on/off switch.&#x20;
+
+#### Alerts
+
+* Only one email per alert is now sent when a alerts are set up for a scheduled job.
+
 #### Scheduler
 
 * The findings page now displays a green indicator next to the Schedule icon when you schedule a job to run automatically. If Scheduler is inactive, a red indicator displays.&#x20;
@@ -45,6 +59,8 @@
 ### Known Limitations
 
 ### Beta Features
+
+* Collibra Data Quality is proud to announce its DQ Cloud public beta.
 
 ### DQ Security Metrics
 
