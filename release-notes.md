@@ -61,9 +61,15 @@
 
 ### Known Limitations
 
+#### Rules
+
+* Regex validations containing parentheses for date formats throw rule exceptions.&#x20;
+  * A workaround for this limitation is to add the API pattern to `XSS_ESCAPE_SLASH_URL_PATTERNS` wherever `\` is used in the API.
+
+#### Alerts
+
 * When alert recipient email addresses are separated by semicolons `;`, alerts emails are not sent to the intended recipients.&#x20;
-  * A workaround to this limitation is to separate alert recipient email addresses with commas `,` instead of semicolons.
-*
+  * A workaround for this limitation is to separate alert recipient email addresses with commas `,` instead of semicolons.
 
 ### Beta Features
 
