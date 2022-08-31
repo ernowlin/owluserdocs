@@ -16,3 +16,17 @@ File formats differ in structure, so you might need to prepare your data before 
 | XML                        | Semi-structured |                                                    |
 | Delta                      | Semi-structured |                                                    |
 
+## Supported delimiters
+
+The following table is a list of supported delimiters available in the Delimiter dropdown menu.
+
+| Type         | Format | Description                                                                                                     |
+| ------------ | ------ | --------------------------------------------------------------------------------------------------------------- |
+| Comma        | CSV    | <p><code>,</code> is used to separate values in the file. <br><br>This is the default delimiter for files. </p> |
+| Tab          | TSV    | `tab` is used to separate values in the file.                                                                   |
+| Semicolon    | CSV    |  `;` is used to separate values in the file.                                                                    |
+| Double Quote | CSV    | `"` is used to separate values in the file.                                                                     |
+| Single Quote | CSV    | `'` is used to separate values in the file.                                                                     |
+| Pipe         | TXT    | `\|` is used to separate values in the text file.                                                               |
+| SOH          | TXT    | A Unicode character 'START OF HEADING' (U+0001) is an invisible control character.                              |
+| Custom       | N/A    | Add a custom delimiter. Support for custom delimiters may vary.                                                 |
