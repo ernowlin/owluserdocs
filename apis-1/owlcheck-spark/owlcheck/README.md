@@ -1,6 +1,6 @@
 # Advanced
 
-An OwlCheck is bash script that is essentially the launch point for any owl job to scan a dataset. A dataset can be a flat file (such as textfile, json file, parquet file, etc), or a table from any number of Databases (such as Oracle, Postgres, Mysql, Greenplum, DB2, SQLServer, Teradata, etc).
+A DQ Check is a bash script that is essentially the launch point for any DQ Job to scan a data set. A data set can be a flat file, such as textfile, json file, parquet file, etc, or a table from any number of databases, such as Oracle, Postgres, Mysql, Greenplum, DB2, SQLServer, Teradata, etc.
 
 Example Run a Data Quality check on any file by setting the file path.
 
@@ -35,7 +35,7 @@ Example output below. A hoot is a valid JSON response
 
 ## Monthly Data
 
-Sometimes you may want to run monthly profiles with aggregated data. In this case the scheduling tool can supply the ${rd} as variable such as $runDate and the end date as $endDate. 1 line examples for bash or shell below.
+Sometimes you may want to run monthly profiles with aggregated data. In this case, the scheduling tool can supply the ${rd} as a variable such as $runDate and the end date as $endDate. 1 line examples for bash or shell below.
 
 ```bash
 echo "Hello World Owl"
@@ -53,9 +53,12 @@ echo $endDate
 -tbin MONTH
 ```
 
-## Monthly BackRun (Using Owl's built in Monthly)
+## Monthly BackRun (Using Collibra Data Quality's built-in Monthly)
 
-Owl has 2 convenient features here: 1) the use of built in ${rd} and ${rdEnd} removes the need for any shell scripting. 2) using -br, Owl will replay 20 months of data using this template automatically.
+Collibra Data Quality has 2 convenient features here:&#x20;
+
+1. The use of built-in ${rd} and ${rdEnd} removes the need for any shell scripting.
+2. Using -br, DQ will replay 20 months of data using this template automatically.
 
 ```bash
 ./owlcheck \
@@ -84,7 +87,7 @@ echo $runDate
 -tbin DAY
 ```
 
-## Daily Data (Using Owl's built in Daily)
+## Daily Data (Using Collibra Data Quality's built-in Daily)
 
 ```bash
 ./owlcheck \
@@ -124,16 +127,16 @@ echo $runDate
 -tbin HOUR
 ```
 
-## OwlCheck Template with Service Hook
+## DQ Check Template with Service Hook
 
-The best practice is to make a generic job that would be repeatable for every OwlCheck. Below is an example that first hits Owl using a REST call and then runs the response.
+The best practice is to make a generic job that would be repeatable for every DQ Check. Below is an example that first hits Collibra Data Quality using a REST call and then runs the response.
 
 ```bash
 curl -X GET "http://$host/v2/getowlchecktemplate?dataset=lake.loan_customer" \
 -H "accept: application/json"
 ```
 
-The above REST call returns the below OwlCheck. It is left up to the Job Control to replace the ${rd} with the date from the Job Control system. You can use Owls built in scheduler to save these steps.
+The above REST call returns the below DQ Check. It is left up to the Job Control to replace the ${rd} with the date from the Job Control system. You can use Collibra DQ's built-in scheduler to save these steps.
 
 ```bash
 ./owlcheck \
@@ -152,7 +155,7 @@ The above REST call returns the below OwlCheck. It is left up to the Job Control
 
 ## REST API End Point
 
-The easiest option is to use the **runtemplate** end point API call to make requests to from cmdLine or JobControl System. This endpoint gets the OwlCheck saved in Owl instead of the client needing to know the OwlCheck details.
+The easiest option is to use the **runtemplate** end point API call to make requests to from cmdLine or JobControl System. This endpoint gets the DQ Check saved in Collibra instead of the client needing to know the DQ Check details.
 
 {% swagger baseUrl="http://$host" path="/v2/runtemplate?dataset=lake.spotify" method="post" summary="RunTemplate" %}
 {% swagger-description %}
@@ -197,7 +200,7 @@ curl -i -H 'Accept: application/json' \
 
 ### Bash Script
 
-A generic and repeatable owlcheck script for job schedulers, that hooks into Owl to get the template.
+A generic and repeatable owlcheck script for job schedulers, that hooks into Collibra to get the template.
 
 ```bash
 #1 authenticate
@@ -214,4 +217,4 @@ owlcheck_args=${owlcheck_args//'${rd}'/$job_run_date}
 eval owlcheck $owlcheck_args
 ```
 
-For more Information on Owl's Scheduler check out the doc on **OwlCheck Cron** Page\*\*.\*\*
+For more Information on Collibra Data Quality's Scheduler, visit the [**DQ** **Check Cron**](owlcheck-cron.md) page.
