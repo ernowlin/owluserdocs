@@ -38,7 +38,7 @@ The following table describes the report columns.
 | Score Trend     | <p>A line graph representation of data quality scores over one week. <br>Hover over the blue dots to see the score trend.</p>          |        |   |
 | Rows            | The total number of rows of a particular data set scanned over one week.                                                               |        |   |
 | Rows Trend      | <p>A line graph representation of row count over one week.<br>Hover over the blue dots to see the rows trend.</p>                      |        |   |
-| Pass/Fail       | Total number of DQ scans with a passing score (>70%) over one week.                                                                    |        |   |
+| Pass/Fail       | Total number of DQ scans with a passing score (>75%) over one week.                                                                    |        |   |
 | Passing Trend   | <p>A histogram of DQ scans that passed (blue) or failed (red) over one week.<br>Hover over the blue dots to see the passing trend.</p> |        |   |
 | Table/File Name | The name of the table or file in use.                                                                                                  |        |   |
 
