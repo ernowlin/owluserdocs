@@ -9,7 +9,7 @@ The Coverage Report provides a view that shows DQ coverage across all your techn
 To generate a Coverage Report, follow these steps.
 
 1. Log in to the Collibra DQ instance.
-2. Click the <img src="../../.gitbook/assets/dq-explorer-icon (1).png" alt="" data-size="original"> Explorer icon in the left navigation pane. \
+2. Click the <img src="../../.gitbook/assets/dq-explorer-icon.png" alt="" data-size="original"> Explorer icon in the left navigation pane. \
    The Explorer view opens.
 3. In Connections, select one of the databases, for which you want to generate a report and click **Generate Report**.\
    The Coverage Report displays. The report includes a donut chart showing the percentage of all schemas in the database that are running data quality on them and interactive bar charts showing which data sets are running data quality jobs on a monthly basis.
