@@ -175,6 +175,7 @@ There is a critical CVE `CVE-2016-1000027` that shows up in the image scan due t
 * Rules
   * Fixed an issue which caused rule breaks to report the opposite of what was defined when a [Generic Rule utilizing regex/rlike](https://collibra.zendesk.com/knowledge/articles/6572100149143/en-us?brand\_id=1497556) was created. (#86977)
   * Fixed an issue where Data Classes with Date column types selected did not detect timestamps. (#83000)
+  * Fixed an issue where Data Classes using the operators `<`, `>` or `=` caused the inverse rule created from this process to throw exceptions. (#83000)
   * When switching a data class from a regex to expression and then editing again, the regex checkbox is now correctly checked.
 * Agent
   * The Explorer page and Scheduler modal now display the same agents. (#86175)
