@@ -109,7 +109,7 @@ Using **owl.hoot** parameter will provide access to the execution results, in th
 
 #### via UI
 
-![Results of notebook execution on UI](<../../../../../.gitbook/assets/image (1) (1).png>)
+![Results of notebook execution on UI](<../../../../../.gitbook/assets/image (1).png>)
 
 ## Example #2
 

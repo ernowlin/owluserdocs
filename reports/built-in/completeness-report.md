@@ -17,7 +17,7 @@ Completeness of your data is important because it shows whether data is inaccura
 To generate a Completeness report, follow these steps.
 
 1. Login to the Collibra DQ instance.
-2. Click the <img src="../../.gitbook/assets/image (1).png" alt="" data-size="line"> icon in the left navigation pane.
+2. Click the <img src="../../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> icon in the left navigation pane.
 3. Click the **Completeness Report** link.
 4. From the BizUnit/Dataset drop-down list, select one of the following options:
    * **Business Unit Level**

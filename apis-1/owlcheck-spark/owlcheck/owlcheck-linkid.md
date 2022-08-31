@@ -34,7 +34,7 @@ To view rule break records, navigate to the Breaks tab on the Rule Builder page.
 
 ## Steps
 
-1. In ![](<../../../.gitbook/assets/dq-explorer-icon (1).png>) Explorer, select a table and create a DQ Job.\
+1. In ![](../../../.gitbook/assets/dq-explorer-icon.png) Explorer, select a table and create a DQ Job.\
    \>> The DQ Job page opens.
 2. In the Scope section, select the **Add Link Back to Source** checkbox.\
    \>> A new column, Link ID, appears.
