@@ -56,7 +56,7 @@ While CORS is still an optional configuration, it is required if you have SAML c
 CORS is also enforced for multi-tenancy.
 {% endhint %}
 
-#### Optional p
+#### Optional Properties: Metadata
 
 When **SAML\_METADATA\_USE\_URL** is set to `true` (default), the following additional properties are available.
 
@@ -137,4 +137,8 @@ Save your changes.
 
 {% hint style="success" %}
 Once you complete this setup, you can restart your application and sign in using the SAML SSO option.
+{% endhint %}
+
+{% hint style="info" %}
+SAML SSO authentication via the /v3/auth/signin API is not supported.
 {% endhint %}
