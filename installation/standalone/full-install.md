@@ -389,7 +389,7 @@ sudo vi /etc/security/limits.conf
 fs.file-max=500000
 *               soft    nofile           58192
 *               hard    nofile           100000
-### do not comment out the 3 lines (add '#')
+### do not comment out the 3 lines (no '#'s in the 3 lines above)
 ```
 
 ### Redirecting Spark Scratch
