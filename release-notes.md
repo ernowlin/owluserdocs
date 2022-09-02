@@ -77,6 +77,10 @@
 
 ### DQ Security Metrics
 
+<figure><img src=".gitbook/assets/vulns-over-time-2022.09.png" alt=""><figcaption><p>DQ security vulnerabilities over 5 months</p></figcaption></figure>
+
+<figure><img src=".gitbook/assets/critical-table-2022.09.png" alt=""><figcaption><p>Critical security vulnerabilities over 5 months</p></figcaption></figure>
+
 ## 2022.08
 
 ### New Features
@@ -313,6 +317,7 @@ There is a critical CVE `CVE-2016-1000027` that shows up in the image scan due t
 * Rules
   * Fixed an issue which caused rule breaks to report the opposite of what was defined when a [Generic Rule utilizing regex/rlike](https://collibra.zendesk.com/knowledge/articles/6572100149143/en-us?brand\_id=1497556) was created. (#86977)
   * Fixed an issue where Data Classes with Date column types selected did not detect timestamps. (#83000)
+  * Fixed an issue where Data Classes using the operators `<`, `>` or `=` caused the inverse rule created from this process to throw exceptions. (#83000)
   * When switching a data class from a regex to expression and then editing again, the regex checkbox is now correctly checked.
 * Agent
   * The Explorer page and Scheduler modal now display the same agents. (#86175)

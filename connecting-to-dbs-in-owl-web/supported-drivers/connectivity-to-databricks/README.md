@@ -39,11 +39,11 @@ Link to [older versions of Databricks JDBC ](https://www.databricks.com/spark/jd
 * Scala SDK
 * [Example](https://dq-docs.collibra.com/apis-1/notebook/cdq-+-databricks)
 
-Databricks no loner supports Run time 6.5 and 10.3. Therefore CDQ Profile 2.45 is not runnable in Databricks.&#x20;
+Databricks no longer supports Run time 6.5 and 10.3. Therefore, CDQ Profile 2.45 is not runnable on Databricks.&#x20;
 
 [https://docs.databricks.com/release-notes/runtime/10.3ml.html](https://docs.databricks.com/release-notes/runtime/10.3ml.html)
 
-&#x20;Here is the latest supported versions of CDQ Profiles with their matching Databricks Run time . (last update: sep 2022)\
+The following table shows the latest supported versions of CDQ Profiles and their matching Databricks Run times. (last updated: September 2022)\
 
 
 <figure><img src="../../../.gitbook/assets/Screen Shot 2022-08-29 at 3.54.00 PM.png" alt=""><figcaption></figcaption></figure>
