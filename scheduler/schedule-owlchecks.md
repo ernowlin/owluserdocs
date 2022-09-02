@@ -4,7 +4,7 @@ After you successfully run a job, you can schedule that job to run automatically
 
 ![](../.gitbook/assets/schedule.gif)
 
-![](<../.gitbook/assets/image (148).png>)
+![](<../.gitbook/assets/image (107).png>)
 
 ![](<../.gitbook/assets/Screen Shot 2020-07-27 at 8.32.20 PM.png>)
 

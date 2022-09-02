@@ -97,40 +97,40 @@ AS $function$
 
 Navigate to the API page
 
-![](<../../.gitbook/assets/image (21).png>)
+![](<../../.gitbook/assets/image (149).png>)
 
 Find the Rest APIs link
 
-![](<../../.gitbook/assets/image (78).png>)
+![](<../../.gitbook/assets/image (124).png>)
 
 Drill-in to the controller-scala section
 
-![](<../../.gitbook/assets/image (118).png>)
+![](<../../.gitbook/assets/image (153).png>)
 
 Find the get-rules-export call
 
-![](<../../.gitbook/assets/image (120).png>)
+![](<../../.gitbook/assets/image (14).png>)
 
 Click Try it out and enter a dataset name, Execute to run the call
 
-![](<../../.gitbook/assets/image (38).png>)
+![](<../../.gitbook/assets/image (23).png>)
 
 Copy the response body
 
-![](<../../.gitbook/assets/image (170).png>)
+![](<../../.gitbook/assets/image (119).png>)
 
 Navigate to the controller-catalog section
 
-![](<../../.gitbook/assets/image (95).png>)
+![](<../../.gitbook/assets/image (60).png>)
 
 Find run-import and Try it out
 
-![](<../../.gitbook/assets/image (64).png>)
+![](<../../.gitbook/assets/image (8).png>)
 
 Make any edits and paste in the response body from the previous step
 
-![](<../../.gitbook/assets/image (132).png>)
+![](<../../.gitbook/assets/image (75).png>)
 
 Visually validate the rules were transferred to another dataset successfully
 
-![](<../../.gitbook/assets/image (151).png>)
+![](<../../.gitbook/assets/image (4).png>)

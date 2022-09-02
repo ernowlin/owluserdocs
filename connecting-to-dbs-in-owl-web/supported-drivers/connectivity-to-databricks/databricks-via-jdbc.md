@@ -4,7 +4,7 @@
 
 Input JDBC credentials
 
-![](<../../../.gitbook/assets/make\_a\_connection (1).gif>)
+![](<../../../.gitbook/assets/make\_a\_connection (3).gif>)
 
 Browse Connection
 

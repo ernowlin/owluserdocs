@@ -118,11 +118,11 @@ http://<url>/v2/get-exports?dataset=public.dataset_scan_2,public.dataset_scan_1&
 
 This is located under controller-scala (internal API)
 
-![](<../../.gitbook/assets/image (51).png>)
+![](<../../.gitbook/assets/image (56).png>)
 
 #### Click Try it out to input the details
 
-![](<../../.gitbook/assets/image (157).png>)
+![](<../../.gitbook/assets/image (18).png>)
 
 #### Step 2 - Run-Import
 
@@ -140,9 +140,9 @@ http://<url>/v2/run-import
 
 This is under controller-catalog
 
-![](<../../.gitbook/assets/image (57).png>)
+![](<../../.gitbook/assets/image (134).png>)
 
-![](<../../.gitbook/assets/image (65).png>)
+![](<../../.gitbook/assets/image (162).png>)
 
 This would be the body of the POST.
 

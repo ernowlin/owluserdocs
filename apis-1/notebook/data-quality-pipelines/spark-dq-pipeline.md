@@ -137,7 +137,7 @@ Here we illustrate an example of how to work with files when using Owl programma
     }
 ```
 
-![](<../../../.gitbook/assets/image (172).png>)
+![](<../../../.gitbook/assets/image (54).png>)
 
 ### All Pipeline Activities in 1 Line
 

@@ -6,7 +6,7 @@ description: Apply custom monitoring with SQL
 
 ### SQL Rule Engine
 
-![](<../../.gitbook/assets/rules (1).gif>)
+![](../../.gitbook/assets/rules.gif)
 
 ### Introduction
 
@@ -36,7 +36,7 @@ As with any SQL generator, there are limitations for more complex scenarios.
 
 Storing break records is only available for Freefrom and Simple rule types. Rule library rules uses one of these types as well.
 
-![](../../.gitbook/assets/break\_records.gif)
+![](<../../.gitbook/assets/break\_records (1).gif>)
 
 Enable additional storage with the -linkid flag. This allows you to store complete sets of break records. See the [linkid section](../../apis-1/owlcheck-spark/owlcheck/owlcheck-linkid.md) for more details.
 
@@ -54,4 +54,4 @@ Native SQL uses your native DB syntax. The score is total break records / rows f
 
 This is a complete list of Spark SQL operators and functions available. [https://spark.apache.org/docs/latest/api/sql/index.html](https://spark.apache.org/docs/latest/api/sql/index.html)
 
-![](<../../.gitbook/assets/sql\_functions (1).gif>)
+![](../../.gitbook/assets/sql\_functions.gif)

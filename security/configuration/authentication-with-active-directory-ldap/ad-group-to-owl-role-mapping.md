@@ -32,4 +32,4 @@ You must restart Collibra Data Quality by running ./owlmanage.sh restart\_owlweb
 
 When logging into Collibra Data Quality web application, make sure to append the domain to the end of the username.
 
-![](<../../../.gitbook/assets/dq-role-mapping-log-in-screen (1).png>)
+![](../../../.gitbook/assets/dq-role-mapping-log-in-screen.png)

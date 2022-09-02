@@ -8,7 +8,7 @@ description: Choosing your deployment
 
 As of March 2022, DQ Cloud is in private beta for select customers. General availability is expected by the end of Q2 2022. Available compute plane options will start with Collibra Edge submitting jobs to Rancher K3s and Hadoop platforms (Cloudera, Dataproc and EMR). Additional compute plane options will be added over time.
 
-![](<../.gitbook/assets/1\_DQ\_Control\_to\_Compute\_to\_Data\_Plane (1).gif>)
+![](../.gitbook/assets/1\_DQ\_Control\_to\_Compute\_to\_Data\_Plane.gif)
 
 ## Pushdown DQ Control to Data
 
@@ -20,4 +20,4 @@ Exploratory at this time, Private Beta coming in 2022 Q3. Some features may be l
 
 Running DQ jobs from Scala and Pyspark notebooks is generally available.
 
-![](<../.gitbook/assets/3\_DQ\_Compute\_(Databricks)\_to\_Data\_(Delta Lake)\_to\_Control\_Plane.gif>)
+![](<../.gitbook/assets/3\_DQ\_Compute\_(Databricks)\_to\_Data\_(Delta Lake)\_to\_Control\_Plane (1).gif>)

@@ -33,7 +33,7 @@ To access the Rules page from the findings page, open a DQ Job to display the fi
 7. Add any custom DQ dimensions for reporting (optional).
 8. Click submit to save the rule.
 
-![Search for a dataset and click Select next to the Type label](<../../.gitbook/assets/image (18) (5).png>)
+![Search for a dataset and click Select next to the Type label](<../../.gitbook/assets/image (18) (5) (1).png>)
 
 ‌The rule will be measured on the next DQ job for that particular dataset.‌
 
