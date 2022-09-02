@@ -1,35 +1,72 @@
+---
+description: >-
+  This section provides information on how to generate a Collibra DQ
+  Completeness Report to determine what percentage of your data is complete.
+---
+
 # Completeness Report
 
-![](../../.gitbook/assets/completeness\_report.gif)
+## What is Data Completeness?
+
+Completeness answers the question of what percentage of your data is complete, or "filled in" (i.e., not `EMPTY` or `NULL`). Using this report, you can view the completeness of a column, a collection of tables, a business unit or data set (file or table), or almost any completeness query.
+
+Completeness of your data is important because it shows whether data is inaccurate, invalid, the wrong type, or missing altogether, which can leave you without any data. Sometimes data values can be missing for valid reasons, which requires a better understanding of the context of whether the missing data is bad for business or acceptable.&#x20;
+
+## Steps
+
+To generate a Completeness report, follow these steps.
+
+1. Login to the Collibra DQ instance.
+2. Click the ![](../../.gitbook/assets/dq-reports-icon.png) icon in the left navigation pane.
+3. Click the **Completeness Report** link.
+4. From the BizUnit/Dataset drop-down list, select one of the following options:
+   * **Business Unit Level**
+     1. From the Business Unit drop-down list, select a business unit, or **All**.
+     2. Proceed to step 5.
+   * **Dataset Level**
+     1. In the Dataset search field, enter a data set for which you want to run the report. You can also enter a partial word to locate data sets in the system.
+     2. Proceed to step 5.
+5. From the Lookback/Custom drop-down list, select one of the following options:
+   * **Lookback**
+     1. From the Lookback drop-down list, select the number of days back to include in the report. You can choose up to 30 days back.
+     2. From the Mode drop-down list, select one of the following options:
+        * **All**: includes all jobs in the system.
+        * **DRAFT**: includes only the jobs that are in draft mode.
+        * **PUBLISHED**: includes the jobs that have been published.
+     3. Proceed to step 6.
+   * **Custom Range**
+     1. From the RunDate/UpdateTime drop-down list, select one of the following options:
+        1. **Run Date**: date/time the data represents.
+        2. **Update Time**: time the DQ job ran.
+     2. In the Date Range field, select a date range by clicking in the from/to fields and choosing the dates using the interactive calendars.&#x20;
+     3. From the Mode drop-down list, select one of the following options:
+        * **All**: includes all reports in the system.
+        * **DRAFT**: includes only the reports that are in draft mode.
+        * **PUBLISHED**: includes the reports that have been published.
+     4. Proceed to step 6.
+6. Click **GO**.\
+   The results display based on your input.
 
 {% hint style="info" %}
-V
+When looking at completeness over time, you should differentiate between the time the DQ job ran (update time) or the date/time the data represents (run date). For example, you could load stock data today but the data loaded was for last week.
 {% endhint %}
 
-Completeness commonly means what percentage of your data is filled in, as in not `EMPTY` or `NULL`. The confusion often comes when you consider the context of completeness. Completeness of a column? Completeness of a dataset (file or table)? Completeness of a collection of tables or business unit? And even worse... completeness over time.
+## All View
 
-Fortunately the Collibra DQ Completeness Report covers all of these dimensions, allowing the user to generate a report that answers almost any completeness question. We have also found that volume weighted completeness is arguably a better metric than average completeness in a rollup scenario.
+The **All** view represents the completeness of data sets throughout the entire Collibra DQ app. The **% Completeness** chart measures all the data, which shows around 93% complete in the following example. The **Volume Weighted Completeness** chart also measures the volume of the data, which shows around 97%.
 
-### Report Builder
+<figure><img src="../../.gitbook/assets/dq-completeness-report.png" alt=""><figcaption></figcaption></figure>
 
-The "all" view shows completeness of the entire DQ program. Really interesting to see that across hundreds of datasets and thousands of total columns or data assets we are 92% complete. The more accurate measurement is likely the 97% due to the fact that it represents the volume of data as well.
+## Column View&#x20;
 
-![](<../../.gitbook/assets/Screen Shot 2021-08-12 at 5.26.43 PM.png>)
+The column view shows the completeness of specific data sets, which makes it easy to see the columns that are least complete and, therefore, of possible concern. The columns range from 0% to 100% complete.
 
-When looking at Completeness over time you may need to differentiate between the time when the DQ job ran (update time) or the date/time the data represents (run date). For example I load stock data today but the data I loaded was for last week.
+<figure><img src="../../.gitbook/assets/dq-column-completeness.png" alt=""><figcaption></figcaption></figure>
 
-### Column Completeness vs Dataset Completeness
+## Behavioral Analytics for Completeness
 
-![](<../../.gitbook/assets/Screen Shot 2021-08-12 at 4.04.53 PM.png>)
+For a different approach to completeness management, see the Collibra DQ [Behavior](../../dq-visuals/behaviors.md) feature. This approach uses the data itself to create baselines and profiles to understand which completeness issues matter and, therefore, require you to take some kind of action.
 
-Above you can see the dataset is 34.7% complete this is made up of columns ranging from 0% to 100% complete. This view makes it easy to see which columns are the least complete and likely the biggest DQ concern.
-
-### Why is Completeness a concern for DQ?
-
-Data completeness is a large concern because it means the data is missing all together. Data can be inaccurate, invalid, of the wrong type but missing leaves you without any data. The challenge is that sometimes data values can be missing for good reasons, this leaves the challenge up to the business user to understand the context of whether missing data is bad for business or acceptable. Please read about Collibra DQ [Behaviors](../../dq-visuals/behaviors.md) detection including `NULL` and `EMPTY` detection for a more modern approach to completeness management. In this approach we will use the data itself to create baselines and profiles to understand which completeness issues actually matter and should be actioned.
-
-### Why Behavioral Analytics for Completeness is Better?
-
-In many academic settings completeness is defined for cases where you expect the data to be complete. However in the real world you have too much data and never enough time to document what and when data should be complete. It is vastly more efficient to use Collibra DQ `Replay` and `Profile` features to generate _statistical process control_ around completeness. This will alert you to a change in slope, or in other words a drastic change in completeness, which tends to be the exact DQ events you care the most about.
+To generate statistical process around completeness in the events you are most concerned about, and alert you to a change in slope (a drastic change in completeness), see the Collibra DQ [Replay](../../apis-1/owlcheck-spark/owlcheck/owlcheck-backrun.md) and [Profile ](../../dq-visuals/profile.md)features.
 
 ![](<../../.gitbook/assets/Statistical Process Control for Data Quality (Animation) Aug 2021.gif>)

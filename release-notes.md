@@ -71,10 +71,6 @@
 * When alert recipient email addresses are separated by semicolons `;`, alerts emails are not sent to the intended recipients.&#x20;
   * A workaround for this limitation is to separate alert recipient email addresses with commas `,` instead of semicolons.
 
-### Beta Features
-
-* Collibra Data Quality is proud to announce its DQ Cloud public beta.
-
 ### DQ Security Metrics
 
 <figure><img src=".gitbook/assets/vulns-over-time-2022.09.png" alt=""><figcaption><p>DQ security vulnerabilities over 5 months</p></figcaption></figure>
