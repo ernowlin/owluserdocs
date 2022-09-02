@@ -42,7 +42,7 @@ The following table describes the report columns.
 | Passing Trend   | <p>A histogram of DQ scans that passed (blue) or failed (red) over one week.<br>Hover over the blue dots to see the passing trend.</p> |        |   |
 | Table/File Name | The name of the table or file in use.                                                                                                  |        |   |
 
-4\. Toggle the ![](../../.gitbook/assets/dq-sort-icon.png) icon at the top of the column to sort the data that displays in the columns in\
+4\. Toggle the ![](<../../.gitbook/assets/dq-sort-icon (1).png>) icon at the top of the column to sort the data that displays in the columns in\
 &#x20;    ascending or descending order.
 
 5\. Filter the report results by entering information in the search bar. For example, if you \
@@ -82,7 +82,7 @@ To see the Data Quality Checks report, follow these steps.
 | Check Value | The value associated with this check.                                                                   |
 | Break Value | The number of points associated with a rule break, which are then subtracted from a data quality score. |
 
-4\. Toggle the ![](../../.gitbook/assets/dq-sort-icon.png) icon at the top of the column to sort the data that displays in the columns in\
+4\. Toggle the ![](<../../.gitbook/assets/dq-sort-icon (1).png>) icon at the top of the column to sort the data that displays in the columns in\
 &#x20;    ascending or descending order.
 
 5\. Filter the report results by entering information in the search bar. For example, if you \

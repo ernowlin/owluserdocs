@@ -10,7 +10,7 @@ This document provides how to guidance to help you to upload and add CDQ jars to
 
 ### Design
 
-![Running CDQ jobs from Scala and Pyspark notebooks.](<../../../.gitbook/assets/3\_DQ\_Compute\_(Databricks)\_to\_Data\_(Delta Lake)\_to\_Control\_Plane.gif>)
+![Running CDQ jobs from Scala and Pyspark notebooks.](<../../../.gitbook/assets/3\_DQ\_Compute\_(Databricks)\_to\_Data\_(Delta Lake)\_to\_Control\_Plane (1).gif>)
 
 ### CDQ Environment Setup
 
@@ -201,7 +201,7 @@ val profile = cdq.profileDF()
 profile.show()
 ```
 
-![CDQ Profile Run In Databricks](<../../../.gitbook/assets/Screen Shot 2022-04-21 at 10.30.21 AM (1).png>)
+![CDQ Profile Run In Databricks](<../../../.gitbook/assets/Screen Shot 2022-04-21 at 10.30.21 AM.png>)
 
 ![The Profile result can be viewed in CDQ Web.](<../../../.gitbook/assets/Screen Shot 2022-04-21 at 10.27.59 AM.png>)
 

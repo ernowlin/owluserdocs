@@ -173,9 +173,9 @@ Excellent! We've now completed the initial one-time configuration!
 
 **Appendix: Synchronization For Single Table in Data Quality and Data Catalog**
 
-![View in Collibra Data Quality](<../.gitbook/assets/image (171).png>)
+![View in Collibra Data Quality](<../.gitbook/assets/image (54).png>)
 
-![View in Collibra Catalog](<../.gitbook/assets/image (6).png>)
+![View in Collibra Catalog](<../.gitbook/assets/image (11).png>)
 
 ## FAQ
 

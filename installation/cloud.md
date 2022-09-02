@@ -18,7 +18,7 @@ This offering is in public beta and only available for select Collibra customers
 
 ## **Diagram**
 
-![Future-state visuals can be found on the diagrams page](<../.gitbook/assets/image (151).png>)
+![Future-state visuals can be found on the diagrams page](<../.gitbook/assets/image (60).png>)
 
 ## **Prerequisites**
 
@@ -72,15 +72,15 @@ Refer to Edge documentation for [system requirements](https://productresources.c
 
 Navigate to the Edge Site Management panel in the Admin Console
 
-![](<../.gitbook/assets/image (127).png>)
+![](<../.gitbook/assets/image (3).png>)
 
 Add an Edge Site and provide a name and description
 
-![](<../.gitbook/assets/image (113).png>)
+![](<../.gitbook/assets/image (5).png>)
 
 Using the Actions drop-down, download the Edge installer package locally
 
-![](<../.gitbook/assets/image (22).png>)
+![](<../.gitbook/assets/image (76).png>)
 
 Upload the Edge installer package to your VM that meets the Edge system requirements above. An example scp command is below, but you can do this several ways.
 
@@ -110,7 +110,7 @@ sudo firewall-cmd --reload
 
 Confirm you have the right Collibra DQ version pointer e.g. **2022.02-186** from your Cloud instance.
 
-![](<../.gitbook/assets/image (109).png>)
+![](<../.gitbook/assets/image (94).png>)
 
 Remember your Postgres IP and credentials from the previous step.
 
@@ -132,11 +132,11 @@ sudo /home/**\<your-directory>**/install-master.sh --storage-path /var/edge prop
 sudo /usr/local/bin/kubectl get pods --all-namespaces
 ```
 
-![](<../.gitbook/assets/image (97).png>)
+![](<../.gitbook/assets/image (162).png>)
 
 **Your Edge site will appear as HEALTHY upon successful installation**
 
-![](<../.gitbook/assets/image (16).png>)
+![](<../.gitbook/assets/image (93).png>)
 
 **Uninstall Edge if there were mistakes/typos in the process**
 
@@ -160,15 +160,15 @@ sudo yum localinstall --skip-broken -y https://rpm.rancher.io/k3s/stable/common/
 
 **Navigate to the Remote Agent panel in the admin console**
 
-![](<../.gitbook/assets/image (91).png>)
+![](<../.gitbook/assets/image (130).png>)
 
 Upon completion of the Edge installation, you'll find an agent available from each respective Edge Site. Click the pencil icon to configure the agent.
 
-![](<../.gitbook/assets/image (158).png>)
+![](<../.gitbook/assets/image (31).png>)
 
 Change the Default Deploy Mode to Cluster, the Default Masters to K8s and input defaults for resource assignment. Also add freeform append Spark confs as shown here.
 
-![](<../.gitbook/assets/image (116).png>)
+![](<../.gitbook/assets/image (13).png>)
 
 Use the spark confs in the code block below.
 
@@ -200,11 +200,11 @@ This is the same process of adding a connection found [here ](../connecting-to-d
 
 Select your target agent using the **Target Agent drop-down**. This drop-down will populate with existing agents. Here is where you will select the agent name from the previous step.
 
-![](<../.gitbook/assets/image (41).png>)
+![](<../.gitbook/assets/image (161).png>)
 
 Afterwards, you do not need to assign the connection to the agent. It will be automatically mapped.
 
-![](<../.gitbook/assets/image (141).png>)
+![](<../.gitbook/assets/image (164).png>)
 
 {% hint style="info" %}
 **To map a connection to another agent, you need to re-save the connection and select another agent from the drop-down list.**

@@ -247,7 +247,7 @@ To limit Spark cores from being used for each job, a common configuration for th
 
 ![Fig 4: Expected final output of edited agent based on this tutorial](<../../.gitbook/assets/Final Output of Agent.png>)
 
-![Set the deployment mode option to Client for a Spark Standalone master](<../../.gitbook/assets/image (103).png>)
+![Set the deployment mode option to Client for a Spark Standalone master](<../../.gitbook/assets/image (1).png>)
 
 ## 8. Create DB Connection for DQ Job
 
@@ -261,13 +261,13 @@ Click the compass icon in the navigation pane to navigate to the Explorer page. 
 
 On the Run page, click Estimate Job, acknowledge the resource recommendations, and click Run.
 
-![](<../../.gitbook/assets/image (112).png>)
+![](<../../.gitbook/assets/image (42).png>)
 
 Click the revolving arrows icon in the left navigation panel to navigate to the Jobs page.&#x20;
 
 Wait 10 seconds and then click the refresh button above the Status column until the status shows that the DQ job is Finished. We recommend refreshing several times, pausing for a few seconds in between clicks. While a job runs, the Activity column tracks the sequence of activities DQ performs before it completes a job. A successful job shows its status as Finished last.&#x20;
 
-![](<../../.gitbook/assets/image (33).png>)
+![](<../../.gitbook/assets/image (25).png>)
 
 ## Troubleshooting + Helpful Commands
 
@@ -404,7 +404,7 @@ export SPARK_WORKER_OPTS="${SPARK_WORKER_OPTS} -Dspark.worker.cleanup.enabled=tr
 
 Or change Spark storage with an agent configuration `-conf spark.local.dir=/home/owldq/owl/owltmp`
 
-![](<../../.gitbook/assets/image (92).png>)
+![](<../../.gitbook/assets/image (138).png>)
 
 ## Tip: Add Spark Home Environment Variables to Profile
 

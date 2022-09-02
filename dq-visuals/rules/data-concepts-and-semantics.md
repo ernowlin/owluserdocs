@@ -49,7 +49,7 @@ You can access the Run Discovery feature via:
 
 ![](../../.gitbook/assets/run-discovery-catalog-1.png)
 
-![](../../.gitbook/assets/dq-job-run-discovery.png)
+![](<../../.gitbook/assets/dq-job-run-discovery (1).png>)
 
 #### Via DQ Job
 
@@ -61,7 +61,7 @@ You can access the Run Discovery feature via:
 
 ![](<../../.gitbook/assets/rule-discovery-run-discovery (1).png>)
 
-![](../../.gitbook/assets/dq-job-run-discovery.png)
+![](<../../.gitbook/assets/dq-job-run-discovery (1).png>)
 
 ## Sensitive Data
 
@@ -94,7 +94,7 @@ Navigate to your dataset in **Catalog** and select the Data Concept you would li
 
 See below sections on how to **Administer Data Concepts** as well as how to **Create and Manage Semantics**
 
-![](../../.gitbook/assets/semantic-apply-dataconcept.gif)
+![](<../../.gitbook/assets/semantic-apply-dataconcept (1).gif>)
 
 ### Step 3: Rerun your DQ Job with applied Data Concept
 

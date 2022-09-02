@@ -20,7 +20,7 @@ The previous driver class, `com.snowflake.client.jdbc.SnowflakeDriver`, is still
 
 Add this connection property to limit the databases and tables displayed in the Explorer view. This will reduce the entries in the Explorer window to only those tables that the user can access.
 
-![](<../../.gitbook/assets/image (154).png>)
+![](<../../.gitbook/assets/image (44).png>)
 
 ```
 CLIENT_METADATA_REQUEST_USE_CONNECTION_CTX=TRUE

@@ -51,7 +51,7 @@ A common JDBC connection is hive.resultset.use.unique.column.names=false
 
 This can be added directly to the JDBC connection url string or to the driver properties section
 
-![](<../../.gitbook/assets/image (2).png>)
+![](<../../.gitbook/assets/image (125).png>)
 
 Test your hive connection via beeline to make sure it is correct before going further.
 

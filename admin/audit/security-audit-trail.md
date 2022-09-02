@@ -8,7 +8,7 @@ Available Data
 * Dataset deletion requests
 * Job schedule attempts
 
-![](<../../.gitbook/assets/image (128).png>)
+![](<../../.gitbook/assets/image (83).png>)
 
 When administrators modify roles mapped to data sets or data sets mapped to roles, changes are documented automatically in the Audit Trail. This information in the entry log include
 

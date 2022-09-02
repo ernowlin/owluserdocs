@@ -6,7 +6,7 @@ description: View a heatmap or your DQ jobs
 
 Navigate to the Pulse View dashboard
 
-![](<../.gitbook/assets/image (36).png>)
+![](<../.gitbook/assets/image (9).png>)
 
 View jobs and health by business unit, scheduled frequency, data source, and more.
 

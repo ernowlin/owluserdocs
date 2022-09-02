@@ -1,6 +1,6 @@
 # Overview
 
-![](<../.gitbook/assets/image (70).png>)
+![](<../.gitbook/assets/image (22).png>)
 
 The left hand icons “Dashboard”, “Inventory”, “Connections”, and “Configuration” are shortcut links to different operations within Owl.
 

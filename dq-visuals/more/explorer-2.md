@@ -4,13 +4,13 @@ description: A no-code option to get started quickly and onboard a dataset.
 
 # Explorer (no-code)
 
-![](<../../.gitbook/assets/explorer (1).gif>)
+![](<../../.gitbook/assets/explorer (4).gif>)
 
 ## Getting Started
 
 This page can be accessed by clicked the Explorer option (the compass icon).
 
-![](<../../.gitbook/assets/image (168).png>)
+![](<../../.gitbook/assets/image (33).png>)
 
 {% hint style="info" %}
 All UI functionality has corresponding API endpoints to define, run, and get results programmatically.
@@ -18,11 +18,11 @@ All UI functionality has corresponding API endpoints to define, run, and get res
 
 ## Select Your Data Source
 
-![](<../../.gitbook/assets/image (152).png>)
+![](<../../.gitbook/assets/image (29).png>)
 
 ## Create a new DQ Job by clicking +Create DQ Job
 
-![](<../../.gitbook/assets/image (156).png>)
+![](<../../.gitbook/assets/image (15).png>)
 
 #### **View Data is an interactive option to run queries and explore the data**
 
@@ -30,13 +30,13 @@ All UI functionality has corresponding API endpoints to define, run, and get res
 
 ## Select The Scope and Define a Query
 
-![](<../../.gitbook/assets/image (87).png>)
+![](<../../.gitbook/assets/image (133).png>)
 
 #### Pick Date Column if your dataset contains an appropriate time filter
 
 #### Click Build Model -> to Save and Continue
 
-![](<../../.gitbook/assets/image (10).png>)
+![](<../../.gitbook/assets/image (12).png>)
 
 ## Transform Tab (advanced / optional)
 
@@ -48,7 +48,7 @@ All UI functionality has corresponding API endpoints to define, run, and get res
 
 ## Profile
 
-![](../../.gitbook/assets/image.png)
+![](<../../.gitbook/assets/image (141).png>)
 
 #### Use the drop-downs to enable different analysis. Best practice is to leave the defaults.
 
@@ -100,9 +100,9 @@ Manually map the columns by dragging left to right or deselect columns
 2. Click Estimate Job
 3. Click Run to start the job
 
-![](<../../.gitbook/assets/image (172).png>)
+![](<../../.gitbook/assets/image (92).png>)
 
-![](<../../.gitbook/assets/image (51).png>)
+![](<../../.gitbook/assets/image (24).png>)
 
 {% hint style="info" %}
 \*Note if you do not see your agent, please verify the agent has been assigned to your connection via:

@@ -42,7 +42,7 @@ hive.resultset.use.unique.column.names=false
 
 ### Example Connection
 
-![](<../../../.gitbook/assets/image (136).png>)
+![](<../../../.gitbook/assets/image (10).png>)
 
 ### FAQ
 

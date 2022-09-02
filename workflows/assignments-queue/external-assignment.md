@@ -10,7 +10,7 @@ To configure a queue, you must have ROLE\_ADMIN or ROLE\_CONNECTION\_MANAGER.
 
 Go to the **Admin Console** and click **Assignment Queues**.\\
 
-![](<../../.gitbook/assets/image (37).png>)
+![](<../../.gitbook/assets/image (70).png>)
 
 ***
 

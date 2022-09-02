@@ -16,7 +16,7 @@ To install Collibra Data Quality using the AWS CloudFormation stack, you need an
 https://owl-packages.s3.amazonaws.com/MP/CDQ_AWSCF_TEMPLATE_RHEL.YAML
 ```
 
-![](<../../.gitbook/assets/dq-aws-install-1 (2).png>)
+![](../../.gitbook/assets/dq-aws-install-1.png)
 
 3\. Click **Next**.
 

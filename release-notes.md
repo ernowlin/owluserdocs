@@ -210,7 +210,7 @@ There is a critical CVE `CVE-2016-1000027` that shows up in the image scan due t
 
 ![DQ security vulnerabilities over 5 months](.gitbook/assets/vulns-over-time-2022-08.png)
 
-![Critical security vulnerabilities over 5 months](<.gitbook/assets/critical-table-2022-08 (1).png>)
+![Critical security vulnerabilities over 5 months](.gitbook/assets/critical-table-2022-08.png)
 
 ## 2022.07
 
@@ -653,7 +653,7 @@ spark_package=${SPARK_PACKAGE:-"spark-3.1.2-bin-hadoop3.2.tgz"}
 
 ![Vulnerabilities over time](<.gitbook/assets/vulns-over-time-2022-04 (1).png>)
 
-![Criticals table](.gitbook/assets/critical-table-2022-04.png)
+![Criticals table](<.gitbook/assets/critical-table-2022-04 (1).png>)
 
 ## 2022.03
 

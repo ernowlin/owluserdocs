@@ -45,7 +45,7 @@ Collibra DQ can compute the Profile of a dataset either via Spark (default) or t
 * Full Profile - Perform full profile calculation except for TopN
 * Count - Only perform row and column counts
 
-![](../.gitbook/assets/pushdown.gif)
+![](<../.gitbook/assets/pushdown (1).gif>)
 
 {% hint style="info" %}
 The following DBMS systems are supported for "Profile Pushdown"

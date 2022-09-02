@@ -16,7 +16,7 @@
 Cross-dataset rules require -libsrc (prior to 2021.11) or -addlib (post 2022.01)
 {% endhint %}
 
-![When a cross-data set rule uses two connections, be sure the jars are in the -lib or -addlib directory.](<../../../../../.gitbook/assets/image (99).png>)
+![When a cross-data set rule uses two connections, be sure the jars are in the -lib or -addlib directory.](<../../../../../.gitbook/assets/image (122).png>)
 
 ## In-Clause (Single Column)
 
@@ -64,7 +64,7 @@ where
 
 ## Sample Results
 
-![](<../../../../../.gitbook/assets/image (44).png>)
+![](<../../../../../.gitbook/assets/image (156).png>)
 
 #### Cross-Table (Guided). Use our wizard to do ad-hoc analysis and visual setup.
 
