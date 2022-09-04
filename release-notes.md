@@ -50,6 +50,10 @@
 * Fixed an issue that prevented DQ jobs created using NFS connection types from displaying under the Remote File Connections dropdown. (ticket #92479)
 * Fixed an issue that caused the file type parser to throw an error message when the default comma delimiter was not detected. The parser now detects a file's delimiter and updates the delimiter type in the UI automatically. (ticket #89489, 92480)
 
+#### Files
+
+* The error message for Failed Merging Schema now has extra logging to clarify the cause of failed schema merges for both Livy sessions and non-Livy paths. (ticket #92694)
+
 #### Security
 
 * Fixed an issue with the v2/getcatalogtableshasrulesfromcxn API that triggered a 403 status code when Dataset Security was enabled. (ticket #93298, 94258)
@@ -65,6 +69,10 @@
 
 * Regex validations containing parentheses for date formats throw rule exceptions.&#x20;
   * A workaround for this limitation is to add the API pattern to `XSS_ESCAPE_SLASH_URL_PATTERNS` wherever `\` is used in the API.
+
+#### Security
+
+* The Assignments Queue feature is only available for local users. Support for externally connected users, such as SAML and AD connector, is not currently available.&#x20;
 
 #### Alerts
 
