@@ -267,7 +267,7 @@
   * [Configuring Active Directory (AD/LDAP)](security/configuration/authentication-with-active-directory-ldap/README.md)
     * [AD Group to Role Mapping](security/configuration/authentication-with-active-directory-ldap/ad-group-to-owl-role-mapping.md)
   * [Connection Security](security/configuration/connection-security.md)
-  * [Dataset Security](security/configuration/dataset-security/README.md)
+  * [Data Set Security Settings](security/configuration/dataset-security/README.md)
     * [Dataset Masking](security/configuration/dataset-security/dataset-masking.md)
   * [Local User Store Authentication](security/configuration/authentication-with-local-user-store/README.md)
     * [Adding Local Users](security/configuration/authentication-with-local-user-store/adding-local-users.md)

@@ -1,16 +1,18 @@
-# Dataset Security
+# Data Set Security Settings
 
-Log into the Admin Console Page as an Administrator of Collibra Data Quality.
+## &#x20;Security
 
-Go to the Admin Console page (click the Collibra Data Quality logo -> click the Gear -> click Admin Console).
+To configure the Data Set Security settings, follow these steps.
 
-Click on “Security” as described in the “Security Settings” section of this document (just above) and toggle on “Dataset Security”.
+## Steps
 
-Log into the Admin Console Page as an Administrator of Collibra Data Quality.
-
-Go to the Admin Console page (click the Collibra Data Quality -> click the Gear -> click Admin Console).
-
-Click on “Datasets” as shown below
+1. Log into the Admin Console Page as an Administrator of Collibra Data Quality.
+2. Click the **Gear** icon in the left navigation pane.
+3. Click **Admin Console**.
+4. Click **Security** on the Quick Links page and toggle on **Dataset Security**.
+5. Click the **Gear** icon in the left navigation pane.
+6. Click **Admin** Console.
+7. Click **Datasets** on the Quick Links page, as shown in the following screenshot.
 
 ![](<../../../.gitbook/assets/Screen Shot 2019-09-05 at 11.07.43 PM.png>)
 
@@ -18,6 +20,20 @@ Note all the Datasets from the demo script we launched at the beginning of this 
 
 ![](<../../../.gitbook/assets/Screen Shot 2019-09-05 at 11.08.43 PM.png>)
 
-However I can see the other DatasetStats that are part of the PUBLIC\_ROLE as [odemo@owl.com](mailto:odemo@owl.com) is a member of that ROLE.
+However, the other DatasetStats that are part of the PUBLIC\_ROLE as [odemo@owl.com](mailto:odemo@owl.com) is a member of that ROLE.
 
-The last thing to notice is that as the user [odemo@owl.com](mailto:odemo@owl.com) cannot access the Admin pages the AD Group odemo is a part of the ADMIN\_ROLE.
+The last thing to notice is that, as the user [odemo@owl.com](mailto:odemo@owl.com) cannot access the Admin pages the AD Group odemo is a part of the ADMIN\_ROLE.
+
+## ACL Security
+
+When ACL is enabled/disabled, an administrator can configure the following options in the Dataset Security pane to limit usage/permissions on data sets:
+
+* Data\_Preview role limit (role that can view source data)
+* Dataset\_train role limit (role that can train data sets)
+* Dataset\_rules role limit (role that can add / edit / delete rules)
+
+<figure><img src="../../../.gitbook/assets/dq-acl-security-enabled.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+This configuration is tied to data sets and not connections or jobs.
+{% endhint %}
