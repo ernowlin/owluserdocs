@@ -12,6 +12,7 @@
 
 * The Jobs chart now shows a dotted gray line to represent jobs in Submitted status.&#x20;
 * The Jobs chart now supports an hourly view option.
+* When you run a Pushdown Job that has a data set that returns 0 rows, an unclear message displays.
 
 #### Schema
 
@@ -76,8 +77,9 @@
 
 #### Rules
 
-* Regex validations containing parentheses for date formats throw rule exceptions.&#x20;
-  * A workaround for this limitation is to add the API pattern to `XSS_ESCAPE_SLASH_URL_PATTERNS` wherever `\` is used in the API.
+* The Rule Builder page becomes unusable if the user creates, validates, saves a new rule and then re-edits.
+  * The workaround for this limitation is to do a full page refresh.
+* When a user attempts to validate a rule that contains a stat, an exception error is returned.
 
 #### Security
 
@@ -87,6 +89,11 @@
 
 * When alert recipient email addresses are separated by semicolons `;`, alerts emails are not sent to the intended recipients.&#x20;
   * A workaround for this limitation is to separate alert recipient email addresses with commas `,` instead of semicolons.
+
+#### Snowflake Pushdown
+
+* When a Job is run, which has a data set that returns 0 rows, an unclear message displays.
+* When a native rule is created that contains an embedded stat, its calculated value will not display on the Job results page.
 
 ### DQ Security Metrics
 
