@@ -42,6 +42,15 @@
 
 * The v2/gethoot API now properly returns rule dimension information for data sets. (ticket #89973)
 
+#### Connections
+
+* The Databricks connection template has changed, due to an upgrade of the driver. Any existing connection that uses the old driver must be updated. Refer to the new template. (ticket #19950)
+* The drivers for Athena, BigQuery, MongoDB, GCS, Hive/Impala were also upgraded but no connection change is required.
+
+#### Spark
+
+* The 2022.09 release uses Spark 3.2.2.
+
 ### Fixes
 
 #### Explorer
