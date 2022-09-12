@@ -10,6 +10,26 @@ Builds follow a naming convention to indicate which [optional](builds.md#optiona
 
 <details>
 
+<summary>2022.09</summary>
+
+**Collibra Data Quality**
+
+* 2022.09-ADGCSILM-1386
+* 2022-09-ABDGCSILM-1387
+* 2022.09-ABDGCSHILM-1388
+* 2022.09-1390
+
+**Spark**
+
+* 3.2.2-2022.09-ADGCSILM-1386
+* 3.2.2-2022.09-ABDGCSILM-1387
+* 3.2.2-2022.09-ABDGCSHILM-1388
+* 3.2.2-2022.09-1390
+
+</details>
+
+<details>
+
 <summary>2022.08</summary>
 
 **Collibra Data Quality**

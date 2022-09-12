@@ -306,15 +306,26 @@ chmod -R 755 /home/owldq
 
 ```
 ### If you need to update your postgres password, you can leverage SSH into the VM
-### Connect to your hosted instance of Postgres
 
+### Connect to your hosted instance of Postgres
 sudo -i -u postgres
 psql -U postgres
 \password
-#Enter new password: ### Enter Strong Password
-#Enter it again: ### Re-enter Strong Password
+#Enter new password: ### Enter Strong Password (no special characters)
+#Enter it again: ### Re-enter Strong Password (no special characters)
 \q
 exit
+
+### Need to update the password in owl-env.sh
+/home/collibra/owl/bin/owlmanage.sh encrypt=### above password
+
+## copy encrypted output
+vi /home/collibra/owl/config/owl-env.sh
+## input pasted encryption into 'export SPRING_DATASOURCE_PASSWORD='
+
+vi /home/collibra/owl/config/owl.properties
+## input pasted encryption into 'spring.datasource.password='
+## input pasted encryption into 'spring.agent.datasource.password='
 ```
 
 ### Permissions for ssh keys when starting Spark
