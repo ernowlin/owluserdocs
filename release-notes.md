@@ -98,6 +98,9 @@ We recommend using Spark 3.x standalone version.
 
 * When a Job is run, which has a data set that returns 0 rows, an unclear message displays.
 * When a native rule is created that contains an embedded stat, its calculated value will not display on the Job results page.
+* Data Set security is not supported.
+* Disabling autometrics will not take effect, therefore, all autometrics are executed.
+* Creating a DQ job using only "SQL Query" workflow doesn't allow you to set the rundate value.
 
 ### DQ Security Metrics
 
