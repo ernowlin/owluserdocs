@@ -311,8 +311,8 @@ chmod -R 755 /home/owldq
 sudo -i -u postgres
 psql -U postgres
 \password
-#Enter new password: ### Enter Strong Password (no special characters)
-#Enter it again: ### Re-enter Strong Password (no special characters)
+#Enter new password: ### Enter Strong Password
+#Enter it again: ### Re-enter Strong Password
 \q
 exit
 
