@@ -53,7 +53,7 @@
 * The 2022.09 release uses Spark 3.2.2.
 
 {% hint style="info" %}
-We recommend using Spark 3.x standalone version.
+We recommend using Spark 3.x for standalone installs/upgrades.
 {% endhint %}
 
 ### Fixes
