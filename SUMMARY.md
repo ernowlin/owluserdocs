@@ -228,6 +228,7 @@
     * [Explorer (advanced)](apis-1/owlcheck-spark/owlcheck/explorer.md)
     * [File Look Back](apis-1/owlcheck-spark/owlcheck/file-lookback.md)
     * [Filter & Filter Not](apis-1/owlcheck-spark/owlcheck/filter.md)
+    * [Header Check](apis-1/owlcheck-spark/owlcheck/header-check.md)
     * [Multiple Pattern Relationships](apis-1/owlcheck-spark/owlcheck/multiple-pattern-combinations.md)
     * [Nulls in Datasets](apis-1/owlcheck-spark/owlcheck/zero-if-null.md)
     * [Spark-shell Sample](apis-1/owlcheck-spark/owlcheck/spark-shell-sample.md)
