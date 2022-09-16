@@ -9,7 +9,7 @@ To get started, you need a Collibra Data Quality account.
 1. To connect to your environment, enter your URL.
 
 {% hint style="success" %}
-**Example:** https://\<your\_host\_name>:9000
+**Example:** http://\<your\_host\_name>:9000
 {% endhint %}
 
 ![Collibra Data Quality log in page](<../../.gitbook/assets/Screen Shot 2022-06-23 at 3.18.59 PM.png>)
