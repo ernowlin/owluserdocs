@@ -30,7 +30,7 @@ Let's proceed after gathering all prerequisites!
 ![](https://lh3.googleusercontent.com/Eyo8SV3nasLqqvXPw0zanZopx7sTV0G7SBcuYt63aI4YmZBXW9DgAHalQWfifNFwhTI5e9Qc3SpsfM3MWFHB6oVLBCeAHlkicRQ9FsBEEKnZ6KJZKuNyF7rmIOKVDch-unS4oAFJ)
 
 {% hint style="info" %}
-**Please see:** [**https://productresources.collibra.com/docs/cloud-edge/latest/Default.htm**](https://productresources.collibra.com/docs/cloud-edge/latest/Default.htm) **for more detailed information on Edge installation and configuration**
+**For more detailed information on Edge installation and configuration, see** [**Installing an Edge site**](https://productresources.collibra.com/docs/collibra/latest/Content/Edge/EdgeSitesInstallation/to\_installing-an-edge-site.htm)**.**&#x20;
 {% endhint %}
 
 #### **1B. Establish Edge’s Connection To Each Data Source (One-Time For Each Source)**
