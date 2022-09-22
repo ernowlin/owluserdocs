@@ -79,7 +79,10 @@
   * [Pushdown](dq-visuals/more/pushdown/README.md)
     * [Snowflake Pushdown](dq-visuals/more/pushdown/snowflake-pushdown/README.md)
       * [Features and Limitations of Snowflake Pushdown](dq-visuals/more/pushdown/snowflake-pushdown/features-and-limitations-of-snowflake-pushdown.md)
-      * [Running a Snowflake Pushdown job](dq-visuals/more/pushdown/snowflake-pushdown/running-a-snowflake-pushdown-job.md)
+      * [Running a Snowflake Pushdown job](dq-visuals/more/pushdown/snowflake-pushdown/running-a-snowflake-pushdown-job/README.md)
+        * [Running a Full Scan](dq-visuals/more/pushdown/snowflake-pushdown/running-a-snowflake-pushdown-job/running-a-full-scan.md)
+        * [Running a Partial Scan](dq-visuals/more/pushdown/snowflake-pushdown/running-a-snowflake-pushdown-job/running-a-partial-scan.md)
+        * [Scanning with SQL Query](dq-visuals/more/pushdown/snowflake-pushdown/running-a-snowflake-pushdown-job/scanning-with-sql-query.md)
   * [Summary](dq-visuals/more/overview.md)
 
 ## Scorecards
