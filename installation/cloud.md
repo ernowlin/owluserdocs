@@ -224,7 +224,7 @@ Edge Capability Resource Requirements: If insufficient resources, your capabilit
 
 Installer: Please beware, downloading a new installer will invalidate the previous installer.
 
-Volume: /var/lib/rancher/k3s path must have 50gb available
+Volume: /var/lib/rancher/k3s path must have 500 GB available.
 
 Root access: root access is needed, though future revisions will follow the least privileged user access policies.
 
