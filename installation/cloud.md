@@ -28,7 +28,7 @@ This is where your [Edge](https://productresources.collibra.com/docs/collibra/la
 
 * RedHat 8 or Centos 8
 * SSH Access
-* 55 GB of free storage
+* 500 GB of free storage
 * 64 GB memory
 * 16 cores
 * Egress (outbound) network access on port 443
@@ -222,7 +222,7 @@ If the DQ Job does not succeed, please check your Agent settings and system prer
 
 Edge Capability Resource Requirements: If insufficient resources, your capabilities will not perform properly.
 
-Installer: Please beware, downloading new installer will invalidate previous installer.
+Installer: Please beware, downloading a new installer will invalidate the previous installer.
 
 Volume: /var/lib/rancher/k3s path must have 50gb available
 
