@@ -222,7 +222,7 @@ If the DQ Job does not succeed, please check your Agent settings and system prer
 
 Edge Capability Resource Requirements: If insufficient resources, your capabilities will not perform properly.
 
-Installer: Please beware, downloading new installer will invalidate the  previous installer.
+Installer: Please beware, downloading a new installer will invalidate the previous installer.
 
 Volume: /var/lib/rancher/k3s path must have 50gb available
 
