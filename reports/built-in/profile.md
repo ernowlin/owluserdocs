@@ -5,7 +5,7 @@
 The Data Quality Data Set Findings Report allows you to search for a particular data set and generate a profile report. You can copy, print, and export the report to an Excel or CSV file format.
 
 {% hint style="info" %}
-As of the 2022.08 release, PDF is no longer a supported file format for exporting reports. Therefore, the print function will be restricted to the CSV file format only.
+As of the 2022.08 release, PDF is no longer a supported file format for exporting reports. Therefore, the print function is now restricted to the CSV file format only.
 {% endhint %}
 
 ## Steps
