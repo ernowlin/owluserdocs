@@ -14,7 +14,7 @@ When you operate a large data lake or several large data environments, it's help
 The Collibra Data Quality Weekly Summary Report automatically aggregates a simple series of the high level trends for each data set, which allows you to see the DQ scores and trends, as well as row counts and passing runs in a weekly report. You can copy, export, and print this report to an Excel or CSV file format.
 
 {% hint style="info" %}
-As of the 2022.08 release, PDF is no longer a supported file format for exporting reports.
+As of the 2022.08 release, PDF is no longer a supported file format for exporting reports. Therefore, the print function will be restricted to the CSV file format only.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/dq-weekly-summary-report.png" alt=""><figcaption></figcaption></figure>
@@ -59,7 +59,7 @@ The following table describes the report columns.
 The Data Quality Checks Report provides a number of automatic checks of your data sets that are continually updated, based on observation and learning. This report includes the type of check performed and the check value and break value per data set. There is also a summary report that rolls up the number of automatic DQ checks done.
 
 {% hint style="info" %}
-As of the 2022.08 release, PDF is no longer a supported file format for exporting reports.
+As of the 2022.08 release, PDF is no longer a supported file format for exporting reports. Therefore, the print function will be restricted to the CSV file format only.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/dq-data-quality-checks-report.png" alt=""><figcaption></figcaption></figure>
