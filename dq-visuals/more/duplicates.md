@@ -8,7 +8,7 @@ This is an advanced opt-in feature
 
 {% embed url="https://owl-analytics.com/general-ledger" %}
 
-Whether you're looking for a fuzzy matching percent or single client cleanup, Owl's duplicate detection can help you sort and rank the likelihood of duplicate data.
+Whether you're looking for a fuzzy matching percent or single client cleanup, Collibra Data Quality's duplicate detection can help you sort and rank the likelihood of duplicate data.
 
 ![](../../.gitbook/assets/owl-dupe-booked.png)
 
@@ -30,7 +30,7 @@ Carrisa Rimmer vs Carrissa Rimer
 
 ## ATM customer data with only a 88% match
 
-As you can see below, less than a 90% match in most cases is a false positive. Each dataset is a bit different, but in many cases you should tune your duplicates to roughly a 90+% match for interesting findings.
+As you can see below, less than a 90% match in most cases is a false positive. Each dataset is a bit different, but in many cases, you should tune your duplicates to roughly a 90+% match for interesting findings.
 
 ![](../../.gitbook/assets/owl-dupes.png)
 

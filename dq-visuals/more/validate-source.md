@@ -6,7 +6,7 @@ This is an advanced opt-in feature
 
 ## Does your data-lake reconcile with your upstream system?
 
-Copying data from one system to another is probably the most common data activity to all organizations. Owl refers to this as source to target. As simple as this activity sounds, Owl has found that most of the time files and database tables are not being copied properly. To ensure and protect against target systems getting out of sync or not matching the originating source, turn on `-vs` to validate that the source matches the target.
+Copying data from one system to another is probably the most common data activity to all organizations. Collibra Data Quality refers to this as source to target. As simple as this activity sounds, Collibra DQ has found that most of the time files and database tables are not being copied properly. To ensure and protect against target systems getting out of sync or not matching the originating source, turn on `-vs` to validate that the source matches the target.
 
 ## A row count is not enough...
 
@@ -17,9 +17,9 @@ The most common check we encounter is a row count. However, a row count does not
 
 ![](<../../.gitbook/assets/Screen Shot 2019-10-01 at 8.50.39 PM.png>)
 
-## OwlCheck Created from Wizard
+## DQ Check Created from Wizard
 
-The Owl Wizard GUI creates the below OwlCheck which it can execute from the GUI by clicking RUN or by pasting at the cmdline.
+The Collibra DQ Wizard GUI creates the below DQ Check which it can execute from the GUI by clicking RUN or by pasting at the cmdline.
 
 ```bash
 -lib /home/ec2-user/owl/drivers/valdrivers \
@@ -40,7 +40,7 @@ The Owl Wizard GUI creates the below OwlCheck which it can execute from the GUI 
 
 ### End of Day Stock Data from Oracle to Mysql
 
-In this example we loaded NYSE\_EOD data in both Oracle and Mysql and then used Owl's Source Validation feature. We see 3 main classes of issues. 1) The row count is off by 1 row, this means a row was dropped or went missing when the data was copied. 2) The schemas don't exactly match. 3) In 2 cases the values are different at the cell level. NULL vs NYSE and 137.4 vs 137.42
+In this example we loaded NYSE\_EOD data in both Oracle and Mysql and then used Collibra DQ's Source Validation feature. We see 3 main classes of issues. 1) The row count is off by 1 row, this means a row was dropped or went missing when the data was copied. 2) The schemas don't exactly match. 3) In 2 cases the values are different at the cell level. NULL vs NYSE and 137.4 vs 137.42
 
 ![](<../../.gitbook/assets/Screen Shot 2019-10-09 at 9.40.55 AM.png>)
 

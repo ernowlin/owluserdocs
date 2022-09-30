@@ -6,7 +6,7 @@ This is an advanced opt-in feature
 
 ## Where'd my rows go?
 
-Owl is constantly learning which records or rows in a dataset are most common. In the case below the NYSE had a reasonable dataset volume (row count).
+Collibra Data Quality is constantly learning which records or rows in a data set are most common. In the case below the NYSE had a reasonable dataset volume (row count).
 
 ![](../../.gitbook/assets/owl-missing-records.png)
 
