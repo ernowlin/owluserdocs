@@ -142,12 +142,10 @@ cdq.removeAllRules(opt.dataset)
 
 // Scan
 cdq.owlCheck()
-val results =  cdq.hoot()
-
+val results =  cdq.hoot() // returns object Hoot, not a DataFrame
 //See Json Results(Option for downstream processing)
-
 println("--------------Results:----------------\n")
-println(results)
+println(results) // optional
 
 //Post Routine, See DataFrame Results (Option for downstream processing)
 val breaks = cdq.getRuleBreakRows("nyse-stocks-symbol")
@@ -185,17 +183,17 @@ val dataset = "cdq_notebook_db_profile3"
 var date = "2018-01-11"
 
 // Options
-val options = new OwlOptions()
-options.dataset = dataset
-options.runId = date
-options.host = pgHost
-options.port = pgPort
-options.pgUser = pgUser
-options.pgPassword = pgPass
+val opt = new OwlOptions()
+opt.dataset = dataset
+opt.runId = date
+opt.host = pgHost
+opt.port = pgPort
+opt.pgUser = pgUser
+opt.pgPassword = pgPass
 
 //Scan
 val cdq = OwlUtils.OwlContext(df, opt)
-cdq.register(options)
+cdq.register(opt)
 cdq.owlCheck()
 val profile = cdq.profileDF()
 profile.show()
@@ -212,13 +210,13 @@ val dataset = "cdq_notebook_db_dupe"
 var date = "2018-01-11"
 
 // Options
-val options = new OwlOptions()
-options.dataset = dataset
-options.runId = date
-options.host = pgHost
-options.port = pgPort
-options.pgUser = pgUser
-options.pgPassword = pgPass
+val opt = new OwlOptions()
+opt.dataset = dataset
+opt.runId = date
+opt.host = pgHost
+opt.port = pgPort
+opt.pgUser = pgUser
+opt.pgPassword = pgPass
 
 opt.dupe.ignoreCase = true
 opt.dupe.on = true
@@ -227,7 +225,7 @@ opt.dupe.include = Array("SYMBOL", "TRADE_DATE")
 
 //Scan
 val cdq = OwlUtils.OwlContext(df, opt)
-cdq.register(options)
+cdq.register(opt)
 cdq.owlCheck()
 
 val dupesDf = cdq.getDupeRecords
@@ -249,13 +247,13 @@ val dataset = "cdq_notebook_db_outlier"
 var date = "2018-01-11"
 
 // Options
-val options = new OwlOptions()
-options.dataset = dataset
-options.runId = date
-options.host = pgHost
-options.port = pgPort
-options.pgUser = pgUser
-options.pgPassword = pgPass
+val opt = new OwlOptions()
+opt.dataset = dataset
+opt.runId = date
+opt.host = pgHost
+opt.port = pgPort
+opt.pgUser = pgUser
+opt.pgPassword = pgPass
 
 opt.dupe.on = false
 
