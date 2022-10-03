@@ -1,5 +1,94 @@
 # Release Notes
 
+## 2022.10
+
+### New Features
+
+#### Rules
+
+* You can now define a rule to detect days without data by using `$daysWithoutData`.
+
+#### Profile
+
+* You can now use a string length feature by toggling the Profile String Length checkbox when you create a data set.&#x20;
+  * When Profile String Length is checked, the min/max length of a string column is saved to table dataset\_field&#x20;
+
+#### Catalog
+
+* You can now use bulk actions to apply Rules, Data Classes, and Sensitive Labels to selected columns. This feature is available under the Catalog Column section of Catalog.&#x20;
+
+#### API
+
+* The /v3/getrunidsbydataset endpoint now provides the following:
+  * The runs from a given time range or timestamps.
+  * The maximum count of runs when no time range or timestamps are provided.&#x20;
+
+#### Validate Source
+
+* You can now write rules against a loaded source data frame when -postclearcache is configured in the agent.
+
+### Enhancements
+
+#### DQ Job
+
+* Start Time and Update Time are now based on the server time zone of the DQ Web App. &#x20;
+
+#### Scheduler
+
+* The Job Schedule page now has pagination.&#x20;
+
+#### Scorecards
+
+* From Pulse View, you can now view missing runs, runs with 0 rows, and runs with failed scores. &#x20;
+
+### Fixes
+
+#### Rules
+
+* Fixed an issue with the Rule Validator that resulted in missing table errors. The Validator now correctly detects columns. (ticket #93430)
+
+#### DQ Job
+
+* Fixed an issue that caused full profile pushdown jobs on Oracle connections to fail due to incorrect delimiting of FROM clauses. (ticket #92409)
+* Fixed an issue that caused inconsistencies between the time zones represented in the Start Time and Update Time columns.&#x20;
+
+#### Behavior
+
+* Fixed an issue that caused jobs with Adaptive Rules to become stuck in Unknown status as a result of an unsupported Time metric for Adaptive Rules. (ticket #95936)
+
+#### Agent
+
+* Fixed the loadBalancerSourceRanges for web and spark\_history services in EKS environments. (ticket #95398)
+  * The helm property `global.ingress.*` has been removed to separate the config for web and spark\_history. Please update the property as follows:\
+    __`global.web.ingress.*`\
+    _``_`global.spark_history.ingress.*`
+* Added support to specify the inbound CIDRs for the Ingress using the property `.global.web.service.loadBalancerSourceRanges`. (ticket #95398)
+  * Though Ingress is supported as part of Helm charts, we recommend attaching your own Ingress to the deployment if you need further customization.&#x20;
+
+#### Validate Source
+
+* The Add Column Names feature is scheduled for removal with the upcoming 2022.11 release. (ticket #96066) &#x20;
+  * This was a previous functionality before being able to limit the query directly (`srcq`) and Update Scope was added.&#x20;
+  * Use the query to edit/limit columns and also use Update Scope.
+
+#### Dupes
+
+* The dupe filter is scheduled for removal from the Dupes page with the upcoming 2022.11 release. (ticket #96065)
+
+#### Explorer
+
+* Fixed an issue that caused BigQuery connections to incorrectly update the library (`-lib`) path when a subset of columns was selected. (ticket #96768)
+
+#### Scheduler
+
+* Fixed an issue that prevented the scheduler from running certain scheduled jobs in multi-tenancy setups. Email server information is now captured from the correct tenant. (ticket #92898)
+
+### Known Limitations
+
+#### Catalog
+
+* When using the new bulk actions feature, updates to your job are not immediately visible in the UI. Once you apply a rule, run a DQ Job against that data set. From the Rules tab, a row with the newly applied rule is visible.&#x20;
+
 ## 2022.09
 
 ### Enhancements
