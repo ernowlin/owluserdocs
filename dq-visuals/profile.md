@@ -32,7 +32,7 @@ Owl automatically profiles datasets over time to enable drill-in for detailed in
 
 Collibra Data Quality offers click or code options to run profiling.
 
-## Dataset Profile
+## Data Set Profile
 
 Collibra Data Quality creates a detailed profile of each dataset under management. This profile will later be used to both provide insight and automatically identify data quality issues.
 
@@ -71,9 +71,9 @@ Pushdown and parallel JDBC cannot be used together. If you are using pushdown, d
 
 ## Profile Insights
 
-![](<../.gitbook/assets/Screen Shot 2020-05-07 at 7.33.16 PM.png>)
+<figure><img src="../.gitbook/assets/dq-profile-insights.png" alt=""><figcaption></figcaption></figure>
 
-By gathering a variety of different statistics, Collibra DQ's profile can provide a great deal of insight about the dataset.
+By gathering a variety of different statistics, Collibra DQ's profile can provide a great deal of insight about a data set.
 
 To see the difference between baseline (historical) and current values, Collibra DQ provides a **Delta %** change column. In the Delta % change column, data is represented in a pie chart for quick visualization of the changes.
 
@@ -100,6 +100,8 @@ Profile includes a range of statistics
 * Mean
 * TopN / BottomN
 * Value Quartiles
+* Minimum (String) Length
+* Maximum (String) Length
 {% endhint %}
 
 ## Sensitive Data Detection (Semantic)
