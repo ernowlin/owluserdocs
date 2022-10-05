@@ -259,6 +259,7 @@
   * [Advanced](admin/configuration/custom-configurations.md)
   * [Pendo](admin/configuration/pendo/README.md)
     * [Usage](admin/configuration/pendo/usage.md)
+  * [React](admin/configuration/react.md)
 * [Audit](admin/audit/README.md)
   * [Dataset Audit Trail](admin/audit/dataset-audit-trail.md)
   * [Security Audit Trail](admin/audit/security-audit-trail.md)
