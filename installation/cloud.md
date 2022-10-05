@@ -5,7 +5,7 @@ description: Installation details for the Edge component for DQ Cloud.
 # Cloud
 
 {% hint style="success" %}
-This offering is in public beta and only available for select Collibra customers. Please contact a Collibra representative to learn more.
+DQ Cloud is in public beta, which means that it is an upcoming feature that is made available to all customers before it is fully ready for general availability so it can be tested and evaluated early. Please contact a Collibra representative or [click here](https://productresources.collibra.com/docs/collibra/latest/Content/ReleaseNotes/co\_beta-features.htm) to learn more.
 {% endhint %}
 
 ## Requirements
