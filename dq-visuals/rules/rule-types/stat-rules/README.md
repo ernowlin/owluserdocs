@@ -7,13 +7,16 @@ select * from @dataset where
 fname.$type != 'String' AND $rowCount < 800
 ```
 
-| Dataset Level Stat      | Rule Example             | Description                                    |
-| ----------------------- | ------------------------ | ---------------------------------------------- |
-| **$totalTimeInSeconds** | $totalTimeInSeconds > 25 | Alert when DQ job runs longer than 25 seconds. |
-| **$totalTimeInMinutes** | $totalTimeInMinutes > 5  | Alert when DQ job runs longer than 5 mins.     |
-| **$totalTimeInHours**   | $totalTimeInHours > 1    | Alert when DQ job runs longer than 1 hour.     |
-| **$rowCount**           | $rowCount < 9000         | Alert when row count less than 9,000.          |
-| **$runDate**            | $runDate = '2020-01-24'  | Use the ${rd} variable in rules.               |
+| Dataset Level Stat      | Rule Example             | Description                                        |
+| ----------------------- | ------------------------ | -------------------------------------------------- |
+| **$totalTimeInSeconds** | $totalTimeInSeconds > 25 | Alert when DQ job runs longer than 25 seconds.     |
+| **$totalTimeInMinutes** | $totalTimeInMinutes > 5  | Alert when DQ job runs longer than 5 mins.         |
+| **$totalTimeInHours**   | $totalTimeInHours > 1    | Alert when DQ job runs longer than 1 hour.         |
+| **$rowCount**           | $rowCount < 9000         | Alert when row count less than 9,000.              |
+| **$runDate**            | $runDate = '2020-01-24'  | Use the ${rd} variable in rules.                   |
+| **$daysWithoutData**    | $daysWithoutData > 4     | Alert when a data set has 0 rows for 5 days.       |
+| **$runsWithoutData**    | $runsWithoutData > 4     | Alert when a data set has missing runs for 5 days. |
+| **$daysSinceLastRun**   | $daysSinceLastRun > 4    | Alert when a data set has not run for 5 days.      |
 
 | Column Level Stat      | Rule Example                             | Description                                                                                                                                             |
 | ---------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -53,5 +56,3 @@ gender['Male'].$uniquePercent between 40 and 60
 | **.$uniquePercent** | credit\_rating\['GOOD'].uniquePercent between 40 and 60 |
 
 ![](<../../../../.gitbook/assets/Screen Shot 2021-05-10 at 2.24.51 PM.png>)
-
-###
