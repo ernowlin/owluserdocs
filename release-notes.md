@@ -6,7 +6,9 @@
 
 #### Rules
 
-* You can now define a rule to detect days without data by using `$daysWithoutData`.
+* You can now define a rule to detect the number of days a job runs without data by using `$daysWithoutData`.
+* You can now define a rule to detect the number of days a job runs with 0 rows by using `$runsWithoutData`.
+* You can now define a rule to detect the number of days since a job last ran by using `$daysSinceLastRun`.
 
 #### Profile
 
@@ -17,15 +19,13 @@
 
 * You can now use bulk actions to apply Rules, Data Classes, and Sensitive Labels to selected columns. This feature is available under the Catalog Column section of Catalog.&#x20;
 
-#### API
-
-* The /v3/getrunidsbydataset endpoint now provides the following:
-  * The runs from a given time range or timestamps.
-  * The maximum count of runs when no time range or timestamps are provided.&#x20;
-
 #### Validate Source
 
-* You can now write rules against a loaded source data frame when -postclearcache is configured in the agent.
+* You can now write rules against a loaded source data frame when `-postclearcache` is configured in the agent.
+
+{% hint style="info" %}
+The DQ UI will be converted to the React MUI framework with the 2022.11 release. Prior to the 2022.11 release, you can turn the [React flag on](admin/configuration/react.md), but note that some features may be temporarily limited.
+{% endhint %}
 
 ### Enhancements
 
@@ -40,6 +40,24 @@
 #### Scorecards
 
 * From Pulse View, you can now view missing runs, runs with 0 rows, and runs with failed scores. &#x20;
+
+#### Admin/Catalog
+
+* Connection details are now masked when non-admin users attempt to view or modify database connection details from the Catalog page. Only users with role\_admin or role\_connection\_manager have the ability to view connection details on this page. (ticket #94430)
+
+#### API
+
+* The /v2/getRunIdDetailsByDataset endpoint now provides the following:
+  * The RunIDs for a given data set.
+  * All completed DQ Jobs for a given data set.
+
+#### Snowflake Pushdown (beta)
+
+* You can now detect shapes that do not conform to a data field.
+
+#### Connections
+
+* The Snowflake JDBC driver is now updated to 3.13.14.
 
 ### Fixes
 
@@ -64,16 +82,20 @@
     _``_`global.spark_history.ingress.*`
 * Added support to specify the inbound CIDRs for the Ingress using the property `.global.web.service.loadBalancerSourceRanges`. (ticket #95398)
   * Though Ingress is supported as part of Helm charts, we recommend attaching your own Ingress to the deployment if you need further customization.&#x20;
+  * This requires a new helm chart.
+* Fixed an issue that caused Livy file estimates to fail for GCS on K8s deployments.
+* Fixed an issue that caused jobs to fail for GCS on K8s deployments.
 
 #### Validate Source
 
 * The Add Column Names feature is scheduled for removal with the upcoming 2022.11 release. (ticket #96066) &#x20;
   * This was a previous functionality before being able to limit the query directly (`srcq`) and Update Scope was added.&#x20;
   * Use the query to edit/limit columns and also use Update Scope.
+* Fixed an issue that caused the incorrect message to display for \[VALUE\_THRESHOLD] when validate source was specified for a matched case. (ticket #94435)
 
 #### Dupes
 
-* The dupe filter is scheduled for removal from the Dupes page with the upcoming 2022.11 release. (ticket #96065)
+* The dupes filter is scheduled for removal from the Dupes page with the upcoming 2022.11 release. (ticket #96065)
 
 #### Explorer
 
@@ -85,9 +107,18 @@
 
 ### Known Limitations
 
+#### Rules
+
+* When a data set has 0 rows returned, stat rules applied to the data set are not executed. &#x20;
+
 #### Catalog
 
 * When using the new bulk actions feature, updates to your job are not immediately visible in the UI. Once you apply a rule, run a DQ Job against that data set. From the Rules tab, a row with the newly applied rule is visible.&#x20;
+
+#### Snowflake Pushdown (beta)
+
+* Freeform (SQLF) rules cannot use a data set name but instead must use `@dataset` because Snowflake does not explicitly understand data set names.
+* When using the SQL Query workflow, selecting a subset of columns in your SQL query must be enclosed in double quotes to prevent the job from running infinitely and without failing.
 
 ## 2022.09
 
