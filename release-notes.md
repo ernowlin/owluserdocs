@@ -68,6 +68,7 @@ The DQ UI will be converted to the React MUI framework with the 2022.11 release.
 #### DQ Job
 
 * Fixed an issue that caused full profile pushdown jobs on Oracle connections to fail due to incorrect delimiting of FROM clauses. (ticket #92409)
+* Fixed an issue that caused jobs to fail at the load activity when using the CTE query. Please note that CTE support is currently limited to Postgres connections. (ticket #88287, 89150)
 * Fixed an issue that caused inconsistencies between the time zones represented in the Start Time and Update Time columns.&#x20;
 
 #### Behavior
@@ -111,6 +112,10 @@ The DQ UI will be converted to the React MUI framework with the 2022.11 release.
 
 * When a data set has 0 rows returned, stat rules applied to the data set are not executed. &#x20;
 
+#### DQ Job
+
+* CTE query support is currently limited to Postgres connections. DB2 and MSSQL are currently unsupported.&#x20;
+
 #### Catalog
 
 * When using the new bulk actions feature, updates to your job are not immediately visible in the UI. Once you apply a rule, run a DQ Job against that data set. From the Rules tab, a row with the newly applied rule is visible.&#x20;
@@ -119,6 +124,7 @@ The DQ UI will be converted to the React MUI framework with the 2022.11 release.
 
 * Freeform (SQLF) rules cannot use a data set name but instead must use `@dataset` because Snowflake does not explicitly understand data set names.
 * When using the SQL Query workflow, selecting a subset of columns in your SQL query must be enclosed in double quotes to prevent the job from running infinitely and without failing.
+* Min/Max precision and scale are only calculated for `double` datatypes. All other datatypes are currently out of scope.
 
 ## 2022.09
 
