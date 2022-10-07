@@ -110,6 +110,8 @@ val pgPort = "0000"
 
 #### <mark style="color:blue;">Create Collibra DQ Test (Rules) and Detects Breaks</mark>
 
+<mark style="color:orange;">Note: If the rules are already created and assigned to a dataset from UI, calling owlcheck() will automatically execute all the rules associated with the given dataset and there is no need to re-create the rule from notebook.</mark>
+
 ```scala
 val dataset = "cdq_notebook_db_rules"
 var date = "2018-01-11"
@@ -123,7 +125,7 @@ opt.port = pgPort
 opt.pgUser = pgUser
 opt.pgPassword = pgPass
 
-// Create a simple rule
+// Create a simple rule and assign it to dataset 
 val simpleRule = OwlUtils.createRule(opt.dataset)
       simpleRule.setRuleNm("nyse-stocks-symbol")
       simpleRule.setRuleValue("symbol == 'BHK'")
@@ -133,6 +135,18 @@ val simpleRule = OwlUtils.createRule(opt.dataset)
       simpleRule.setIsActive(1)
       simpleRule.setUserNm("admin")
       simpleRule.setPreviewLimit(8)
+
+// Create a rule from generic rules that are created from UI:
+val genericRule = OwlUtils.createRule(opt.dataset)
+    genericRule.setRuleNm("exchangeRule") // this could be any name
+    genericRule.setRuleType("CUSTOM") 
+    genericRule.setPoints(1)
+    genericRule.setIsActive(1)
+    genericRule.setUserNm("admin")
+    genericRule.setRuleRepo("exchangeCheckRule"); // Validate the generic rule name 
+     //from UI
+    genericRule.setRuleValue("EXCH") // COLUMN assosicate with the rule
+
 
 // Pre Routine 
 val cdq = com.owl.core.util.OwlUtils.OwlContext(df, opt)
