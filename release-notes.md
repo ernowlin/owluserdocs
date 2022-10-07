@@ -15,10 +15,6 @@
 * You can now use a string length feature by toggling the Profile String Length checkbox when you create a data set.&#x20;
   * When Profile String Length is checked, the min/max length of a string column is saved to table dataset\_field&#x20;
 
-#### Catalog
-
-* You can now use bulk actions to apply Rules, Data Classes, and Sensitive Labels to selected columns. This feature is available under the Catalog Column section of Catalog.&#x20;
-
 #### Validate Source
 
 * You can now write rules against a loaded source data frame when `-postclearcache` is configured in the agent.
