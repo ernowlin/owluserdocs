@@ -179,24 +179,46 @@ The breaks and the rules can be viewed in CDQ web as well.
 #### <mark style="color:blue;">Create Collibra DQ Test (Profile)</mark>
 
 ```scala
-val dataset = "cdq_notebook_db_profile3"
-var date = "2018-01-11"
+val dataset = "cdq_notebook_nyse_profile"
 
+val runList = List("2018-01-01", "2018-01-02", "2018-01-03", "2018-01-04", "2018-01-05", "2018-01-08", "2018-01-09", "2018-01-10")
+for(runId <- runList) {
 // Options
 val opt = new OwlOptions()
 opt.dataset = dataset
-opt.runId = date
 opt.host = pgHost
 opt.port = pgPort
 opt.pgUser = pgUser
 opt.pgPassword = pgPass
 
+val profileOpt = new ProfileOpt
+profileOpt.on = true
+profileOpt.setShape(true)
+profileOpt.setShapeSensitivity(5.0)
+profileOpt.setShapeMaxPerCol(10)
+profileOpt.setShapeMaxColSize(10)
+profileOpt.setShapeGranular(true)
+profileOpt.behaviorEmptyCheck = true
+profileOpt.behaviorMaxValueCheck = true
+profileOpt.behaviorMinValueCheck = true
+profileOpt.behaviorNullCheck = true
+profileOpt.behaviorRowCheck = true
+profileOpt.behaviorMeanValueCheck = true
+profileOpt.behaviorUniqueCheck = true
+profileOpt.behaviorMinSupport = 5 // default is 4
+profileOpt.behaviorLookback = 5
+options.profile = profileOpt
+
+var date = runId
+var df_1 = df.where($"TRADE_DATE"===s"$date")
+
 //Scan
-val cdq = OwlUtils.OwlContext(df, opt)
+val cdq = OwlUtils.OwlContext(df_1, options)
 cdq.register(opt)
 cdq.owlCheck()
 val profile = cdq.profileDF()
 profile.show()
+}
 ```
 
 ![CDQ Profile Run In Databricks](<../../../.gitbook/assets/Screen Shot 2022-04-21 at 10.30.21 AM (1).png>)

@@ -14,11 +14,11 @@
 
 ### URL
 
-jdbc:databricks://**`<your-account-here>.`**.cloud.databricks.com:443/default;transportMode=http;ssl=1;httpPath=sql/protocolv1/o/3633393438801721/0915-195703-sh82m595;AuthMech=3;UID=token;PWD=**`<your-token-here>`**
+`jdbc:spark://`**`<your-account-here>.`**`cloud.databricks.com:443/default;transportMode=http;ssl=1;httpPath=sql/protocolv1/o/639171477642820/0329-133041-8y8dbmh5;AuthMech=3;UID=token;PWD=`**`<your-token-here>`**
 
 ### **Driver**
 
-com.databricks.client.jdbc.Driver
+`com.simba.spark.jdbc.Driver`
 
 ### Credentials
 
@@ -27,8 +27,8 @@ com.databricks.client.jdbc.Driver
 
 ### **Jar**
 
-[https://databricks-bi-artifacts.s3.us-east-2.amazonaws.com/simbaspark-drivers/jdbc/2.6.27/DatabricksJDBC42-2.6.27.1048.zip](https://databricks-bi-artifacts.s3.us-east-2.amazonaws.com/simbaspark-drivers/jdbc/2.6.27/DatabricksJDBC42-2.6.27.1048.zip)\
-`Version:` 2.6.27
+`SimbaJDBC42.jar`\
+`Version:` 2.6.22
 
 Link to [Databricks download](https://databricks.com/spark/jdbc-drivers-download)\
 Link to [older versions of Databricks JDBC ](https://www.databricks.com/spark/jdbc-drivers-archive)
