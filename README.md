@@ -4,6 +4,10 @@ description: Autogenerate Rules, Anomaly Detection, Reconciliation
 
 # Collibra Data Quality & Observability
 
+{% hint style="info" %}
+We're moving! To improve customer experience, the Collibra Data Quality User Guide is moving to the [Collibra Documentation Center](https://productresources.collibra.com/docs/collibra/latest/Content/Home.htm) as part of the Collibra Data Quality 2022.11 release. To ensure a seamless transition, [dq-docs.collibra.com](./) will remain accessible, but the DQ User Guide will be maintained exclusively in the Documentation Center following the 2022.11 release.&#x20;
+{% endhint %}
+
 ![](<.gitbook/assets/Screen Shot 2021-07-28 at 8.02.40 AM.png>)
 
 Automatic Data Quality without the need for Rules. Collibra Data Quality provides a fast and elegant way to manage your data sets by learning through observation rather than human input. Collibra Data Quality applies the latest advancements in Data Science and Machine Learning to the problem of Data Quality. Surfacing data issues in minutes instead of months.
