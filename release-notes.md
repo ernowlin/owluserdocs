@@ -50,6 +50,7 @@ The DQ UI will be converted to the React MUI framework with the 2022.11 release.
 #### Snowflake Pushdown (beta)
 
 * You can now detect shapes that do not conform to a data field.
+* You can now view Histogram and Data Preview details for the Profile activity.
 
 #### Connections
 

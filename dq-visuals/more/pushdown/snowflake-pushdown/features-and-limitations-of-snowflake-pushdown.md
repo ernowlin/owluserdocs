@@ -16,7 +16,6 @@ The following table shows the features unique to DQ Jobs run using Snowflake Pus
 
 | Feature                            | Description                                                                                                                               |
 | ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| Dynamic date filter                | A togglable option that allows you to filter column data dynamically by runDate ${rd}.                                                    |
 | Configurable number of connections | Allows you to set the number of open connections between 1-5 so you can run jobs in parallel and improve the performance of profile jobs. |
 | Cancel jobs                        | Unlike Spark compute jobs, you can cancel the SQL queries of Snowflake Pushdown jobs.                                                     |
 | No agent                           | Pushdown runs the database engine to execute jobs directly, removing the need for agents. Agent ID = 0.                                   |
@@ -27,7 +26,7 @@ The following table shows the features unique to DQ Jobs run using Snowflake Pus
 Currently, there are some limitations with Snowflake Pushdown since it is in private beta as of 2022.08:
 
 * The cancel jobs feature is currently unavailable, though it will be available in an upcoming release.
-* Only DQ Native Rules are supported, though support for Freeform rules is planned in a future release.
+* Only DQ Native Rules are supported.
 * Profile and Rules are supported layers, but Outliers, Patterns, Dupes, Shapes, and Records are not yet supported.&#x20;
 * We do not currently support Okta integration, though support for it is planned in a future release.&#x20;
 * You cannot currently run a job from the command line. This functionality will be supported in an upcoming release.
