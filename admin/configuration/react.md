@@ -4,7 +4,7 @@
 As of the 2022.11 release, React MUI will be on by default.&#x20;
 {% endhint %}
 
-You can toggle React MUI on or off, depending on your preferred experience.&#x20;
+You can toggle React MUI on or off, depending on your preference.&#x20;
 
 ## Steps
 
