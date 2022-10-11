@@ -3,7 +3,7 @@
 ## 2022.10
 
 {% hint style="info" %}
-We're moving! To improve customer experience, the Collibra Data Quality User Guide is moving to the [Collibra Documentation Center](https://productresources.collibra.com/docs/collibra/latest/Content/Home.htm) as part of the 2022.11 Collibra DQ release. To ensure a seamless transition, [dq-docs.collibra.com](./) will remain accessible, but the DQ User Guide will be maintained exclusively in the Documentation Center following 2022.11.&#x20;
+We're moving! To improve customer experience, the Collibra Data Quality User Guide is moving to the [Collibra Documentation Center](https://productresources.collibra.com/docs/collibra/latest/Content/Home.htm) as part of the 2022.11 Collibra Data Quality release. To ensure a seamless transition, [dq-docs.collibra.com](./) will remain accessible, but the DQ User Guide will be maintained exclusively in the Documentation Center following 2022.11.&#x20;
 {% endhint %}
 
 ### New Features
@@ -111,7 +111,7 @@ The DQ UI will be converted to the React MUI framework with the 2022.11 release.
 
 #### Rules
 
-* When a data set has 0 rows returned, stat rules applied to the data set are not executed. &#x20;
+* When a data set has 0 rows returned, stat rules applied to the data set are not executed. While a full fix is planned for a future release, this limitation is only partially fixed as of 2022.10.
 
 #### DQ Job
 

@@ -28,9 +28,9 @@ You can find detailed instructions about [selecting the scope](more/explorer-2.m
 
 ## Automatically Profile
 
-Owl automatically profiles datasets over time to enable drill-in for detailed insights an automated data quality. A profile is just the first step towards an amazing amount of auto discovery. Visualize segments of the dataset and how how the dataset is changing over time.
+Collibra Data Quality automatically profiles datasets over time to enable drill-in for detailed insights an automated data quality. A profile is just the first step towards an amazing amount of auto discovery. Visualize segments of the dataset and how how the dataset is changing over time.
 
-Collibra Data Quality offers click or code options to run profiling.
+Collibra DQ offers click or code options to run profiling.
 
 ## Data Set Profile
 
