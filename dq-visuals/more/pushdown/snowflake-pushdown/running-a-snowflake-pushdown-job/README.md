@@ -27,9 +27,9 @@ This section shows you how to get started with the three scanning methods of a S
 
 ### Autometrics
 
-Autometrics, or automatic metrics, are common metrics used to observe changes to your data. These can be applied or removed by clicking the Configure Metrics & Layers at the bottom of the DQ Job page.&#x20;
+Autometrics, or automatic metrics, are common metrics used to observe changes to your data. These can be applied or removed from the Autometrics tab on the Add Layers workflow, then selecting or deselecting Autometrics.&#x20;
 
-The following table shows a list of autometrics measured by Collibra Data Quality and whether they are applied by default.
+The following table shows a list of Autometrics measured by Collibra Data Quality and whether they are applied by default.
 
 | Autometric type  | Subtype      | Description                                                           | Default? |
 | ---------------- | ------------ | --------------------------------------------------------------------- | -------- |
@@ -47,8 +47,20 @@ The following table shows a list of autometrics measured by Collibra Data Qualit
 |                  | Empty values | Monitor columns for empty data.                                       | True     |
 
 {% hint style="info" %}
-You can always apply or remove autometrics, but if you bypass the configuration, the DQ Job will still run correctly with the default autometrics applied.
+You can always apply or remove Autometrics, but if you bypass the configuration, the DQ Job will still run correctly with the default Autometrics applied.
 {% endhint %}
+
+### Shapes
+
+A shape is the format of data in a string column. Enabling Shapes lets you discover inconsistencies in the data formats of a column. For example, when analyzing a date column, Collibra DQ may detect different string formats of the same meaning, such as 11-12-2022, 11/12/2022, and 11.12.2022.&#x20;
+
+The Shapes feature is on by default, but you can choose to toggle it off. You can also manually control the advanced options by checking the Manual checkbox.&#x20;
+
+| Option                | Description                                                                                           |
+| --------------------- | ----------------------------------------------------------------------------------------------------- |
+| **Occurrences**       | Set occurrences between 0.001-5 to show shapes below the percentage you set.                          |
+| **Format per column** | Set format per column between 0-100 to identify columns with fewer formats than the number you set.   |
+| **Character length**  | Set character length between 0-100 to identify shapes that are less than the number you set.          |
 
 ### Replay
 

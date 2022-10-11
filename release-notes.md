@@ -2,6 +2,10 @@
 
 ## 2022.10
 
+{% hint style="info" %}
+We're moving! To improve customer experience, the Collibra Data Quality User Guide is moving to the [Collibra Documentation Center](https://productresources.collibra.com/docs/collibra/latest/Content/Home.htm) as part of the 2022.11 Collibra DQ release. To ensure a seamless transition, [dq-docs.collibra.com](./) will remain accessible, but the DQ User Guide will be maintained exclusively in the Documentation Center following 2022.11.&#x20;
+{% endhint %}
+
 ### New Features
 
 #### Rules
@@ -49,7 +53,7 @@ The DQ UI will be converted to the React MUI framework with the 2022.11 release.
 
 #### Snowflake Pushdown (beta)
 
-* You can now detect shapes that do not conform to a data field.
+* You can now detect shapes that do not conform to a data field. Pushdown jobs scan all columns for shapes by default.
 * You can now view Histogram and Data Preview details for the Profile activity.
 
 #### Connections
@@ -64,7 +68,7 @@ The DQ UI will be converted to the React MUI framework with the 2022.11 release.
 
 #### DQ Job
 
-* Fixed an issue that caused full profile pushdown jobs on Oracle connections to fail due to incorrect delimiting of FROM clauses. (ticket #92409)
+* Fixed an issue that caused queries with joins to fail on the load activity when Full Profile Pushdown was enabled. Pushdown profiling now supports SQL joins. (ticket #92409)
 * Fixed an issue that caused jobs to fail at the load activity when using the CTE query. Please note that CTE support is currently limited to Postgres connections. (ticket #88287, 89150)
 * Fixed an issue that caused inconsistencies between the time zones represented in the Start Time and Update Time columns.&#x20;
 
@@ -122,6 +126,12 @@ The DQ UI will be converted to the React MUI framework with the 2022.11 release.
 * Freeform (SQLF) rules cannot use a data set name but instead must use `@dataset` because Snowflake does not explicitly understand data set names.
 * When using the SQL Query workflow, selecting a subset of columns in your SQL query must be enclosed in double quotes to prevent the job from running infinitely and without failing.
 * Min/Max precision and scale are only calculated for `double` datatypes. All other datatypes are currently out of scope.
+
+### DQ Security Metrics
+
+<figure><img src=".gitbook/assets/vulns-over-time-2022.10.png" alt=""><figcaption><p>DQ security vulnerabilities over 5 months</p></figcaption></figure>
+
+<figure><img src=".gitbook/assets/critical-table-2022-10.png" alt=""><figcaption><p>Critical security vulnerabilities over 5 months</p></figcaption></figure>
 
 ## 2022.09
 
