@@ -97,7 +97,7 @@ The DQ UI will be converted to the React MUI framework with the 2022.11 release.
 
 #### Dupes
 
-* The dupes filter is scheduled for removal from the Dupes page with the upcoming 2022.11 release. (ticket #96065)
+* The Advanced Filter is scheduled for removal from the Dupes page with the upcoming 2022.11 release. (ticket #96065)
 
 #### Explorer
 
