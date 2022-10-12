@@ -193,7 +193,17 @@ cd $OWL_BASE/owl/bin
 # > License Accepted new date: <expiration-date>
 ```
 
-## 7. Set DQ Agent Configuration
+## 7. Set License Name
+
+It is required that you set a license name upon your initial deployment of DQ. \
+Replace `<your-license-name>` with a valid license name provided by Collibra.
+
+```
+vi /<install-dir>/owl/config/owl-env.sh
+export DQ_INTEGRATION_PENDO_ACCOUNTID=<your-license-name>
+```
+
+## 8. Set DQ Agent Configuration
 
 Next, start the DQ Agent process to enable processing of DQ checks.
 
@@ -249,7 +259,7 @@ To limit Spark cores from being used for each job, a common configuration for th
 
 ![Set the deployment mode option to Client for a Spark Standalone master](<../../.gitbook/assets/image (100).png>)
 
-## 8. Create DB Connection for DQ Job
+## 9. Create DB Connection for DQ Job
 
 Follow the steps on [How to Add DB Connection via UI](https://docs.owl-analytics.com/installation/agent-configuration#how-to-add-db-connection-via-ui) page to add `metastore` database connection. For demo purposes, we will run a DQ Job against local DQ Metadata Storage.
 
