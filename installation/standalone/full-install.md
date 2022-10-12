@@ -193,7 +193,17 @@ cd $OWL_BASE/owl/bin
 # > License Accepted new date: <expiration-date>
 ```
 
-## 7. Set DQ Agent Configuration
+## 7. Set License Name
+
+It is required that you set a license name upon your initial deployment of DQ. \
+Replace `<your-license-name>` with a valid license name provided by Collibra.
+
+```
+vi /<install-dir>/owl/config/owl-env.sh
+export DQ_INTEGRATION_PENDO_ACCOUNTID=<your-license-name>
+```
+
+## 8. Set DQ Agent Configuration
 
 Next, start the DQ Agent process to enable processing of DQ checks.
 
@@ -249,7 +259,7 @@ To limit Spark cores from being used for each job, a common configuration for th
 
 ![Set the deployment mode option to Client for a Spark Standalone master](<../../.gitbook/assets/image (1).png>)
 
-## 8. Create DB Connection for DQ Job
+## 9. Create DB Connection for DQ Job
 
 Follow the steps on [How to Add DB Connection via UI](https://docs.owl-analytics.com/installation/agent-configuration#how-to-add-db-connection-via-ui) page to add `metastore` database connection. For demo purposes, we will run a DQ Job against local DQ Metadata Storage.
 
@@ -566,6 +576,7 @@ Contents of the Owl-env.sh script and what is is used for.
 | export MULTITENANTMODE=FALSE                                             | Flipping to TRUE will enable multitenant support.                                                                                                                                                                                                                       |
 | export multiTenantSchemaHub=owlhub                                       | Schema name used for multitenancy.                                                                                                                                                                                                                                      |
 | export OWL\_SPARKLOG\_ENABLE=false                                       | Enabling deeper Spark logs when toggled to true.                                                                                                                                                                                                                        |
+| export DQ\_INTEGRATION\_PENDO\_ACCOUNTID=\<your-license-name>            |                                                                                                                                                                                                                                                                         |
 
 #### Configuration / owl.properties file <a href="#configuration-owl.properties-file" id="configuration-owl.properties-file"></a>
 

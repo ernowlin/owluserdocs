@@ -18,12 +18,13 @@ helm upgrade --install --namespace <namespace> \
 --set global.version.spark=<owl-spark-version> \
 --set global.configMap.data.license_key=<owl-license-key> \
 --set global.web.service.type=ClusterIP \
+--set global.web.usageMeter.pendo.accountId=<your-license-name>
 <deployment-name> \
 /path/to/chart/owldq
 ```
 
 {% hint style="info" %}
-The metastore container must start first as the other containers use it to write data. On your initial deplyment, the other containers might start before the metastore and fail.
+The metastore container must start first as the other containers use it to write data. On your initial deployment, the other containers might start before the metastore and fail.
 {% endhint %}
 
 ### Externally accessible service
