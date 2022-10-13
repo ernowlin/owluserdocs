@@ -25,7 +25,7 @@ You have an [active Snowflake connection](../../../../../connecting-to-dbs-in-ow
    Alternatively, you can also click **Add layers** from the left workflow menu.\
    \>> The Add layers view appears.
 7. Optionally add layers or toggle default settings.&#x20;
-   * Certain Autometrics are enabled by default. You can optionally toggle them on and off.
+   * Certain AdaptiveRules are enabled by default. You can optionally toggle them on and off.
    * Shapes are enabled by default. You can optionally toggle them on and off, and configure more advanced options by selecting the Manual checkbox.&#x20;
 8. Click **Next**.\
    \>> The Review page opens.
