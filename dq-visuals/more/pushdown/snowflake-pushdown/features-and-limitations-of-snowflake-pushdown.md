@@ -19,7 +19,7 @@ The following table shows the features unique to DQ Jobs run using Snowflake Pus
 | Configurable number of connections | Allows you to set the number of open connections between 1-5 so you can run jobs in parallel and improve the performance of profile jobs. |
 | Cancel jobs                        | Unlike Spark compute jobs, you can cancel the SQL queries of Snowflake Pushdown jobs.                                                     |
 | No agent                           | Pushdown runs the database engine to execute jobs directly, removing the need for agents. Agent ID = 0.                                   |
-| More control over AdaptiveRules    | With minimal clicks, you can apply AdaptiveRules, such as row count and uniqueness, from the UI.                                          |
+| More control over autometrics      | With minimal clicks, you can apply autometrics, such as row count and uniqueness, from the UI.                                            |
 
 ## Limitations
 
