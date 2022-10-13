@@ -19,7 +19,7 @@ You have an [active Snowflake connection](../../../../../connecting-to-dbs-in-ow
    \>> The Job creator page opens.
 4. Select **Full Scan**.
 5. Optionally add layers or toggle default settings.&#x20;
-   * Certain AdaptiveRules are enabled by default. You can optionally toggle them on and off.
+   * Certain Autometrics are enabled by default. You can optionally toggle them on and off.
    * Shapes are enabled by default. You can optionally toggle them on and off, and configure more advanced options by selecting the Manual checkbox.&#x20;
 6. Click **Next**.\
    \>> The Review page opens.
