@@ -125,6 +125,8 @@ opt.port = pgPort
 opt.pgUser = pgUser
 opt.pgPassword = pgPass
 
+opt.setDatasetSafeOff(false) // to enable historical overwrite of dataset
+
 // Create a simple rule and assign it to dataset 
 val simpleRule = OwlUtils.createRule(opt.dataset)
       simpleRule.setRuleNm("nyse-stocks-symbol")
