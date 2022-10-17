@@ -39,5 +39,5 @@ Fig 6 is what the new connection setting should look like. Make sure to provide 
 ### Link Connection to Agent
 
 {% hint style="info" %}
-Make sure to [Link DB Connection](https://docs.owl-analytics.com/installation/agent-configuration#how-to-link-db-connection-to-agent-via-ui) to a DQ Agent, if required
+Make sure to [Link DB Connection](https://dq-docs.collibra.com/connecting-to-dbs-in-owl-web/owl-db-connection/add-connection-to-agent) to a DQ Agent, if required
 {% endhint %}

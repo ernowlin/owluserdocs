@@ -261,9 +261,9 @@ To limit Spark cores from being used for each job, a common configuration for th
 
 ## 9. Create DB Connection for DQ Job
 
-Follow the steps on [How to Add DB Connection via UI](https://docs.owl-analytics.com/installation/agent-configuration#how-to-add-db-connection-via-ui) page to add `metastore` database connection. For demo purposes, we will run a DQ Job against local DQ Metadata Storage.
+Follow the steps on [How to Add DB Connection via UI](https://dq-docs.collibra.com/connecting-to-dbs-in-owl-web/owl-db-connection#how-to-add-db-connection-via-ui) page to add `metastore` database connection. For demo purposes, we will run a DQ Job against local DQ Metadata Storage.
 
-Follow the steps on [How To Link DB Connection to Agent via UI](https://dq-docs.collibra.com/installation/agent-configuration) page to configure newly created DQ Agent.
+Follow the steps on [How To Link DB Connection to Agent via UI](https://dq-docs.collibra.com/connecting-to-dbs-in-owl-web/owl-db-connection) page to configure newly created DQ Agent.
 
 Click the compass icon in the navigation pane to navigate to the Explorer page. Click the "metastore" connection, select the "public" schema, and select the first table in the resulting list of tables. From the preview and scope page, click Build Model. When the Profile page populates, click  Save/Run.
 
