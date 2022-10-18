@@ -12,7 +12,7 @@ Collibra Data Quality & Observability provides observations that sometimes requi
 
 Assignments are handled by Collibra DQ internally, or via an existing ServiceNow queue when configured. Collibra DQ is the default configuration, but you can configure ServiceNow from the Assignments Queue section of the Admin Console.
 
-To assign an observation to a user, go to the findings page of a previously run DQ Job. From the Action dropdown, select **Validate** or **Resolve**. Resolving a finding retrains your Job's quality score if any points were deducted. Alternatively, if you validate a finding, you can assign an item to a Collibra DQ user for further investigation.
+To assign an observation to a user, go to the findings page of a previously run DQ Job. From the Action dropdown, select **Validate** or **Resolve**. Resolving a finding retrains your Job's quality score if any points were deducted. Alternatively, if you validate a finding, you can assign an item to a Collibra DQ user for further investigation.&#x20;
 
 <figure><img src="../../.gitbook/assets/dq-assingments-queue-validate-finding-workflow.png" alt=""><figcaption><p>Select a target queue from the External Queues dropdown</p></figcaption></figure>
 
@@ -22,5 +22,5 @@ Optionally, you can enter a description to provide details for the assignee.&#x2
 
 External Queues are where the source of the assignment is tracked. Tracking options include:
 
-* Internally via the Collibra DQ Assignments Queue page.
-* Externally via ServiceNow.
+* Internally via the [Collibra DQ Assignments Queue](internal-assignment.md) page.
+* Externally via [ServiceNow](external-assignment.md).
