@@ -38,7 +38,7 @@ You have an [active Snowflake connection](../../../../../connecting-to-dbs-in-ow
 
 9\. Optionally add layers or toggle default settings.&#x20;
 
-* Certain Autometrics are enabled by default. You can optionally toggle them on and off.
+* Certain AdaptiveRules are enabled by default. You can optionally toggle them on and off.
 * Shapes are enabled by default. You can optionally toggle them on and off, and configure more advanced options by selecting the Manual checkbox.&#x20;
 
 10\. Click **Next**.\

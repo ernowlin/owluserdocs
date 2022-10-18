@@ -25,42 +25,43 @@ This section shows you how to get started with the three scanning methods of a S
 **Note:** More advanced layers beyond basic profile jobs will soon be available to customers participating in the private beta.
 {% endhint %}
 
-### Autometrics
+### AdaptiveRules
 
-Autometrics, or automatic metrics, are common metrics used to observe changes to your data. These can be applied or removed from the Autometrics tab on the Add Layers workflow, then selecting or deselecting Autometrics.&#x20;
+AdaptiveRules are common metrics used to observe changes to your data. These can be applied or removed from the AdaptiveRules tab on the Add Layers workflow by selecting or deselecting AdaptiveRules.&#x20;
 
-The following table shows a list of Autometrics measured by Collibra Data Quality and whether they are applied by default.
+The following table shows a list of AdaptiveRules measured by Collibra Data Quality and whether they are applied by default.
 
-| Autometric type  | Subtype      | Description                                                           | Default? |
-| ---------------- | ------------ | --------------------------------------------------------------------- | -------- |
-| **Availability** | N/A          | Observe changes to the row count and loading time in your table.      | N/A      |
-|                  | Row count    | Monitor the row count change in your table.                           | True     |
-|                  | Loading time | Monitor loading time changes.                                         | False    |
-| **Distribution** | N/A          | Observe the number of unique values in a table.                       | N/A      |
-|                  | Uniqueness   | Monitor a column's cardinality within the range of previous DQ Jobs   | True     |
-| **Conformity**   | N/A          | Observe columns with values that fall outside of the normal range.    | N/A      |
-|                  | Min          | Monitor columns with min values outside the normal range.             | False    |
-|                  | Mean         | Monitor columns with mean values outside the normal range.            | False    |
-|                  | Max          | Monitor columns with max values outside the normal range.             | False    |
-| **Completeness** | N/A          | Observe columns in your table containing null values or empty fields. | N/A      |
-|                  | Null values  | Monitor columns for null values.                                      | True     |
-|                  | Empty values | Monitor columns for empty data.                                       | True     |
+| AdaptiveRule type | Subtype      | Description                                                           | Default? |
+| ----------------- | ------------ | --------------------------------------------------------------------- | -------- |
+| **Availability**  | N/A          | Observe changes to the row count and loading time in your table.      | N/A      |
+|                   | Row count    | Monitor the row count change in your table.                           | True     |
+|                   | Loading time | Monitor loading time changes.                                         | False    |
+| **Distribution**  | N/A          | Observe the number of unique values in a table.                       | N/A      |
+|                   | Uniqueness   | Monitor a column's cardinality within the range of previous DQ Jobs   | True     |
+| **Conformity**    | N/A          | Observe columns with values that fall outside of the normal range.    | N/A      |
+|                   | Min          | Monitor columns with min values outside the normal range.             | False    |
+|                   | Mean         | Monitor columns with mean values outside the normal range.            | False    |
+|                   | Max          | Monitor columns with max values outside the normal range.             | False    |
+| **Completeness**  | N/A          | Observe columns in your table containing null values or empty fields. | N/A      |
+|                   | Null values  | Monitor columns for null values.                                      | True     |
+|                   | Empty values | Monitor columns for empty data.                                       | True     |
 
 {% hint style="info" %}
-You can always apply or remove Autometrics, but if you bypass the configuration, the DQ Job will still run correctly with the default Autometrics applied.
+You can always apply or remove AdaptiveRules, but if you bypass the configuration, the DQ Job will still run correctly with the default AdaptiveRules applied.
 {% endhint %}
 
 ### Shapes
 
-A shape is the format of data in a string column. Enabling Shapes lets you discover inconsistencies in the data formats of a column. For example, when analyzing a date column, Collibra DQ may detect different string formats of the same meaning, such as 11-12-2022, 11/12/2022, and 11.12.2022.&#x20;
+A shape is the format of data in a string column. Enabling Shapes lets you discover inconsistencies in the data formats of a column. For example, when analyzing a date column, Collibra DQ may detect different string formats of the same meaning, such as 11-15-2022, 11/15/2022, and 11.15.2022.&#x20;
 
 The Shapes feature is on by default, but you can choose to toggle it off. You can also manually control the advanced options by checking the Manual checkbox.&#x20;
 
-| Option                | Description                                                                                           |
-| --------------------- | ----------------------------------------------------------------------------------------------------- |
-| **Occurrences**       | Set occurrences between 0.001-5 to show shapes below the percentage you set.                          |
-| **Format per column** | Set format per column between 0-100 to identify columns with fewer formats than the number you set.   |
-| **Character length**  | Set character length between 0-100 to identify shapes that are less than the number you set.          |
+| Option                  | Description                                                                                                                                                                                                            |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Occurrences**         | Set occurrences between 0.001-5 to show shapes that occur less than the percentage you set.                                                                                                                            |
+| **Format per column**   | Set format per column between 0-100 to identify columns with more formats than the number you set. This helps identify columns that are too noisy, meaning they do not have a consistent format for detection.         |
+| **Character length**    | Set character length between 0-100 to identify string lengths that are greater than the number you set. Character lengths beyond the set value are considered free from fields and do not have a format for detection. |
+| **Data shape granular** | Considers the length of the shape and differentiates between numerical and letter formats. For the length of a shape to be detected, data shape granular must be enabled.                                              |
 
 ### Replay
 
