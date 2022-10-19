@@ -17,8 +17,8 @@ To access the Rules page from the findings page, open a DQ Job to display the fi
 
 ## Instructions
 
-1. Search for a dataset or navigate to the rule page using the hot link
-   * Rules can only be applied to datasets once a DQ job has been run
+1. Search for a data set or navigate to the rule page using the hot link
+   * Rules can only be applied to data sets once a DQ job has been run
 2. Click Load
    * This will populate the schema and any previously saved rules
 3. Select a rule type
@@ -39,20 +39,17 @@ To access the Rules page from the findings page, open a DQ Job to display the fi
 
 #### **Rule Types** <a href="#hruletypes" id="hruletypes"></a>
 
-1. When to use a simple rule:
-   * Simple rules would be applied to filter a condition on a single column in a single table.
-   * Example: city = 'Baltimore'
-2. When to use a freeform sql rule:
-   * ​Complex (freeform sql) would be used when applying a condition across multiple tables/columns and generally when more flexibility/customization is desired.
-   * ​Example: select \* from dataset where name = 'Owl'
-3. When to use a preset rule:
-   * Preset rules would be used for quickly adding strict condition check. Commonly used conditions are available to add to any dataset columns.‌
+| Rule Type              | Description                                                                                                                                                    | Example                                        |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| **Simple rules**       | Simple rules are used when you want to filter a condition on a single column in a single table.                                                                | City = 'Baltimore'                             |
+| **Freeform SQL rules** | Freeform SQL rules are used when you want to apply a condition across multiple tables/columns and generally when more flexibility or customization is desired. | select \* from dataset where name = 'Collibra' |
+| **Preset rules**       | Preset rules are used for quickly adding strict condition checks. Commonly used conditions are available to add to any data set columns.‌                      |                                                |
 
-All built-in spark functions are available to use. ([https://spark.apache.org/docs/2.3.0/api/sql/](https://spark.apache.org/docs/2.3.0/api/sql/)) for simple and freeform sql rules.‌
+All built-in Spark functions are available to use ([https://spark.apache.org/docs/2.3.0/api/sql/](https://spark.apache.org/docs/2.3.0/api/sql/)) for Simple and Freeform SQL rules.‌
 
 #### **Points and Percentage** <a href="#hpointsandpercentage" id="hpointsandpercentage"></a>
 
-For every percentage the X condition occurs, deduct Y points from the data quality score. If a rule was triggered 10 times out of 100 rows, break records occurred 10% of the time. If you input 1 point for every 1 percent, 10 points would be deducted from the overall score.‌
+For every percentage the _x_ condition occurs, deduct _y_ points from the data quality score. If a rule was triggered 10 times out of 100 rows, break records occurred 10% of the time. If you input 1 point for every 1 percent, 10 points are deducted from the overall score.‌
 
 #### **Creating Your First Rule** <a href="#hcreatingyourfirstrule" id="hcreatingyourfirstrule"></a>
 
