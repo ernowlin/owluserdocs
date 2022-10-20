@@ -39,7 +39,7 @@ You can also apply common Data Type and Global rules from the Quick Rule dropdow
 
 Create a rule once using the Create Generic Rule builder and re-use the rule across any column on any data set. This is called a global rule, or a rule in the Rule Library that you can use for global use across many data sets. Collibra Data Quality substitutes the data set and column to which the rule applies at runtime. This commonly saves hundreds of redundant rules that do the same thing but on different column names.
 
-To add a rule to the Rule Library, you must first access
+To add a rule to the Rule Library:
 
 1. Select a data set from the search bar on the Rule Builder page.&#x20;
 2. Click the **Create Generic Rule** tab.

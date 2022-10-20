@@ -25,3 +25,7 @@ When the Schedule Status is set to Active and your job is scheduled to run autom
 {% hint style="success" %}
 After you toggle the Schedule Status and click Save from the Scheduler modal, refresh the page for your settings to update.
 {% endhint %}
+
+## Leverage external schedulers
+
+For more details on how to leverage an external scheduler, check out [this section](https://dq-docs.collibra.com/apis-1/owlcheck-spark/owlcheck/owlcheck-cron). We support Cron / Autosys / Control M / Oozie.
