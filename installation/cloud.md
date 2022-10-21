@@ -22,7 +22,7 @@ DQ Cloud is in public beta, which means that it is an upcoming feature that is m
 
 ## **Diagram**
 
-![Future-state visuals can be found on the diagrams page](<../.gitbook/assets/image (83).png>)
+<figure><img src="../.gitbook/assets/Screenshot 2022-10-21 082845.jpg" alt=""><figcaption><p><strong>Includes future offering of compute pool and pushdown which is pending...</strong></p></figcaption></figure>
 
 ## **Prerequisites**
 

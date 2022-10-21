@@ -6,6 +6,8 @@ We're moving! To improve customer experience, the Collibra Data Quality User Gui
 
 ### Collibra DQ Architecture
 
+<figure><img src="../../.gitbook/assets/Screenshot 2022-10-21 083121.png" alt=""><figcaption></figcaption></figure>
+
 ![](../../.gitbook/assets/2022-05-12\_21-11-46.png)
 
 ### High-Level Diagram <a href="#howlstandalone" id="howlstandalone"></a>
