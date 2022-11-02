@@ -92,6 +92,58 @@ jdbc:snowflake://\<ACCOUNT\_NAME>/?tracing=all\&useProxy=true\&proxyHost=10.142.
 As of 2022.08, Snowflake Pushdown is only available as a private beta for participating customers.&#x20;
 {% endhint %}
 
+To get started with Snowflake Pushdown, you need a Snowflake account with Admin access to run the following script to set up users, roles, and the Collibra DQ virtual warehouse:
+
+```
+-- Update the following session variables
+set dq_username='SERVICE_ACCOUNT_USER';
+-- Use only uppercase for password
+set dq_password='SERVICE_ACCOUNT_PASSWORD';
+set dq_warehouse_name='COLLIBRA_DQ_WH';
+set dq_warehouse_size='XSMALL';
+set user_database='TARGET_DB';
+​
+-- Do not update, variables for Collibra DQ
+set dq_role_name='COLLIBRA_DQ_ROLE';
+​
+-- Run as admin user
+USE ROLE ACCOUNTADMIN;
+​
+-- User and Role for Collibra DQ
+CREATE ROLE IF NOT EXISTS identifier($dq_role_name);
+CREATE USER IF NOT EXISTS identifier($dq_username) PASSWORD=$dq_password DEFAULT_ROLE=$dq_role_name;
+GRANT ROLE identifier($dq_role_name) TO USER identifier($dq_username);
+​
+-- Warehouse to run Collibra DQ
+CREATE WAREHOUSE IF NOT EXISTS identifier($dq_warehouse_name) WAREHOUSE_SIZE=$dq_warehouse_size INITIALLY_SUSPENDED=TRUE
+AUTO_SUSPEND = 5 AUTO_RESUME = TRUE;
+​
+-- Assign privileges to Collibra DQ warehouse
+GRANT OPERATE, USAGE, MONITOR ON WAREHOUSE identifier($dq_warehouse_name) TO ROLE identifier($dq_role_name);
+​
+-- Assign metadata access to Collibra DQ role
+GRANT USAGE,MONITOR on DATABASE identifier($user_database) to identifier($dq_role_name);
+GRANT USAGE,MONITOR ON ALL SCHEMAS IN DATABASE identifier($user_database) to identifier($dq_role_name);
+​
+-- Update session variable user_database, run this portion for each target database you wish to run DQ checks
+-- Grant read access to objects in user database
+USE DATABASE identifier($user_database);
+GRANT SELECT ON ALL TABLES IN DATABASE identifier($user_database) TO ROLE identifier($dq_role_name);
+GRANT SELECT ON ALL VIEWS IN DATABASE identifier($user_database) TO ROLE identifier($dq_role_name);
+GRANT SELECT ON ALL EXTERNAL TABLES IN DATABASE identifier($user_database) TO ROLE identifier($dq_role_name);
+GRANT SELECT ON ALL STREAMS IN DATABASE identifier($user_database) TO ROLE identifier($dq_role_name);
+​
+GRANT SELECT ON FUTURE TABLES IN DATABASE identifier($user_database) TO ROLE identifier($dq_role_name);
+GRANT SELECT ON FUTURE VIEWS IN DATABASE identifier($user_database) TO ROLE identifier($dq_role_name);
+GRANT SELECT ON FUTURE EXTERNAL TABLES IN DATABASE identifier($user_database) TO ROLE identifier($dq_role_name);
+GRANT SELECT ON FUTURE STREAMS IN DATABASE identifier($user_database) TO ROLE identifier($dq_role_name);
+```
+
+{% hint style="info" %}
+Please ensure the SQL variables are updated in the above script before proceeding.
+{% endhint %}
+
 To run a Snowflake Pushdown job, you must opt in when setting up your Snowflake connection. To toggle Pushdown capabilities on, ensure that the Pushdown checkbox in the Snowflake connection modal is checked.&#x20;
 
 ![](../../.gitbook/assets/dq-connections-snowflake-pushdown.png)
+

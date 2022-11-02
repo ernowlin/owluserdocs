@@ -15,6 +15,13 @@ By running a Snowflake Pushdown job, you can:
 
 For more information on Snowflake, see the [Snowflake documentation](https://docs.snowflake.com/en/user-guide/intro-key-concepts.html).
 
+## Prerequisites
+
+Before running Snowflake Pushdown jobs, a user with Admin permissions must:
+
+* Successfully run the [Pushdown setup script](https://dq-docs.collibra.com/connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-snowflake#pushdown).
+* [Enable Pushdown](https://dq-docs.collibra.com/connecting-to-dbs-in-owl-web/supported-drivers/connectivity-to-snowflake#pushdown) from the Collibra DQ UI.
+
 ## Pushdown vs. Pull Up
 
 Collibra DQ Pull Up is a DQ Job without pushdown, where all of the processing is executed inside the Apache Spark compute engine. Source data is stored inside a database, where Spark reads it out, and the parameters you set when you select a scope, define a range, and add build layers, are partitioned and sorted. The results of the profile job are then recorded in the DQ Metastore. Depending on the size of your data set and the number of DQ checks performed, this process can greatly slow run times because Spark has its own compute resources, such as memory and CPUs. Pull up has limited support for profiling but you can't run it without setting up Spark.
