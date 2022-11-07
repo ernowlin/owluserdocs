@@ -200,7 +200,7 @@ Replace `<your-license-name>` with a valid license name provided by Collibra.
 
 ```
 vi /<install-dir>/owl/config/owl-env.sh
-export DQ_INTEGRATION_PENDO_ACCOUNTID=<your-license-name>
+export LICENSE_NAME=<your-license-name>
 ```
 
 ## 8. Set DQ Agent Configuration
