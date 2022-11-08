@@ -6,6 +6,10 @@ description: >-
 
 # Smart Meter Data
 
+{% hint style="info" %}
+We've moved! To improve customer experience, the Collibra Data Quality User Guide has moved to the [Collibra Documentation Center](https://productresources.collibra.com/docs/collibra/latest/Content/DataQuality/DQSolutions/Smart%20Meter%20Data.htm) as part of the Collibra Data Quality 2022.11 release. To ensure a seamless transition, [dq-docs.collibra.com](http://dq-docs.collibra.com/) will remain accessible, but the DQ User Guide is now maintained exclusively in the Documentation Center.
+{% endhint %}
+
 OwlDQ's Smart Meter Data Analytics provides accurate and predictable data quality to companies often inundated with massive amounts of data and aging enterprise systems.
 
 The U.S. smart meter data management market forecast is projected to reach $556.94 million by 2026. In 2018, U.S. electric utilities had about 86.8 million advanced (smart) metering installations. OwlDQ provides an automated process to manage the mountain of data collected, and glean critical business insights. By applying our ML algorithms during the normal data ingestion cycles Owl uncovered $10 million dollars in unbilled revenue for a leading US Energy Company.

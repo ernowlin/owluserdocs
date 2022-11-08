@@ -1,5 +1,9 @@
 # DQ Job MySql
 
+{% hint style="info" %}
+We've moved! To improve customer experience, the Collibra Data Quality User Guide has moved to the [Collibra Documentation Center](https://productresources.collibra.com/docs/collibra/latest/Content/DataQuality/DQApis/DQ%20Job%20MySql.htm) as part of the Collibra Data Quality 2022.11 release. To ensure a seamless transition, [dq-docs.collibra.com](http://dq-docs.collibra.com/) will remain accessible, but the DQ User Guide is now maintained exclusively in the Documentation Center.
+{% endhint %}
+
 ### Video Tutorial (MySQL)
 
 Add automatic data quality to any database in 60 seconds. This example shows a single table being selected for DQ, however Owl also provides the ability to scan all schemas and tables at once.

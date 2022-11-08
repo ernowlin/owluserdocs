@@ -4,6 +4,10 @@ description: Foreign Exchange Rates
 
 # Financial FxRate Data
 
+{% hint style="info" %}
+We've moved! To improve customer experience, the Collibra Data Quality User Guide has moved to the [Collibra Documentation Center](https://productresources.collibra.com/docs/collibra/latest/Content/DataQuality/DQSolutions/Financial%20FxRate%20Data.htm) as part of the Collibra Data Quality 2022.11 release. To ensure a seamless transition, [dq-docs.collibra.com](http://dq-docs.collibra.com/) will remain accessible, but the DQ User Guide is now maintained exclusively in the Documentation Center.
+{% endhint %}
+
 ### Owl Automatically Alerts to Incorrect FX Rate Data without a Single Rule
 
 FX Rate data commonly looks like the below table. Often you have a TO currency and a FROM currency with the RATE being the multiplier column for conversion. For example in March you would need to spend $1 US Dollar and 18 US cents to receive $1 Euro. "In exchange for"

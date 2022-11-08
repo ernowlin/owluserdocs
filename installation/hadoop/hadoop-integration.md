@@ -1,6 +1,10 @@
 # Hadoop Install
 
 {% hint style="info" %}
+We've moved! To improve customer experience, the Collibra Data Quality User Guide has moved to the [Collibra Documentation Center](https://productresources.collibra.com/docs/collibra/latest/Content/DataQuality/Installation/Hadoop%20Install.htm) as part of the Collibra Data Quality 2022.11 release. To ensure a seamless transition, [dq-docs.collibra.com](http://dq-docs.collibra.com/) will remain accessible, but the DQ User Guide is now maintained exclusively in the Documentation Center.
+{% endhint %}
+
+{% hint style="info" %}
 In some cases, the required Hadoop client configuration requires the DQ Agent to run on an Hadoop Edge node within the cluster. This can happen because native dependency packages are required, network isolation from subnet that is hosting DQ server, complex security configuration, ect. In these circumstances, simply deploy the DQ Agent on a cluster Edge Node that contains the required configurations and packages. In this setup, the DQ Agent will use the existing Hadoop configuration and packages to run DQ checks on the Hadoop cluster.
 {% endhint %}
 

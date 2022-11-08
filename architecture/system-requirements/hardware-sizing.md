@@ -1,5 +1,9 @@
 # Hardware Sizing
 
+{% hint style="info" %}
+We've moved! To improve customer experience, the Collibra Data Quality User Guide has moved to the [Collibra Documentation Center](https://productresources.collibra.com/docs/collibra/latest/Content/DataQuality/DQArchitecture/Hardware%20Sizing.htm) as part of the Collibra Data Quality 2022.11 release. To ensure a seamless transition, [dq-docs.collibra.com](http://dq-docs.collibra.com/) will remain accessible, but the DQ User Guide is now maintained exclusively in the Documentation Center.
+{% endhint %}
+
 Hardware Sizing (Standalone Install)
 
 ## Small Tier - 16 Core, 128G RAM (r5.4xlarge / E16s v3) <a href="#small-tier-16-core-128g-ram-r5.4xlarge-e16s-v3" id="small-tier-16-core-128g-ram-r5.4xlarge-e16s-v3"></a>

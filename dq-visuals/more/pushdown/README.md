@@ -4,6 +4,10 @@ description: Pushdown feature description
 
 # Pushdown
 
+{% hint style="info" %}
+We've moved! To improve customer experience, the Collibra Data Quality User Guide has moved to the [Collibra Documentation Center](https://productresources.collibra.com/docs/collibra/latest/Content/DataQuality/DQCoreComponents/Pushdown.htm) as part of the Collibra Data Quality 2022.11 release. To ensure a seamless transition, [dq-docs.collibra.com](http://dq-docs.collibra.com/) will remain accessible, but the DQ User Guide is now maintained exclusively in the Documentation Center.
+{% endhint %}
+
 Some of the DQ features support pushdown to avoid transferring large data sets from a data source (Database, Cloud storage, file systems, and so on) into Spark. When pushdown is enabled and supported, the DQ Job generates SQL queries to offload the compute to the data source, reducing the amount of data transfer and Spark computation of the DQ Job. Not all features support pushdown nor pushdown completely eliminate data transfer.
 
 ## Why use pushdown

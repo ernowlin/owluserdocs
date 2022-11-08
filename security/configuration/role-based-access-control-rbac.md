@@ -1,5 +1,9 @@
 # Role Based Access Control (RBAC)
 
+{% hint style="info" %}
+We've moved! To improve customer experience, the Collibra Data Quality User Guide has moved to the [Collibra Documentation Center](https://productresources.collibra.com/docs/collibra/latest/Content/DataQuality/DQSecurity/Role%20Based%20Access%20Control.htm) as part of the Collibra Data Quality 2022.11 release. To ensure a seamless transition, [dq-docs.collibra.com](http://dq-docs.collibra.com/) will remain accessible, but the DQ User Guide is now maintained exclusively in the Documentation Center.
+{% endhint %}
+
 The image below depicts Collibra Data Quality's security architecture.
 
 ![](https://lh3.googleusercontent.com/Fw3N1MBaOdHcOrXlOGr9sYn4RGbnakMorQjeLnEJcoihKhaJaZ-H4OtxiXo6b6B6O404EfgpXhegs6OJtUJkurjwJVwSa-haXkPAY5W7tvV0QTN3Y4Zk2qQDZkAn3WWoE2v2S\_ig)

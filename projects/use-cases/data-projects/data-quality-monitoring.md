@@ -4,6 +4,10 @@ description: Project-Based Use Cases
 
 # Makes your Data Lake better.
 
+{% hint style="info" %}
+We've moved! To improve customer experience, the Collibra Data Quality User Guide has moved to the [Collibra Documentation Center](https://productresources.collibra.com/docs/collibra/latest/Content/DataQuality/DQSolutions/Makes%20your%20Data%20Lake%20better..htm) as part of the Collibra Data Quality 2022.11 release. To ensure a seamless transition, [dq-docs.collibra.com](http://dq-docs.collibra.com/) will remain accessible, but the DQ User Guide is now maintained exclusively in the Documentation Center.
+{% endhint %}
+
 Data Lakes support analytics which will ultimately drive actions which increase revenue, support compliance, prevent churn, etc. However, whether that action is near to real-time or not, none of those can be performed without first performing a DQ check. For example, can you trigger an action before first checking the “GDPR Remove” list? A Data Quality check must always be the first step in any action. OwlDQ with Schema Learned can perform 100+ owl checks. However beyond simply those checks, it is OwlDQ's unique Spark-based architecture listed below that enables innovation. Churn, credit check, AML, infosec checks developed in the Data Lake could be added as part of Owlcheck on the streaming data.
 
 * **Data and Privacy in Place.** Data never has to move for a DQ OwlCheck. The latency saved from operating in place, the added hybrid flexibility, the privacy maintained serves many new use cases that were not possible before. It also removes any unnecessary consolidation for the sake of simply consolidation. DQ doesn't have to start by first moving it into a Data Lake.

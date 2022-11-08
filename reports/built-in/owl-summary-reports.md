@@ -7,6 +7,10 @@ description: >-
 
 # Summary Reports
 
+{% hint style="info" %}
+We've moved! To improve customer experience, the Collibra Data Quality User Guide has moved to the [Collibra Documentation Center](https://productresources.collibra.com/docs/collibra/latest/Content/DataQuality/Reports/Summary%20Reports\_1.htm) as part of the Collibra Data Quality 2022.11 release. To ensure a seamless transition, [dq-docs.collibra.com](http://dq-docs.collibra.com/) will remain accessible, but the DQ User Guide is now maintained exclusively in the Documentation Center.
+{% endhint %}
+
 ## What is the Weekly Summary Report?
 
 When you operate a large data lake or several large data environments, it's helpful to have a way to report across different dimensions at an executive summary level. You may want to know the health or coverage per line of business, department or tenet, or per database.&#x20;
@@ -31,16 +35,7 @@ To generate a Weekly Summary report, follow these steps.
 
 The following table describes the report columns.
 
-| Column          | Description                                                                                                                            | Column |   |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ------ | - |
-| Dataset         | The data sets scanned over one week.                                                                                                   |        |   |
-| Score           | The average data quality score of a data set over one week.                                                                            |        |   |
-| Score Trend     | <p>A line graph representation of data quality scores over one week. <br>Hover over the blue dots to see the score trend.</p>          |        |   |
-| Rows            | The total number of rows of a particular data set scanned over one week.                                                               |        |   |
-| Rows Trend      | <p>A line graph representation of row count over one week.<br>Hover over the blue dots to see the rows trend.</p>                      |        |   |
-| Pass/Fail       | Total number of DQ scans, whether they pass or fail.                                                                                   |        |   |
-| Passing Trend   | <p>A histogram of DQ scans that passed (blue) or failed (red) over one week.<br>Hover over the blue dots to see the passing trend.</p> |        |   |
-| Table/File Name | The name of the table or file in use.                                                                                                  |        |   |
+<table><thead><tr><th>Column</th><th>Description</th><th data-hidden>Column</th><th data-hidden></th></tr></thead><tbody><tr><td>Dataset</td><td>The data sets scanned over one week.</td><td></td><td></td></tr><tr><td>Score</td><td>The average data quality score of a data set over one week.</td><td></td><td></td></tr><tr><td>Score Trend</td><td>A line graph representation of data quality scores over one week. <br>Hover over the blue dots to see the score trend.</td><td></td><td></td></tr><tr><td>Rows</td><td>The total number of rows of a particular data set scanned over one week.</td><td></td><td></td></tr><tr><td>Rows Trend</td><td>A line graph representation of row count over one week.<br>Hover over the blue dots to see the rows trend.</td><td></td><td></td></tr><tr><td>Pass/Fail</td><td>Total number of DQ scans, whether they pass or fail.</td><td></td><td></td></tr><tr><td>Passing Trend</td><td>A histogram of DQ scans that passed (blue) or failed (red) over one week.<br>Hover over the blue dots to see the passing trend.</td><td></td><td></td></tr><tr><td>Table/File Name</td><td>The name of the table or file in use.</td><td></td><td></td></tr></tbody></table>
 
 4\. Toggle the ![](../../.gitbook/assets/dq-sort-icon.png) icon at the top of the column to sort the data that displays in the columns in\
 &#x20;    ascending or descending order.

@@ -1,5 +1,9 @@
 # Data Set Findings
 
+{% hint style="info" %}
+We've moved! To improve customer experience, the Collibra Data Quality User Guide has moved to the [Collibra Documentation Center](https://productresources.collibra.com/docs/collibra/latest/Content/DataQuality/Reports/Data%20Set%20Findings.htm) as part of the Collibra Data Quality 2022.11 release. To ensure a seamless transition, [dq-docs.collibra.com](http://dq-docs.collibra.com/) will remain accessible, but the DQ User Guide is now maintained exclusively in the Documentation Center.
+{% endhint %}
+
 ## What is the Data Set Findings Report? <a href="#owl-weekly-rollup-reports" id="owl-weekly-rollup-reports"></a>
 
 The Data Quality Data Set Findings Report allows you to search for a particular data set and generate a profile report. You can copy, print, and export the report to an Excel or CSV file format.

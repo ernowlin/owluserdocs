@@ -1,5 +1,9 @@
 # Connectivity to Athena
 
+{% hint style="info" %}
+We've moved! To improve customer experience, the Collibra Data Quality User Guide has moved to the [Collibra Documentation Center](https://productresources.collibra.com/docs/collibra/latest/Content/DataQuality/DBConnection/Connectivity%20to%20Athena.htm) as part of the Collibra Data Quality 2022.11 release. To ensure a seamless transition, [dq-docs.collibra.com](http://dq-docs.collibra.com/) will remain accessible, but the DQ User Guide is now maintained exclusively in the Documentation Center.
+{% endhint %}
+
 Your host can connect to Athena with either an Athena public service endpoint or an Athena private endpoint. For more information on setting the endpoint, see [Command line options](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-options.html) and [Boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/core/session.html).
 
 ### JDBC URL Example

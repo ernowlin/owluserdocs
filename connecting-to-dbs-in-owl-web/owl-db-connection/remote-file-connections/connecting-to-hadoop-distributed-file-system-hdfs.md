@@ -1,5 +1,9 @@
 # Connecting to Hadoop Distributed File System (HDFS)
 
+{% hint style="info" %}
+We've moved! To improve customer experience, the Collibra Data Quality User Guide has moved to the [Collibra Documentation Center](https://productresources.collibra.com/docs/collibra/latest/Content/DataQuality/DBConnection/Connecting%20to%20Hadoop%20Distributed%20File%20System%20\(HDFS\).htm) as part of the Collibra Data Quality 2022.11 release. To ensure a seamless transition, [dq-docs.collibra.com](http://dq-docs.collibra.com/) will remain accessible, but the DQ User Guide is now maintained exclusively in the Documentation Center.
+{% endhint %}
+
 ## Prerequisites
 
 To configure the HDFS connector, you need:

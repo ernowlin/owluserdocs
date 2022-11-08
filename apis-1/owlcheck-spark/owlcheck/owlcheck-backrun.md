@@ -4,6 +4,10 @@ description: Replay 30 days of data
 
 # DQ Job Back Run
 
+{% hint style="info" %}
+We've moved! To improve customer experience, the Collibra Data Quality User Guide has moved to the [Collibra Documentation Center](https://productresources.collibra.com/docs/collibra/latest/Content/DataQuality/DQApis/DQ%20Job%20Back%20Run.htm) as part of the Collibra Data Quality 2022.11 release. To ensure a seamless transition, [dq-docs.collibra.com](http://dq-docs.collibra.com/) will remain accessible, but the DQ User Guide is now maintained exclusively in the Documentation Center.
+{% endhint %}
+
 ### How to Replay a Data Test
 
 Many times you will want to see how a dataset plays out over time. This could be 5 days or 5 months. Using this slider the tool will automatically create training sets and profiles as well as run any rules or outliers you've put in place.

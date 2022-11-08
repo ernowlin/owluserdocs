@@ -1,5 +1,9 @@
 # Bank Loans
 
+{% hint style="info" %}
+We've moved! To improve customer experience, the Collibra Data Quality User Guide has moved to the [Collibra Documentation Center](https://productresources.collibra.com/docs/collibra/latest/Content/DataQuality/DQSolutions/Bank%20Loans.htm) as part of the Collibra Data Quality 2022.11 release. To ensure a seamless transition, [dq-docs.collibra.com](http://dq-docs.collibra.com/) will remain accessible, but the DQ User Guide is now maintained exclusively in the Documentation Center.
+{% endhint %}
+
 It is common for banks to lend money in return for monthly payments with interest. However to do so a bank must make sure that the applications are valid and wellformed to begin the underwriting and approval process. Below we will apply some basic lending concepts to OwlDQ.
 
 1. Credit Score Validation

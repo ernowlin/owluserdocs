@@ -4,6 +4,10 @@ description: UTC + global DateTime standard
 
 # Time Zone API
 
+{% hint style="info" %}
+We've moved! To improve customer experience, the Collibra Data Quality User Guide has moved to the [Collibra Documentation Center](https://productresources.collibra.com/docs/collibra/latest/Content/DataQuality/DQApis/Time%20Zone%20API.htm) as part of the Collibra Data Quality 2022.11 release. To ensure a seamless transition, [dq-docs.collibra.com](http://dq-docs.collibra.com/) will remain accessible, but the DQ User Guide is now maintained exclusively in the Documentation Center.
+{% endhint %}
+
 ### Background on common time issues
 
 Controlling dates and times has always been a troublesome topic for global systems. Server clock vs server code such as new Date() which may create a date in the local time zone of the server vs the browser or client's time zone. Moving to the cloud only makes the problem worse when you need to consider the time zone the server might be in and inherit from its system's clock.

@@ -1,5 +1,9 @@
 # Cyber Anomalies in Real-Time
 
+{% hint style="info" %}
+We've moved! To improve customer experience, the Collibra Data Quality User Guide has moved to the [Collibra Documentation Center](https://productresources.collibra.com/docs/collibra/latest/Content/DataQuality/DQSolutions/Cyber%20Anomalies%20in%20Real-Time.htm) as part of the Collibra Data Quality 2022.11 release. To ensure a seamless transition, [dq-docs.collibra.com](http://dq-docs.collibra.com/) will remain accessible, but the DQ User Guide is now maintained exclusively in the Documentation Center.
+{% endhint %}
+
 With increasing number of cyber threats most of the cyber security team doesn’t have the capacity to manually detect, monitor, and defend against all. Effective cyber threat management requires leveraging automation to inform decisions.
 
 OwlDQ framework, provides organizations the ability to load and process diverse security data feeds at scale in order to detect network data anomalies. The OwlDQ alerts can enable network admins to respond to these events in timely manner.

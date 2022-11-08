@@ -4,6 +4,10 @@ description: Template for Job Control
 
 # DQ Job Cron
 
+{% hint style="info" %}
+We've moved! To improve customer experience, the Collibra Data Quality User Guide has moved to the [Collibra Documentation Center](https://productresources.collibra.com/docs/collibra/latest/Content/DataQuality/DQApis/DQ%20Job%20Cron.htm) as part of the Collibra Data Quality 2022.11 release. To ensure a seamless transition, [dq-docs.collibra.com](http://dq-docs.collibra.com/) will remain accessible, but the DQ User Guide is now maintained exclusively in the Documentation Center.
+{% endhint %}
+
 ### Cron / Autosys / Control M / Oozie
 
 It is common for organization to need to run jobs on a schedule. Below are a few shell tricks to get a date from bash and use an OwlCheck with template variables.
