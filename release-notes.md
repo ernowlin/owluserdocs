@@ -7,7 +7,7 @@ We've moved! To improve customer experience, the Collibra Data Quality User Guid
 ## 2022.11
 
 {% hint style="warning" %}
-The [MS SQL driver](https://productresources.collibra.com/docs/collibra/latest/Content/DataQuality/DBConnection/Supported%20Connections.htm) that comes with JDK11 standalone packages does not currently work in the JDK11 environment. MSSQL requires a seperate JAR for JDK11. Please contact your Customer Success Manager for the compatible driver.\
+The [MS SQL driver](https://productresources.collibra.com/docs/collibra/latest/Content/DataQuality/DBConnection/Supported%20Connections.htm) that comes with JDK11 standalone packages does not currently work in the JDK11 environment. MSSQL requires a separate JAR for JDK11. Please contact your Customer Success Manager for the compatible driver.\
 \
 [Dremio](https://productresources.collibra.com/docs/collibra/latest/Content/DataQuality/DBConnection/Supported%20Connections.htm) is not currently supported for JDK11 standalone packages. If you plan to run JDK11, add `-Dcdjd.io.netty.tryReflectionSetAccessible=true` to owlmanage.sh as a JVM option for your Web and Spark instances. Please contact your Customer Success Manager for assistance.\
 \
