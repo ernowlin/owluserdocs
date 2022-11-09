@@ -4,12 +4,36 @@
 We've moved! To improve customer experience, the Collibra Data Quality User Guide has moved to the [Collibra Documentation Center](https://productresources.collibra.com/docs/collibra/latest/Content/DataQuality/release-notes.htm) as part of the Collibra Data Quality 2022.11 release. To ensure a seamless transition, [dq-docs.collibra.com](https://dq-docs.collibra.com/) will remain accessible, but the DQ User Guide is now maintained exclusively in the Documentation Center.
 {% endhint %}
 
+## 2022.11
+
+{% hint style="warning" %}
+The [MS SQL driver](https://productresources.collibra.com/docs/collibra/latest/Content/DataQuality/DBConnection/Supported%20Connections.htm) that comes with JDK11 standalone packages does not currently work in the JDK11 environment. MSSQL requires a seperate JAR for JDK11. Please contact your Customer Success Manager for the compatible driver.\
+\
+[Dremio](https://productresources.collibra.com/docs/collibra/latest/Content/DataQuality/DBConnection/Supported%20Connections.htm) is not currently supported for JDK11 standalone packages. If you plan to run JDK11, add `-Dcdjd.io.netty.tryReflectionSetAccessible=true` to owlmanage.sh as a JVM option for your Web and Spark instances. Please contact your Customer Success Manager for assistance.\
+\
+As of October 18, 2022, all images for the 2022.10 release have a Critical CVE (CVE-2022-42889). If you picked up the 2022.10 release before October 18, 2022, there should be no issue with your scans. If issues persist, please contact your Customer Success Manager for a new build.
+{% endhint %}
+
+{% hint style="info" %}
+After you complete an upgrade or a new installation of Collibra DQ, you are now required to enter a license name by following either a one-time prompt on the login page, entering the`LICENSE_NAME` environment variable in the environment variable file (owl-env.sh), or by entering the `global.configMap.data.license_name` Helm chart variable.
+{% endhint %}
+
+Please see the [2022.11 Release Notes here](https://productresources.collibra.com/docs/collibra/latest/Content/DataQuality/release-notes.htm).
+
 ## 2022.10
 
 ### New Features
 
 {% hint style="warning" %}
 For the Collibra Data Quality 2022.10 release, all Docker images run on JDK11. Standalone packages contain JDK8 and JDK11 options. If you are an existing customer who requires JDK11, please upgrade your runtime before upgrading to 2022.10. Most Hadoop environment versions (EMR/HDP/CDH) still run on JDK8, so customers using these environments can upgrade with the JDK8 packages. If you prefer to upgrade to JDK11, you must follow the documentation of your respective Hadoop environment to upgrade to JDK11 before deploying the 2022.10 release.
+
+
+
+The [MS SQL driver](https://productresources.collibra.com/docs/collibra/latest/Content/DataQuality/DBConnection/Supported%20Connections.htm) that comes with JDK11 standalone packages does not currently work in the JDK11 environment. MSSQL requires a seperate JAR for JDK11. Please contact your Customer Success Manager for the compatible driver.\
+\
+[Dremio](https://productresources.collibra.com/docs/collibra/latest/Content/DataQuality/DBConnection/Supported%20Connections.htm) is not currently supported for JDK11 standalone packages. If you plan to run JDK11, add `-Dcdjd.io.netty.tryReflectionSetAccessible=true` to owlmanage.sh as a JVM option for your Web and Spark instances. Please contact your Customer Success Manager for assistance.\
+\
+As of October 18, 2022, all images for the 2022.10 release have a Critical CVE (CVE-2022-42889). If you picked up the 2022.10 release before October 18, 2022, there should be no issue with your scans. If issues persist, please contact your Customer Success Manager for a new build.
 {% endhint %}
 
 #### Rules
