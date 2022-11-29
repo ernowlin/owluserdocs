@@ -87,9 +87,17 @@ import com.owl.core.util.OwlUtils
 spark.catalog.clearCache
 ```
 
-#### <mark style="color:blue;">Bringing In Customer Data From Another Database</mark>
+#### <mark style="color:blue;">Bringing Customer Data From Another Database</mark>
 
 ```scala
+// Option 1: Bringing Customer Data From A File
+val df = (spark.read
+  .format("csv").option("header", true).option("delimiter", ",")
+  .load("dbfs:/FileStore/nyse.csv")
+)
+
+
+// Option 2: Bringing Customer Data From A Database
 val connProps = Map(
 "driver" -> "org.postgresql.Driver", 
 "user" -> "????", 
@@ -99,6 +107,7 @@ val connProps = Map(
 //--- Load Spark DataFrame ---//
  val df = spark.read.format("jdbc").options(connProps).load display(df)
 display(df) // view your data
+
 ```
 
 #### <mark style="color:blue;">Variables to setup CDQ metastore database location</mark>
