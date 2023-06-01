@@ -16,4 +16,3 @@ We've moved! To improve customer experience, the Collibra Data Quality User Guid
 | String check         | STRINGCHECK   | Checks whether the target column has **only** STRING values or not.  |
 | Mixed datatype check | DATATYPECHECK | Checks the dataType of the field.                                    |
 
-****

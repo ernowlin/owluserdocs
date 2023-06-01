@@ -18,12 +18,7 @@ To use Snowflake Pushdown, you must be a participant in the private beta. This f
 
 The following table shows the features unique to DQ Jobs run using Snowflake Pushdown processing.
 
-| Feature                            | Description                                                                                                                               |
-| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| Configurable number of connections | Allows you to set the number of open connections between 1-5 so you can run jobs in parallel and improve the performance of profile jobs. |
-| Cancel jobs                        | Unlike Spark compute jobs, you can cancel the SQL queries of Snowflake Pushdown jobs.                                                     |
-| No agent                           | Pushdown runs the database engine to execute jobs directly, removing the need for agents. Agent ID = 0.                                   |
-| More control over AdaptiveRules    | With minimal clicks, you can apply AdaptiveRules, such as row count and uniqueness, from the UI.                                          |
+<table><thead><tr><th width="439.6975268902373">Feature</th><th>Description</th></tr></thead><tbody><tr><td>Configurable number of connections</td><td>Allows you to set the number of open connections between 1-5 so you can run jobs in parallel and improve the performance of profile jobs.</td></tr><tr><td>Cancel jobs</td><td>Unlike Spark compute jobs, you can cancel the SQL queries of Snowflake Pushdown jobs.</td></tr><tr><td>No agent</td><td>Pushdown runs the database engine to execute jobs directly, removing the need for agents. Agent ID = 0.</td></tr><tr><td>More control over AdaptiveRules</td><td>With minimal clicks, you can apply AdaptiveRules, such as row count and uniqueness, from the UI.</td></tr></tbody></table>
 
 ## Limitations
 

@@ -112,8 +112,8 @@ The DQ UI will be converted to the React MUI framework with the 2022.11 release.
 
 * Fixed the loadBalancerSourceRanges for web and spark\_history services in EKS environments. (ticket #95398)
   * The helm property `global.ingress.*` has been removed to separate the config for web and spark\_history. Please update the property as follows:\
-    __`global.web.ingress.*`\
-    _``_`global.spark_history.ingress.*`
+    `global.web.ingress.*`\
+    `global.spark_history.ingress.*`
 * Added support to specify the inbound CIDRs for the Ingress using the property `.global.web.service.loadBalancerSourceRanges`. (ticket #95398)
   * Though Ingress is supported as part of Helm charts, we recommend attaching your own Ingress to the deployment if you need further customization.&#x20;
   * This requires a new helm chart.

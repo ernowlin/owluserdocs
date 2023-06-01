@@ -64,10 +64,7 @@ Some alert settings are configurable without requiring a username or password wh
 
 The following table contains the configurable properties.&#x20;
 
-| Property                  | Default Value | Description                                                                                                                                                                                                                                                                                         |
-| ------------------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| mail.smtp.auth            | True          | <p>When set to True, the server attempts to authenticate the user using the AUTH command. </p><p></p><p>When set to False, username and password authentication are turned off. </p>                                                                                                                |
-| mail.smtp.starttls.enable | True          | <p>When set to True and TLS is supported by the server, this enables the use of the STARTTLS command to switch the connection to a TLS-protected connection before issuing any login commands.</p><p></p><p>When TLS is not supported by your mail server, this property must be set to False. </p> |
+<table><thead><tr><th width="282">Property</th><th width="156">Default Value</th><th>Description</th></tr></thead><tbody><tr><td>mail.smtp.auth</td><td>True</td><td><p>When set to True, the server attempts to authenticate the user using the AUTH command. </p><p></p><p>When set to False, username and password authentication are turned off. </p></td></tr><tr><td>mail.smtp.starttls.enable</td><td>True</td><td><p>When set to True and TLS is supported by the server, this enables the use of the STARTTLS command to switch the connection to a TLS-protected connection before issuing any login commands.</p><p></p><p>When TLS is not supported by your mail server, this property must be set to False. </p></td></tr></tbody></table>
 
 {% hint style="info" %}
 These properties are preset to their default values. For example, mail.smtp.auth is preset to True.

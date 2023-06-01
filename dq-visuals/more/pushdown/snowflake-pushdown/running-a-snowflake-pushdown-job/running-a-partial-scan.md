@@ -55,7 +55,7 @@ You have an [active Snowflake connection](../../../../../connecting-to-dbs-in-ow
 
 ### Time Slice
 
-Time slice is a filter that lets you select a range of dates or times for your DQ scan. To apply a time slice filter, select **Add**, **** configure your preferences in the Add Time Slice modal, then select **Save** to save your filter. When a filter is successfully saved, a badge displays on the Time Slice tile, and the number of applied filters is reflected in the left workflow menu.&#x20;
+Time slice is a filter that lets you select a range of dates or times for your DQ scan. To apply a time slice filter, select **Add**, configure your preferences in the Add Time Slice modal, then select **Save** to save your filter. When a filter is successfully saved, a badge displays on the Time Slice tile, and the number of applied filters is reflected in the left workflow menu.&#x20;
 
 #### Edit Time Slice modal
 
@@ -69,7 +69,7 @@ Time slice is a filter that lets you select a range of dates or times for your D
 
 ### Row Filter
 
-Row Filter scans a section of rows from your table. To add a Row Filter, select **Add**, **** configure your preferences in the Add Filter modal, then select **Save** to save your filter. When a filter is successfully saved, a badge displays on the Time Slice tile, and the number of applied filters is reflected in the left workflow menu.&#x20;
+Row Filter scans a section of rows from your table. To add a Row Filter, select **Add**, configure your preferences in the Add Filter modal, then select **Save** to save your filter. When a filter is successfully saved, a badge displays on the Time Slice tile, and the number of applied filters is reflected in the left workflow menu.&#x20;
 
 #### Add Filter modal
 

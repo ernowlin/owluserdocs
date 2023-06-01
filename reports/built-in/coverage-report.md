@@ -19,14 +19,7 @@ To generate a Coverage Report, follow these steps.
    The Coverage Report displays. The report includes a donut chart showing the percentage of all schemas in the database that are running data quality on them and interactive bar charts showing which data sets are running data quality jobs on a monthly basis.
 4. To see how many new data quality jobs have been added, click one of the following bar charts (the green color represents new DQ jobs and the gray are the existing jobs):
 
-| View    | Description                                                 |
-| ------- | ----------------------------------------------------------- |
-| **1m**  | Shows new and existing jobs after one month.                |
-| **3m**  | Shows new and existing jobs after three months.             |
-| **6m**  | Shows new and existing jobs after six months.               |
-| **YTD** | Shows new and existing jobs year-to-date.                   |
-| **1y**  | Shows new and existing jobs after one year.                 |
-| **All** | Shows new and existing jobs for the entire range of months. |
+<table><thead><tr><th width="345">View</th><th>Description</th></tr></thead><tbody><tr><td><strong>1m</strong></td><td>Shows new and existing jobs after one month.</td></tr><tr><td><strong>3m</strong></td><td>Shows new and existing jobs after three months.</td></tr><tr><td><strong>6m</strong></td><td>Shows new and existing jobs after six months.</td></tr><tr><td><strong>YTD</strong></td><td>Shows new and existing jobs year-to-date.</td></tr><tr><td><strong>1y</strong></td><td>Shows new and existing jobs after one year.</td></tr><tr><td><strong>All</strong></td><td>Shows new and existing jobs for the entire range of months.</td></tr></tbody></table>
 
 5\. To generate a Coverage Report for a specific schema, expand the schema and click **Generate**\
 &#x20;    **Report**.\

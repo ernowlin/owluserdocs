@@ -35,7 +35,7 @@ To generate a Weekly Summary report, follow these steps.
 
 The following table describes the report columns.
 
-<table><thead><tr><th>Column</th><th>Description</th><th data-hidden>Column</th><th data-hidden></th></tr></thead><tbody><tr><td>Dataset</td><td>The data sets scanned over one week.</td><td></td><td></td></tr><tr><td>Score</td><td>The average data quality score of a data set over one week.</td><td></td><td></td></tr><tr><td>Score Trend</td><td>A line graph representation of data quality scores over one week. <br>Hover over the blue dots to see the score trend.</td><td></td><td></td></tr><tr><td>Rows</td><td>The total number of rows of a particular data set scanned over one week.</td><td></td><td></td></tr><tr><td>Rows Trend</td><td>A line graph representation of row count over one week.<br>Hover over the blue dots to see the rows trend.</td><td></td><td></td></tr><tr><td>Pass/Fail</td><td>Total number of DQ scans, whether they pass or fail.</td><td></td><td></td></tr><tr><td>Passing Trend</td><td>A histogram of DQ scans that passed (blue) or failed (red) over one week.<br>Hover over the blue dots to see the passing trend.</td><td></td><td></td></tr><tr><td>Table/File Name</td><td>The name of the table or file in use.</td><td></td><td></td></tr></tbody></table>
+<table><thead><tr><th width="261">Column</th><th>Description</th><th data-hidden>Column</th><th data-hidden></th></tr></thead><tbody><tr><td>Dataset</td><td>The data sets scanned over one week.</td><td></td><td></td></tr><tr><td>Score</td><td>The average data quality score of a data set over one week.</td><td></td><td></td></tr><tr><td>Score Trend</td><td>A line graph representation of data quality scores over one week. <br>Hover over the blue dots to see the score trend.</td><td></td><td></td></tr><tr><td>Rows</td><td>The total number of rows of a particular data set scanned over one week.</td><td></td><td></td></tr><tr><td>Rows Trend</td><td>A line graph representation of row count over one week.<br>Hover over the blue dots to see the rows trend.</td><td></td><td></td></tr><tr><td>Pass/Fail</td><td>Total number of DQ scans, whether they pass or fail.</td><td></td><td></td></tr><tr><td>Passing Trend</td><td>A histogram of DQ scans that passed (blue) or failed (red) over one week.<br>Hover over the blue dots to see the passing trend.</td><td></td><td></td></tr><tr><td>Table/File Name</td><td>The name of the table or file in use.</td><td></td><td></td></tr></tbody></table>
 
 4\. Toggle the ![](../../.gitbook/assets/dq-sort-icon.png) icon at the top of the column to sort the data that displays in the columns in\
 &#x20;    ascending or descending order.
@@ -70,12 +70,7 @@ To see the Data Quality Checks report, follow these steps.
    \>> The Data Quality Checks report displays. \
    This report includes a summary of the number of checks that Collibra DQ automatically ran at the top of the report and the details, which are described in the following table.
 
-| Column      | Description                                                                                             |
-| ----------- | ------------------------------------------------------------------------------------------------------- |
-| Data Set    | The name of the data set.                                                                               |
-| Check Type  | The type of check that DQ ran.                                                                          |
-| Check Value | The value associated with this check.                                                                   |
-| Break Value | The number of points associated with a rule break, which are then subtracted from a data quality score. |
+<table><thead><tr><th width="202">Column</th><th>Description</th></tr></thead><tbody><tr><td>Data Set</td><td>The name of the data set.</td></tr><tr><td>Check Type</td><td>The type of check that DQ ran.</td></tr><tr><td>Check Value</td><td>The value associated with this check. </td></tr><tr><td>Break Value</td><td>The number of points associated with a rule break, which are then subtracted from a data quality score.</td></tr></tbody></table>
 
 4\. Toggle the ![](../../.gitbook/assets/dq-sort-icon.png) icon at the top of the column to sort the data that displays in the columns in\
 &#x20;    ascending or descending order.

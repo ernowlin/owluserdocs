@@ -35,20 +35,7 @@ AdaptiveRules are common metrics used to observe changes to your data. These can
 
 The following table shows a list of AdaptiveRules measured by Collibra Data Quality and whether they are applied by default.
 
-| AdaptiveRule type | Subtype      | Description                                                           | Default? |
-| ----------------- | ------------ | --------------------------------------------------------------------- | -------- |
-| **Availability**  | N/A          | Observe changes to the row count and loading time in your table.      | N/A      |
-|                   | Row count    | Monitor the row count change in your table.                           | True     |
-|                   | Loading time | Monitor loading time changes.                                         | False    |
-| **Distribution**  | N/A          | Observe the number of unique values in a table.                       | N/A      |
-|                   | Uniqueness   | Monitor a column's cardinality within the range of previous DQ Jobs   | True     |
-| **Conformity**    | N/A          | Observe columns with values that fall outside of the normal range.    | N/A      |
-|                   | Min          | Monitor columns with min values outside the normal range.             | False    |
-|                   | Mean         | Monitor columns with mean values outside the normal range.            | False    |
-|                   | Max          | Monitor columns with max values outside the normal range.             | False    |
-| **Completeness**  | N/A          | Observe columns in your table containing null values or empty fields. | N/A      |
-|                   | Null values  | Monitor columns for null values.                                      | True     |
-|                   | Empty values | Monitor columns for empty data.                                       | True     |
+<table><thead><tr><th width="180">AdaptiveRule type</th><th width="151">Subtype</th><th width="320">Description</th><th>Default?</th></tr></thead><tbody><tr><td><strong>Availability</strong></td><td>N/A</td><td>Observe changes to the row count and loading time in your table.</td><td>N/A</td></tr><tr><td></td><td>Row count</td><td>Monitor the row count change in your table.</td><td>True</td></tr><tr><td></td><td>Loading time</td><td>Monitor loading time changes.</td><td>False</td></tr><tr><td><strong>Distribution</strong></td><td>N/A</td><td>Observe the number of unique values in a table.</td><td>N/A</td></tr><tr><td></td><td>Uniqueness</td><td>Monitor a column's cardinality within the range of previous DQ Jobs</td><td>True</td></tr><tr><td><strong>Conformity</strong></td><td>N/A</td><td>Observe columns with values that fall outside of the normal range.</td><td>N/A</td></tr><tr><td></td><td>Min</td><td>Monitor columns with min values outside the normal range.</td><td>False</td></tr><tr><td></td><td>Mean</td><td>Monitor columns with mean values outside the normal range.</td><td>False</td></tr><tr><td></td><td>Max</td><td>Monitor columns with max values outside the normal range.</td><td>False</td></tr><tr><td><strong>Completeness</strong></td><td>N/A</td><td>Observe columns in your table containing null values or empty fields.</td><td>N/A</td></tr><tr><td></td><td>Null values</td><td>Monitor columns for null values.</td><td>True</td></tr><tr><td></td><td>Empty values</td><td>Monitor columns for empty data.</td><td>True</td></tr></tbody></table>
 
 {% hint style="info" %}
 You can always apply or remove AdaptiveRules, but if you bypass the configuration, the DQ Job will still run correctly with the default AdaptiveRules applied.

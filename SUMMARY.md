@@ -1,7 +1,6 @@
 # Table of contents
 
 * [Collibra Data Quality & Observability](README.md)
-* [Getting Started](getting-started.md)
 * [Release Notes](release-notes.md)
 * [Builds](builds.md)
 * [APIs](apis.md)
