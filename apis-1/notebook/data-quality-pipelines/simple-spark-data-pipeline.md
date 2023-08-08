@@ -13,12 +13,13 @@ val connProps = Map (
   "user"     -> s"${user}",
   "password" -> s"${pass}",
   "url"      -> s"jdbc:postgresql://${host}:${port}/${database}",
-  "dbtable"  -> "owl_test.nyse"
+  "dbtable"  -> "cdq_test.nyse"
 )
 
 //--- Load Spark DataFrame ---//
 val jdbcDF = spark.read.format("jdbc").options(connProps).load
 jdbcDF.show
+
 ```
 
 ## Configure Owl Options
@@ -28,30 +29,29 @@ Connect to Owl's Metadata Database and control DQ scan options. Wrap sparkDF wit
 ```scala
 import com.owl.common.options._
 import com.owl.core.util.OwlUtils
-
 val opt = new OwlOptions
-//--- Owl Metastore ---//
-opt.host = s"$owlHost"
-opt.port = s"5432/postgres?currentSchema=public"
-opt.pgUser = s"$owlUser"
-opt.pgPassword = s"$owlPass"
+//--- CDQ Metastore ---//
+opt.host = s"$cdqHost"
+opt.port = s"xxxx/postgres?currentSchema=public"
+opt.pgUser = s"$cdqUser"
+opt.pgPassword = s"$cdqPass"
 //--- Run Options ---//
-opt.dataset = "owl_test.nyse"
+opt.dataset = "cdq_test.nyse"
 opt.runId = "2018-01-10"
 opt.datasetSafeOff = true
-
-val owl = OwlUtils.OwlContext(jdbcDF, opt)
+val cdq = OwlUtils.OwlContext(jdbcDF, opt)
 ```
 
 ## Register with Catalog and Run Profile
 
 ```scala
-//--- Register with Owl Catalog ---//
-owl.register(opt)
-
+//--- Register with CDQ Catalog ---//
+cdq.register(opt)
+cdq.owlCheck()
 //--- Profile Dataset ---//
-val profile = owl.profileDF
+val profile = cdq.profileDF
 profile.show
+
 ```
 
 Notice that Owl returns results as Dataframes. This is a fantastic abstraction that allows you to ignore all domain objects and custom types and interact with a scaleable generic result set using common protocols like "where" or "filter" or "save" or "write" all with parallel operations.
@@ -84,18 +84,18 @@ Take duplicate detection for example. A common use-case where a business wants t
 opt.dupe.on = true
 opt.dupe.lowerBound = 99
 opt.dupe.include = Array("SYMBOL", "EXCH")
-
 val df1Day = jdbcDF.where("TRADE_DATE = '2018-01-10' ")
-val owl = OwlUtils.OwlContext(df1Day, opt)
-
-val dupes = owl.dupesDF
+val cdq = OwlUtils.OwlContext(df1Day, opt)
+cdq.owlCheck()
+val dupesPreview = cdq.getDupesPreview()
+val records = cdq.getRecordsDF
 dupes.show
-
 // rdd collect
 dupes.rdd.collect.foreach(println)
-
 // records linked together for remediation
-owl.getDupeRecords.show
+cdq.getDupeRecords.show
+
+
 ```
 
 ## Outliers
@@ -103,14 +103,20 @@ owl.getDupeRecords.show
 Gaining and understanding of your outliers is a commonly desired DQ function. Owl has several configurations to help find the most meaningful outliers in your dataset and over time. Below compares the current day to a baseline of days in the historical dataframe.
 
 ```scala
-opt.outlier.on = true
-opt.outlier.lookback = 6
-opt.outlier.dateColumn = "TRADE_DATE"
-opt.outlier.timeBin = OutlierOpt.TimeBin.DAY
-opt.outlier.key = Array("SYMBOL")
-
-val df1Day = jdbcDF2.where("TRADE_DATE = '2018-01-10' ")
-val owl = OwlUtils.OwlContextWithHistory(dfCurrent = df1Day, dfHist = jdbcDF2, opt = opt)
-val outliers = owl.outliersDF
+val outlierOpt = new OutlierOpt()
+outlierOpt.combine = true
+outlierOpt.dateColumn = "trade_date"
+outlierOpt.lookback = 4
+outlierOpt.key = Array("symbol")
+outlierOpt.timeBin = OutlierOpt.TimeBin.DAY
+outlierOpt.historyLimit = 10
+dlMulti.add(outlierOpt)
+opt.setOutliers(dlMulti)
+val cdq = OwlUtils.OwlContext(df, opt)
+ .register(opt)
+cdq.setHistoricalDF(dfHistory)
+cdq.owlCheck()
+val outliers = cdq.getOutliers()
 outliers.show
+
 ```
