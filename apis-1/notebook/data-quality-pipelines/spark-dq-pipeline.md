@@ -10,7 +10,7 @@ We've moved! To improve customer experience, the Collibra Data Quality User Guid
 
 ## Programmatic DQ
 
-Don't like leaving your notebook? Want to build VDQ into your in-house data quality pipeline? CDQ can do both!
+Don't like leaving your notebook? Want to build CDQ into your in-house data quality pipeline? CDQ can do both!
 
 ### Real World Examples
 
@@ -36,7 +36,7 @@ Let's create a simple rule and assign points to the overall scoring system for l
     OwlUtils.addRule(rule)
 ```
 
-Now let's chain together the remaining 2 items that were part of our original requirement. Note that Owl has 6 additional ML DQ features that we did not turn on in this case.
+Now let's chain together the remaining 2 items that were part of our original requirement. Note that CDQ has 6 additional ML DQ features that we did not turn on in this case.
 
 ```scala
 val df_source = (spark.read
@@ -80,7 +80,7 @@ if (ruleBreaks.count() > 1) {
 }
 val outliers = cdq.getOutliers()
 if (outliers.where($"confidence" < 10).count > 3) {
-  // Owl email Alert to business group for attention
+  // CDQ email Alert to business group for attention
   // where 3 outliers have a confidence below 10
 }
 
@@ -88,7 +88,7 @@ if (outliers.where($"confidence" < 10).count > 3) {
 
 ### Ingesting Intraday Files
 
-Here we illustrate an example of how to work with files when using Owl programmatically. This can be implemented in both a Notebook setting and in your own codebase.
+Here we illustrate an example of how to work with files when using CDQ programmatically. This can be implemented in both a Notebook setting and in your own codebase.
 
 ```scala
  ///////////////////////////////////////////////////////////////////////////
@@ -96,7 +96,7 @@ Here we illustrate an example of how to work with files when using Owl programma
     ///////////////////////////////////////////////////////////////////////////
 
     // Part of your pipeline includes the ingestion of files that have the date
-    // and hour encoded in the file name. How do you process those files using Owl?
+    // and hour encoded in the file name. How do you process those files using CDQ?
     //
     // Format: <name>_<year>_<month>_<day>.csv
     //
@@ -130,7 +130,7 @@ new File(getClass.getResource("/position_file_2019_11_03_09.csv").getPath),
     // Customize this to only process a subset of the data.
     opt.load.fileQuery = "select * from dataset"
     position_files.foreach { file: File =>
-      // Tell Owl where to find the file.
+      // Tell CDQ where to find the file.
       opt.load.filePath = file.getPath
 
       // Parse the filename to construct the run date (-rd) that will be passed
@@ -141,16 +141,16 @@ new File(getClass.getResource("/position_file_2019_11_03_09.csv").getPath),
       val hour = parts.takeRight(1).head
       // Must be in format 'yyyy-MM-dd' or 'yyyy-MM-dd HH:mm'.
       val rd = s"${date} ${hour}"
-      // Tell Owl to process data
+      // Tell CDQ to process data
       opt.runId = rd
       // Create a DataFrame from the file.
       val df = OwlUtils.load(opt.load.filePath, opt.load.delimiter, spark)
 
       // Instantiate an OwlContext with the dataframe and our custom configuration.
       val cdq = OwlUtils.OwlContext(df, spark, opt)
-      // Make sure Owl has catalogued the dataset.
+      // Make sure CDQ has catalogued the dataset.
       cdq.register(opt)
-      // Let Owl do the rest!
+      // Let CDQ do the rest!
       cdq.owlCheck()
 
     }
@@ -158,7 +158,7 @@ new File(getClass.getResource("/position_file_2019_11_03_09.csv").getPath),
 
 ### All Pipeline Activities in 1 Line
 
-For brevity and convenience CDQ allows a DF to be loaded in the constructor and in 1 line run all 9 dimensions of data quality "owl.owlcheck()". To adjust the DQ dimensions you simply set the properties in the OwlOptions object.
+For brevity and convenience CDQ allows a DF to be loaded in the constructor and in 1 line run all 9 dimensions of data quality "cdq.owlcheck()". To adjust the DQ dimensions you simply set the properties in the OwlOptions object.
 
 ```scala
 val cdq = Util.OwlContext(df, atmCustFileDf, opts)
