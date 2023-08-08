@@ -158,50 +158,14 @@ new File(getClass.getResource("/position_file_2019_11_03_09.csv").getPath),
 
 ### All Pipeline Activities in 1 Line
 
-For brevity and convenience Owl allows a DF to be loaded in the constructor and in 1 line run all 9 dimensions of data quality "owl.owlcheck". To adjust the DQ dimensions you simply set the properties in the props object.
+For brevity and convenience CDQ allows a DF to be loaded in the constructor and in 1 line run all 9 dimensions of data quality "owl.owlcheck()". To adjust the DQ dimensions you simply set the properties in the OwlOptions object.
 
 ```scala
-val owl = Util.OwlContext(df, atmCustFile, props)
-owl.owlCheck
+val cdq = Util.OwlContext(df, atmCustFileDf, opts)
+cdq.owlCheck()
 ```
 
-#### Example of some common property settings
 
-```scala
-val props = new Props()
-props.filePath = s"${filePath}/atm_customer_${rd.replace("-","_")}.csv"
-props.runId = rd
-props.dateCol = "OWL_RUN_ID"
-props.dataset = "ATM_CUSTOMER3"
-props.del = ","
-props.datasetSafety = false
-props.calculateBoundaries = true
-props.fileLookBack = true
-props.timeBin = "DAY"
-
-// outlier, missing records
-props.dl = true
-props.dlKey = "customer_id"
-props.dlLb = 4
-
-// pattern mining
-props.freqPatternMiningByKey = true
-props.fpgKey = "customer_id"
-props.fpgLookback = 4
-props.fpgDateCol = "OWL_RUN_ID"
-props.fpgCols = "card_number,first_name,last_name,checking_savings"
-props.fpgLowFreq = true
-
-// validate Src
-props.validateSrc = true
-props.valSrcKey = "customer_id"
-
-// fuzzy match
-props.isDupe = true
-props.dupeCutOff = 88
-props.depth = 3
-props.dupeExcludeCols = "customer_id,card_number,customer_since_date,OWL_RUN_ID"
-```
 
 ![](../../../.gitbook/assets/owl-spark-dq=pipeline.png)
 
