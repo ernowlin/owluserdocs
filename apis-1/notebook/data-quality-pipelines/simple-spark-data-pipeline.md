@@ -22,9 +22,9 @@ jdbcDF.show
 
 ```
 
-## Configure Owl Options
+## Configure OwlOptions
 
-Connect to Owl's Metadata Database and control DQ scan options. Wrap sparkDF with Owl context.
+Connect to CDQ's Metadata Database and control DQ scan options. Wrap sparkDF with Owl context.
 
 ```scala
 import com.owl.common.options._
@@ -54,7 +54,7 @@ profile.show
 
 ```
 
-Notice that Owl returns results as Dataframes. This is a fantastic abstraction that allows you to ignore all domain objects and custom types and interact with a scaleable generic result set using common protocols like "where" or "filter" or "save" or "write" all with parallel operations.
+Notice that cdq returns results as Dataframes. This is a fantastic abstraction that allows you to ignore all domain objects and custom types and interact with a scaleable generic result set using common protocols like "where" or "filter" or "save" or "write" all with parallel operations.
 
 ```scala
 +--------------+-----+-------+-----------+---+---+--------+-----------+------+----+------+-------+-------+------+----+---------+
@@ -100,7 +100,7 @@ cdq.getDupeRecords.show
 
 ## Outliers
 
-Gaining and understanding of your outliers is a commonly desired DQ function. Owl has several configurations to help find the most meaningful outliers in your dataset and over time. Below compares the current day to a baseline of days in the historical dataframe.
+Gaining and understanding of your outliers is a commonly desired DQ function. CDQ has several configurations to help find the most meaningful outliers in your dataset and over time. Below compares the current day to a baseline of days in the historical dataframe.
 
 ```scala
 val outlierOpt = new OutlierOpt()
