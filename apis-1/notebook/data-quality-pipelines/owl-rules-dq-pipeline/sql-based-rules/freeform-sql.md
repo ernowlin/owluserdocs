@@ -30,7 +30,7 @@ The base of the statement is given with **@\<dataset\_name>** style. In general 
 ```scala
 opt.dataset = "example_ds"
 
-val rule = RuleBll.createRule(opt.dataset)
+val rule = OwlUtils.createRule(opt.dataset)
 rule.setRuleNm("is_city_not_null_or_empty")
 rule.setRuleValue("select * from @example_ds t where t.amount > '5000'")
 rule.setRuleType("SQLF")
@@ -110,7 +110,7 @@ WHERE <join_expression> AND <filter_expression>
 ```scala
 opt.dataset = "example_ds"
 
-val rule = RuleBll.createRule(opt.dataset)
+val rule = OwlUtils.createRule(opt.dataset)
 rule.setRuleValue("select * from @example_ds t, @t1  where t.customer_id = t1.customer_id  and t.card_number <> t1.card_number ")
 rule.setRuleType("SQLF")
 ```
@@ -142,7 +142,7 @@ rule.setRuleType("SQLF")
 ```scala
 opt.dataset = "example_ds"
 
-val rule = RuleBll.createRule(opt.dataset)
+val rule = OwlUtils.createRule(opt.dataset)
 rule.setRuleNm("not_back2back_days")
 rule.setRuleValue(" select * from @example_ds A LEFT OUTER JOIN @t1 B ON A.customer_id = B.customer_id where A.customer_id is not null and B.customer_id is null  ")
 rule.setRuleType("SQLF")

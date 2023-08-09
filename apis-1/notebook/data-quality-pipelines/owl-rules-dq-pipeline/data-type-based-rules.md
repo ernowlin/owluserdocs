@@ -54,7 +54,7 @@ We've moved! To improve customer experience, the Collibra Data Quality User Guid
 ```scala
 opt.dataset = "example_ds"
 
-val rule = RuleBll.createRule(opt.dataset)
+val rule = OwlUtils.createRule(opt.dataset)
 rule.setRuleNm("<rule_name>")
 rule.setRuleValue("<column_name>")
 rule.setRuleType("<rule_type>")

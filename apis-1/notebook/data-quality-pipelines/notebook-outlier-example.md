@@ -26,35 +26,41 @@ val spark = SparkSession.builder
   .master("local")
   .appName("test")
   .getOrCreate()
-
 val opt = new OwlOptions()
 opt.dataset = "dataset_outlier"
 opt.runId = "2018-02-24"
 opt.outlier.on = true
-opt.outlier.key = Array("fname")
-opt.outlier.dateColumn = "app_date"
-opt.outlier.timeBin = OutlierOpt.TimeBin.DAY
-opt.outlier.lookback = 5
-opt.outlier.excludes = Array("customer_id")
+
+ val dlMulti: util.List[OutlierOpt] = new util.ArrayList[OutlierOpt]
+ val outlierOpt = new OutlierOpt()
+ outlierOpt.combine = true
+ outlierOpt.dateColumn = "app_date"
+ outlierOpt.lookback = 5
+ outlierOpt.key = Array("fname")
+ outlierOpt.exclude = Array("customer_id")
+ outlierOpt.historyLimit = 10
+ outlierOpt.timeBin = OutlierOpt.TimeBin.DAY
+ dlMulti.add(outlierOpt)
+ opt.setOutliers(dlMulti)
 
 val dfHist = OwlUtils.load(filePath = filePath, delim = ",", sparkSession = spark)
 val dfCurrent = dfHist.where(s"app_date = '${opt.runId}' ")
 
-val owl = OwlUtils.OwlContextWithHistory(dfCurrent=dfCurrent, dfHist=dfHist, opt=opt)
-owl.register(opt)
-owl.owlCheck()
+val cdq = OwlUtils.OwlContextWithHistory(dfCurrent=dfCurrent, dfHist=dfHist, opt=opt)
+cdq.register(opt)
+cdq.owlCheck()
 ```
 
-### Owl Web UI
+### CDQ Web UI
 
 Score drops from 100 to 99 based on the single outlier in the file. Row count is 1 because there is only 1 row in the current data frame. The historical data frame was provided for context and you can see those rows in the outlier drill-in. The customer\_id is available in the data preview and can be used as an API hook to link back to the original dataset.
 
 ![](../../../.gitbook/assets/owl-df-with-hist-customer\_id.png)
 
-After you run an owlcheck using owl.owlcheck you might want to check individual scores to see what type of issues were in the data. Owl can send back the records with issues in the format of a DataFrame using the notebook cmds or JSON from the REST api.
+After you run an owlcheck using cdq.owlcheck you might want to check individual scores to see what type of issues were in the data. CDQ can send back the records with issues in the format of a DataFrame using the notebook cmds or JSON from the REST api.
 
 ```scala
-val hoot = owl.hoot
+val hoot = cdq.hoot
 
 println(s"SHAPE   ${hoot.shapeScore} ")
 println(s"DUPE    ${hoot.dupeScore} ")
@@ -67,10 +73,10 @@ println(s"SOURCE  ${hoot.sourceScore} ")
 println(s"RULES   ${hoot.ruleScore} ")
 
 if (hoot.shapeScore > 0) {
-  owl.getShapeRecords.show
+  cdq.getShapeRecords.show
 }
 if (hoot.dupeScore > 0) {
-  owl.getDupeRecords.show
+  cdq.getDupeRecords.show
 }
 ```
 

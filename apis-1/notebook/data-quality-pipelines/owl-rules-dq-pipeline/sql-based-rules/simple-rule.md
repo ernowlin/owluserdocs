@@ -51,7 +51,7 @@ def sparkInit(): SparkSession = {
   sparkSession
 }
 
-@Test def simpleRule(): Unit = {
+def simpleRuleNotebook(): Unit = {
 
   // Arrange
   val spark = sparkInit()
@@ -69,8 +69,7 @@ def sparkInit(): SparkSession = {
   val opt = new OwlOptions {
     runId = "2019-09-20"
     dataset = "simple_sql_rule_ds"
-    onReadOnly = false
-    load = loadOptions
+     load = loadOptions
   }
 
   val rule = new Rule {
@@ -84,23 +83,23 @@ def sparkInit(): SparkSession = {
     setUserNm("admin")
   }
 
-  val owl = OwlUtils.OwlContext(df, opt)
+  val cdq = OwlUtils.OwlContext(df, opt)
     .register(opt)
   
   OwlUtils.addRule(rule)
 
   // Act
-  owl.owlCheck()
+  cdq.owlCheck()
 
   // Assert
   import scala.collection.JavaConversions
   val hootRule = JavaConversions.asScalaBuffer(owl.hoot.rules).find(x => rule.getRuleNm.equals(x.getRuleNm)).orNull
-  Assert.assertNotNull(hootRule)
-  Assert.assertEquals(66, hootRule.getScore)
+
 }
 
 // Execute notebook
 simpleRuleNotebook()
+
 ```
 {% endcode %}
 
@@ -133,7 +132,7 @@ In this example you can see how to create a simple SQL with rule with **template
 2.  Create the Rule instance, where value of **RuleValue** will be used to replace **$colNm** in the template expression.\\
 
     ```scala
-    val rule = RuleBll.createRule(opt.dataset)
+    val rule = OwlUtils.createRule(opt.dataset)
     rule.setRuleNm("is_city_not_null_or_empty")
     rule.setRuleValue("city")
     rule.setRuleType("CUSTOM") // legacy type required to look into rule repo
@@ -174,7 +173,7 @@ def sparkInit(): SparkSession = {
   sparkSession
 }
 
-@Test def simpleRuleWithTemplate(): Unit = {
+ def simpleRuleWithTemplate(): Unit = {
 
   // Arrange
   val spark = sparkInit()
@@ -195,10 +194,15 @@ def sparkInit(): SparkSession = {
     onReadOnly = false
     load = loadOptions
   }
+  // create a generic rule
+  val ruleRepoName = "not_null_or_empty"
+  val ruleRepo = OwlUtils.createRuleTemplate(ruleRepoName, "Column cannot contain null or empty values", "$colNm is null or $colNm = \'\' or $colNm  = \'null\'")
+  Util.RuleRepoDaoFactory().delete(ruleRepo)
+  val cdq = OwlUtils.OwlContext(df, opt)
 
-  val ruleTemplate = RuleTemplateBll.createRuleTemplate("not_null_or_empty","Column cannot contain null or empty values", " $colNm is null or $colNm = \'\' or $colNm  = \'null\' ")
-
-  val rule = RuleBll.createRule(opt.dataset)
+  cdq.addRuleTemplate(ruleRepo)
+  
+  val rule = OwlUtils.createRule(opt.dataset)
   rule.setRuleNm("is_city_not_null_or_empty")
   rule.setRuleValue("city")
   rule.setRuleType("CUSTOM") // legacy type required to look into rule repo
@@ -208,20 +212,17 @@ def sparkInit(): SparkSession = {
   rule.setIsActive(1)
   rule.setUserNm("admin")
 
-  val owl = OwlUtils.OwlContext(df, opt)
+  val cdq = OwlUtils.OwlContext(df, opt)
     .register(opt)
   
-  OwlUtils.addRuleTemplate(ruleTemplate)
-  OwlUtils.addRule(rule)
-
+  cdq.addRule(rule)
   // Act
   owl.owlCheck()
 
   // Assert
   import scala.collection.JavaConversions
   val hootRule = JavaConversions.asScalaBuffer(owl.hoot.rules).find(x => rule.getRuleNm.equals(x.getRuleNm)).orNull
-  Assert.assertNotNull(hootRule)
-  Assert.assertEquals(66, hootRule.getScore)
+   println(hootRule.getScore)
 }  
   
 // Execute notebook
